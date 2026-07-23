@@ -1,0 +1,124 @@
+site_name: Algo
+site_description: 中文算法竞赛与题解知识库：从朴素思路到最优解
+site_author: WineChord
+site_url: https://www.wineandchord.com/algo/
+repo_name: WineChord/algo
+repo_url: https://github.com/WineChord/algo
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2021–2026 WineChord
+
+theme:
+  name: material
+  language: zh
+  icon:
+    logo: material/code-braces
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至浅色模式
+  font: false
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WineChord
+      name: WineChord on GitHub
+
+nav:
+  - 首页: index.md
+  - 入门与方法:
+      - 学习路线: guide/roadmap.md
+      - 解题方法: guide/problem-solving.md
+      - 复杂度分析: guide/complexity.md
+      - 竞赛 C++: guide/cpp.md
+  - 基础技巧:
+      - 知识地图: basics/index.md
+      - 二分查找: basics/binary-search.md
+  - 数据结构: data-structures/index.md
+  - 图论: graph/index.md
+  - 动态规划: dp/index.md
+  - 数学: math/index.md
+  - 字符串: strings/index.md
+  - 题解:
+      - 题解索引: problems/index.md
+      - 写作模板: problems/template.md
+  - 资源: resources.md
+  - 更新日志: changelog.md

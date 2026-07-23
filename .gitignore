@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Python and MkDocs
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+site/
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/

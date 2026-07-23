@@ -1,0 +1,181 @@
+:root {
+  --md-primary-fg-color: #6f1d37;
+  --md-primary-fg-color--light: #963b59;
+  --md-primary-fg-color--dark: #451020;
+  --md-accent-fg-color: #a8732a;
+  --algo-gold: #c99a45;
+  --algo-ink: #251c20;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #8f3655;
+  --md-accent-fg-color: #e2b45f;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.md-grid {
+  max-width: 78rem;
+}
+
+.md-header {
+  box-shadow: 0 0.15rem 0.65rem rgba(43, 12, 23, 0.18);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h1 {
+  color: var(--algo-ink);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset a {
+  text-underline-offset: 0.16em;
+}
+
+.md-typeset code {
+  border-radius: 0.3rem;
+}
+
+.md-typeset .highlight code {
+  line-height: 1.55;
+}
+
+.algo-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2rem;
+  padding: clamp(2rem, 6vw, 4.2rem);
+  color: #fff;
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(232, 191, 110, 0.32), transparent 28%),
+    linear-gradient(135deg, #3f0d20 0%, #772343 54%, #a66a31 130%);
+  box-shadow: 0 1.1rem 2.6rem rgba(66, 15, 34, 0.2);
+}
+
+.algo-hero::after {
+  position: absolute;
+  right: -2rem;
+  bottom: -5rem;
+  width: 17rem;
+  height: 17rem;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2.4rem rgba(255, 255, 255, 0.05),
+    0 0 0 4.8rem rgba(255, 255, 255, 0.035);
+}
+
+.algo-hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.7rem;
+  color: #fff;
+  font-size: clamp(2.25rem, 6vw, 4.8rem);
+  letter-spacing: -0.05em;
+}
+
+.algo-hero p {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+}
+
+.algo-hero .md-button {
+  margin-top: 1.4rem;
+  margin-right: 0.55rem;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.78);
+}
+
+.algo-hero .md-button--primary {
+  color: #481126;
+  border-color: #f6dfae;
+  background: #f6dfae;
+}
+
+.algo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+  margin: 1.3rem 0 2rem;
+}
+
+.algo-card {
+  display: block;
+  height: 100%;
+  padding: 1.1rem 1.2rem;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 0.25rem 0.85rem rgba(35, 23, 27, 0.05);
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.algo-card:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0.55rem 1.25rem rgba(78, 25, 44, 0.12);
+  transform: translateY(-2px);
+}
+
+.algo-card strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--md-accent-fg-color);
+  font-size: 1.03rem;
+}
+
+.algo-card span {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.algo-kicker {
+  margin-bottom: 0.3rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--md-primary-fg-color) 9%, transparent);
+}
+
+@media screen and (max-width: 44.984375em) {
+  .algo-hero {
+    border-radius: 0.8rem;
+  }
+
+  .algo-hero h1 {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
+
+  .algo-hero .md-button {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
