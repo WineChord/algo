@@ -18,6 +18,7 @@ HEADERS = """#include <algorithm>
 #include <bitset>
 #include <cassert>
 #include <chrono>
+#include <climits>
 #include <cmath>
 #include <cstdint>
 #include <deque>
