@@ -23,14 +23,13 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/check_content.py
 python scripts/check_cpp.py
+python scripts/check_rendering.py
+mkdocs build --strict
+python scripts/check_rendering.py --site-dir site --browser
 mkdocs serve
 ```
 
-浏览器打开 `http://127.0.0.1:8000/algo/`。生产构建使用：
-
-```bash
-mkdocs build --strict
-```
+浏览器打开 `http://127.0.0.1:8000/algo/`。
 
 ## 目录
 
@@ -39,6 +38,7 @@ mkdocs build --strict
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
 - `scripts/check_cpp.py`：逐个编译 C++ 代码块
+- `scripts/check_rendering.py`：校对 Markdown、公式、构建产物与浏览器渲染
 - `.github/workflows/pages.yml`：GitHub Pages 自动发布
 
 ## License
