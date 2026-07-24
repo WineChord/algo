@@ -4,17 +4,17 @@
 
 ## 在线评测
 
-- [LeetCode 中文站](https://leetcode.cn/)：面试题、数据结构与专题练习。
+- [LeetCode](https://leetcode.cn/)：面试题、数据结构与专题练习。
 - [Codeforces](https://codeforces.com/)：高频比赛、成熟的题目难度体系和社区讨论。
 - [AtCoder](https://atcoder.jp/)：题面严谨，ABC 到 AGC 形成清晰梯度。
-- [洛谷](https://www.luogu.com.cn/)：中文题库、模板题与国内竞赛内容丰富。
-- [牛客竞赛](https://ac.nowcoder.com/)：中文比赛、企业赛与练习。
+- [洛谷](https://www.luogu.com.cn/)：模板题与国内竞赛内容丰富。
+- [牛客竞赛](https://ac.nowcoder.com/)：比赛、企业赛与练习。
 - [CSES Problem Set](https://cses.fi/problemset/)：覆盖核心算法的紧凑题单。
 
 ## 参考手册
 
 - [C++ reference](https://en.cppreference.com/w/)：标准库与语言特性的权威式参考手册。
-- [OI Wiki](https://oi-wiki.org/)：中文算法与竞赛知识百科。
+- [OI Wiki](https://oi-wiki.org/)：算法与竞赛知识百科。
 - [CP-Algorithms](https://cp-algorithms.com/)：实现导向的算法参考。
 - [Codeforces EDU](https://codeforces.com/edu/courses)：专题课程与配套练习。
 
