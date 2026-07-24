@@ -102,21 +102,27 @@ int main() {
 
 ### 线性与子序列
 
-- [LeetCode 70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
-- [LeetCode 198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
-- [LeetCode 300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
+--8<-- "includes/problems/lc-70.md"
+
+--8<-- "includes/problems/lc-198.md"
+
+--8<-- "includes/problems/lc-300.md"
 
 ### 背包
 
-- [LeetCode 416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
-- [LeetCode 494. 目标和](https://leetcode.cn/problems/target-sum/)
-- [洛谷 P1048 采药](https://www.luogu.com.cn/problem/P1048)
+--8<-- "includes/problems/lc-416.md"
+
+--8<-- "includes/problems/lc-494.md"
+
+--8<-- "includes/problems/luogu-p1048.md"
 
 ### 区间、树形与状态压缩
 
-- [LeetCode 312. 戳气球](https://leetcode.cn/problems/burst-balloons/)
-- [LeetCode 337. 打家劫舍 III](https://leetcode.cn/problems/house-robber-iii/)
-- [LeetCode 847. 访问所有节点的最短路径](https://leetcode.cn/problems/shortest-path-visiting-all-nodes/)
+--8<-- "includes/problems/lc-312.md"
+
+--8<-- "includes/problems/lc-337.md"
+
+--8<-- "includes/problems/lc-847.md"
 
 ## 正确性检查
 

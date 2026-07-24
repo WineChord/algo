@@ -54,9 +54,11 @@ int main() {
 
 代表题目：
 
-- [LeetCode 28. 找出字符串中第一个匹配项的下标](https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/)
-- [LeetCode 459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/)
-- [洛谷 P3375【模板】KMP](https://www.luogu.com.cn/problem/P3375)
+--8<-- "includes/problems/lc-28.md"
+
+--8<-- "includes/problems/lc-459.md"
+
+--8<-- "includes/problems/luogu-p3375.md"
 
 ## Trie
 
@@ -69,8 +71,9 @@ Trie 把公共前缀合并成路径，适合：
 
 若字符集固定且较小，可以用数组存儿子，速度快但空间大；字符集稀疏时可使用映射。必须区分“路径存在”和“某个单词在此结束”。
 
-- [LeetCode 208. 实现 Trie](https://leetcode.cn/problems/implement-trie-prefix-tree/)
-- [LeetCode 421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/)
+--8<-- "includes/problems/lc-208.md"
+
+--8<-- "includes/problems/lc-421.md"
 
 ## 字符串哈希
 
@@ -90,7 +93,7 @@ AC 自动机把多个模式串插入 Trie，再建立类似 KMP 的失配指针�
 
 复杂度通常写作 \(O(\sum |pattern|+|text|+matches)\)，具体还取决于字符集和如何统计输出。
 
-- [洛谷 P3808【模板】AC 自动机（简单版）](https://www.luogu.com.cn/problem/P3808)
+--8<-- "includes/problems/luogu-p3808.md"
 
 ## 回文与后缀结构
 
@@ -101,9 +104,11 @@ AC 自动机把多个模式串插入 Trie，再建立类似 KMP 的失配指针�
 
 代表题目：
 
-- [LeetCode 5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
-- [LeetCode 214. 最短回文串](https://leetcode.cn/problems/shortest-palindrome/)
-- [LeetCode 1044. 最长重复子串](https://leetcode.cn/problems/longest-duplicate-substring/)
+--8<-- "includes/problems/lc-5.md"
+
+--8<-- "includes/problems/lc-214.md"
+
+--8<-- "includes/problems/lc-1044.md"
 
 ## 易错检查
 

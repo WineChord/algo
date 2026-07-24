@@ -161,6 +161,63 @@ body {
   color: var(--scholar-accent);
 }
 
+.md-typeset details.problem {
+  overflow: hidden;
+  border: 1px solid var(--scholar-line);
+  border-radius: 0;
+  background: var(--scholar-surface);
+  box-shadow: none;
+}
+
+.md-typeset details.problem > summary {
+  padding: 0.95rem 2.4rem 0.95rem 2.7rem;
+  color: var(--scholar-ink);
+  background: transparent;
+  font-family: var(--scholar-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset details.problem > summary::before {
+  background-color: var(--scholar-accent);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+  mask-image: var(--md-admonition-icon--example);
+}
+
+.md-typeset details.problem[open] > summary {
+  border-bottom: 1px solid var(--scholar-line);
+  background: var(--scholar-accent-soft);
+}
+
+.md-typeset details.problem > :not(summary) {
+  margin-right: 1.1rem;
+  margin-left: 1.1rem;
+}
+
+.md-typeset details.problem .problem-source {
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: center;
+  margin: 0.1rem 0 0.7rem;
+  color: var(--scholar-accent);
+  font-family: var(--scholar-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.md-typeset details.problem .problem-source:hover {
+  text-decoration: underline;
+}
+
+.md-typeset details.problem .highlight {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .scholar-home {
   margin: 0.8rem 0 4rem;
   color: var(--scholar-ink);
@@ -630,6 +687,11 @@ body {
     min-height: 0;
     padding: 1.2rem 0;
     border-right: 0;
+  }
+
+  .md-typeset details.problem > summary {
+    padding: 0.85rem 2.1rem 0.85rem 2.45rem;
+    font-size: 0.9rem;
   }
 }
 

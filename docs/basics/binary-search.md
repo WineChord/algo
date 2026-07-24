@@ -71,69 +71,19 @@ int main() {
 
 ## 3. 精确查找：LeetCode 704 { #leetcode-704 }
 
-[LeetCode 704. 二分查找](https://leetcode.cn/problems/binary-search/)
-
-### 暴力
-
-从左到右扫描，时间 \(O(n)\)、额外空间 \(O(1)\)。
-
-### 最优
-
-数组已升序，可以用二分。找到第一个 `>= target` 的位置，再检查是否相等。时间 \(O(\log n)\)、额外空间 \(O(1)\)。
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-class Solution {
-public:
-    int search(vector<int>& nums, int target) {
-        int l = 0, r = nums.size();
-        while (l < r) {
-            int m = l + (r - l) / 2;
-            if (nums[m] >= target) r = m;
-            else l = m + 1;
-        }
-        return l < nums.size() && nums[l] == target ? l : -1;
-    }
-};
-```
+--8<-- "includes/problems/lc-704.md"
 
 若只需要判断是否存在，标准库写法更短：`binary_search(nums.begin(), nums.end(), target)`。
 
 ## 4. 左右边界：LeetCode 34 { #leetcode-34 }
 
-[LeetCode 34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
-
-先找第一个 `>= target` 的位置 `l`，再找第一个 `> target` 的位置 `r`。答案是 \([l,r)\) 对应的闭区间 \([l,r-1]\)。
+--8<-- "includes/problems/lc-34.md"
 
 ### 为什么不搜索 `target + 1`
 
 当 `target == INT_MAX` 时，`target + 1` 会溢出。直接使用 `>` 谓词更安全。
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-class Solution {
-public:
-    vector<int> searchRange(vector<int>& a, int target) {
-        int n = a.size();
-        auto first = [&](bool upper) {
-            int l = 0, r = n;
-            while (l < r) {
-                int m = l + (r - l) / 2;
-                if (upper ? a[m] > target : a[m] >= target) r = m;
-                else l = m + 1;
-            }
-            return l;
-        };
-        int l = first(false);
-        if (l == n || a[l] != target) return vector<int>{-1, -1};
-        return vector<int>{l, first(true) - 1};
-    }
-};
-```
-
-时间 \(O(\log n)\)，额外空间 \(O(1)\)。使用 `lower_bound` 和 `upper_bound` 也是同一算法复杂度，实际提交时推荐优先使用标准库；手写版本用于真正理解区间语义和应对自定义谓词。
+使用 `lower_bound` 和 `upper_bound` 也是同一算法复杂度，实际提交时推荐优先使用标准库；手写版本用于真正理解区间语义和应对自定义谓词。
 
 ## 5. 答案二分：把最优化转成判定
 
@@ -153,72 +103,11 @@ public:
 
 ### LeetCode 875：最小速度
 
-[LeetCode 875. 爱吃香蕉的珂珂](https://leetcode.cn/problems/koko-eating-bananas/)
-
-速度越大，所需时间越少，因此“能在 `h` 小时内吃完”对速度单调。答案范围是 \([1,\max(piles)]\)。
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-class Solution {
-public:
-    int minEatingSpeed(vector<int>& piles, int h) {
-        int l = 1, r = *max_element(piles.begin(), piles.end());
-        auto ok = [&](int k) {
-            long long hours = 0;
-            for (int x : piles) hours += (x + k - 1LL) / k;
-            return hours <= h;
-        };
-        while (l < r) {
-            int m = l + (r - l) / 2;
-            if (ok(m)) r = m;
-            else l = m + 1;
-        }
-        return l;
-    }
-};
-```
-
-设最大堆为 \(M\)，二分 \(O(\log M)\) 次，每次扫描 \(n\) 堆，总时间 \(O(n\log M)\)，额外空间 \(O(1)\)。
+--8<-- "includes/problems/lc-875.md"
 
 ### LeetCode 410：最小化最大段和
 
-[LeetCode 410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum/)
-
-若规定每段和不能超过 \(x\)，可以贪心地尽量延长当前段；一旦加入下一个数会超过 \(x\)，就新开一段。这种策略得到所需段数的最小值。
-
-- 下界：单个元素不能拆开，所以至少是 \(\max a_i\)；
-- 上界：所有元素放在一段，所以至多是 \(\sum a_i\)；
-- \(x\) 越大，所需段数不会增加，判定单调。
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-class Solution {
-public:
-    int splitArray(vector<int>& nums, int k) {
-        long long l = *max_element(nums.begin(), nums.end());
-        long long r = accumulate(nums.begin(), nums.end(), 0LL);
-        auto ok = [&](long long limit) {
-            int parts = 1;
-            long long sum = 0;
-            for (int x : nums) {
-                if (sum + x > limit) ++parts, sum = 0;
-                sum += x;
-            }
-            return parts <= k;
-        };
-        while (l < r) {
-            long long m = l + (r - l) / 2;
-            if (ok(m)) r = m;
-            else l = m + 1;
-        }
-        return (int)l;
-    }
-};
-```
-
-设数组和为 \(S\)，总时间 \(O(n\log S)\)，额外空间 \(O(1)\)。
+--8<-- "includes/problems/lc-410.md"
 
 ## 6. 浮点二分
 
@@ -269,12 +158,22 @@ int main() {
 | 变化 | 原方法是否可用 | 对应方向 |
 | --- | --- | --- |
 | 数组降序 | 可用，但谓词方向改变 | 重新定义单调 `check` |
-| 数组旋转后仍分段有序 | 需要判断哪一半有序 | [LeetCode 33](https://leetcode.cn/problems/search-in-rotated-sorted-array/) |
-| 存在大量重复且旋转 | 最坏可能退化到 \(O(n)\) | [LeetCode 81](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/) |
+| 数组旋转后仍分段有序 | 需要判断哪一半有序 | LeetCode 33（见下方） |
+| 存在大量重复且旋转 | 最坏可能退化到 \(O(n)\) | LeetCode 81（见下方） |
 | 不知道右边界 | 先指数扩张，再二分 | 无界有序序列搜索 |
 | 数据动态插入删除 | 静态数组二分不足 | `set`、平衡树、值域数据结构 |
-| 求第 \(k\) 小配对距离 | 对距离做答案二分，双指针判定 | [LeetCode 719](https://leetcode.cn/problems/find-k-th-smallest-pair-distance/) |
-| 求矩阵第 \(k\) 小 | 对值域二分，计数判定 | [LeetCode 378](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/) |
+| 求第 \(k\) 小配对距离 | 对距离做答案二分，双指针判定 | LeetCode 719（见下方） |
+| 求矩阵第 \(k\) 小 | 对值域二分，计数判定 | LeetCode 378（见下方） |
+
+### 对应题目
+
+--8<-- "includes/problems/lc-33.md"
+
+--8<-- "includes/problems/lc-81.md"
+
+--8<-- "includes/problems/lc-719.md"
+
+--8<-- "includes/problems/lc-378.md"
 
 ## 最终记忆建议
 

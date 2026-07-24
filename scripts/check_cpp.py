@@ -8,8 +8,11 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = sorted((ROOT / "docs").rglob("*.md"))
-FENCE = re.compile(r"^```(?:cpp|c\+\+)(?:\s+.*)?$")
+FILES = [
+    *sorted((ROOT / "docs").rglob("*.md")),
+    *sorted((ROOT / "includes" / "problems").glob("*.md")),
+]
+FENCE = re.compile(r"^(?P<indent>\s*)```(?:cpp|c\+\+)(?:\s+.*)?$")
 HEADERS = """#include <algorithm>
 #include <array>
 #include <bitset>
@@ -51,18 +54,21 @@ for path in FILES:
     block: list[str] = []
     in_cpp = False
     skip = False
+    indent = ""
     for number, line in enumerate(lines, 1):
-        if not in_cpp and FENCE.match(line):
+        match = FENCE.match(line) if not in_cpp else None
+        if match:
             in_cpp = True
             start = number
             block = []
+            indent = match.group("indent")
             skip = number > 1 and lines[number - 2].strip() == "<!-- compile:skip -->"
-        elif in_cpp and line == "```":
+        elif in_cpp and line.strip() == "```":
             if not skip:
                 snippets.append((path, start, "\n".join(block) + "\n"))
             in_cpp = False
         elif in_cpp:
-            block.append(line)
+            block.append(line[len(indent):] if line.startswith(indent) else line)
 
 failures: list[str] = []
 with tempfile.TemporaryDirectory(prefix="algo-cpp-") as directory:

@@ -41,9 +41,11 @@ BFS 按距离分层扩展，因此在**边权全部相等**的图上第一次到
 
 代表题目：
 
-- [LeetCode 200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
-- [LeetCode 994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
-- [洛谷 P5318【深基18.例3】查找文献](https://www.luogu.com.cn/problem/P5318)
+--8<-- "includes/problems/lc-200.md"
+
+--8<-- "includes/problems/lc-994.md"
+
+--8<-- "includes/problems/luogu-p5318.md"
 
 ## 最短路选择
 
@@ -63,9 +65,11 @@ BFS 按距离分层扩展，因此在**边权全部相等**的图上第一次到
 
 相关题目：
 
-- [LeetCode 743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
-- [LeetCode 1368. 使网格图至少有一条有效路径的最小代价](https://leetcode.cn/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
-- [洛谷 P4779【模板】单源最短路径（标准版）](https://www.luogu.com.cn/problem/P4779)
+--8<-- "includes/problems/lc-743.md"
+
+--8<-- "includes/problems/lc-1368.md"
+
+--8<-- "includes/problems/luogu-p4779.md"
 
 ## DAG 与拓扑排序
 
@@ -80,9 +84,11 @@ BFS 按距离分层扩展，因此在**边权全部相等**的图上第一次到
 
 代表题目：
 
-- [LeetCode 207. 课程表](https://leetcode.cn/problems/course-schedule/)
-- [LeetCode 210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
-- [LeetCode 1857. 有向图中最大颜色值](https://leetcode.cn/problems/largest-color-value-in-a-directed-graph/)
+--8<-- "includes/problems/lc-207.md"
+
+--8<-- "includes/problems/lc-210.md"
+
+--8<-- "includes/problems/lc-1857.md"
 
 ## 最小生成树
 

@@ -4,8 +4,19 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md"))]
-FENCE = re.compile(r"^```(?:cpp|c\+\+)(?:\s+.*)?$")
+DOCS = sorted((ROOT / "docs").rglob("*.md"))
+PROBLEMS = sorted((ROOT / "includes" / "problems").glob("*.md"))
+FILES = [ROOT / "README.md", *DOCS, *PROBLEMS]
+FENCE = re.compile(r"^\s*```(?:cpp|c\+\+)(?:\s+.*)?$", re.MULTILINE)
+PROBLEM_URL = re.compile(
+    r"https://leetcode\.cn/problems/[a-z0-9-]+/"
+    r"|https://www\.luogu\.com\.cn/problem/[A-Za-z0-9]+"
+    r"|https://(?:www\.)?codeforces\.com/(?:contest/\d+/problem/[A-Za-z0-9]+|problemset/problem/\d+/[A-Za-z0-9]+)"
+    r"|https://atcoder\.jp/contests/[A-Za-z0-9_-]+/tasks/[A-Za-z0-9_-]+"
+    r"|https://ac\.nowcoder\.com/acm/problem/\d+"
+    r"|https://www\.acwing\.com/problem/content/\d+/"
+)
+SNIPPET = re.compile(r'--8<-- "(includes/problems/[^"]+\.md)"')
 errors: list[str] = []
 
 for path in FILES:
@@ -17,7 +28,7 @@ for path in FILES:
             in_cpp = True
             fence_line = number
             continue
-        if in_cpp and line == "```":
+        if in_cpp and line.strip() == "```":
             in_cpp = False
             continue
         if in_cpp and not line.strip():
@@ -27,7 +38,45 @@ for path in FILES:
     if in_cpp:
         errors.append(f"{path.relative_to(ROOT)}:{fence_line}: C++ 代码块未闭合")
 
+referenced: set[Path] = set()
+for path in [ROOT / "README.md", *DOCS]:
+    text = path.read_text(encoding="utf-8")
+    if PROBLEM_URL.search(text):
+        errors.append(f"{path.relative_to(ROOT)}: 题目原始链接必须放入默认折叠的题目详情片段")
+    for snippet in SNIPPET.findall(text):
+        target = ROOT / snippet
+        if not target.is_file():
+            errors.append(f"{path.relative_to(ROOT)}: 引用的题目详情不存在：{snippet}")
+        else:
+            referenced.add(target.resolve())
+
+required = ("**题意**", "**思路**", "**复杂度**", "**C++ 实现**")
+urls: dict[str, Path] = {}
+for path in PROBLEMS:
+    text = path.read_text(encoding="utf-8")
+    if path.resolve() not in referenced:
+        errors.append(f"{path.relative_to(ROOT)}: 题目详情未被任何页面引用")
+    first = next((line for line in text.splitlines() if line.strip()), "")
+    if not first.startswith('??? problem "'):
+        errors.append(f"{path.relative_to(ROOT)}: 题目详情必须使用默认折叠的 ??? problem")
+    if first.startswith("???+"):
+        errors.append(f"{path.relative_to(ROOT)}: 题目详情不得默认展开")
+    for marker in required:
+        if marker not in text:
+            errors.append(f"{path.relative_to(ROOT)}: 缺少 {marker}")
+    if not FENCE.search(text):
+        errors.append(f"{path.relative_to(ROOT)}: 缺少 C++ 实现代码块")
+    found = PROBLEM_URL.findall(text)
+    if len(found) != 1:
+        errors.append(f"{path.relative_to(ROOT)}: 必须且只能包含一个题目原始链接")
+    elif found[0] in urls:
+        errors.append(
+            f"{path.relative_to(ROOT)}: 与 {urls[found[0]].relative_to(ROOT)} 重复收录同一题目"
+        )
+    else:
+        urls[found[0]] = path
+
 if errors:
     print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)
-print(f"内容检查通过：{len(FILES)} 个 Markdown 文件")
+print(f"内容检查通过：{len(DOCS)} 个页面，{len(PROBLEMS)} 个默认折叠题目详情")

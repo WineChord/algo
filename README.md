@@ -10,6 +10,7 @@
 ## 内容特点
 
 - 从约束和暴力解出发，解释优化动机，而不是只给模板。
+- 每道在线评测题都可点击展开题意、思路、复杂度与完整 C++ 实现。
 - 同时记录正确性依据、复杂度、易错点、追问与相关题目。
 - C++ 实现保持简洁、可读、贴近竞赛现场。
 - 通过知识地图、题型索引和双向链接连接零散题目。
@@ -21,6 +22,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/check_content.py
+python scripts/check_cpp.py
 mkdocs serve
 ```
 
@@ -33,6 +35,7 @@ mkdocs build --strict
 ## 目录
 
 - `docs/`：网站正文
+- `includes/problems/`：可跨专题复用的折叠题目详情
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
 - `scripts/check_cpp.py`：逐个编译 C++ 代码块

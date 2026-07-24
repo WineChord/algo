@@ -125,12 +125,17 @@ E=p(E+1)+(1-p)\cdot 1
 
 ## 代表题目
 
-- [LeetCode 50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
-- [LeetCode 204. 计数质数](https://leetcode.cn/problems/count-primes/)
-- [LeetCode 372. 超级次方](https://leetcode.cn/problems/super-pow/)
-- [LeetCode 878. 第 N 个神奇数字](https://leetcode.cn/problems/nth-magical-number/)
-- [洛谷 P3383【模板】线性筛素数](https://www.luogu.com.cn/problem/P3383)
-- [洛谷 P1082【模板】同余方程](https://www.luogu.com.cn/problem/P1082)
+--8<-- "includes/problems/lc-50.md"
+
+--8<-- "includes/problems/lc-204.md"
+
+--8<-- "includes/problems/lc-372.md"
+
+--8<-- "includes/problems/lc-878.md"
+
+--8<-- "includes/problems/luogu-p3383.md"
+
+--8<-- "includes/problems/luogu-p1082.md"
 
 ## 易错检查
 

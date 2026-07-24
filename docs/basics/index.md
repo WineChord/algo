@@ -30,9 +30,11 @@
 
 代表题目：
 
-- [LeetCode 15. 三数之和](https://leetcode.cn/problems/3sum/)
-- [LeetCode 56. 合并区间](https://leetcode.cn/problems/merge-intervals/)
-- [洛谷 P1177【模板】排序](https://www.luogu.com.cn/problem/P1177)
+--8<-- "includes/problems/lc-15.md"
+
+--8<-- "includes/problems/lc-56.md"
+
+--8<-- "includes/problems/luogu-p1177.md"
 
 ## 双指针与滑动窗口
 
@@ -52,9 +54,11 @@
 
 代表题目：
 
-- [LeetCode 11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
-- [LeetCode 3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
-- [LeetCode 76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/)
+--8<-- "includes/problems/lc-11.md"
+
+--8<-- "includes/problems/lc-3.md"
+
+--8<-- "includes/problems/lc-76.md"
 
 ## 前缀和与差分
 
@@ -74,9 +78,11 @@ S(x_1,y_1,x_2,y_2)=s_{x_2,y_2}-s_{x_1-1,y_2}-s_{x_2,y_1-1}+s_{x_1-1,y_1-1}
 
 代表题目：
 
-- [LeetCode 560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
-- [LeetCode 1109. 航班预订统计](https://leetcode.cn/problems/corporate-flight-bookings/)
-- [LeetCode 304. 二维区域和检索](https://leetcode.cn/problems/range-sum-query-2d-immutable/)
+--8<-- "includes/problems/lc-560.md"
+
+--8<-- "includes/problems/lc-1109.md"
+
+--8<-- "includes/problems/lc-304.md"
 
 ## 离散化
 

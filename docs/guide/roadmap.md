@@ -34,10 +34,13 @@
 
 推荐练习：
 
-- [LeetCode 704. 二分查找](https://leetcode.cn/problems/binary-search/)
-- [LeetCode 3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
-- [LeetCode 560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
-- [LeetCode 56. 合并区间](https://leetcode.cn/problems/merge-intervals/)
+--8<-- "includes/problems/lc-704.md"
+
+--8<-- "includes/problems/lc-3.md"
+
+--8<-- "includes/problems/lc-560.md"
+
+--8<-- "includes/problems/lc-56.md"
 
 ## 阶段 2：数据结构与搜索
 

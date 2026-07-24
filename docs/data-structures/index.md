@@ -30,16 +30,19 @@
 
 代表题目：
 
-- [LeetCode 20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
-- [LeetCode 84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/)
-- [LeetCode 739. 每日温度](https://leetcode.cn/problems/daily-temperatures/)
+--8<-- "includes/problems/lc-20.md"
+
+--8<-- "includes/problems/lc-84.md"
+
+--8<-- "includes/problems/lc-739.md"
 
 ### 队列与双端队列
 
 普通队列表达按层扩展，是 BFS 的核心。双端队列还能维护单调候选，用于滑动窗口最值。
 
-- [LeetCode 239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
-- [LeetCode 862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/)
+--8<-- "includes/problems/lc-239.md"
+
+--8<-- "includes/problems/lc-862.md"
 
 ## 堆
 
@@ -55,9 +58,11 @@
 
 代表题目：
 
-- [LeetCode 215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
-- [LeetCode 295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
-- [LeetCode 23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
+--8<-- "includes/problems/lc-215.md"
+
+--8<-- "includes/problems/lc-295.md"
+
+--8<-- "includes/problems/lc-23.md"
 
 ## 哈希表与有序映射
 
@@ -85,9 +90,11 @@
 
 代表题目：
 
-- [LeetCode 684. 冗余连接](https://leetcode.cn/problems/redundant-connection/)
-- [LeetCode 721. 账户合并](https://leetcode.cn/problems/accounts-merge/)
-- [洛谷 P3367【模板】并查集](https://www.luogu.com.cn/problem/P3367)
+--8<-- "includes/problems/lc-684.md"
+
+--8<-- "includes/problems/lc-721.md"
+
+--8<-- "includes/problems/luogu-p3367.md"
 
 ## 树状数组与线段树
 
