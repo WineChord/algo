@@ -16,15 +16,11 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: custom
-      accent: custom
       toggle:
         icon: material/weather-night
         name: 切换至深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: custom
-      accent: custom
       toggle:
         icon: material/weather-sunny
         name: 切换至浅色模式
@@ -99,7 +95,6 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/WineChord
