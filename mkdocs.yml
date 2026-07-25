@@ -109,6 +109,7 @@ nav:
       - 竞赛 C++: guide/cpp.md
   - 基础技巧:
       - 知识地图: basics/index.md
+      - 前 k 个极值: basics/top-k-extrema.md
       - 二分查找: basics/binary-search.md
   - 数据结构: data-structures/index.md
   - 图论: graph/index.md
