@@ -42,6 +42,8 @@
 
 --8<-- "includes/problems/lc-3536.md"
 
+--8<-- "includes/problems/lc-628.md"
+
 ## 数据结构
 
 --8<-- "includes/problems/lc-20.md"

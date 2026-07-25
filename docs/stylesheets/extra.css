@@ -1,3 +1,19 @@
 :root {
   --md-text-font: "PingFang SC";
 }
+
+@media screen and (max-width: 44.984375em) {
+  .md-typeset pre,
+  .md-typeset pre > code {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .md-typeset pre > code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    word-break: break-word;
+    tab-size: 2;
+  }
+}
