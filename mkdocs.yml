@@ -110,7 +110,9 @@ nav:
   - 基础技巧:
       - 知识地图: basics/index.md
       - 序列扫描与不变量: basics/sequence-invariants.md
-      - 前 k 个极值: basics/top-k-extrema.md
+      - 极值候选与 Top-K: basics/top-k-extrema.md
+      - 非负两数乘积: basics/pair-product-extrema.md
+      - 有符号乘积: basics/signed-product-extrema.md
       - 二分查找: basics/binary-search.md
   - 数据结构:
       - 知识地图: data-structures/index.md

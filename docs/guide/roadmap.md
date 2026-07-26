@@ -26,7 +26,8 @@
 | 模块 | 必会内容 | 识别信号 |
 | --- | --- | --- |
 | 排序 | 比较排序、稳定性、自定义比较器 | 顺序不重要、相邻关系、离线处理 |
-| [前 $k$ 个极值](../basics/top-k-extrema.md) | 最大值、次大值、小根堆 | 只需要少量候选、流式输入 |
+| [极值候选与 Top-K](../basics/top-k-extrema.md) | 固定变量、小根堆、可合并摘要 | 只需要少量候选、流式输入 |
+| [乘积极值](../basics/pair-product-extrema.md) | 非负前二与[有符号双端候选](../basics/signed-product-extrema.md) | 目标对因子单调、负号改变候选 |
 | 二分 | 边界查找、答案二分 | 单调性、最小可行值、最大合法值 |
 | [序列扫描](../basics/sequence-invariants.md) | 局部窗口、补数哈希、双指针、双端结算 | 局部贡献、单调移动、唯一扩张起点 |
 | 前缀和 | 一维、二维、异或前缀 | 静态区间查询、子数组统计 |
@@ -44,6 +45,10 @@
 --8<-- "includes/problems/lc-56.md"
 
 --8<-- "includes/problems/lc-3536.md"
+
+--8<-- "includes/problems/lc-1464.md"
+
+--8<-- "includes/problems/lc-628.md"
 
 ## 阶段 2：数据结构与搜索
 

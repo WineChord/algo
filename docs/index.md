@@ -14,6 +14,7 @@
 
 - [基础技巧](basics/index.md)
 - [序列扫描与不变量](basics/sequence-invariants.md)
+- [极值候选与 Top-K](basics/top-k-extrema.md)
 - [数据结构](data-structures/index.md)
 - [哈希分组与 LRU](data-structures/hash-and-cache.md)
 - [图论](graph/index.md)
