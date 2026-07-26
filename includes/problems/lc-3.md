@@ -14,17 +14,17 @@
     using namespace std;
     class Solution {
     public:
-        int lengthOfLongestSubstring(string s) {
-            array<int, 256> last;
-            last.fill(-1);
-            int ans = 0, l = 0;
-            for (int r = 0; r < (int)s.size(); ++r) {
-                unsigned char c = s[r];
-                l = max(l, last[c] + 1);
-                last[c] = r;
-                ans = max(ans, r - l + 1);
-            }
-            return ans;
+      int lengthOfLongestSubstring(string s) {
+        array<int, 256> last;
+        last.fill(-1);
+        int answer = 0, left = 0;
+        for (int right = 0; right < (int)s.size(); ++right) {
+          unsigned char c = s[right];
+          left = max(left, last[c] + 1);
+          last[c] = right;
+          answer = max(answer, right - left + 1);
         }
+        return answer;
+      }
     };
     ```

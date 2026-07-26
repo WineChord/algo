@@ -109,13 +109,22 @@ nav:
       - 竞赛 C++: guide/cpp.md
   - 基础技巧:
       - 知识地图: basics/index.md
+      - 序列扫描与不变量: basics/sequence-invariants.md
       - 前 k 个极值: basics/top-k-extrema.md
       - 二分查找: basics/binary-search.md
-  - 数据结构: data-structures/index.md
-  - 图论: graph/index.md
-  - 动态规划: dp/index.md
+  - 数据结构:
+      - 知识地图: data-structures/index.md
+      - 哈希分组与 LRU: data-structures/hash-and-cache.md
+  - 图论:
+      - 知识地图: graph/index.md
+      - 0-1 权与奇偶状态: graph/weighted-parity-states.md
+  - 动态规划:
+      - 知识地图: dp/index.md
+      - 线性递推: dp/linear-recurrences.md
   - 数学: math/index.md
-  - 字符串: strings/index.md
+  - 字符串:
+      - 知识地图: strings/index.md
+      - 回文中心与半径: strings/palindrome-centers.md
   - 题解:
       - 题解索引: problems/index.md
       - 写作模板: problems/template.md

@@ -26,6 +26,7 @@ HEADERS = """#include <algorithm>
 #include <iomanip>
 #include <iostream>
 #include <limits>
+#include <list>
 #include <map>
 #include <numeric>
 #include <queue>

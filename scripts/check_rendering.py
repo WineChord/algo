@@ -725,6 +725,26 @@ def browser_audit(
                             ].filter((image) =>
                               image.complete && image.naturalWidth === 0
                             ).length;
+                            const codeElements = [
+                              ...document.querySelectorAll(
+                                'article.md-content__inner pre, '
+                                + 'article.md-content__inner pre > code'
+                              )
+                            ];
+                            const codeOverflow = codeElements.filter((element) =>
+                              element.scrollWidth > element.clientWidth + 1
+                            ).length;
+                            const unwrappedCode = [
+                              ...document.querySelectorAll(
+                                'article.md-content__inner pre > code'
+                              )
+                            ].filter((element) => {
+                              const style = getComputedStyle(element);
+                              return style.whiteSpace !== 'pre-wrap'
+                                || !['anywhere', 'break-word'].includes(
+                                  style.overflowWrap
+                                );
+                            }).length;
                             return {
                               version: window.MathJax
                                 && window.MathJax.version
@@ -735,6 +755,8 @@ def browser_audit(
                               mathErrors,
                               badOverflow,
                               brokenImages,
+                              codeOverflow,
+                              unwrappedCode,
                               raw,
                               article: !!article,
                               documentOverflow:
@@ -781,6 +803,16 @@ def browser_audit(
                         if stats["documentOverflow"]:
                             errors.append(
                                 f"{route}: page has horizontal overflow at {width}px"
+                            )
+                        if mobile and stats["codeOverflow"]:
+                            errors.append(
+                                f"{route}: {stats['codeOverflow']} code containers "
+                                f"overflow at {width}px"
+                            )
+                        if mobile and stats["unwrappedCode"]:
+                            errors.append(
+                                f"{route}: {stats['unwrappedCode']} code blocks "
+                                f"lack pre-wrap/overflow-wrap at {width}px"
                             )
                         logs = driver.get_log("browser")
                         severe = [

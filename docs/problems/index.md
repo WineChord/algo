@@ -6,6 +6,10 @@
 
 ## 基础技巧与二分
 
+--8<-- "includes/problems/atcoder-abc468-a.md"
+
+--8<-- "includes/problems/lc-1.md"
+
 --8<-- "includes/problems/lc-15.md"
 
 --8<-- "includes/problems/lc-56.md"
@@ -15,6 +19,10 @@
 --8<-- "includes/problems/lc-11.md"
 
 --8<-- "includes/problems/lc-3.md"
+
+--8<-- "includes/problems/lc-42.md"
+
+--8<-- "includes/problems/lc-128.md"
 
 --8<-- "includes/problems/lc-76.md"
 
@@ -45,6 +53,10 @@
 --8<-- "includes/problems/lc-628.md"
 
 ## 数据结构
+
+--8<-- "includes/problems/lc-49.md"
+
+--8<-- "includes/problems/lc-146.md"
 
 --8<-- "includes/problems/lc-20.md"
 
@@ -89,6 +101,12 @@
 --8<-- "includes/problems/lc-847.md"
 
 ## 图论
+
+--8<-- "includes/problems/lc-3286.md"
+
+--8<-- "includes/problems/lc-3996.md"
+
+--8<-- "includes/problems/codeforces-2247-a.md"
 
 --8<-- "includes/problems/lc-200.md"
 

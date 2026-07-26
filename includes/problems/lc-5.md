@@ -14,14 +14,25 @@
     using namespace std;
     class Solution {
     public:
-        string longestPalindrome(string s) {
-            int n=s.size(),best=0,len=1;
-            auto go=[&](int l,int r){
-                while(l>=0&&r<n&&s[l]==s[r]) l--,r++;
-                if(r-l-1>len) best=l+1,len=r-l-1;
-            };
-            for(int i=0;i<n;i++) go(i,i),go(i,i+1);
-            return s.substr(best,len);
+      string longestPalindrome(string s) {
+        int n = s.size();
+        int bestStart = 0, bestLength = 1;
+        auto expand = [&](int left, int right) {
+          while (left >= 0 && right < n && s[left] == s[right]) {
+            --left;
+            ++right;
+          }
+          int length = right - left - 1;
+          if (length > bestLength) {
+            bestStart = left + 1;
+            bestLength = length;
+          }
+        };
+        for (int center = 0; center < n; ++center) {
+          expand(center, center);
+          expand(center, center + 1);
         }
+        return s.substr(bestStart, bestLength);
+      }
     };
     ```
