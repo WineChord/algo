@@ -117,6 +117,8 @@ nav:
       - 二分查找: basics/binary-search.md
   - 数据结构:
       - 知识地图: data-structures/index.md
+      - 链表与局部接线: data-structures/linked-lists.md
+      - 单调队列: data-structures/monotonic-queues.md
       - 哈希分组与 LRU: data-structures/hash-and-cache.md
   - 图论:
       - 知识地图: graph/index.md
@@ -128,9 +130,11 @@ nav:
       - 双序列动态规划: dp/sequence-dp.md
   - 数学:
       - 知识地图: math/index.md
+      - 排列排名与 Lehmer 码: math/permutation-ranking.md
       - 前缀余数与模构造: math/modular-constructions.md
   - 字符串:
       - 知识地图: strings/index.md
+      - 回文重排与字典序: strings/palindrome-rearrangements.md
       - 回文中心与半径: strings/palindrome-centers.md
   - 题解:
       - 题解索引: problems/index.md

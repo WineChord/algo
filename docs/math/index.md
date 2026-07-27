@@ -94,6 +94,8 @@ $$
 
 若 $n\ge p$、模数非质数或询问规模特殊，需要 Lucas、中国剩余定理或质因数分解等不同工具，不能直接沿用这一公式的实现。
 
+字典序排列计数把固定前缀后的方案看成连续块。普通排列的块大小是阶乘，多重集合排列的块大小是多项式系数；排名、逆排名和第 $k$ 个排列的统一推导见[排列排名：从字典序块到 Lehmer 码](permutation-ranking.md)。
+
 ## 矩阵与线性递推
 
 矩阵乘法能组合线性变换。若状态满足固定线性递推，可以把一次转移写成矩阵 $A$，通过快速幂求 $A^n$，把线性递推从 $O(n)$ 降为 $O(k^3\log n)$，其中 $k$ 是状态维度。
@@ -127,7 +129,11 @@ $$
 
 ## 代表题目
 
+--8<-- "includes/problems/atcoder-abc468-c.md"
+
 --8<-- "includes/problems/codeforces-2247-b.md"
+
+--8<-- "includes/problems/codeforces-2247-c.md"
 
 --8<-- "includes/problems/lc-50.md"
 

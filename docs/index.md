@@ -17,6 +17,8 @@
 - [前缀状态与差分覆盖](basics/prefix-sums-and-difference.md)
 - [极值候选与 Top-K](basics/top-k-extrema.md)
 - [数据结构](data-structures/index.md)
+- [链表与局部接线](data-structures/linked-lists.md)
+- [单调队列](data-structures/monotonic-queues.md)
 - [哈希分组与 LRU](data-structures/hash-and-cache.md)
 - [图论](graph/index.md)
 - [0-1 权与奇偶状态](graph/weighted-parity-states.md)
@@ -25,8 +27,10 @@
 - [线性递推](dp/linear-recurrences.md)
 - [双序列动态规划](dp/sequence-dp.md)
 - [数学](math/index.md)
+- [排列排名与 Lehmer 码](math/permutation-ranking.md)
 - [前缀余数与模构造](math/modular-constructions.md)
 - [字符串](strings/index.md)
+- [回文重排与字典序](strings/palindrome-rearrangements.md)
 - [回文中心与半径](strings/palindrome-centers.md)
 
 ## 其他

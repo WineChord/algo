@@ -1,5 +1,14 @@
 # 更新日志
 
+## 2026-07-28
+
+### 指针、窗口、排列与回文构造
+
+- 新增[链表与局部接线](data-structures/linked-lists.md)、[单调队列](data-structures/monotonic-queues.md)、[排列排名与 Lehmer 码](math/permutation-ranking.md)和[回文重排与字典序](strings/palindrome-rearrangements.md)专题，把哨兵接线、摊还淘汰、字典序分块和半边降维整理为可迁移的不变量。
+- 扩充[序列扫描](basics/sequence-invariants.md)、[前缀状态](basics/prefix-sums-and-difference.md)、[二分查找](basics/binary-search.md)与字符串知识地图，补齐稳定压缩、单次交易、前缀偏序可达性、半开区间边界和纵向公共前缀。
+- 收录 [AtCoder ABC468 C](problems/index.md#problem-atcoder-abc468-c)、[CF Round 1111 Div.2 C（2247C）](problems/index.md#problem-codeforces-2247-c)、[第 511 场周赛 Q3](problems/index.md#problem-lc-3998)、[LeetCode 3517](problems/index.md#problem-lc-3517)，以及 [LeetCode Top 21–30](problems/index.md) 的权威折叠题目条目。
+- 统一相关 C++ 为两空格缩进，并在窄屏保持自动折行；官方分值、平台难度与社区估算分别标注来源，缺失数值不作推断。
+
 ## 2026-07-27
 
 ### 链接与检索

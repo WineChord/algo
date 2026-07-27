@@ -72,7 +72,11 @@
 3. 不变量是什么？
 4. 什么条件变化会让它不再适用？
 
-配套专题：[哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。
+配套专题：
+
+- [链表：指针不变量与局部接线](../data-structures/linked-lists.md)；
+- [单调队列：维护仍可能最优的窗口候选](../data-structures/monotonic-queues.md)；
+- [哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。
 
 ## 阶段 3：动态规划、贪心与图论
 
@@ -105,8 +109,8 @@
 
 当基础算法能独立实现后，开始按题型做专题训练：
 
-- 字符串匹配、字典树、字符串哈希与[回文中心](../strings/palindrome-centers.md)；
-- 数论、组合计数、概率与期望；
+- 字符串匹配、字典树、字符串哈希、[回文重排](../strings/palindrome-rearrangements.md)与[回文中心](../strings/palindrome-centers.md)；
+- 数论、组合计数、[排列排名](../math/permutation-ranking.md)、概率与期望；
 - 树上问题、连通性、网络流；
 - 状态压缩、数位 DP、优化 DP；
 - 计算几何、多项式等进阶主题。
