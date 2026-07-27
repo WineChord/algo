@@ -899,6 +899,14 @@ def browser_audit(
                             "#" + fragment
                         )
                     )
+                    driver.execute_async_script(
+                        """
+                        const done = arguments[0];
+                        requestAnimationFrame(() =>
+                          requestAnimationFrame(() =>
+                            setTimeout(done, 300)));
+                        """
+                    )
                     deep_link_stats = wait.until(
                         lambda current: current.execute_script(
                             """
@@ -922,6 +930,11 @@ def browser_audit(
                             """
                         )
                     )
+                    if not driver.current_url.endswith("#" + fragment):
+                        errors.append(
+                            f"/problems/#{fragment}: another navigation "
+                            "behavior replaced the stable fragment"
+                        )
                     if not deep_link_stats["target"]:
                         errors.append(
                             f"/problems/#{fragment}: target anchor is missing"
