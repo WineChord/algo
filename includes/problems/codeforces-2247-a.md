@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-codeforces-2247-a"></div>
+
 ??? problem "CF Round 1111 · Div.2 A · Zero Sum（2247A）"
     [打开原题 ↗](https://codeforces.com/contest/2247/problem/A){ .problem-source }
 

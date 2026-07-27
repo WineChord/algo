@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-lc-1"></div>
+
 ??? problem "LeetCode 1 · 两数之和"
     [打开原题 ↗](https://leetcode.cn/problems/two-sum/){ .problem-source }
 

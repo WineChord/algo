@@ -2,33 +2,38 @@
 
 ## 2026-07-27
 
+### 链接与检索
+
+- 更新日志中的题目名称可直达[对应题目详情](problems/index.md)；带片段的链接会定位并展开目标题目，普通索引仍保持默认折叠。
+- 专题、路线、规范和权威来源使用描述性链接，减少在长页面和多级导航中的重复查找。
+
 ### 边界状态、后序聚合与构造
 
-- 新增前缀状态与差分专题，统一解释子数组计数、区间覆盖和在线查询的模型边界。
-- 新增双序列动态规划、树上后序聚合与前缀余数构造专题，补齐状态压缩、路径恢复、摘要设计和构造必要性证明。
-- 收录 AtCoder ABC468 B、CF Round 1111 Div.2 B（2247B）、第 511 场周赛 Q2，以及 LeetCode Top 11–20 的权威题目条目。
-- 扩充二分分割、链表逐位运算、边界收缩、连通分量、秩选择与有序归并等稳定知识节点，并统一相关 C++ 为两空格缩进。
+- 新增[前缀状态与差分专题](basics/prefix-sums-and-difference.md)，统一解释子数组计数、区间覆盖和在线查询的模型边界。
+- 新增[双序列动态规划](dp/sequence-dp.md)、[树上后序聚合](graph/tree-aggregation.md)与[前缀余数构造](math/modular-constructions.md)专题，补齐状态压缩、路径恢复、摘要设计和构造必要性证明。
+- 收录 [AtCoder ABC468 B](problems/index.md#problem-atcoder-abc468-b)、[CF Round 1111 Div.2 B（2247B）](problems/index.md#problem-codeforces-2247-b)、[第 511 场周赛 Q2](problems/index.md#problem-lc-3997)，以及 [LeetCode Top 11–20](problems/index.md) 的权威题目条目。
+- 扩充[二分分割](basics/binary-search.md)、[链表逐位运算](data-structures/index.md)、[边界收缩](basics/sequence-invariants.md)、[连通分量](graph/index.md)、[秩选择](data-structures/index.md)与[有序归并](basics/sequence-invariants.md)等稳定知识节点，并统一相关 C++ 为两空格缩进。
 
 ### 极值候选的分层学习路径
 
-- 将通用 Top-K 摘要、非负两数乘积和有符号三数乘积整理为职责清晰的三个专题，保留原极值入口并补齐导航、路线图与题解索引。
-- 收录 LeetCode 1464「数组中两元素的最大乘积」，从位置对枚举和排序推导到一次扫描维护前二，并说明平移后的非负单调性。
+- 将[通用 Top-K 摘要](basics/top-k-extrema.md)、[非负两数乘积](basics/pair-product-extrema.md)和[有符号三数乘积](basics/signed-product-extrema.md)整理为职责清晰的三个专题，保留原极值入口并补齐[导航与路线图](guide/roadmap.md)和[题解索引](problems/index.md)。
+- 收录 [LeetCode 1464「数组中两元素的最大乘积」](problems/index.md#problem-lc-1464)，从位置对枚举和排序推导到一次扫描维护前二，并说明平移后的非负单调性。
 - 统一相关题目的两空格 C++ 风格，补充重复值、负号、动态删除与区间摘要的模型边界。
 
 ## 2026-07-26
 
 ### 序列、哈希与状态不变量
 
-- 新增序列扫描专题，串联局部峰值、补数哈希、三数双指针、双端接雨水与连续段唯一扩张起点。
-- 新增哈希分组与 LRU 专题，补充签名无歧义、滑动窗口失效边界、链表与哈希双不变量。
-- 新增 0-1 权与奇偶状态专题，覆盖二值权最短路、骑士图二分颜色和相邻翻转的 GF(2) 解释。
-- 新增回文中心与线性递推专题，比较区间 DP、中心扩展、Manacher、滚动状态与快速倍增。
-- 收录 AtCoder ABC468 A、CF Round 1111 Div.2 A（2247A），以及 LeetCode 1、3、5、15、42、49、70、128、146、3286、3996 的权威折叠题目条目。
-- 统一新增与校正代码为两空格缩进、正常横向空格，并保持窄屏自动折行。
+- 新增[序列扫描专题](basics/sequence-invariants.md)，串联局部峰值、补数哈希、三数双指针、双端接雨水与连续段唯一扩张起点。
+- 新增[哈希分组与 LRU 专题](data-structures/hash-and-cache.md)，补充签名无歧义、滑动窗口失效边界、链表与哈希双不变量。
+- 新增 [0-1 权与奇偶状态专题](graph/weighted-parity-states.md)，覆盖二值权最短路、骑士图二分颜色和相邻翻转的 GF(2) 解释。
+- 新增[回文中心](strings/palindrome-centers.md)与[线性递推](dp/linear-recurrences.md)专题，比较区间 DP、中心扩展、Manacher、滚动状态与快速倍增。
+- 收录 [AtCoder ABC468 A](problems/index.md#problem-atcoder-abc468-a)、[CF Round 1111 Div.2 A（2247A）](problems/index.md#problem-codeforces-2247-a)，以及 [LeetCode 1](problems/index.md#problem-lc-1)、[LeetCode 3](problems/index.md#problem-lc-3)、[LeetCode 5](problems/index.md#problem-lc-5)、[LeetCode 15](problems/index.md#problem-lc-15)、[LeetCode 42](problems/index.md#problem-lc-42)、[LeetCode 49](problems/index.md#problem-lc-49)、[LeetCode 70](problems/index.md#problem-lc-70)、[LeetCode 128](problems/index.md#problem-lc-128)、[LeetCode 146](problems/index.md#problem-lc-146)、[LeetCode 3286](problems/index.md#problem-lc-3286)、[LeetCode 3996](problems/index.md#problem-lc-3996) 的权威折叠题目条目。
+- 统一新增与校正代码为[竞赛 C++ 规范](guide/cpp.md)中的两空格缩进与正常横向空格，并保持窄屏自动折行。
 
 ### 有符号极值与三数乘积
 
-- 收录 LeetCode 628「三个数的最大乘积」，从三重枚举、排序和值域计数推导到一次扫描。
+- 收录 [LeetCode 628「三个数的最大乘积」](problems/index.md#problem-lc-628)，从三重枚举、排序和值域计数推导到一次扫描。
 - 解释为什么有负数时必须同时保留三个最大值与两个最小值，并补充正确性证明、样例手推和方案比较。
 - 扩展到恢复下标、选择 $k$ 个数、动态增删、区间查询、数值互异和连续子数组等约束变化。
 - 改善移动端代码阅读：窄屏下保留源码缩进并自动折行，避免整页或代码块横向滚动。
@@ -37,29 +42,29 @@
 
 ### 前 $k$ 个极值
 
-- 新增单次扫描维护最大值、次大值与前 $k$ 个候选的专题，比较枚举、排序、计数和流式维护。
-- 收录 LeetCode 3536「两个数字的最大乘积」，补充正确性证明、复杂度下界、重复数位边界与方案选择。
+- 新增[单次扫描维护前 $k$ 个极值](basics/top-k-extrema.md)的专题，比较枚举、排序、计数和流式维护。
+- 收录 [LeetCode 3536「两个数字的最大乘积」](problems/index.md#problem-lc-3536)，补充正确性证明、复杂度下界、重复数位边界与方案选择。
 - 系统扩展到恢复答案、最优对计数、选择 $k$ 个数位、数值互异、负数数组、动态增删和区间查询。
 
 ## 2026-07-24
 
 ### 渲染质量
 
-- 统一公式分隔符并固定 MathJax 版本，避免合法 TeX 被当作普通文本。
+- 统一公式分隔符并固定 [MathJax](https://docs.mathjax.org/en/v3.2-latest/) 版本，避免合法 TeX 被当作普通文本。
 - 发布前校对 Markdown 与公式源、生成的 HTML，以及桌面和移动视口中的真实浏览器渲染。
 
 ### 界面精简
 
-- 恢复 MkDocs Material 的原生布局、配色与组件，只保留必要的字体设置。
-- 全站正文优先使用苹方，首页改为短标题、直接入口与分类链接。
+- 恢复 [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) 的原生布局、配色与组件，只保留必要的字体设置。
+- 全站正文优先使用苹方，[首页](index.md)改为短标题、直接入口与分类链接。
 
 ### 站点初始化
 
-- 建立算法知识库与 GitHub Pages 自动发布流程。
-- 完成学习路线、统一解题方法、复杂度分析与竞赛 C++ 规范。
-- 建立基础技巧、数据结构、图论、动态规划、数学和字符串知识地图。
-- 发布二分查找专题，覆盖边界二分、答案二分、正确性、易错点与变种。
-- 建立题解索引、写作模板、全文搜索、MathJax 与深浅色主题。
+- 建立算法知识库与 [GitHub Pages 自动发布流程](https://github.com/WineChord/algo/actions)。
+- 完成[学习路线](guide/roadmap.md)、[统一解题方法](guide/problem-solving.md)、[复杂度分析](guide/complexity.md)与[竞赛 C++ 规范](guide/cpp.md)。
+- 建立[基础技巧](basics/index.md)、[数据结构](data-structures/index.md)、[图论](graph/index.md)、[动态规划](dp/index.md)、[数学](math/index.md)和[字符串](strings/index.md)知识地图。
+- 发布[二分查找专题](basics/binary-search.md)，覆盖边界二分、答案二分、正确性、易错点与变种。
+- 建立[题解索引](problems/index.md)、[写作模板](problems/template.md)、全文搜索、[MathJax](https://docs.mathjax.org/en/v3.2-latest/) 与深浅色主题。
 
 ### 视觉系统
 
@@ -68,5 +73,5 @@
 
 ### 题目详情
 
-- 所有在线评测题统一为默认折叠的详情入口，展开后提供题意、思路、复杂度、原题链接和完整 C++ 实现。
-- 题目详情采用唯一片段跨专题复用，并增加结构、链接、折叠状态和 C++ 编译检查。
+- [所有在线评测题](problems/index.md)统一为默认折叠的详情入口，展开后提供题意、思路、复杂度、原题链接和完整 C++ 实现。
+- 题目详情采用唯一片段跨专题复用，并增加结构、链接、折叠状态和 [C++ 编译检查](guide/cpp.md)。

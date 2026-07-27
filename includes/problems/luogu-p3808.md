@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p3808"></div>
+
 ??? problem "洛谷 P3808 · AC 自动机（简单版）"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P3808){ .problem-source }
 

@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-lc-5"></div>
+
 ??? problem "LeetCode 5 · 最长回文子串"
     [打开原题 ↗](https://leetcode.cn/problems/longest-palindromic-substring/){ .problem-source }
 

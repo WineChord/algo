@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-lc-2"></div>
+
 ??? problem "LeetCode 2 · 两数相加"
     [打开原题 ↗](https://leetcode.cn/problems/add-two-numbers/){ .problem-source }
 

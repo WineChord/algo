@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p1048"></div>
+
 ??? problem "洛谷 P1048 · 采药"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P1048){ .problem-source }
 

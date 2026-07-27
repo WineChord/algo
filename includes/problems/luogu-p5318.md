@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p5318"></div>
+
 ??? problem "洛谷 P5318 · 查找文献"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P5318){ .problem-source }
 

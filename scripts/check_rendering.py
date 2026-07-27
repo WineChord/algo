@@ -575,6 +575,7 @@ def browser_audit(
 ) -> tuple[int, str, int]:
     try:
         from selenium import webdriver
+        from selenium.webdriver.common.by import By
         from selenium.webdriver.chrome.options import Options
         from selenium.webdriver.chrome.service import Service
         from selenium.webdriver.support.ui import WebDriverWait
@@ -835,6 +836,115 @@ def browser_audit(
                             f"{route}: browser audit failed at {width}px "
                             f"after three attempts: {type(exc).__name__}: {exc}"
                         )
+            problem_page = site_dir / "problems" / "index.html"
+            changelog_page = site_dir / "changelog" / "index.html"
+            if problem_page.is_file() and changelog_page.is_file():
+                try:
+                    driver.execute_cdp_cmd(
+                        "Emulation.setDeviceMetricsOverride",
+                        {
+                            "width": 1440,
+                            "height": 1000,
+                            "deviceScaleFactor": 1,
+                            "mobile": False,
+                        },
+                    )
+                    visits += 1
+                    driver.get(base_url + "/problems/")
+                    problem_stats = wait.until(
+                        lambda current: current.execute_script(
+                            """
+                            const details = [
+                              ...document.querySelectorAll('details.problem')
+                            ];
+                            const anchors = [
+                              ...document.querySelectorAll(
+                                '.problem-anchor[id^="problem-"]'
+                              )
+                            ];
+                            return {
+                              details: details.length,
+                              anchors: anchors.length,
+                              open: details.filter((item) => item.open).length,
+                            };
+                            """
+                        )
+                    )
+                    if (
+                        not problem_stats["details"]
+                        or problem_stats["anchors"] != problem_stats["details"]
+                    ):
+                        errors.append(
+                            "/problems/: problem details and stable anchors "
+                            "must have equal nonzero counts"
+                        )
+                    if problem_stats["open"]:
+                        errors.append(
+                            "/problems/: problem details must be collapsed "
+                            "without a fragment"
+                        )
+                    visits += 1
+                    driver.get(base_url + "/changelog/")
+                    link = wait.until(
+                        lambda current: current.find_element(
+                            By.CSS_SELECTOR,
+                            'a[href*="/problems/#problem-"]',
+                        )
+                    )
+                    target_url = link.get_attribute("href")
+                    fragment = target_url.partition("#")[2]
+                    link.click()
+                    wait.until(
+                        lambda current: current.current_url.endswith(
+                            "#" + fragment
+                        )
+                    )
+                    deep_link_stats = wait.until(
+                        lambda current: current.execute_script(
+                            """
+                            const fragment = decodeURIComponent(
+                              window.location.hash.slice(1)
+                            );
+                            const anchor = document.getElementById(fragment);
+                            const details = anchor?.nextElementSibling;
+                            return {
+                              target: !!anchor,
+                              opened: details instanceof HTMLDetailsElement
+                                && details.classList.contains('problem')
+                                && details.open,
+                              openCount: document.querySelectorAll(
+                                'details.problem[open]'
+                              ).length,
+                              top: anchor
+                                ? anchor.getBoundingClientRect().top
+                                : null,
+                            };
+                            """
+                        )
+                    )
+                    if not deep_link_stats["target"]:
+                        errors.append(
+                            f"/problems/#{fragment}: target anchor is missing"
+                        )
+                    if (
+                        not deep_link_stats["opened"]
+                        or deep_link_stats["openCount"] != 1
+                    ):
+                        errors.append(
+                            f"/problems/#{fragment}: deep link must open only "
+                            "its target disclosure"
+                        )
+                    top = deep_link_stats["top"]
+                    if top is None or not -1 <= top <= 180:
+                        errors.append(
+                            f"/problems/#{fragment}: target is outside the "
+                            f"expected viewport position ({top})"
+                        )
+                except Exception as exc:
+                    errors.append(
+                        "problem deep-link browser audit failed: "
+                        f"{type(exc).__name__}: {exc}"
+                    )
             driver.execute_cdp_cmd("Emulation.clearDeviceMetricsOverride", {})
         finally:
             driver.quit()

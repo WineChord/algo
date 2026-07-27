@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p1082"></div>
+
 ??? problem "洛谷 P1082 · 同余方程"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P1082){ .problem-source }
 

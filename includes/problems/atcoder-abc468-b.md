@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-atcoder-abc468-b"></div>
+
 ??? problem "AtCoder ABC468 B · Corridor Watch"
     [打开原题 ↗](https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en){ .problem-source }
 

@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-atcoder-abc468-a"></div>
+
 ??? problem "AtCoder ABC468 A · Maximal Value"
     [打开原题 ↗](https://atcoder.jp/contests/abc468/tasks/abc468_a){ .problem-source }
 

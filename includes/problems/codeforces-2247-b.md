@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-codeforces-2247-b"></div>
+
 ??? problem "CF Round 1111 · Div.2 B · Yet Another Constructive（2247B）"
     [打开原题 ↗](https://codeforces.com/problemset/problem/2247/B){ .problem-source }
 

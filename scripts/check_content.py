@@ -17,6 +17,16 @@ PROBLEM_URL = re.compile(
     r"|https://www\.acwing\.com/problem/content/\d+/"
 )
 SNIPPET = re.compile(r'--8<-- "(includes/problems/[^"]+\.md)"')
+PROBLEM_ANCHOR = re.compile(
+    r'^<div class="problem-anchor" id="(problem-[a-z0-9-]+)"></div>$'
+)
+MARKDOWN_LINK = re.compile(r"\[([^\]\n]+)\]\(([^)\n]+)\)")
+CHANGELOG_PROBLEM_LABEL = re.compile(
+    r"LeetCode\s+\d+"
+    r"|AtCoder\s+ABC\d+\s+[A-Z]\b"
+    r"|\b\d{4}[A-Z]\b"
+    r"|第\s*\d+\s*场周赛\s*Q\d+"
+)
 errors: list[str] = []
 
 for path in FILES:
@@ -52,14 +62,26 @@ for path in [ROOT / "README.md", *DOCS]:
 
 required = ("**题意**", "**思路**", "**复杂度**", "**C++ 实现**")
 urls: dict[str, Path] = {}
+anchors: set[str] = set()
 for path in PROBLEMS:
     text = path.read_text(encoding="utf-8")
     if path.resolve() not in referenced:
         errors.append(f"{path.relative_to(ROOT)}: 题目详情未被任何页面引用")
-    first = next((line for line in text.splitlines() if line.strip()), "")
-    if not first.startswith('??? problem "'):
+    nonempty = [line for line in text.splitlines() if line.strip()]
+    expected_anchor = f"problem-{path.stem}"
+    anchor_line = nonempty[0] if nonempty else ""
+    anchor_match = PROBLEM_ANCHOR.fullmatch(anchor_line)
+    if not anchor_match or anchor_match.group(1) != expected_anchor:
+        errors.append(
+            f"{path.relative_to(ROOT)}: 首行必须提供稳定锚点 "
+            f'<div class="problem-anchor" id="{expected_anchor}"></div>'
+        )
+    else:
+        anchors.add(expected_anchor)
+    disclosure = nonempty[1] if len(nonempty) > 1 else ""
+    if not disclosure.startswith('??? problem "'):
         errors.append(f"{path.relative_to(ROOT)}: 题目详情必须使用默认折叠的 ??? problem")
-    if first.startswith("???+"):
+    if disclosure.startswith("???+"):
         errors.append(f"{path.relative_to(ROOT)}: 题目详情不得默认展开")
     for marker in required:
         if marker not in text:
@@ -75,6 +97,32 @@ for path in PROBLEMS:
         )
     else:
         urls[found[0]] = path
+
+changelog = ROOT / "docs" / "changelog.md"
+changelog_text = changelog.read_text(encoding="utf-8")
+masked = list(changelog_text)
+for match in MARKDOWN_LINK.finditer(changelog_text):
+    label, target = match.groups()
+    if CHANGELOG_PROBLEM_LABEL.search(label):
+        if not target.startswith("problems/index.md#problem-"):
+            errors.append(
+                f"{changelog.relative_to(ROOT)}:{changelog_text.count(chr(10), 0, match.start()) + 1}: "
+                "题目名称应链接到站内题目详情"
+            )
+        elif target.partition("#")[2] not in anchors:
+            errors.append(
+                f"{changelog.relative_to(ROOT)}:{changelog_text.count(chr(10), 0, match.start()) + 1}: "
+                f"题目详情锚点不存在：{target}"
+            )
+    for index in range(match.start(), match.end()):
+        if masked[index] != "\n":
+            masked[index] = " "
+unlinked = "".join(masked)
+for match in CHANGELOG_PROBLEM_LABEL.finditer(unlinked):
+    errors.append(
+        f"{changelog.relative_to(ROOT)}:{changelog_text.count(chr(10), 0, match.start()) + 1}: "
+        f"题目名称应为可点击的站内详情链接：{match.group(0)}"
+    )
 
 if errors:
     print("\n".join(errors), file=sys.stderr)

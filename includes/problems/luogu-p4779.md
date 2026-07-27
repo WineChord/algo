@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p4779"></div>
+
 ??? problem "洛谷 P4779 · 单源最短路径（标准版）"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P4779){ .problem-source }
 

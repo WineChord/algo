@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-lc-3"></div>
+
 ??? problem "LeetCode 3 · 无重复字符的最长子串"
     [打开原题 ↗](https://leetcode.cn/problems/longest-substring-without-repeating-characters/){ .problem-source }
 

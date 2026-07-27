@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-lc-4"></div>
+
 ??? problem "LeetCode 4 · 寻找两个正序数组的中位数"
     [打开原题 ↗](https://leetcode.cn/problems/median-of-two-sorted-arrays/){ .problem-source }
 

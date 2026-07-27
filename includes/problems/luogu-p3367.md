@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p3367"></div>
+
 ??? problem "洛谷 P3367 · 并查集"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P3367){ .problem-source }
 

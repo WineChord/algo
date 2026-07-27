@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p3383"></div>
+
 ??? problem "洛谷 P3383 · 线性筛素数"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P3383){ .problem-source }
 

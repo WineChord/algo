@@ -2,6 +2,10 @@
   --md-text-font: "PingFang SC";
 }
 
+.problem-anchor {
+  scroll-margin-top: 4.8rem;
+}
+
 @media screen and (max-width: 44.984375em) {
   .md-typeset pre,
   .md-typeset pre > code {

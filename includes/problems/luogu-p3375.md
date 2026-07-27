@@ -1,3 +1,5 @@
+<div class="problem-anchor" id="problem-luogu-p3375"></div>
+
 ??? problem "洛谷 P3375 · KMP 字符串匹配"
     [打开原题 ↗](https://www.luogu.com.cn/problem/P3375){ .problem-source }
 
