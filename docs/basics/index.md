@@ -12,6 +12,7 @@
 | [非负两数乘积](pair-product-extrema.md) | 最大值、次大值与单调变换 | $O(n)$ | 两个因子非负且目标单调 |
 | [有符号乘积](signed-product-extrema.md) | 同时维护数轴两端 | $O(n)$ | 负号奇偶性改变候选结构 |
 | [二分查找](binary-search.md) | 在单调谓词上找分界点 | $O(\log n)$ | 可定义单调的 `check` |
+| [前缀状态与差分](prefix-sums-and-difference.md) | 边界状态关系与区间事件 | $O(n)$ | 聚合可由前缀关系或离线边界恢复 |
 | 双指针 | 指针只向一个方向移动 | $O(n)$ | 移动具有单调性 |
 | 滑动窗口 | 动态维护连续区间信息 | $O(n)$ | 扩张与收缩条件可维护 |
 | 前缀和 | 预处理可逆的区间聚合 | 预处理 $O(n)$，查询 $O(1)$ | 数据静态或修改较少 |
@@ -84,11 +85,13 @@ $$
 S(x_1,y_1,x_2,y_2)=s_{x_2,y_2}-s_{x_1-1,y_2}-s_{x_2,y_1-1}+s_{x_1-1,y_1-1}
 $$
 
-差分是前缀和的逆操作。对 $[l,r]$ 整体加 $x$，只需执行 $d_l\mathrel{+}=x$、$d_{r+1}\mathrel{-}=x$，最后对差分数组求前缀和恢复结果。
+差分是前缀和的逆操作。对 $[l,r]$ 整体加 $x$，只需执行 $d_l\mathrel{+}=x$、$d_{r+1}\mathrel{-}=x$，最后对差分数组求前缀和恢复结果。从区间恒等式推导到前缀频次、从批量覆盖推导到边界事件，见[前缀状态与差分覆盖](prefix-sums-and-difference.md)。
 
 代表题目：
 
 --8<-- "includes/problems/lc-560.md"
+
+--8<-- "includes/problems/atcoder-abc468-b.md"
 
 --8<-- "includes/problems/lc-1109.md"
 

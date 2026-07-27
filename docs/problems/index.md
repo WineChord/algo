@@ -8,11 +8,15 @@
 
 --8<-- "includes/problems/atcoder-abc468-a.md"
 
+--8<-- "includes/problems/atcoder-abc468-b.md"
+
 --8<-- "includes/problems/lc-1.md"
 
 --8<-- "includes/problems/lc-15.md"
 
 --8<-- "includes/problems/lc-56.md"
+
+--8<-- "includes/problems/lc-88.md"
 
 --8<-- "includes/problems/luogu-p1177.md"
 
@@ -48,6 +52,10 @@
 
 --8<-- "includes/problems/lc-378.md"
 
+--8<-- "includes/problems/lc-4.md"
+
+--8<-- "includes/problems/lc-54.md"
+
 --8<-- "includes/problems/lc-1464.md"
 
 --8<-- "includes/problems/lc-3536.md"
@@ -55,6 +63,8 @@
 --8<-- "includes/problems/lc-628.md"
 
 ## 数据结构
+
+--8<-- "includes/problems/lc-2.md"
 
 --8<-- "includes/problems/lc-49.md"
 
@@ -102,11 +112,15 @@
 
 --8<-- "includes/problems/lc-847.md"
 
+--8<-- "includes/problems/lc-72.md"
+
 ## 图论
 
 --8<-- "includes/problems/lc-3286.md"
 
 --8<-- "includes/problems/lc-3996.md"
+
+--8<-- "includes/problems/lc-3997.md"
 
 --8<-- "includes/problems/codeforces-2247-a.md"
 
@@ -129,6 +143,8 @@
 --8<-- "includes/problems/lc-1857.md"
 
 ## 数学
+
+--8<-- "includes/problems/codeforces-2247-b.md"
 
 --8<-- "includes/problems/lc-50.md"
 

@@ -76,6 +76,8 @@ int main() {
 
 固定阶递推从递归、记忆化到滚动状态与快速倍增的完整推导，见[线性递推：从递归树到滚动状态](linear-recurrences.md)。
 
+同时消耗两个序列前缀的状态设计、编辑距离与路径恢复，见[双序列动态规划](sequence-dp.md)。
+
 ## 记忆化搜索还是递推
 
 两者描述同一张状态 DAG：
@@ -125,6 +127,10 @@ int main() {
 --8<-- "includes/problems/lc-337.md"
 
 --8<-- "includes/problems/lc-847.md"
+
+### 双序列
+
+--8<-- "includes/problems/lc-72.md"
 
 ## 正确性检查
 

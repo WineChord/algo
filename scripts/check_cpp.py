@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 import os
 import re
 import shutil
@@ -49,13 +50,33 @@ if not compiler:
     print("未找到 C++ 编译器", file=sys.stderr)
     raise SystemExit(1)
 
-snippets: list[tuple[Path, int, str]] = []
+LIST_NODE_PRELUDE = """#include <bits/stdc++.h>
+using namespace std;
+struct ListNode {
+  int val;
+  ListNode* next;
+  ListNode(int x = 0, ListNode* p = nullptr) : val(x), next(p) {}
+};
+"""
+TREE_NODE_PRELUDE = """#include <bits/stdc++.h>
+using namespace std;
+struct TreeNode {
+  int val;
+  TreeNode* left;
+  TreeNode* right;
+  TreeNode(int x = 0, TreeNode* l = nullptr, TreeNode* r = nullptr)
+      : val(x), left(l), right(r) {}
+};
+"""
+
+snippets: list[tuple[Path, int, str, str | None]] = []
 for path in FILES:
     lines = path.read_text(encoding="utf-8").splitlines()
     start = 0
     block: list[str] = []
     in_cpp = False
     skip = False
+    prelude: str | None = None
     indent = ""
     for number, line in enumerate(lines, 1):
         match = FENCE.match(line) if not in_cpp else None
@@ -64,10 +85,15 @@ for path in FILES:
             start = number
             block = []
             indent = match.group("indent")
-            skip = number > 1 and lines[number - 2].strip() == "<!-- compile:skip -->"
+            directive = lines[number - 2].strip() if number > 1 else ""
+            skip = directive == "<!-- compile:skip -->"
+            prelude = {
+                "<!-- compile:leetcode-list -->": LIST_NODE_PRELUDE,
+                "<!-- compile:leetcode-tree -->": TREE_NODE_PRELUDE,
+            }.get(directive)
         elif in_cpp and line.strip() == "```":
             if not skip:
-                snippets.append((path, start, "\n".join(block) + "\n"))
+                snippets.append((path, start, "\n".join(block) + "\n", prelude))
             in_cpp = False
         elif in_cpp:
             block.append(line[len(indent):] if line.startswith(indent) else line)
@@ -77,16 +103,25 @@ with tempfile.TemporaryDirectory(prefix="algo-cpp-") as directory:
     temp = Path(directory)
     (temp / "bits").mkdir()
     (temp / "bits" / "stdc++.h").write_text(HEADERS, encoding="utf-8")
-    for index, (path, line, source) in enumerate(snippets, 1):
+    jobs: list[tuple[Path, int, Path]] = []
+    for index, (path, line, source, prelude) in enumerate(snippets, 1):
         target = temp / f"snippet-{index}.cpp"
-        target.write_text(source, encoding="utf-8")
+        target.write_text((prelude or "") + source, encoding="utf-8")
+        jobs.append((path, line, target))
+
+    def compile_one(job: tuple[Path, int, Path]) -> str | None:
+        path, line, target = job
         result = subprocess.run(
             [compiler, "-std=c++23", "-fsyntax-only", "-I", str(temp), str(target)],
             capture_output=True,
             text=True,
         )
         if result.returncode:
-            failures.append(f"{path.relative_to(ROOT)}:{line}\n{result.stderr.strip()}")
+            return f"{path.relative_to(ROOT)}:{line}\n{result.stderr.strip()}"
+        return None
+
+    with ThreadPoolExecutor(max_workers=min(8, max(1, os.cpu_count() or 1))) as pool:
+        failures.extend(failure for failure in pool.map(compile_one, jobs) if failure)
 
 if failures:
     print("\n\n".join(failures), file=sys.stderr)
