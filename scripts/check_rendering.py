@@ -1022,6 +1022,40 @@ def browser_audit(
                                   style.overflowWrap
                                 );
                             }).length;
+                            const viewportWidth =
+                              document.documentElement.clientWidth;
+                            const documentOverflow =
+                              document.documentElement.scrollWidth
+                              > viewportWidth + 1;
+                            const overflowNodes = documentOverflow
+                              ? [...document.querySelectorAll('body *')]
+                                .map((element) => {
+                                  const rect = element.getBoundingClientRect();
+                                  const style = getComputedStyle(element);
+                                  const className =
+                                    typeof element.className === 'string'
+                                      ? element.className.trim()
+                                      : '';
+                                  return {
+                                    label: element.tagName.toLowerCase()
+                                      + (element.id ? `#${element.id}` : '')
+                                      + (className
+                                        ? `.${className.replace(/\\s+/g, '.')}`
+                                        : ''),
+                                    right: Math.round(rect.right * 10) / 10,
+                                    width: Math.round(rect.width * 10) / 10,
+                                    scrollWidth: element.scrollWidth,
+                                    clientWidth: element.clientWidth,
+                                    overflowX: style.overflowX,
+                                  };
+                                })
+                                .filter((item) =>
+                                  item.width > 0
+                                  && item.right > viewportWidth + 1)
+                                .sort((left, right) =>
+                                  right.right - left.right)
+                                .slice(0, 8)
+                              : [];
                             return {
                               version: window.MathJax
                                 && window.MathJax.version
@@ -1039,9 +1073,8 @@ def browser_audit(
                               figureIssues,
                               raw,
                               article: !!article,
-                              documentOverflow:
-                                document.documentElement.scrollWidth
-                                > document.documentElement.clientWidth + 1,
+                              documentOverflow,
+                              overflowNodes,
                             };
                             """
                         )
@@ -1097,8 +1130,22 @@ def browser_audit(
                                 + "; ".join(stats["figureIssues"])
                             )
                         if stats["documentOverflow"]:
+                            overflow_detail = "; ".join(
+                                f"{item['label']} right={item['right']} "
+                                f"width={item['width']} "
+                                f"scroll/client={item['scrollWidth']}/"
+                                f"{item['clientWidth']} "
+                                f"overflow-x={item['overflowX']}"
+                                for item in stats["overflowNodes"]
+                            )
                             errors.append(
-                                f"{route}: page has horizontal overflow at {width}px"
+                                f"{route}: page has horizontal overflow at "
+                                f"{width}px"
+                                + (
+                                    f": {overflow_detail}"
+                                    if overflow_detail
+                                    else ""
+                                )
                             )
                         if mobile and stats["codeOverflow"]:
                             errors.append(
