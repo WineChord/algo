@@ -12,6 +12,13 @@ tags:
 
 > 在一个单调布尔序列中，找到 `false` 与 `true` 的分界点。
 
+<figure class="knowledge-figure" id="figure-binary-search-boundary">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/binary-search-boundary.svg" aria-label="打开二分查找边界不变量原图">
+    <img src="../../assets/figures/binary-search-boundary.svg" alt="半开区间中 false 到 true 的单调边界，以及 l、mid、r 的位置关系" width="960" height="450" loading="lazy" decoding="async">
+  </a>
+  <figcaption>搜索过程中，<code>[l, r)</code> 始终包含第一个满足条件的位置；<code>mid</code> 的真假只决定丢弃哪一侧。</figcaption>
+</figure>
+
 一旦能定义单调谓词 `check(x)`，数组、答案范围、时间或距离都可以成为二分对象。
 
 ## 1. 从线性扫描到对数查找
@@ -197,3 +204,9 @@ int main() {
 2. **答案二分**：先写判定、证明单调，再找最小可行或最大合法。
 
 `lower_bound`、`upper_bound` 应当会用；手写模板应当能从不变量重新推导。不要同时死记多套只差一个等号的代码。
+
+## Reference
+
+- [std::lower_bound — cppreference](https://en.cppreference.com/w/cpp/algorithm/lower_bound)
+- [LeetCode 704：二分查找](../problems/index.md#problem-lc-704)
+- [LeetCode 34：在排序数组中查找元素的第一个和最后一个位置](../problems/index.md#problem-lc-34)

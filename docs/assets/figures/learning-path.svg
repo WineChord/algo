@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">算法学习路径</title>
+  <desc id="figure-desc">从解题闭环到专题训练，并通过比赛复盘回到薄弱前置知识。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#ffffff"/>
+  <text x="54" y="48" fill="#172033" font-size="24" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>学习不是直线，而是带依赖的循环</text>
+  <circle cx="119" cy="122" r="32" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="119" y="130" fill="#2563eb" font-size="22" font-weight="700" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>0</text>
+  <rect x="54" y="178" width="132" height="84" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+  <text x="74" y="209" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>解题闭环</text>
+  <text x="74" y="235" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>读题 · 暴力 · 验证</text>
+  <circle cx="295" cy="122" r="32" fill="#ccfbf1" stroke="#0f766e" stroke-width="3"/>
+  <text x="295" y="130" fill="#0f766e" font-size="22" font-weight="700" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>1</text>
+  <rect x="230" y="178" width="132" height="84" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+  <text x="250" y="209" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>基础工具箱</text>
+  <text x="250" y="235" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>扫描 · 排序 · 二分</text>
+  <circle cx="471" cy="122" r="32" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/>
+  <text x="471" y="130" fill="#6d28d9" font-size="22" font-weight="700" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>2</text>
+  <rect x="406" y="178" width="132" height="84" rx="12" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+  <text x="426" y="209" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>结构与搜索</text>
+  <text x="426" y="235" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>栈队列 · 图遍历</text>
+  <circle cx="647" cy="122" r="32" fill="#ffedd5" stroke="#c2410c" stroke-width="3"/>
+  <text x="647" y="130" fill="#c2410c" font-size="22" font-weight="700" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>3</text>
+  <rect x="582" y="178" width="132" height="84" rx="12" fill="#ffffff" stroke="#c2410c" stroke-width="2"/>
+  <text x="602" y="209" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>模型与证明</text>
+  <text x="602" y="235" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>DP · 贪心 · 图论</text>
+  <circle cx="823" cy="122" r="32" fill="#dcfce7" stroke="#15803d" stroke-width="3"/>
+  <text x="823" y="130" fill="#15803d" font-size="22" font-weight="700" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>4</text>
+  <rect x="758" y="178" width="132" height="84" rx="12" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+  <text x="778" y="209" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>专题与比赛</text>
+  <text x="778" y="235" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>迁移 · 复盘 · 组合</text>
+  <line x1="151" y1="122" x2="224" y2="122" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="327" y1="122" x2="400" y2="122" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="503" y1="122" x2="576" y2="122" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="679" y1="122" x2="752" y2="122" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M 824 286 C 824 354, 118 354, 118 286" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <rect x="258" y="374" width="426" height="42" rx="4" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+  <text x="471" y="402" fill="#2563eb" font-size="17" font-weight="600" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>比赛暴露薄弱环节，复盘把知识重新接回前置节点</text>
+</svg>

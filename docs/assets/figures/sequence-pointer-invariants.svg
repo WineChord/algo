@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">序列扫描的指针不变量</title>
+  <desc id="figure-desc">滑动窗口、相向双指针和读写压缩对应不同的定稿语义。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="450" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>指针的移动方向来自“被跨过部分已经定稿”</text>
+  <text x="48" y="115" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>滑动窗口</text>
+  <rect x="210" y="92" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="236" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <rect x="268" y="92" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="294" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <rect x="326" y="92" width="52" height="48" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="352" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <rect x="384" y="92" width="52" height="48" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="410" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <rect x="442" y="92" width="52" height="48" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="468" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>4</text>
+  <rect x="500" y="92" width="52" height="48" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="526" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>5</text>
+  <rect x="558" y="92" width="52" height="48" rx="5" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="584" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>6</text>
+  <rect x="616" y="92" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="642" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>7</text>
+  <rect x="674" y="92" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="700" y="123" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>8</text>
+  <text x="326" y="82" fill="#0f766e" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>l</text>
+  <text x="610" y="82" fill="#0f766e" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>r</text>
+  <text x="210" y="168" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>窗口内状态合法；右扩、左缩</text>
+  <text x="48" y="233" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>相向双指针</text>
+  <rect x="210" y="210" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="236" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <rect x="268" y="210" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="294" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <rect x="326" y="210" width="52" height="48" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="352" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <rect x="384" y="210" width="52" height="48" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="410" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <rect x="442" y="210" width="52" height="48" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="468" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>4</text>
+  <rect x="500" y="210" width="52" height="48" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="526" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>5</text>
+  <rect x="558" y="210" width="52" height="48" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="584" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>6</text>
+  <rect x="616" y="210" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="642" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>7</text>
+  <rect x="674" y="210" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="700" y="241" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>8</text>
+  <text x="326" y="200" fill="#2563eb" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>l →</text>
+  <text x="610" y="200" fill="#2563eb" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>← r</text>
+  <text x="210" y="286" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>移动受限的一侧，一次排除一批组合</text>
+  <text x="48" y="351" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>读写压缩</text>
+  <rect x="210" y="328" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="236" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <rect x="268" y="328" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="294" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <rect x="326" y="328" width="52" height="48" rx="5" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="352" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <rect x="384" y="328" width="52" height="48" rx="5" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="410" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <rect x="442" y="328" width="52" height="48" rx="5" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="468" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>4</text>
+  <rect x="500" y="328" width="52" height="48" rx="5" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="526" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>5</text>
+  <rect x="558" y="328" width="52" height="48" rx="5" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="584" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>6</text>
+  <rect x="616" y="328" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="642" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>7</text>
+  <rect x="674" y="328" width="52" height="48" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="700" y="359" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>8</text>
+  <text x="326" y="318" fill="#6d28d9" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>write</text>
+  <text x="610" y="318" fill="#6d28d9" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>read →</text>
+  <text x="210" y="404" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>写指针之前是稳定答案前缀</text>
+</svg>

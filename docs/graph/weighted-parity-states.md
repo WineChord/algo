@@ -2,6 +2,13 @@
 
 很多“能否到达”问题并不需要保存完整路径。先判断答案依赖最短代价、步数奇偶，还是某个操作不变量，往往能把通用搜索压缩成更小状态，甚至变成 $O(1)$ 判定。
 
+<figure class="knowledge-figure" id="figure-parity-product-state">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/parity-product-state.svg" aria-label="打开奇偶乘积状态图原图">
+    <img src="../../assets/figures/parity-product-state.svg" alt="原图节点与 even、odd 两层奇偶状态组成乘积图，权值一的边翻转层，权值零的边保持层" width="960" height="460" loading="lazy" decoding="async">
+  </a>
+  <figcaption>当路径还携带一位奇偶信息时，把状态写成 <code>(u, p)</code>；沿权值 <code>w</code> 的边转移到 <code>(v, p xor w)</code>。</figcaption>
+</figure>
+
 ## 二值点权网格：从 DFS 到 0-1 BFS
 
 在二值网格中进入格子的损失是 0 或 1。把每个格子建成点，把“进入目标格的值”作为边权，问题就成为单源最短路。
@@ -79,3 +86,10 @@ $$
 1. 被删除的信息不会改变答案；
 2. 剩余条件不仅必要，而且充分；
 3. 棋盘尺寸、障碍、权值范围或操作集合变化后，证明是否仍成立。
+
+## Reference
+
+- [LeetCode 3286：穿越网格图的安全路径](../problems/index.md#problem-lc-3286)
+- [LeetCode 3996：偶数次骑士移动](../problems/index.md#problem-lc-3996)
+- [Codeforces 2247A](../problems/index.md#problem-codeforces-2247-a)
+- [Dijkstra, “A note on two problems in connexion with graphs”](https://doi.org/10.1007/BF01386390)

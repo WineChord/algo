@@ -10,6 +10,13 @@ tags:
 
 回文构造与回文子串识别是两类不同问题。前者已知字符多重集合，核心是分配频次与控制字典序；后者关心原串中的连续位置结构，通常使用中心扩展、DP 或 Manacher。
 
+<figure class="knowledge-figure" id="figure-palindrome-half">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/palindrome-half.svg" aria-label="打开回文左半边降维原图">
+    <img src="../../assets/figures/palindrome-half.svg" alt="字符频次先确定左半边与奇频中心，再将左半边镜像为右半边组成完整回文" width="960" height="450" loading="lazy" decoding="async">
+  </a>
+  <figcaption>左半边决定字典序，奇频字符决定中心，右半边只是镜像；因此构造空间可以直接降到一半。</figcaption>
+</figure>
+
 ## 可行性的奇偶条件
 
 长度为 $n$ 的字符串能重排成回文，当且仅当奇频字符数量等于 $n\bmod2$：
@@ -65,3 +72,9 @@ $$
 ## 与回文识别的边界
 
 若问题要求原串中最长回文子串、所有中心半径或最少前插字符，应转到[回文中心与半径](palindrome-centers.md)。若只关心字符可否重新排列以及怎样构造，频次与左半边才是主模型。
+
+## Reference
+
+- [LeetCode 3517：最小回文排列 I](../problems/index.md#problem-lc-3517)
+- [LeetCode 214：最短回文串](../problems/index.md#problem-lc-214)
+- [std::sort — cppreference](https://en.cppreference.com/w/cpp/algorithm/sort)

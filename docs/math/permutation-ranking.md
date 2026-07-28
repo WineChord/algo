@@ -10,6 +10,13 @@ tags:
 
 排列的字典序并不是只能靠枚举比较。固定一个前缀后，剩余元素的全部排列构成连续的字典序块；数清这些块，就能在排列与它的排名之间双向转换。
 
+<figure class="knowledge-figure" id="figure-factorial-blocks">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/factorial-blocks.svg" aria-label="打开排列阶乘块原图">
+    <img src="../../assets/figures/factorial-blocks.svg" alt="长度四排列按首位分成四个连续的三阶乘字典序块，并用 Lehmer 码记录跳过块数" width="960" height="490" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Lehmer 码的每一位不是任意数字，而是当前位置跳过了多少个“更小未使用值”的完整后缀块。</figcaption>
+</figure>
+
 ## 字典序为什么能分块
 
 设排列长度为 $n$。在位置 $i$ 已经固定前缀后，若选择一个比目标当前位置更小的未使用值，那么第一个差异已经确定，后缀怎样排列都比目标小。每种这样的选择对应
@@ -78,3 +85,8 @@ $$
 - 动态可用集合：树状数组或平衡树维护秩；
 - 排列区间计数：把字典序边界转换为排名边界；
 - 排列上的最短相邻交换：把目标位置序列转为逆序对计数。
+
+## Reference
+
+- [AtCoder Beginner Contest 468 C](../problems/index.md#problem-atcoder-abc468-c)
+- [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

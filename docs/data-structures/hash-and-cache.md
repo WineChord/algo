@@ -43,6 +43,13 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 - 按键在期望 $O(1)$ 找到节点；
 - 在 $O(1)$ 时间把命中节点变成最新，并删除最旧节点。
 
+<figure class="knowledge-figure" id="figure-lru-composition">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/lru-composition.svg" aria-label="打开 LRU 组合结构原图">
+    <img src="../../assets/figures/lru-composition.svg" alt="哈希表中的键指向双向链表节点，链表从 MRU 到 LRU 保存最近使用顺序" width="960" height="470" loading="lazy" decoding="async">
+  </a>
+  <figcaption>哈希表回答“节点在哪里”，双向链表回答“谁最新、谁最旧”；一次命中必须同步更新两种信息。</figcaption>
+</figure>
+
 单独的哈希表没有时间顺序，单独的链表无法按键常数定位；二者组合才满足接口。
 
 --8<-- "includes/problems/lc-146.md"
@@ -75,3 +82,10 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 4. 状态何时过期，删除或移动时哪些结构必须同步更新？
 
 回答这四问后，复杂度分析才有意义；“用了哈希表所以 $O(n)$”不是证明。
+
+## Reference
+
+- [LeetCode 49：字母异位词分组](../problems/index.md#problem-lc-49)
+- [LeetCode 3：无重复字符的最长子串](../problems/index.md#problem-lc-3)
+- [LeetCode 146：LRU 缓存](../problems/index.md#problem-lc-146)
+- [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

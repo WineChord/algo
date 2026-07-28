@@ -2,6 +2,13 @@
 
 回文题首先要区分连续子串与可跳过的子序列。连续回文由中心和半径唯一描述；这使中心扩展与 Manacher 成为比通用区间 DP 更贴近结构的解法。
 
+<figure class="knowledge-figure" id="figure-palindrome-radius">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/palindrome-radius.svg" aria-label="打开回文中心与半径原图">
+    <img src="../../assets/figures/palindrome-radius.svg" alt="插入分隔符后的字符串以一个中心和半径表示回文，并展示中心扩展与 Manacher 镜像复用" width="960" height="460" loading="lazy" decoding="async">
+  </a>
+  <figcaption>分隔符统一奇偶中心；Manacher 先利用最右回文区间中的镜像半径，再只对未知部分继续扩张。</figcaption>
+</figure>
+
 ## 最长回文子串
 
 --8<-- "includes/problems/lc-5.md"
@@ -77,3 +84,8 @@ $$
 - 空串与单字符的初值是否正确；
 - 字符单位是字节、码点还是用户可见字符；
 - Manacher 的变换串半径如何映射回原串起点和长度。
+
+## Reference
+
+- [Manacher, “A New Linear-Time ‘On-Line’ Algorithm for Finding the Smallest Initial Palindrome of a String”](https://doi.org/10.1145/321892.321896)
+- [LeetCode 5：最长回文子串](../problems/index.md#problem-lc-5)

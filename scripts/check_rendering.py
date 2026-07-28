@@ -677,6 +677,70 @@ def browser_audit(
                                               done(true))));
                                         """
                                     )
+                                images_ready = driver.execute_async_script(
+                                    """
+                                    const done = arguments[0];
+                                    const images = [
+                                      ...document.querySelectorAll(
+                                        'article.md-content__inner img'
+                                      )
+                                    ];
+                                    images.forEach((image) => {
+                                      image.loading = 'eager';
+                                    });
+                                    const pending = images.map((image) => {
+                                      if (image.complete && image.naturalWidth) {
+                                        return Promise.resolve();
+                                      }
+                                      return new Promise((resolve, reject) => {
+                                        const finish = () => {
+                                          image.removeEventListener(
+                                            'load',
+                                            finish
+                                          );
+                                          image.removeEventListener(
+                                            'error',
+                                            fail
+                                          );
+                                          resolve();
+                                        };
+                                        const fail = () => reject(
+                                          new Error(
+                                            `image failed: ${image.currentSrc}`
+                                          )
+                                        );
+                                        image.addEventListener(
+                                          'load',
+                                          finish,
+                                          {once: true}
+                                        );
+                                        image.addEventListener(
+                                          'error',
+                                          fail,
+                                          {once: true}
+                                        );
+                                      });
+                                    });
+                                    Promise.race([
+                                      Promise.all(pending),
+                                      new Promise((_, reject) =>
+                                        setTimeout(
+                                          () => reject(
+                                            new Error('image load timeout')
+                                          ),
+                                          8000
+                                        )
+                                      ),
+                                    ])
+                                      .then(() => done(true))
+                                      .catch((error) =>
+                                        done(String(error)));
+                                    """
+                                )
+                                if images_ready is not True:
+                                    raise RuntimeError(
+                                        f"image loading failed: {images_ready}"
+                                    )
                                 break
                             except Exception:
                                 driver.get_log("browser")
@@ -690,6 +754,195 @@ def browser_audit(
                             const article = document.querySelector(
                               'article.md-content__inner'
                             );
+                            const parseColor = (value) => {
+                              const normalized = value.trim().toLowerCase();
+                              const values = normalized.match(
+                                /-?(?:\\d+(?:\\.\\d*)?|\\.\\d+)%?/g
+                              );
+                              if (!values || values.length < 3) return null;
+                              const percentage = (item, scale) =>
+                                item.endsWith('%')
+                                  ? Number.parseFloat(item) * scale / 100
+                                  : Number.parseFloat(item);
+                              if (normalized.startsWith('color(srgb')) {
+                                return {
+                                  r: percentage(values[0], 1) * 255,
+                                  g: percentage(values[1], 1) * 255,
+                                  b: percentage(values[2], 1) * 255,
+                                  a: values[3]
+                                    ? percentage(values[3], 1)
+                                    : 1,
+                                };
+                              }
+                              if (normalized.startsWith('rgb')) {
+                                return {
+                                  r: percentage(values[0], 255),
+                                  g: percentage(values[1], 255),
+                                  b: percentage(values[2], 255),
+                                  a: values[3]
+                                    ? percentage(values[3], 1)
+                                    : 1,
+                                };
+                              }
+                              return null;
+                            };
+                            const composite = (front, back) => {
+                              const alpha = front.a + back.a * (1 - front.a);
+                              if (!alpha) {
+                                return {r: 0, g: 0, b: 0, a: 0};
+                              }
+                              return {
+                                r: (
+                                  front.r * front.a
+                                  + back.r * back.a * (1 - front.a)
+                                ) / alpha,
+                                g: (
+                                  front.g * front.a
+                                  + back.g * back.a * (1 - front.a)
+                                ) / alpha,
+                                b: (
+                                  front.b * front.a
+                                  + back.b * back.a * (1 - front.a)
+                                ) / alpha,
+                                a: alpha,
+                              };
+                            };
+                            const effectiveBackground = (element) => {
+                              const chain = [];
+                              for (
+                                let node = element;
+                                node instanceof Element;
+                                node = node.parentElement
+                              ) {
+                                chain.push(node);
+                              }
+                              let color = {r: 255, g: 255, b: 255, a: 1};
+                              for (const node of chain.reverse()) {
+                                const layer = parseColor(
+                                  getComputedStyle(node).backgroundColor
+                                );
+                                if (layer) color = composite(layer, color);
+                              }
+                              return color;
+                            };
+                            const luminance = (color) => {
+                              const channel = (value) => {
+                                const normalized = value / 255;
+                                return normalized <= 0.04045
+                                  ? normalized / 12.92
+                                  : Math.pow(
+                                    (normalized + 0.055) / 1.055,
+                                    2.4
+                                  );
+                              };
+                              return (
+                                0.2126 * channel(color.r)
+                                + 0.7152 * channel(color.g)
+                                + 0.0722 * channel(color.b)
+                              );
+                            };
+                            const contrast = (front, back) => {
+                              const foreground = composite(front, back);
+                              const a = luminance(foreground);
+                              const b = luminance(back);
+                              return (
+                                Math.max(a, b) + 0.05
+                              ) / (Math.min(a, b) + 0.05);
+                            };
+                            const figureIssues = [];
+                            const previousScheme = document.body.getAttribute(
+                              'data-md-color-scheme'
+                            );
+                            for (const scheme of ['default', 'slate']) {
+                              document.body.setAttribute(
+                                'data-md-color-scheme',
+                                scheme
+                              );
+                              void document.body.offsetWidth;
+                              for (const figure of document.querySelectorAll(
+                                'article.md-content__inner .knowledge-figure'
+                              )) {
+                                const label = figure.id || '<missing-id>';
+                                const caption = figure.querySelector(
+                                  'figcaption'
+                                );
+                                const image = figure.querySelector('img');
+                                const media = figure.querySelector(
+                                  'a.knowledge-figure__image-link[href]'
+                                );
+                                if (!caption || !image || !media) {
+                                  figureIssues.push(
+                                    `${scheme}:${label}: incomplete figure`
+                                  );
+                                  continue;
+                                }
+                                const background = effectiveBackground(caption);
+                                const foreground = parseColor(
+                                  getComputedStyle(caption).color
+                                );
+                                if (!foreground) {
+                                  figureIssues.push(
+                                    `${scheme}:${label}: unreadable color`
+                                  );
+                                } else {
+                                  const ratio = contrast(
+                                    foreground,
+                                    background
+                                  );
+                                  if (ratio < 4.5) {
+                                    figureIssues.push(
+                                      `${scheme}:${label}: caption contrast `
+                                      + `${ratio.toFixed(2)}:1`
+                                    );
+                                  }
+                                }
+                                const rect = figure.getBoundingClientRect();
+                                const imageRect = image.getBoundingClientRect();
+                                const viewport =
+                                  document.documentElement.clientWidth;
+                                if (
+                                  rect.left < -1
+                                  || rect.right > viewport + 1
+                                  || imageRect.width > rect.width + 1
+                                ) {
+                                  figureIssues.push(
+                                    `${scheme}:${label}: viewport overflow`
+                                  );
+                                }
+                                if (
+                                  !image.complete
+                                  || !image.naturalWidth
+                                  || !image.naturalHeight
+                                ) {
+                                  figureIssues.push(
+                                    `${scheme}:${label}: image unavailable`
+                                  );
+                                } else {
+                                  const intrinsic =
+                                    image.naturalWidth / image.naturalHeight;
+                                  const rendered =
+                                    image.clientWidth / image.clientHeight;
+                                  if (
+                                    !Number.isFinite(rendered)
+                                    || Math.abs(intrinsic - rendered) > 0.02
+                                  ) {
+                                    figureIssues.push(
+                                      `${scheme}:${label}: distorted image`
+                                    );
+                                  }
+                                }
+                              }
+                            }
+                            if (previousScheme === null) {
+                              document.body.removeAttribute(
+                                'data-md-color-scheme'
+                              );
+                            } else {
+                              document.body.setAttribute(
+                                'data-md-color-scheme',
+                                previousScheme
+                              );
+                            }
                             const clone = article ? article.cloneNode(true) : null;
                             if (clone) {
                               clone.querySelectorAll(
@@ -758,6 +1011,7 @@ def browser_audit(
                               brokenImages,
                               codeOverflow,
                               unwrappedCode,
+                              figureIssues,
                               raw,
                               article: !!article,
                               documentOverflow:
@@ -800,6 +1054,11 @@ def browser_audit(
                         if stats["brokenImages"]:
                             errors.append(
                                 f"{route}: {stats['brokenImages']} broken images"
+                            )
+                        if stats["figureIssues"]:
+                            errors.append(
+                                f"{route}: figure audit: "
+                                + "; ".join(stats["figureIssues"])
                             )
                         if stats["documentOverflow"]:
                             errors.append(

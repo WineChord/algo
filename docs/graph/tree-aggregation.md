@@ -14,6 +14,13 @@ tags:
 
 这就是后序遍历，也是树形动态规划最小的可运行形态。摘要可以是子树大小、和、最大值、若干状态，或这些量的组合。
 
+<figure class="knowledge-figure" id="figure-tree-postorder-aggregation">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/tree-postorder-aggregation.svg" aria-label="打开树上后序聚合原图">
+    <img src="../../assets/figures/tree-postorder-aggregation.svg" alt="树的叶节点摘要先汇总到子树根，再由两个子树根汇总到父节点" width="960" height="450" loading="lazy" decoding="async">
+  </a>
+  <figcaption>后序保证每条父子边只传递一次摘要；摘要的定义决定父节点能否仅凭局部合并得到答案。</figcaption>
+</figure>
+
 ## 先定义返回值，再决定遍历
 
 若父节点只需要知道每棵孩子子树的最大值，则递归函数只需返回一个整数：
@@ -59,3 +66,8 @@ $$
 - 需要路径或祖先信息：还应自顶向下传递状态；
 - 频繁换根：固定根子树语义会变化，需要换根 DP 或欧拉序结构；
 - 动态增删边：静态树遍历不再足够，需要动态树数据结构。
+
+## Reference
+
+- [LeetCode 3997：统计二叉树中的支配节点](../problems/index.md#problem-lc-3997)
+- [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

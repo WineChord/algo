@@ -15,6 +15,13 @@ tags:
 
 二者都在避免“对每个区间重新遍历内部元素”。
 
+<figure class="knowledge-figure" id="figure-prefix-difference-boundaries">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/prefix-difference-boundaries.svg" aria-label="打开差分区间边界事件原图">
+    <img src="../../assets/figures/prefix-difference-boundaries.svg" alt="区间加法在左边界增加差分、在右边界之后撤销，并通过前缀和恢复" width="960" height="480" loading="lazy" decoding="async">
+  </a>
+  <figcaption>差分把一次区间修改压成两个边界事件；最后的一次前缀扫描才把事件还原为逐点贡献。</figcaption>
+</figure>
+
 ## 前缀状态：区间由两个边界决定
 
 对数组 $a_1,\ldots,a_n$，定义
@@ -94,3 +101,10 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 3. 区间修改是否可以延迟到最后统一恢复？
 4. 查询与修改是否在线交错？
 5. 前缀累加、答案计数或边界 $r+1$ 是否可能溢出或越界？
+
+## Reference
+
+- [LeetCode 560：和为 K 的子数组](../problems/index.md#problem-lc-560)
+- [LeetCode 1109：航班预订统计](../problems/index.md#problem-lc-1109)
+- [LeetCode 304：二维区域和检索](../problems/index.md#problem-lc-304)
+- [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

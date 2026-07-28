@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">差分的区间边界事件</title>
+  <desc id="figure-desc">区间加法在左边界开始、右边界之后撤销，再由前缀和恢复。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>区间信息可以留在两个边界，再由前缀扫描恢复</text>
+  <rect x="72" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="115" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <text x="115" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <rect x="164" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="207" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <text x="207" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <rect x="256" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="299" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <text x="299" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <rect x="348" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="391" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <text x="391" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <rect x="440" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="483" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <text x="483" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>4</text>
+  <rect x="532" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="575" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <text x="575" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>5</text>
+  <rect x="624" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="667" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <text x="667" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>6</text>
+  <rect x="716" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="759" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <text x="759" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>7</text>
+  <rect x="808" y="104" width="86" height="58" rx="5" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="851" y="140" fill="#172033" font-size="17" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <text x="851" y="186" fill="#5f6b7a" font-size="13" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>8</text>
+  <line x1="256" y1="194" x2="710" y2="194" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+  <text x="483" y="222" fill="#2563eb" font-size="16" font-weight="650" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>给区间 [l, r] 整体加 v</text>
+  <line x1="256" y1="244" x2="256" y2="288" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="710" y1="244" x2="710" y2="288" stroke="#c2410c" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="184" y="304" width="180" height="70" rx="12" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="204" y="335" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>diff[l] += v</text>
+  <text x="204" y="361" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>贡献从这里开始</text>
+  <rect x="602" y="304" width="198" height="70" rx="12" fill="#ffedd5" stroke="#c2410c" stroke-width="2"/>
+  <text x="622" y="335" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>diff[r + 1] -= v</text>
+  <text x="622" y="361" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>贡献从这里撤销</text>
+  <path d="M 300 402 C 410 446, 560 446, 670 402" fill="none" stroke="#6d28d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+  <rect x="330" y="442" width="308" height="30" rx="3" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+  <text x="484" y="465" fill="#6d28d9" font-size="16" font-weight="650" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>一次前缀和恢复每个位置的净增量</text>
+</svg>

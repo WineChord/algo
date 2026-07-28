@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">回文中心与半径</title>
+  <desc id="figure-desc">插入分隔符后奇偶回文统一为中心和半径，并可复用镜像半径。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>中心与半径统一描述连续回文</text>
+  <circle cx="76" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="76" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="126" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="126" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="176" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="176" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="226" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="226" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <circle cx="276" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="276" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="326" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="326" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="376" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="376" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="426" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="426" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>c</text>
+  <circle cx="476" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="476" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="526" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="526" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="576" cy="144" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="576" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="626" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="626" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <circle cx="676" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="676" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <circle cx="726" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="726" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="776" cy="144" r="20" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="776" y="150" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>#</text>
+  <line x1="426" y1="84" x2="426" y2="196" stroke="#6d28d9" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6"/>
+  <text x="426" y="74" fill="#6d28d9" font-size="15" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>center</text>
+  <path d="M 276 216 C 326 276, 526 276, 576 216" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="426" y="286" fill="#2563eb" font-size="16" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>radius = 3</text>
+  <rect x="84" y="340" width="238" height="76" rx="12" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="104" y="371" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>中心扩展</text>
+  <text x="104" y="397" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>每个中心独立向两侧比较</text>
+  <rect x="361" y="340" width="238" height="76" rx="12" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="381" y="371" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>Manacher 复用</text>
+  <text x="381" y="397" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>区间内先取镜像半径下界</text>
+  <rect x="638" y="340" width="238" height="76" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="658" y="371" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>继续扩张</text>
+  <text x="658" y="397" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>只有最右边界会贡献新比较</text>
+</svg>

@@ -10,6 +10,13 @@ tags:
 
 滑动窗口最大值的朴素做法会在相邻窗口中反复扫描同一批元素。单调队列只保留“尚未过期、且未来仍可能成为答案”的下标。
 
+<figure class="knowledge-figure" id="figure-monotonic-queue-elimination">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/monotonic-queue-elimination.svg" aria-label="打开单调队列两类淘汰原图">
+    <img src="../../assets/figures/monotonic-queue-elimination.svg" alt="滑动窗口柱状序列中，单调队列分别从队首淘汰过期下标、从队尾淘汰被支配下标" width="960" height="480" loading="lazy" decoding="async">
+  </a>
+  <figcaption>队首删除解决“还在不在窗口”，队尾删除解决“未来还有没有机会成为最大值”。</figcaption>
+</figure>
+
 ## 两类永久淘汰
 
 处理新位置 $i$ 时，对最大值队列执行：
@@ -59,3 +66,9 @@ tags:
 - `k=1` 与 `k=n` 是否正确；
 - 负数不会破坏固定窗口最大值，但会破坏许多依赖和单调性的双指针方法；
 - 在线修改历史元素后，静态单调队列通常失效，需要区间树。
+
+## Reference
+
+- [LeetCode 239：滑动窗口最大值](../problems/index.md#problem-lc-239)
+- [LeetCode 862：和至少为 K 的最短子数组](../problems/index.md#problem-lc-862)
+- [std::deque — cppreference](https://en.cppreference.com/w/cpp/container/deque)

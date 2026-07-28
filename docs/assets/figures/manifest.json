@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/render_visuals.py",
+  "assets": [
+    {
+      "file": "docs/assets/figures/learning-path.svg",
+      "title": "算法学习路径",
+      "description": "从解题闭环到专题训练，并通过比赛复盘回到薄弱前置知识。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 470,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "9c17fdbada304dfdbb44900f4c06184678f79376e56d6026bc0002510e0c50e1",
+      "placements": [
+        {
+          "page": "docs/guide/roadmap.md",
+          "id": "figure-learning-path"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/solving-loop.svg",
+      "title": "算法解题闭环",
+      "description": "从题目契约、朴素解和瓶颈分析走向不变量、证明、实现与测试。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 470,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "0c426fd43f92b59e48ae8893b2611da9c4f09a0717fbd8bfce03ef3b1779932c",
+      "placements": [
+        {
+          "page": "docs/guide/problem-solving.md",
+          "id": "figure-solving-loop"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/growth-rates.svg",
+      "title": "常见复杂度增长趋势",
+      "description": "线性、线性对数、平方和指数增长率随输入规模增加而分离。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "6e907bf4f8c56cf58b24add911556350324d0d8ea6572a9c2d31a873abfe19e9",
+      "placements": [
+        {
+          "page": "docs/guide/complexity.md",
+          "id": "figure-growth-rates"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/binary-search-boundary.svg",
+      "title": "二分查找边界不变量",
+      "description": "半开搜索区间包围单调布尔序列中第一个为真的位置。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 450,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "51c0e3a5d2a6a74d4c8b4b1c32b39f1bf6c446e729ee3eee4ed932d6bffad65a",
+      "placements": [
+        {
+          "page": "docs/basics/binary-search.md",
+          "id": "figure-binary-search-boundary"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/sequence-pointer-invariants.svg",
+      "title": "序列扫描的指针不变量",
+      "description": "滑动窗口、相向双指针和读写压缩对应不同的定稿语义。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 450,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "62ecbbb4ce58b741293061db8c05cffe2b7983dc8951883a56a14152d545d9cf",
+      "placements": [
+        {
+          "page": "docs/basics/sequence-invariants.md",
+          "id": "figure-sequence-pointer-invariants"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/prefix-difference-boundaries.svg",
+      "title": "差分的区间边界事件",
+      "description": "区间加法在左边界开始、右边界之后撤销，再由前缀和恢复。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "c1105e33db43147045c7c0a306924078668427f798dd94bf3e9402660a961236",
+      "placements": [
+        {
+          "page": "docs/basics/prefix-sums-and-difference.md",
+          "id": "figure-prefix-difference-boundaries"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/top-k-candidate-filter.svg",
+      "title": "Top-K 候选过滤",
+      "description": "输入流经过大小为 k 的候选集，永久淘汰不可能进入答案的元素。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "5773591ae2ca62666b686baee08945120113980a6d81a1f38cd168413cd80d4f",
+      "placements": [
+        {
+          "page": "docs/basics/top-k-extrema.md",
+          "id": "figure-top-k-candidate-filter"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/pair-product-information.svg",
+      "title": "非负两数乘积的信息压缩",
+      "description": "枚举、排序和前二扫描逐步减少不必要信息。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 440,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "1ca01d59524484d83494f6dc40320cb36be82227376e8ccb07007732d73eea3e",
+      "placements": [
+        {
+          "page": "docs/basics/pair-product-extrema.md",
+          "id": "figure-pair-product-information"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/signed-product-extrema.svg",
+      "title": "有符号三数乘积的双端候选",
+      "description": "最大乘积只需比较三个最大值与两个最小值加最大值。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "aedd7f7295d694d13d09656130b3aeb998997dea0d7d477ea6a4330615ec9139",
+      "placements": [
+        {
+          "page": "docs/basics/signed-product-extrema.md",
+          "id": "figure-signed-product-extrema"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/linked-list-rewire.svg",
+      "title": "单链表局部接线",
+      "description": "反转当前边之前保存后继，从而不丢失尚未处理后缀。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 460,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "aafaa5d17d8124bb18ee92fc26dc7ca5ea5f6c21dc46a37d9543773c2e9fdc38",
+      "placements": [
+        {
+          "page": "docs/data-structures/linked-lists.md",
+          "id": "figure-linked-list-rewire"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/monotonic-queue-elimination.svg",
+      "title": "单调队列的两类淘汰",
+      "description": "队首按窗口过期，队尾按值支配淘汰，剩余候选保持单调。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "2b49513ae7149167d8744655f165f54286fe0a1df03446a55c8f980519042184",
+      "placements": [
+        {
+          "page": "docs/data-structures/monotonic-queues.md",
+          "id": "figure-monotonic-queue-elimination"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/lru-composition.svg",
+      "title": "LRU 的哈希表与双向链表",
+      "description": "哈希表负责按键定位，双向链表负责维护最近使用顺序。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 470,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "61388dace8dd4fbd20f47604a46926f3d6ad941520ff64ef5b26541420b1a01b",
+      "placements": [
+        {
+          "page": "docs/data-structures/hash-and-cache.md",
+          "id": "figure-lru-composition"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/graph-algorithm-selector.svg",
+      "title": "图算法选择路径",
+      "description": "按可达性、边权与负边条件选择 DFS、BFS、0-1 BFS、Dijkstra 或其他工具。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 450,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "ea47a9026bac309a5ca3852d574222a4c456f0bc5cc4ef329757c00c1d319ed2",
+      "placements": [
+        {
+          "page": "docs/graph/index.md",
+          "id": "figure-graph-algorithm-selector"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/parity-product-state.svg",
+      "title": "奇偶乘积状态图",
+      "description": "将原图节点与路径奇偶组合为显式状态，并按边权翻转奇偶。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 460,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "3347bb331a7dbb00184507c68c81fda10450db3218dbf02387c191d032d00ab5",
+      "placements": [
+        {
+          "page": "docs/graph/weighted-parity-states.md",
+          "id": "figure-parity-product-state"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/tree-postorder-aggregation.svg",
+      "title": "树上后序聚合",
+      "description": "叶和子树的摘要沿后序向父节点汇合。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 450,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "ce6d503217806f62eeb3d38cf28cc06ee6755cbdf5fa429bdec28a612064fdbc",
+      "placements": [
+        {
+          "page": "docs/graph/tree-aggregation.md",
+          "id": "figure-tree-postorder-aggregation"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/dp-state-dag.svg",
+      "title": "动态规划状态依赖 DAG",
+      "description": "状态转移形成有向无环依赖，递推顺序必须先计算前驱。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 470,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "eb9d7e42b54011430a8c2ff68df03f8947b85d7dabecd58f2cffec8cacf1c325",
+      "placements": [
+        {
+          "page": "docs/dp/index.md",
+          "id": "figure-dp-state-dag"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/recurrence-state-collapse.svg",
+      "title": "线性递推的状态压缩",
+      "description": "递归树先去重成递推表，再按依赖窗口压缩为滚动状态。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 470,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "95a8fe6247a22d7cb5532136fb6ff8920dfaa64c4e33b7ca386a4c06c007b810",
+      "placements": [
+        {
+          "page": "docs/dp/linear-recurrences.md",
+          "id": "figure-recurrence-state-collapse"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/edit-distance-grid.svg",
+      "title": "编辑距离状态网格",
+      "description": "每个双序列前缀状态从替换、删除和插入三个前驱转移。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 480,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "25f6ef772aa299112019c53aebae2ae23d7e3c9c86d9c8905fae16183db125fe",
+      "placements": [
+        {
+          "page": "docs/dp/sequence-dp.md",
+          "id": "figure-edit-distance-grid"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/residue-cycle.svg",
+      "title": "前缀余数周期构造",
+      "description": "余数状态在距离 k 处首次重复，从而排除更短的整除子数组。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 460,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "59e268f211bffd21e225939845d29d4989de8e9d50af568f54e4d97b6b7ef006",
+      "placements": [
+        {
+          "page": "docs/math/modular-constructions.md",
+          "id": "figure-residue-cycle"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/factorial-blocks.svg",
+      "title": "排列字典序的阶乘块",
+      "description": "固定前缀后每个候选值对应一个连续的后缀排列块。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 490,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "c9eac3a18b4c6d3016fef0fdf3ce30a665ad6a8e083e3115874d09bb0007ce63",
+      "placements": [
+        {
+          "page": "docs/math/permutation-ranking.md",
+          "id": "figure-factorial-blocks"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/palindrome-radius.svg",
+      "title": "回文中心与半径",
+      "description": "插入分隔符后奇偶回文统一为中心和半径，并可复用镜像半径。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 460,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "c43d58802494608b5f22abbdb28e0bf676ba4244412a1eccd7c9c88678064d02",
+      "placements": [
+        {
+          "page": "docs/strings/palindrome-centers.md",
+          "id": "figure-palindrome-radius"
+        }
+      ]
+    },
+    {
+      "file": "docs/assets/figures/palindrome-half.svg",
+      "title": "回文重排的左半边降维",
+      "description": "频次决定左半边和中心，右半边由镜像唯一确定。",
+      "kind": "original-svg",
+      "width": 960,
+      "height": 450,
+      "license": "MIT",
+      "source": "Repository-authored explanatory diagram",
+      "sha256": "d4cdb1efa7d5cd15dae137bafbc703dd75ae26ceae39e8c0742fc254e51c45e7",
+      "placements": [
+        {
+          "page": "docs/strings/palindrome-rearrangements.md",
+          "id": "figure-palindrome-half"
+        }
+      ]
+    }
+  ]
+}

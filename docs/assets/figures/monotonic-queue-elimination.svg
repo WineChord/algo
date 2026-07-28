@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">单调队列的两类淘汰</title>
+  <desc id="figure-desc">队首按窗口过期，队尾按值支配淘汰，剩余候选保持单调。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="480" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>队列只保留尚未过期、也尚未被支配的下标</text>
+  <rect x="74" y="166" width="54" height="80" rx="4" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="101" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <text x="101" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=0</text>
+  <rect x="162" y="134" width="54" height="112" rx="4" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="189" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <text x="189" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=1</text>
+  <rect x="250" y="198" width="54" height="48" rx="4" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="277" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>-1</text>
+  <text x="277" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=2</text>
+  <rect x="338" y="230" width="54" height="16" rx="4" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="365" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>-3</text>
+  <text x="365" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=3</text>
+  <rect x="426" y="102" width="54" height="144" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="453" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>5</text>
+  <text x="453" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=4</text>
+  <rect x="514" y="134" width="54" height="112" rx="4" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="541" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <text x="541" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=5</text>
+  <rect x="602" y="86" width="54" height="160" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="629" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>6</text>
+  <text x="629" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=6</text>
+  <rect x="690" y="70" width="54" height="176" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="717" y="272" fill="#172033" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>7</text>
+  <text x="717" y="294" fill="#5f6b7a" font-size="12" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>i=7</text>
+  <line x1="54" y1="246" x2="890" y2="246" stroke="#172033" stroke-width="2" stroke-linecap="round"/>
+  <rect x="78" y="326" width="242" height="78" rx="12" fill="#ffedd5" stroke="#c2410c" stroke-width="2"/>
+  <text x="98" y="357" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>队首淘汰：过期</text>
+  <text x="98" y="383" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>下标已经离开窗口</text>
+  <rect x="359" y="326" width="242" height="78" rx="12" fill="#fee4e2" stroke="#b42318" stroke-width="2"/>
+  <text x="379" y="357" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>队尾淘汰：被支配</text>
+  <text x="379" y="383" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>更晚的新值还不小</text>
+  <rect x="640" y="326" width="242" height="78" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="660" y="357" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>保留：仍可能成为最大值</text>
+  <text x="660" y="383" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>下标递增，值严格递减</text>
+  <text x="480" y="454" fill="#5f6b7a" font-size="16" font-weight="400" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>每个下标只入队一次、出队一次，因此总弹出次数是 O(n)。</text>
+</svg>

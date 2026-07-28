@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">奇偶乘积状态图</title>
+  <desc id="figure-desc">将原图节点与路径奇偶组合为显式状态，并按边权翻转奇偶。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>把“到达点 u 时的奇偶”提升为显式状态</text>
+  <circle cx="114" cy="140" r="25" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="114" y="147" fill="#172033" font-size="18" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>s</text>
+  <circle cx="280" cy="90" r="25" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="280" y="97" fill="#172033" font-size="18" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="280" cy="190" r="25" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="280" y="197" fill="#172033" font-size="18" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <circle cx="446" cy="140" r="25" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="446" y="147" fill="#172033" font-size="18" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>t</text>
+  <line x1="139" y1="132" x2="254" y2="98" stroke="#2563eb" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="196" y="107" fill="#2563eb" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <line x1="139" y1="148" x2="254" y2="182" stroke="#c2410c" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="196" y="157" fill="#c2410c" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <line x1="305" y1="98" x2="421" y2="132" stroke="#c2410c" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="363" y="107" fill="#c2410c" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <line x1="305" y1="182" x2="421" y2="148" stroke="#2563eb" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="363" y="157" fill="#2563eb" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <text x="270" y="252" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>原图：边权决定是否翻转奇偶</text>
+  <line x1="500" y1="70" x2="500" y2="302" stroke="#c8d1dc" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 7"/>
+  <text x="548" y="119" fill="#0f766e" font-size="15" font-weight="700" text-anchor="start" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>even</text>
+  <circle cx="650" cy="112" r="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="650" y="118" fill="#0f766e" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>s</text>
+  <circle cx="728" cy="112" r="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="728" y="118" fill="#0f766e" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="806" cy="112" r="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="806" y="118" fill="#0f766e" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <circle cx="884" cy="112" r="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="884" y="118" fill="#0f766e" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>t</text>
+  <text x="548" y="245" fill="#6d28d9" font-size="15" font-weight="700" text-anchor="start" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>odd</text>
+  <circle cx="650" cy="238" r="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="650" y="244" fill="#6d28d9" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>s</text>
+  <circle cx="728" cy="238" r="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="728" y="244" fill="#6d28d9" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <circle cx="806" cy="238" r="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="806" y="244" fill="#6d28d9" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <circle cx="884" cy="238" r="22" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="884" y="244" fill="#6d28d9" font-size="14" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>t</text>
+  <line x1="672" y1="112" x2="706" y2="112" stroke="#0f766e" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="750" y1="112" x2="784" y2="238" stroke="#c2410c" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="672" y1="238" x2="706" y2="112" stroke="#c2410c" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="750" y1="238" x2="784" y2="238" stroke="#6d28d9" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="724" y="292" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>乘积图：(u, parity)</text>
+  <rect x="198" y="350" width="564" height="72" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="218" y="381" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>统一转移</text>
+  <text x="218" y="407" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>沿权值 w 的边：(u, p) → (v, p xor w)</text>
+</svg>

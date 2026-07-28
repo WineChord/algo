@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="450" viewBox="0 0 960 450" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">回文重排的左半边降维</title>
+  <desc id="figure-desc">频次决定左半边和中心，右半边由镜像唯一确定。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="450" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>回文重排只需决定左半边</text>
+  <rect x="54" y="96" width="252" height="82" rx="12" fill="#f4f7fa" stroke="#c8d1dc" stroke-width="2"/>
+  <text x="74" y="127" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>字符频次</text>
+  <text x="74" y="153" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>a: 4 · b: 2 · c: 1</text>
+  <line x1="306" y1="137" x2="362" y2="137" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="374" y="96" width="212" height="82" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="394" y="127" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>左半边</text>
+  <text x="394" y="153" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>a a b</text>
+  <line x1="586" y1="137" x2="642" y2="137" stroke="#5f6b7a" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <rect x="654" y="96" width="252" height="82" rx="12" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="674" y="127" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>完整回文</text>
+  <text x="674" y="153" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>a a b | c | b a a</text>
+  <rect x="190" y="252" width="62" height="62" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="221" y="291" fill="#2563eb" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <rect x="274" y="252" width="62" height="62" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="305" y="291" fill="#2563eb" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <rect x="358" y="252" width="62" height="62" rx="7" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="389" y="291" fill="#2563eb" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <rect x="442" y="252" width="62" height="62" rx="7" fill="#ffedd5" stroke="#c2410c" stroke-width="2"/>
+  <text x="473" y="291" fill="#c2410c" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>c</text>
+  <rect x="526" y="252" width="62" height="62" rx="7" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="557" y="291" fill="#0f766e" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>b</text>
+  <rect x="610" y="252" width="62" height="62" rx="7" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="641" y="291" fill="#0f766e" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <rect x="694" y="252" width="62" height="62" rx="7" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="725" y="291" fill="#0f766e" font-size="22" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>a</text>
+  <line x1="190" y1="334" x2="420" y2="334" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+  <line x1="526" y1="334" x2="756" y2="334" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+  <text x="305" y="362" fill="#2563eb" font-size="15" font-weight="650" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>按字典序优化</text>
+  <text x="641" y="362" fill="#0f766e" font-size="15" font-weight="650" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>左半边镜像</text>
+  <text x="473" y="362" fill="#c2410c" font-size="15" font-weight="650" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>奇频中心</text>
+  <text x="480" y="424" fill="#5f6b7a" font-size="17" font-weight="400" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>每个合法答案与一个左半边排列一一对应。</text>
+</svg>

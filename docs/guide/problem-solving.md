@@ -2,6 +2,13 @@
 
 面对陌生题目时，稳定的方法比偶然的灵感更可靠。本页给出一套可以反复执行的流程，目标是把“我怎么会想到”拆成可检查的推理步骤。
 
+<figure class="knowledge-figure" id="figure-solving-loop">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/solving-loop.svg" aria-label="打开算法解题闭环原图">
+    <img src="../../assets/figures/solving-loop.svg" alt="从题目契约、朴素解、瓶颈分析到不变量、证明、实现、测试与复盘的循环流程" width="960" height="470" loading="lazy" decoding="async">
+  </a>
+  <figcaption>优化不是从算法名开始，而是从朴素解暴露的瓶颈出发；反例会把推导送回最早失效的假设。</figcaption>
+</figure>
+
 ## 1. 把题目翻译成精确定义
 
 先去掉故事背景，写下：
@@ -157,3 +164,8 @@ repeat many times:
 - [ ] 区间、状态、编号和整数范围定义一致。
 - [ ] 我测试了最小值、极值、重复值和无解情况。
 - [ ] 我知道至少一个条件变化会让当前方法失效。
+
+## Reference
+
+- [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
+- [ICPC Problem Archive](https://icpc.global/worldfinals/problems)

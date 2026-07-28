@@ -1,12 +1,59 @@
 :root {
   --md-text-font: "PingFang SC";
+  --knowledge-figure-border: #d7dde5;
+  --knowledge-figure-caption: #465266;
 }
 
 .problem-anchor {
   scroll-margin-top: 4.8rem;
 }
 
+.knowledge-figure {
+  margin: 1.6rem 0 2rem;
+  overflow: hidden;
+  border: 0.05rem solid var(--knowledge-figure-border);
+  border-radius: 0.4rem;
+  background: #fff;
+}
+
+.knowledge-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background: #fff;
+}
+
+.knowledge-figure__image-link {
+  display: block;
+  background: #fff;
+}
+
+.knowledge-figure__image-link:focus-visible {
+  outline: 0.15rem solid var(--md-accent-fg-color);
+  outline-offset: -0.15rem;
+}
+
+.knowledge-figure figcaption {
+  padding: 0.72rem 0.9rem 0.78rem;
+  border-top: 0.05rem solid var(--knowledge-figure-border);
+  color: var(--knowledge-figure-caption);
+  font-size: 0.76rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
 @media screen and (max-width: 44.984375em) {
+  .knowledge-figure {
+    margin: 1.2rem -0.2rem 1.6rem;
+    border-radius: 0.25rem;
+  }
+
+  .knowledge-figure figcaption {
+    padding: 0.62rem 0.7rem 0.68rem;
+    font-size: 0.72rem;
+  }
+
   .md-typeset pre,
   .md-typeset pre > code {
     max-width: 100%;

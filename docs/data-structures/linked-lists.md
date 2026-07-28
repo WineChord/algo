@@ -10,6 +10,13 @@ tags:
 
 链表题的难点通常不是遍历，而是修改一条边时仍保留尚未处理部分的入口。比背模板更可靠的方法，是给每个指针写出它在循环开始时代表的结构。
 
+<figure class="knowledge-figure" id="figure-linked-list-rewire">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/linked-list-rewire.svg" aria-label="打开单链表局部接线原图">
+    <img src="../../assets/figures/linked-list-rewire.svg" alt="单链表反转时 prev、current 与 next 三个指针保存已反转前缀、当前节点和未处理后缀" width="960" height="460" loading="lazy" decoding="async">
+  </a>
+  <figcaption>局部接线只有一步，但必须先把后继保存到 <code>next</code>；否则改写 <code>current-&gt;next</code> 后会失去剩余链表。</figcaption>
+</figure>
+
 ## 单链表的最小状态
 
 反转链表时维护：
@@ -76,3 +83,9 @@ tags:
 - 可能有环：先检测或规定操作只覆盖有限节点；
 - 链表节点在外部共享：原地复用可能破坏别名，需要明确所有权；
 - 频繁随机访问：链表的线性寻址成为瓶颈，应考虑数组或块状结构。
+
+## Reference
+
+- [LeetCode 206：反转链表](../problems/index.md#problem-lc-206)
+- [LeetCode 25：K 个一组翻转链表](../problems/index.md#problem-lc-25)
+- [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

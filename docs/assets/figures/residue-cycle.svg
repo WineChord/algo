@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="figure-title figure-desc">
+  <title id="figure-title">前缀余数周期构造</title>
+  <desc id="figure-desc">余数状态在距离 k 处首次重复，从而排除更短的整除子数组。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/>
+    </marker>
+  </defs>
+  <rect width="960" height="460" fill="#ffffff"/>
+  <text x="48" y="44" fill="#172033" font-size="23" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>让前缀余数恰好每隔 k 步再次相遇</text>
+  <circle cx="278" cy="104" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="278" y="111" fill="#2563eb" font-size="17" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>0</text>
+  <circle cx="413" cy="202" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="413" y="209" fill="#2563eb" font-size="17" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>1</text>
+  <circle cx="362" cy="356" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="362" y="363" fill="#2563eb" font-size="17" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>2</text>
+  <circle cx="194" cy="356" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="194" y="363" fill="#2563eb" font-size="17" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>3</text>
+  <circle cx="143" cy="202" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="143" y="209" fill="#2563eb" font-size="17" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>4</text>
+  <line x1="278" y1="104" x2="413" y2="202" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="413" y1="202" x2="362" y2="356" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="362" y1="356" x2="194" y2="356" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="194" y1="356" x2="143" y2="202" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <line x1="143" y1="202" x2="278" y2="104" stroke="#0f766e" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <text x="278" y="240" fill="#0f766e" font-size="19" font-weight="700" text-anchor="middle" font-family='"SFMono-Regular",Consolas,"Liberation Mono",monospace'>Rᵢ = i mod k</text>
+  <text x="278" y="272" fill="#5f6b7a" font-size="15" font-weight="400" text-anchor="middle" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>示例 k = 5</text>
+  <rect x="532" y="108" width="322" height="76" rx="12" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+  <text x="552" y="139" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>距离 &lt; k</text>
+  <text x="552" y="165" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>窗口内余数互异，没有过短碰撞</text>
+  <rect x="532" y="220" width="322" height="76" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="552" y="251" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>距离 = k</text>
+  <text x="552" y="277" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>相同余数首次重现，目标区间出现</text>
+  <rect x="532" y="332" width="322" height="76" rx="12" fill="#ffedd5" stroke="#c2410c" stroke-width="2"/>
+  <text x="552" y="363" fill="#172033" font-size="18" font-weight="650" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>可实现性</text>
+  <text x="552" y="389" fill="#5f6b7a" font-size="14" font-weight="400" text-anchor="start" font-family='"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'>相邻余数差映射为 [1, m] 内正数</text>
+</svg>

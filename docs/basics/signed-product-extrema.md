@@ -2,6 +2,13 @@
 
 非负数的两数乘积只需保留最大的两个出现；允许负数并选择三个数后，符号奇偶性让最优候选同时依赖数轴两端。本专题聚焦“为何必须保留哪些极值”、这些摘要如何在线维护，以及约束变化何时迫使模型升级。
 
+<figure class="knowledge-figure" id="figure-signed-product-extrema">
+  <a class="knowledge-figure__image-link" href="../../assets/figures/signed-product-extrema.svg" aria-label="打开有符号三数乘积双端候选原图">
+    <img src="../../assets/figures/signed-product-extrema.svg" alt="有符号数轴上三个最大值与两个最小值加最大值构成的两组三数乘积候选" width="960" height="480" loading="lazy" decoding="async">
+  </a>
+  <figcaption>正数端给出“三个最大值”，负数端则可能用两个很小的负数把乘积翻回正数；两组候选缺一不可。</figcaption>
+</figure>
+
 先阅读[极值候选与 Top-K](top-k-extrema.md)可以建立通用前缀不变量；若所有候选非负且只选两个数，见[非负两数乘积](pair-product-extrema.md)。
 
 ## 三数乘积的候选结构
@@ -404,3 +411,8 @@ long long maximumProductSubarray(const vector<int>& nums) {
 ## 复盘
 
 识别信号是“答案只依赖很少几个极值”。核心不变量是扫描前缀后，状态始终保存该前缀中仍可能参与最终答案的候选；有符号三数乘积需要的是三个最大值与两个最小值。出现负数、删除、计数、区间查询或连续性约束时，不要强行沿用两个变量，而应分别补充数轴另一端、频率、可合并状态或前缀动态规划。
+
+## Reference
+
+- [LeetCode 628：三个数的最大乘积](../problems/index.md#problem-lc-628)
+- [std::multiset — cppreference](https://en.cppreference.com/w/cpp/container/multiset)

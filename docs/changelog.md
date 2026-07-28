@@ -2,6 +2,12 @@
 
 ## 2026-07-28
 
+### 图示与出处
+
+- 为[学习路线](guide/roadmap.md#figure-learning-path)、[复杂度分析](guide/complexity.md#figure-growth-rates)、[二分查找](basics/binary-search.md#figure-binary-search-boundary)、[图论](graph/index.md#figure-graph-algorithm-selector)与[动态规划](dp/index.md#figure-dp-state-dag)等专题补充可独立定位的语义图示，集中解释状态、边界、依赖与淘汰过程。
+- 图示统一提供准确替代文本、正文内解释、高清 SVG 入口和固定尺寸；来源、许可与文件哈希由清单约束，并在构建后复核页面位置。
+- 为相关技术页补充精选 `Reference`，优先链接原始论文、官方题面、标准库文档与出版社页面。
+
 ### 指针、窗口、排列与回文构造
 
 - 新增[链表与局部接线](data-structures/linked-lists.md)、[单调队列](data-structures/monotonic-queues.md)、[排列排名与 Lehmer 码](math/permutation-ranking.md)和[回文重排与字典序](strings/palindrome-rearrangements.md)专题，把哨兵接线、摊还淘汰、字典序分块和半边降维整理为可迁移的不变量。
