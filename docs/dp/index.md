@@ -2,13 +2,6 @@
 
 动态规划（Dynamic Programming, DP）把问题拆成有重叠的子问题，并保存子问题答案。真正困难的通常不是写循环，而是设计一组“足以决定未来、又尽可能小”的状态。
 
-<figure class="knowledge-figure" id="figure-dp-state-dag">
-  <a class="knowledge-figure__image-link" href="../assets/figures/dp-state-dag.svg" aria-label="打开动态规划状态依赖图原图">
-    <img src="../assets/figures/dp-state-dag.svg" alt="多个 dp 状态和转移边构成有向无环图，从起点状态按拓扑顺序计算到答案状态" width="960" height="470" loading="lazy" decoding="async">
-  </a>
-  <figcaption>状态定义确定节点，最后一步确定依赖边，递推循环则必须遵守这张依赖图的拓扑顺序。</figcaption>
-</figure>
-
 ## 四步推导法
 
 ### 1. 定义状态

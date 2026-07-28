@@ -2,13 +2,6 @@
 
 当对象之间存在“连接、依赖、转移或冲突”时，可以把对象建成点、关系建成边。图论的第一步往往不是选算法，而是确定点和边分别代表什么。
 
-<figure class="knowledge-figure" id="figure-graph-algorithm-selector">
-  <a class="knowledge-figure__image-link" href="../assets/figures/graph-algorithm-selector.svg" aria-label="打开图算法选择路径原图">
-    <img src="../assets/figures/graph-algorithm-selector.svg" alt="根据可达性目标、边权是否相同、是否只有零一权、是否非负或存在负边选择图算法" width="960" height="450" loading="lazy" decoding="async">
-  </a>
-  <figcaption>“是否可达”和“最小代价”是不同问题；进入最短路后，边权范围继续决定队列、双端队列还是堆。</figcaption>
-</figure>
-
 ## 建图前的五个问题
 
 1. 边有向还是无向？

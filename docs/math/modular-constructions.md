@@ -15,13 +15,6 @@ tags:
 3. 设计周期结构达到必要条件；
 4. 逐项检查数值范围与所有禁用模式。
 
-<figure class="knowledge-figure" id="figure-residue-cycle">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/residue-cycle.svg" aria-label="打开前缀余数周期构造原图">
-    <img src="../../assets/figures/residue-cycle.svg" alt="五个前缀余数构成周期，相同余数在恰好五步后第一次重复" width="960" height="460" loading="lazy" decoding="async">
-  </a>
-  <figcaption>把数组构造改写成余数状态构造后，目标长度对应“第一次碰撞距离”，而非某个单独区间的偶然和。</figcaption>
-</figure>
-
 ## 零和子数组等价于前缀余数碰撞
 
 设正整数数组的前缀和为 $P_i$。子数组 $[l,r]$ 的和能被 $m$ 整除，当且仅当

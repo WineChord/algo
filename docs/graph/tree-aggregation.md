@@ -14,13 +14,6 @@ tags:
 
 这就是后序遍历，也是树形动态规划最小的可运行形态。摘要可以是子树大小、和、最大值、若干状态，或这些量的组合。
 
-<figure class="knowledge-figure" id="figure-tree-postorder-aggregation">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/tree-postorder-aggregation.svg" aria-label="打开树上后序聚合原图">
-    <img src="../../assets/figures/tree-postorder-aggregation.svg" alt="树的叶节点摘要先汇总到子树根，再由两个子树根汇总到父节点" width="960" height="450" loading="lazy" decoding="async">
-  </a>
-  <figcaption>后序保证每条父子边只传递一次摘要；摘要的定义决定父节点能否仅凭局部合并得到答案。</figcaption>
-</figure>
-
 ## 先定义返回值，再决定遍历
 
 若父节点只需要知道每棵孩子子树的最大值，则递归函数只需返回一个整数：

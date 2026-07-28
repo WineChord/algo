@@ -12,13 +12,6 @@ tags:
 
 > 在一个单调布尔序列中，找到 `false` 与 `true` 的分界点。
 
-<figure class="knowledge-figure" id="figure-binary-search-boundary">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/binary-search-boundary.svg" aria-label="打开二分查找边界不变量原图">
-    <img src="../../assets/figures/binary-search-boundary.svg" alt="半开区间中 false 到 true 的单调边界，以及 l、mid、r 的位置关系" width="960" height="450" loading="lazy" decoding="async">
-  </a>
-  <figcaption>搜索过程中，<code>[l, r)</code> 始终包含第一个满足条件的位置；<code>mid</code> 的真假只决定丢弃哪一侧。</figcaption>
-</figure>
-
 一旦能定义单调谓词 `check(x)`，数组、答案范围、时间或距离都可以成为二分对象。
 
 ## 1. 从线性扫描到对数查找

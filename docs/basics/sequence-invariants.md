@@ -6,13 +6,6 @@
 
 局部窗口直接枚举有限邻域；哈希表把“过去是否出现”压成一次查询；排序赋予双指针单调性；前后缀或双端状态让尚未看到的中间部分不再影响已结算位置。本页用五类模型串起这条推导路径。
 
-<figure class="knowledge-figure" id="figure-sequence-pointer-invariants">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/sequence-pointer-invariants.svg" aria-label="打开序列扫描指针不变量原图">
-    <img src="../../assets/figures/sequence-pointer-invariants.svg" alt="滑动窗口、相向双指针和读写压缩三类指针移动方式的对比" width="960" height="450" loading="lazy" decoding="async">
-  </a>
-  <figcaption>先说清被跨过部分为何已经定稿，再决定左、右、读、写指针怎样移动。</figcaption>
-</figure>
-
 ## 局部判定：只枚举真正的候选中心
 
 若一个位置的贡献只依赖固定半径邻域，就不应枚举任意子序列。ABC468 A 中，候选峰值只能是内部位置，且判定只读三个相邻元素。

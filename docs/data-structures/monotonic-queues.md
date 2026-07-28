@@ -10,13 +10,6 @@ tags:
 
 滑动窗口最大值的朴素做法会在相邻窗口中反复扫描同一批元素。单调队列只保留“尚未过期、且未来仍可能成为答案”的下标。
 
-<figure class="knowledge-figure" id="figure-monotonic-queue-elimination">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/monotonic-queue-elimination.svg" aria-label="打开单调队列两类淘汰原图">
-    <img src="../../assets/figures/monotonic-queue-elimination.svg" alt="滑动窗口柱状序列中，单调队列分别从队首淘汰过期下标、从队尾淘汰被支配下标" width="960" height="480" loading="lazy" decoding="async">
-  </a>
-  <figcaption>队首删除解决“还在不在窗口”，队尾删除解决“未来还有没有机会成为最大值”。</figcaption>
-</figure>
-
 ## 两类永久淘汰
 
 处理新位置 $i$ 时，对最大值队列执行：

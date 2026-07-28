@@ -43,13 +43,6 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 - 按键在期望 $O(1)$ 找到节点；
 - 在 $O(1)$ 时间把命中节点变成最新，并删除最旧节点。
 
-<figure class="knowledge-figure" id="figure-lru-composition">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/lru-composition.svg" aria-label="打开 LRU 组合结构原图">
-    <img src="../../assets/figures/lru-composition.svg" alt="哈希表中的键指向双向链表节点，链表从 MRU 到 LRU 保存最近使用顺序" width="960" height="470" loading="lazy" decoding="async">
-  </a>
-  <figcaption>哈希表回答“节点在哪里”，双向链表回答“谁最新、谁最旧”；一次命中必须同步更新两种信息。</figcaption>
-</figure>
-
 单独的哈希表没有时间顺序，单独的链表无法按键常数定位；二者组合才满足接口。
 
 --8<-- "includes/problems/lc-146.md"

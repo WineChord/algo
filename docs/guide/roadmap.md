@@ -2,13 +2,6 @@
 
 算法知识不是一条严格的直线，更像一张有依赖关系的图。下面的路线强调“先建立可运行的最小闭环，再逐层扩展”，每一阶段都应该同时包含概念、实现和题目。
 
-<figure class="knowledge-figure" id="figure-learning-path">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/learning-path.svg" aria-label="打开算法学习路径原图">
-    <img src="../../assets/figures/learning-path.svg" alt="五个学习阶段从解题闭环逐步连接到专题与比赛，并由比赛复盘回到前置知识" width="960" height="470" loading="lazy" decoding="async">
-  </a>
-  <figcaption>阶段之间有主依赖，但不是单向通关：比赛与复盘会不断把新问题接回更早的知识节点。</figcaption>
-</figure>
-
 ## 阶段 0：建立解题闭环
 
 先做到能够独立完成以下循环：

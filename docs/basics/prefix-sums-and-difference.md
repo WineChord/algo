@@ -15,13 +15,6 @@ tags:
 
 二者都在避免“对每个区间重新遍历内部元素”。
 
-<figure class="knowledge-figure" id="figure-prefix-difference-boundaries">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/prefix-difference-boundaries.svg" aria-label="打开差分区间边界事件原图">
-    <img src="../../assets/figures/prefix-difference-boundaries.svg" alt="区间加法在左边界增加差分、在右边界之后撤销，并通过前缀和恢复" width="960" height="480" loading="lazy" decoding="async">
-  </a>
-  <figcaption>差分把一次区间修改压成两个边界事件；最后的一次前缀扫描才把事件还原为逐点贡献。</figcaption>
-</figure>
-
 ## 前缀状态：区间由两个边界决定
 
 对数组 $a_1,\ldots,a_n$，定义

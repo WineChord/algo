@@ -1,59 +1,36 @@
 :root {
   --md-text-font: "PingFang SC";
-  --knowledge-figure-border: #d7dde5;
-  --knowledge-figure-caption: #465266;
+  --wc-inline-math-baseline-shift: -0.22em;
+}
+
+.md-typeset span.arithmatex {
+  display: inline-block;
+  max-width: none;
+  overflow: visible;
+  vertical-align: var(--wc-inline-math-baseline-shift);
+}
+
+.md-typeset div.arithmatex {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.md-typeset .md-typeset__table {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .problem-anchor {
   scroll-margin-top: 4.8rem;
 }
 
-.knowledge-figure {
-  margin: 1.6rem 0 2rem;
-  overflow: hidden;
-  border: 0.05rem solid var(--knowledge-figure-border);
-  border-radius: 0.4rem;
-  background: #fff;
-}
-
-.knowledge-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  background: #fff;
-}
-
-.knowledge-figure__image-link {
-  display: block;
-  background: #fff;
-}
-
-.knowledge-figure__image-link:focus-visible {
-  outline: 0.15rem solid var(--md-accent-fg-color);
-  outline-offset: -0.15rem;
-}
-
-.knowledge-figure figcaption {
-  padding: 0.72rem 0.9rem 0.78rem;
-  border-top: 0.05rem solid var(--knowledge-figure-border);
-  color: var(--knowledge-figure-caption);
-  font-size: 0.76rem;
-  line-height: 1.65;
-  text-align: left;
-}
-
 @media screen and (max-width: 44.984375em) {
-  .knowledge-figure {
-    margin: 1.2rem -0.2rem 1.6rem;
-    border-radius: 0.25rem;
-  }
-
-  .knowledge-figure figcaption {
-    padding: 0.62rem 0.7rem 0.68rem;
-    font-size: 0.72rem;
-  }
-
   .md-typeset pre,
   .md-typeset pre > code {
     max-width: 100%;

@@ -2,11 +2,11 @@
 
 ## 2026-07-28
 
-### 图示与出处
+### 图表与渲染
 
-- 为[学习路线](guide/roadmap.md#figure-learning-path)、[复杂度分析](guide/complexity.md#figure-growth-rates)、[二分查找](basics/binary-search.md#figure-binary-search-boundary)、[图论](graph/index.md#figure-graph-algorithm-selector)与[动态规划](dp/index.md#figure-dp-state-dag)等专题补充可独立定位的语义图示，集中解释状态、边界、依赖与淘汰过程。
-- 图示统一提供准确替代文本、正文内解释、高清 SVG 入口和固定尺寸；来源、许可与文件哈希由清单约束，并在构建后复核页面位置。
-- 为相关技术页补充精选 `Reference`，优先链接原始论文、官方题面、标准库文档与出版社页面。
+- 复核[学习路线](guide/roadmap.md)、[复杂度分析](guide/complexity.md)、[二分查找](basics/binary-search.md)、[图论](graph/index.md)与[动态规划](dp/index.md)等专题，让不变量、边界和依赖关系优先由正文、表格与可运行代码解释。
+- 图表仅在能核对公开来源、版本、许可和页面语义时进入正文；构建检查同时阻止无来源的矢量图、画布绘图和背景图叠字。
+- 统一行内公式与正文的基线、溢出和窄屏行为，并为相关技术页补充精选 `Reference`，优先链接原始论文、官方题面、标准库文档与出版社页面。
 
 ### 指针、窗口、排列与回文构造
 

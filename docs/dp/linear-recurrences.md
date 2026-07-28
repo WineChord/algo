@@ -2,13 +2,6 @@
 
 线性 DP 最常见的优化不是改变转移，而是看清每个状态真正依赖多远的历史。爬楼梯展示了递归、记忆化、递推、空间压缩与快速幂之间的完整路径。
 
-<figure class="knowledge-figure" id="figure-recurrence-state-collapse">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/recurrence-state-collapse.svg" aria-label="打开线性递推状态压缩原图">
-    <img src="../../assets/figures/recurrence-state-collapse.svg" alt="递归树中的重复子问题被压缩成递推表，随后按有限依赖窗口压缩成两个滚动变量" width="960" height="470" loading="lazy" decoding="async">
-  </a>
-  <figcaption>记忆化先消除重复计算；只有证明新状态只依赖有限个旧状态后，才可以继续压缩存储。</figcaption>
-</figure>
-
 ## 最后一步分类
 
 到达第 $i$ 阶的最后一步只有两类：

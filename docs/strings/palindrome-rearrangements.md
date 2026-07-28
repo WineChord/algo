@@ -10,13 +10,6 @@ tags:
 
 回文构造与回文子串识别是两类不同问题。前者已知字符多重集合，核心是分配频次与控制字典序；后者关心原串中的连续位置结构，通常使用中心扩展、DP 或 Manacher。
 
-<figure class="knowledge-figure" id="figure-palindrome-half">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/palindrome-half.svg" aria-label="打开回文左半边降维原图">
-    <img src="../../assets/figures/palindrome-half.svg" alt="字符频次先确定左半边与奇频中心，再将左半边镜像为右半边组成完整回文" width="960" height="450" loading="lazy" decoding="async">
-  </a>
-  <figcaption>左半边决定字典序，奇频字符决定中心，右半边只是镜像；因此构造空间可以直接降到一半。</figcaption>
-</figure>
-
 ## 可行性的奇偶条件
 
 长度为 $n$ 的字符串能重排成回文，当且仅当奇频字符数量等于 $n\bmod2$：

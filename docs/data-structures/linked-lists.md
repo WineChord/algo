@@ -10,13 +10,6 @@ tags:
 
 链表题的难点通常不是遍历，而是修改一条边时仍保留尚未处理部分的入口。比背模板更可靠的方法，是给每个指针写出它在循环开始时代表的结构。
 
-<figure class="knowledge-figure" id="figure-linked-list-rewire">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/linked-list-rewire.svg" aria-label="打开单链表局部接线原图">
-    <img src="../../assets/figures/linked-list-rewire.svg" alt="单链表反转时 prev、current 与 next 三个指针保存已反转前缀、当前节点和未处理后缀" width="960" height="460" loading="lazy" decoding="async">
-  </a>
-  <figcaption>局部接线只有一步，但必须先把后继保存到 <code>next</code>；否则改写 <code>current-&gt;next</code> 后会失去剩余链表。</figcaption>
-</figure>
-
 ## 单链表的最小状态
 
 反转链表时维护：

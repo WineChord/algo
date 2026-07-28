@@ -14,13 +14,6 @@ tags:
 
 状态 $(i,j)$ 的最后一步决定它从哪个更小前缀转移而来。关键不是记住公式，而是证明所有最优方案的最后一步都能被这些转移完整且互斥地覆盖。
 
-<figure class="knowledge-figure" id="figure-edit-distance-grid">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/edit-distance-grid.svg" aria-label="打开编辑距离状态网格原图">
-    <img src="../../assets/figures/edit-distance-grid.svg" alt="source 与 target 的前缀组成编辑距离网格，每个格子从左、上和左上三个前驱转移" width="960" height="480" loading="lazy" decoding="async">
-  </a>
-  <figcaption>左、上、左上三个前驱分别对应插入、删除与替换或匹配；循环方向必须先完成这些前驱。</figcaption>
-</figure>
-
 ## 编辑距离：枚举最后一次操作
 
 对字符串 `word1` 与 `word2`，定义 `dp[i][j]` 为把 `word1` 的前 $i$ 个字符变成 `word2` 的前 $j$ 个字符所需的最少操作数。

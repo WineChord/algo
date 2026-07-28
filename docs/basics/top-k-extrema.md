@@ -2,13 +2,6 @@
 
 当答案只依赖最大值、次大值或前 $k$ 个候选时，完整排序往往计算了过多信息。更直接的做法是让扫描状态始终保存“已读前缀中仍可能进入最终答案的元素”，并在新元素到达时淘汰已经不可能影响答案的候选。
 
-<figure class="knowledge-figure" id="figure-top-k-candidate-filter">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/top-k-candidate-filter.svg" aria-label="打开 Top-K 候选过滤原图">
-    <img src="../../assets/figures/top-k-candidate-filter.svg" alt="输入流经过大小为 k 的候选集，并按阈值保留或永久淘汰元素" width="960" height="480" loading="lazy" decoding="async">
-  </a>
-  <figcaption>只插入的场景中，候选集当前最小值就是门槛；已经被前 <var>k</var> 名压住的历史元素不会重新进入答案。</figcaption>
-</figure>
-
 本页保留通用模型和选型边界。两个常见乘积模型分别进入：
 
 - [非负两数乘积：从枚举到双极值](pair-product-extrema.md)；

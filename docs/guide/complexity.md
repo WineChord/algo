@@ -36,13 +36,6 @@ $$
 
 当 $n=2\times10^5$ 时，$n\log_2 n$ 约为 $3.5\times10^6$，而 $n^2=4\times10^{10}$。这解释了为什么一次排序通常可行，枚举所有数对通常不可行。
 
-<figure class="knowledge-figure" id="figure-growth-rates">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/growth-rates.svg" aria-label="打开常见复杂度增长趋势原图">
-    <img src="../../assets/figures/growth-rates.svg" alt="线性、线性对数、平方与指数复杂度随输入规模增加而逐渐分离的趋势图" width="960" height="480" loading="lazy" decoding="async">
-  </a>
-  <figcaption>增长率决定规模扩大后的趋势；图中曲线只作相对示意，不能替代对常数、内存和测试组数的估算。</figcaption>
-</figure>
-
 ## 如何计算时间复杂度
 
 ### 顺序执行：相加后取主项

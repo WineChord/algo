@@ -2,13 +2,6 @@
 
 从不同位置选择两个非负量并最大化乘积时，答案只依赖按出现位置计数的最大值与次大值。真正需要先核对的是：目标函数在合法值域上是否随每个自变量单调不减、重复值能否按出现次数使用，以及变换之后是否仍然非负。
 
-<figure class="knowledge-figure" id="figure-pair-product-information">
-  <a class="knowledge-figure__image-link" href="../../assets/figures/pair-product-information.svg" aria-label="打开非负两数乘积信息压缩原图">
-    <img src="../../assets/figures/pair-product-information.svg" alt="从枚举所有数对、排序全部元素到只维护最大值与次大值的信息压缩过程" width="960" height="440" loading="lazy" decoding="async">
-  </a>
-  <figcaption>枚举保留全部组合，排序保留完整顺序；当目标对两个非负因子单调时，最大值与次大值已经是充分摘要。</figcaption>
-</figure>
-
 这条路径建立在[极值候选与 Top-K](top-k-extrema.md) 的前缀不变量上；允许负数或改为选择三个数时，应转到[有符号乘积与双端极值](signed-product-extrema.md)。
 
 ## 数组中的平移乘积
