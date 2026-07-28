@@ -34,6 +34,18 @@ $$
 
 最右边界每次只向右推进，总时间 $O(n)$、空间 $O(n)$。它达到读取输入的线性下界，但坐标换算和哨兵边界更易写错；只有约束需要或明确要求线性时优先。
 
+## 允许一个字符改写：按失配对计数
+
+固定中心向两侧扩展时，每一层新增一对镜像字符。把这对是否相等累加为失配对数：
+
+- 0 对失配：原串已经是回文；
+- 1 对失配：改写其中一个字符即可；
+- 至少 2 对失配：一次改写无法同时修复。
+
+同一中心的半径增大时，失配数只会不减；遇到第二对失配后可以立即停止扩张。该单调性只保证剪枝正确，并不会把最坏复杂度从 $O(n^2)$ 降为线性。
+
+--8<-- "includes/problems/atcoder-abc468-d.md"
+
 ## 正确性抓手
 
 中心扩展的覆盖性来自：
@@ -82,3 +94,4 @@ $$
 
 - [Manacher, “A New Linear-Time ‘On-Line’ Algorithm for Finding the Smallest Initial Palindrome of a String”](https://doi.org/10.1145/321892.321896)
 - [LeetCode 5：最长回文子串](../problems/index.md#problem-lc-5)
+- [AtCoder Beginner Contest 468 D：Pre-Palindrome](../problems/index.md#problem-atcoder-abc468-d)

@@ -49,6 +49,36 @@ $$
 
 这个模板适用于所有固定阶线性递推：先证明最后决策分类互斥完备，再证明滚动状态没有丢失未来依赖。
 
+## 滚动状态不只用于计数
+
+线性递推的聚合运算可以是最大值。关键仍是定义“当前位置结束”或“处理完当前前缀”后足以决定未来的摘要。
+
+### 必须在当前位置结束
+
+最大子数组和定义
+
+$$
+ending_i=\max(a_i,ending_{i-1}+a_i).
+$$
+
+每个非空子数组都有唯一右端点；对所有 `ending` 取最大值就覆盖了全部候选。这里不能把初值设为 0，否则全负数组会错误地选择空数组。
+
+--8<-- "includes/problems/lc-53.md"
+
+### 前缀内可以选或不选
+
+相邻位置不能同时选择时，处理完前 $i$ 项的最优值满足
+
+$$
+best_i=\max(best_{i-1},best_{i-2}+a_i).
+$$
+
+两个分支按“是否选择第 $i$ 项”互斥且完备，只需滚动保留前一项与前两项。
+
+--8<-- "includes/problems/lc-198.md"
+
+这两类状态看似都只有两个变量，但语义不同：`ending` 强制当前元素进入方案，`best` 则允许完全继承旧答案。混用状态定义往往会在全负数组或必须非空的条件下出错。
+
 ## 约束变化
 
 ### 任意步长集合
@@ -91,4 +121,6 @@ $f(n)=F_{n+1}$。矩阵快速幂或 Fibonacci 快速倍增可在 $O(\log n)$ 时
 ## Reference
 
 - [LeetCode 70：爬楼梯](../problems/index.md#problem-lc-70)
+- [LeetCode 53：最大子数组和](../problems/index.md#problem-lc-53)
+- [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

@@ -1,5 +1,20 @@
 # 更新日志
 
+## 2026-07-29
+
+### 搜索、规范表示与局部状态
+
+- 新增[搜索与枚举知识地图](search/index.md)和[合法前缀回溯](search/backtracking.md)，把状态、选择、剪枝、恢复与输出规模下界整理成统一读者路径。
+- 新增[循环等价类](strings/cyclic-normalization.md)专题，以 Booth 最小循环表示解释“先规范化、再分组”，并补齐独立分量签名的充分必要性证明。
+- 扩充[线性递推](dp/linear-recurrences.md)、[树上后序聚合](graph/tree-aggregation.md)、[回文中心](strings/palindrome-centers.md)、[回文重排](strings/palindrome-rearrangements.md)、[排列排名](math/permutation-ranking.md)与[数学知识地图](math/index.md)，串联滚动最优状态、指针摘要、近似回文、饱和计数和平方和分类。
+- 在基础技巧中补充稳定原地筛选、定长频次窗口、数位半反转、矩阵边界模拟和异或阈值诱导的下标块连通性。
+
+### 权威题目条目
+
+- 收录 [AtCoder ABC468 D](problems/index.md#problem-atcoder-abc468-d)、[CF Round 1111 Div.2 D1（2247D1）](problems/index.md#problem-codeforces-2247-d1)和[第 511 场周赛 Q4](problems/index.md#problem-lc-3999)。
+- 收录 [LeetCode 3518](problems/index.md#problem-lc-3518)，以及 [LeetCode Top 31–40](problems/index.md) 的十个连续权威题目条目。
+- 统一 14 道题的官方难度与可核验评分口径、完整最优 C++、两空格缩进和窄屏自动折行。
+
 ## 2026-07-28
 
 ### 图表与渲染

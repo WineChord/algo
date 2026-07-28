@@ -115,6 +115,9 @@ nav:
       - 非负两数乘积: basics/pair-product-extrema.md
       - 有符号乘积: basics/signed-product-extrema.md
       - 二分查找: basics/binary-search.md
+  - 搜索与枚举:
+      - 知识地图: search/index.md
+      - 回溯与合法前缀: search/backtracking.md
   - 数据结构:
       - 知识地图: data-structures/index.md
       - 链表与局部接线: data-structures/linked-lists.md
@@ -134,6 +137,7 @@ nav:
       - 前缀余数与模构造: math/modular-constructions.md
   - 字符串:
       - 知识地图: strings/index.md
+      - 循环等价类与规范化: strings/cyclic-normalization.md
       - 回文重排与字典序: strings/palindrome-rearrangements.md
       - 回文中心与半径: strings/palindrome-centers.md
   - 题解:

@@ -48,6 +48,10 @@ $$
 
 从小到大尝试下一字符，计算每个候选对应的完整字典序块；若块大小小于 $k$，减去整块，否则固定该字符继续。计数只用于与 $k$ 比较时，可以在 $k$ 处饱和，避免大整数和溢出；不能先取模再比较大小。
 
+实现时不必每次重新计算完整阶乘商。字符集固定为 26 时，可以按剩余频次逐项乘组合数；每一步都在 `k` 处截断，既保留比较所需的信息，又避免中间结果溢出。
+
+--8<-- "includes/problems/lc-3518.md"
+
 ## 相邻交换最小化
 
 若目标不只是构造，而是把原字符串通过相邻交换变为某个回文，字符频次仍决定可行性，但顺序成本不再只由多重集合决定。先为每个目标字符匹配一个原位置，得到位置序列；最少相邻交换次数等于这个序列的逆序对数，可用树状数组统计。
@@ -69,5 +73,6 @@ $$
 ## Reference
 
 - [LeetCode 3517：最小回文排列 I](../problems/index.md#problem-lc-3517)
+- [LeetCode 3518：最小回文排列 II](../problems/index.md#problem-lc-3518)
 - [LeetCode 214：最短回文串](../problems/index.md#problem-lc-214)
 - [std::sort — cppreference](https://en.cppreference.com/w/cpp/algorithm/sort)

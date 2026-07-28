@@ -62,6 +62,14 @@ $$
 
 其中 $r$ 是剩余长度，$f_x$ 是各值剩余次数。计算第 $k$ 个不同排列时，必须按候选值逐块计数并跳过；若计数可能很大，应使用饱和计数、质因数分解或大整数，不能先取模再与 $k$ 比较。
 
+### 只需与 $k$ 比较时做饱和计数
+
+逆排名不需要知道远大于 $k$ 的精确方案数。组合数或多项式系数一旦达到当前 `k`，就可以截断为 `k`；后续只关心“这个块够不够大”。截断必须发生在保持单调性的精确整数运算之后，不能先取模。
+
+回文重排把完整字符串一一映射到左半边的多重集合排列，因此可以直接复用这种分块逆排名。
+
+--8<-- "includes/problems/lc-3518.md"
+
 ## 常见错误
 
 - 忘记区分零基与一基排名；
@@ -82,4 +90,5 @@ $$
 ## Reference
 
 - [AtCoder Beginner Contest 468 C](../problems/index.md#problem-atcoder-abc468-c)
+- [LeetCode 3518：最小回文排列 II](../problems/index.md#problem-lc-3518)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
