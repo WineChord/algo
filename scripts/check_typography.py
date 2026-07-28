@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import json
 import re
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,6 +12,8 @@ FILES = [
     *sorted((ROOT / "docs").rglob("*.md")),
     *sorted((ROOT / "includes").rglob("*.md")),
 ]
+AUTOCORRECT = ROOT / "node_modules" / ".bin" / "autocorrect"
+AUTOCORRECT_TARGETS = ("README.md", "mkdocs.yml", "docs", "includes")
 
 HAN = r"\u3400-\u4dbf\u4e00-\u9fff"
 MIXED_SCRIPT = re.compile(
@@ -113,7 +117,55 @@ def report(path: Path, number: int, message: str, errors: list[str]) -> None:
     errors.append(f"{path.relative_to(ROOT)}:{number}: {message}")
 
 
+def run_autocorrect(errors: list[str]) -> int:
+    if not AUTOCORRECT.is_file():
+        errors.append("AutoCorrect 不可用，请先运行 `npm ci`")
+        return 0
+    result = subprocess.run(
+        [
+            str(AUTOCORRECT),
+            "--lint",
+            "--strict",
+            "--format",
+            "json",
+            "--quiet",
+            *AUTOCORRECT_TARGETS,
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if not result.stdout.strip():
+        detail = result.stderr.strip() or f"退出状态 {result.returncode}"
+        errors.append(f"AutoCorrect 未生成检查报告：{detail}")
+        return 0
+    try:
+        result_json = json.loads(result.stdout)
+    except json.JSONDecodeError as exc:
+        errors.append(f"AutoCorrect 返回了无效 JSON：{exc}")
+        return 0
+    issue_count = 0
+    for message in result_json.get("messages", []):
+        path = message.get("filepath", "<unknown>")
+        if message.get("error"):
+            errors.append(f"{path}: {message['error']}")
+        for issue in message.get("lines", []):
+            issue_count += 1
+            old = issue.get("old", "").strip()
+            new = issue.get("new", "").strip()
+            errors.append(
+                f"{path}:{issue.get('l', '?')}:{issue.get('c', '?')}: "
+                f"建议将 {old!r} 改为 {new!r}"
+            )
+    if result.returncode not in {0, 1}:
+        detail = result.stderr.strip() or "未知错误"
+        errors.append(f"AutoCorrect 运行失败（状态 {result.returncode}）：{detail}")
+    return issue_count
+
+
 errors: list[str] = []
+autocorrect_issues = run_autocorrect(errors)
 for path in FILES:
     fence_char = ""
     fence_length = 0
@@ -158,4 +210,7 @@ if errors:
     print("\n".join(errors), file=sys.stderr)
     raise SystemExit(1)
 
-print(f"文案排版检查通过：{len(FILES)} 个正文与站点配置文件")
+print(
+    f"文案排版检查通过：{len(FILES)} 个正文与站点配置文件，"
+    f"AutoCorrect {autocorrect_issues} 个问题"
+)

@@ -37,6 +37,7 @@ __pycache__/
 *.py[cod]
 .cache/
 site/
+node_modules/
 
 # Editors and operating systems
 .DS_Store

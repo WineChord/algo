@@ -1,6 +1,6 @@
 <div class="problem-anchor" id="problem-codeforces-2247-b"></div>
 
-??? problem "CF Round 1111 · Div.2 B · Yet Another Constructive（2247B）"
+??? problem "CF Round 1111 · Div.2 B · Yet Another Constructive (2247B)"
     [打开原题 ↗](https://codeforces.com/problemset/problem/2247/B){ .problem-source }
 
     **分值与难度**：Codeforces 官方 750 分；官方 API 暂未给出 problem rating，未按题号推断。

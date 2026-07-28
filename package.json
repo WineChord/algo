@@ -1,0 +1,7 @@
+{
+  "name": "winechord-algo-validation",
+  "private": true,
+  "devDependencies": {
+    "autocorrect-node": "2.14.0"
+  }
+}

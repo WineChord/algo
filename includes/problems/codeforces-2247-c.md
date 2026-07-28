@@ -1,6 +1,6 @@
 <div class="problem-anchor" id="problem-codeforces-2247-c"></div>
 
-??? problem "CF Round 1111 · Div.2 C · Inversion of a Subsequence（2247C）"
+??? problem "CF Round 1111 · Div.2 C · Inversion of a Subsequence (2247C)"
     [打开原题 ↗](https://codeforces.com/contest/2247/problem/C){ .problem-source }
 
     **分值与难度**：Codeforces 官方 1250 分；官方 API 暂未给出 problem rating，标签为 `greedy`、`math`。

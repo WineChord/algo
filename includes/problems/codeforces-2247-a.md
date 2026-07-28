@@ -1,6 +1,6 @@
 <div class="problem-anchor" id="problem-codeforces-2247-a"></div>
 
-??? problem "CF Round 1111 · Div.2 A · Zero Sum（2247A）"
+??? problem "CF Round 1111 · Div.2 A · Zero Sum (2247A)"
     [打开原题 ↗](https://codeforces.com/contest/2247/problem/A){ .problem-source }
 
     **题意**：数组只含 $\pm1$；每次把一对相邻元素同时取反，判断能否把总和变成 0。
