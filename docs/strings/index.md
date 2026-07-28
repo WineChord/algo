@@ -97,7 +97,13 @@ Trie 把公共前缀合并成路径，适合：
 
 AC 自动机把多个模式串插入 Trie，再建立类似 KMP 的失配指针。扫描文本时同时推进所有可能模式，适合敏感词匹配、字典模式计数等多模式任务。
 
-复杂度通常写作 $O(\sum |pattern|+|text|+matches)$，具体还取决于字符集和如何统计输出。
+复杂度通常写作
+
+$$
+O\!\left(\sum |\mathrm{pattern}|+|\mathrm{text}|+\mathrm{matches}\right),
+$$
+
+具体还取决于字符集和如何统计输出。
 
 --8<-- "includes/problems/luogu-p3808.md"
 
