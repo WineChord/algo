@@ -108,7 +108,7 @@
 
 ### 图论
 
-先把 DFS、BFS、拓扑排序和最短路练熟，再进入最小生成树、强连通分量、最近公共祖先和网络流。详见[图论知识地图](../graph/index.md)与[0-1 权、二分图和操作奇偶](../graph/weighted-parity-states.md)。
+先把 DFS、BFS、拓扑排序和最短路练熟，再进入最小生成树、强连通分量、最近公共祖先和网络流。详见[图论知识地图](../graph/index.md)与 [0-1 权、二分图和操作奇偶](../graph/weighted-parity-states.md)。
 
 树上子问题先于父问题的统一接口见[树上后序聚合](../graph/tree-aggregation.md)。
 

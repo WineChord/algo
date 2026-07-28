@@ -9,7 +9,7 @@
   <figcaption>枚举保留全部组合，排序保留完整顺序；当目标对两个非负因子单调时，最大值与次大值已经是充分摘要。</figcaption>
 </figure>
 
-这条路径建立在[极值候选与 Top-K](top-k-extrema.md)的前缀不变量上；允许负数或改为选择三个数时，应转到[有符号乘积与双端极值](signed-product-extrema.md)。
+这条路径建立在[极值候选与 Top-K](top-k-extrema.md) 的前缀不变量上；允许负数或改为选择三个数时，应转到[有符号乘积与双端极值](signed-product-extrema.md)。
 
 ## 数组中的平移乘积
 

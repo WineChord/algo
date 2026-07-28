@@ -9,7 +9,7 @@
   <figcaption>正数端给出“三个最大值”，负数端则可能用两个很小的负数把乘积翻回正数；两组候选缺一不可。</figcaption>
 </figure>
 
-先阅读[极值候选与 Top-K](top-k-extrema.md)可以建立通用前缀不变量；若所有候选非负且只选两个数，见[非负两数乘积](pair-product-extrema.md)。
+先阅读[极值候选与 Top-K](top-k-extrema.md) 可以建立通用前缀不变量；若所有候选非负且只选两个数，见[非负两数乘积](pair-product-extrema.md)。
 
 ## 三数乘积的候选结构
 

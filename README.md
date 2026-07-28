@@ -22,6 +22,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/check_content.py
+python scripts/check_typography.py
 python scripts/check_figures.py
 python scripts/check_cpp.py
 python scripts/check_rendering.py
@@ -40,6 +41,7 @@ mkdocs serve
 - `includes/problems/`：可跨专题复用的折叠题目详情
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
+- `scripts/check_typography.py`：中英文、数字、单位与全角标点排版检查
 - `scripts/render_visuals.py`：确定性生成站内 SVG 图示与哈希清单
 - `scripts/check_figures.py`：校验图示安全性、来源、页面锚点与构建结果
 - `scripts/check_cpp.py`：逐个编译 C++ 代码块

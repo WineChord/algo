@@ -33,7 +33,7 @@
 
 看到“任意顺序均可”“只关心数值关系”“需要找最接近的一对”时，应主动考虑排序。
 
-如果只需要最大值、次大值或固定数量的候选，完整排序往往计算了过多信息。先用[极值候选与 Top-K](top-k-extrema.md)判断摘要是否充分；两个非负因子的乘积见[非负两数乘积](pair-product-extrema.md)，允许负数后见[有符号乘积](signed-product-extrema.md)。
+如果只需要最大值、次大值或固定数量的候选，完整排序往往计算了过多信息。先用[极值候选与 Top-K](top-k-extrema.md) 判断摘要是否充分；两个非负因子的乘积见[非负两数乘积](pair-product-extrema.md)，允许负数后见[有符号乘积](signed-product-extrema.md)。
 
 代表题目：
 
