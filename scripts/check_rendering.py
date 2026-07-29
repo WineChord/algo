@@ -20,6 +20,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 
 EXPECTED_MATHJAX_VERSION = "3.2.2"
+CODE_WRAP_STORAGE_KEY = "wc-code-wrap-v1"
 BACKTICK = "`"
 BARE_COMMANDS = (
     "alpha",
@@ -869,6 +870,209 @@ def inline_math_baseline_probe(driver: object) -> list[str]:
     return [str(issue) for issue in issues]
 
 
+def code_wrap_interaction_probe(
+    driver: object,
+    wait: object,
+    base_url: str,
+    route: str,
+    errors: list[str],
+) -> int:
+    driver.execute_cdp_cmd(
+        "Emulation.setDeviceMetricsOverride",
+        {
+            "width": 390,
+            "height": 844,
+            "deviceScaleFactor": 1,
+            "mobile": True,
+        },
+    )
+    driver.get(base_url + route)
+    driver.execute_script(
+        "window.localStorage.removeItem(arguments[0]);",
+        CODE_WRAP_STORAGE_KEY,
+    )
+    driver.refresh()
+    wait.until(
+        lambda current: current.execute_script(
+            """
+            const blocks = [...document.querySelectorAll(
+              'article.md-content__inner .highlight'
+            )].filter((block) =>
+              block.querySelector(':scope > pre > code')
+            );
+            return blocks.length > 0
+              && blocks.every((block) =>
+                block.querySelectorAll(
+                  ':scope > .wc-code-toolbar '
+                  + '> [data-code-wrap-toggle]'
+                ).length === 1
+              );
+            """
+        )
+    )
+    initial = driver.execute_script(
+        """
+        const blocks = [...document.querySelectorAll(
+          'article.md-content__inner .highlight'
+        )].filter((block) =>
+          block.querySelector(':scope > pre > code')
+        );
+        const controls = blocks.map((block) =>
+          block.querySelector(
+            ':scope > .wc-code-toolbar > [data-code-wrap-toggle]'
+          )
+        );
+        const code = blocks.map((block) =>
+          block.querySelector(':scope > pre > code')
+        );
+        return {
+          blocks: blocks.length,
+          controls: controls.length,
+          root: document.documentElement.dataset.codeWrap,
+          invalidControls: controls.filter((button) => {
+            const rect = button.getBoundingClientRect();
+            return button.tagName !== 'BUTTON'
+              || button.getAttribute('aria-pressed') !== 'true'
+              || button.getAttribute('aria-label')
+                !== '关闭代码自动换行'
+              || button.textContent.trim() !== '自动换行：开'
+              || rect.height < 43.5;
+          }).length,
+          invalidCode: code.filter((element) => {
+            const style = getComputedStyle(element);
+            return style.whiteSpace !== 'pre-wrap'
+              || !['anywhere', 'break-word'].includes(style.overflowWrap)
+              || style.overflowX !== 'hidden'
+              || element.scrollWidth > element.clientWidth + 1;
+          }).length,
+          documentOverflow: document.documentElement.scrollWidth
+            > document.documentElement.clientWidth + 1,
+        };
+        """
+    )
+    if (
+        initial["root"] != "on"
+        or initial["blocks"] != initial["controls"]
+        or initial["invalidControls"]
+        or initial["invalidCode"]
+        or initial["documentOverflow"]
+    ):
+        errors.append(
+            f"{route}: default code-wrap state failed at 390px: {initial}"
+        )
+        return 2
+    controls = driver.find_elements(
+        "css selector",
+        "article.md-content__inner [data-code-wrap-toggle]",
+    )
+    if len(controls) != initial["controls"]:
+        errors.append(
+            f"{route}: code-wrap control count changed before interaction"
+        )
+        return 2
+    controls[0].click()
+    nowrap = wait.until(
+        lambda current: current.execute_script(
+            """
+            const blocks = [...document.querySelectorAll(
+              'article.md-content__inner .highlight'
+            )].filter((block) =>
+              block.querySelector(':scope > pre > code')
+            );
+            const controls = blocks.map((block) =>
+              block.querySelector('[data-code-wrap-toggle]')
+            );
+            const code = blocks.map((block) =>
+              block.querySelector(':scope > pre > code')
+            );
+            if (
+              document.documentElement.dataset.codeWrap !== 'off'
+              || controls.some((button) =>
+                button.getAttribute('aria-pressed') !== 'false'
+              )
+            ) return null;
+            return {
+              stored: window.localStorage.getItem(arguments[0]),
+              invalidControls: controls.filter((button) =>
+                button.getAttribute('aria-label')
+                  !== '开启代码自动换行'
+                || button.textContent.trim() !== '自动换行：关'
+              ).length,
+              invalidCode: code.filter((element) => {
+                const style = getComputedStyle(element);
+                return style.whiteSpace !== 'pre'
+                  || style.overflowWrap !== 'normal'
+                  || style.wordBreak !== 'normal'
+                  || !['auto', 'scroll'].includes(style.overflowX);
+              }).length,
+              localScrollers: code.filter((element) =>
+                element.scrollWidth > element.clientWidth + 1
+              ).length,
+              documentOverflow: document.documentElement.scrollWidth
+                > document.documentElement.clientWidth + 1,
+            };
+            """,
+            CODE_WRAP_STORAGE_KEY,
+        )
+    )
+    if (
+        nowrap["stored"] != "off"
+        or nowrap["invalidControls"]
+        or nowrap["invalidCode"]
+        or not nowrap["localScrollers"]
+        or nowrap["documentOverflow"]
+    ):
+        errors.append(
+            f"{route}: disabled code-wrap state failed at 390px: {nowrap}"
+        )
+    driver.refresh()
+    persisted = wait.until(
+        lambda current: current.execute_script(
+            """
+            const controls = [...document.querySelectorAll(
+              'article.md-content__inner [data-code-wrap-toggle]'
+            )];
+            if (!controls.length) return null;
+            return {
+              root: document.documentElement.dataset.codeWrap,
+              pressed: controls.every((button) =>
+                button.getAttribute('aria-pressed') === 'false'
+              ),
+              nowrap: [...document.querySelectorAll(
+                'article.md-content__inner .highlight pre > code'
+              )].every((element) =>
+                getComputedStyle(element).whiteSpace === 'pre'
+              ),
+              documentOverflow: document.documentElement.scrollWidth
+                > document.documentElement.clientWidth + 1,
+            };
+            """
+        )
+    )
+    if (
+        persisted["root"] != "off"
+        or not persisted["pressed"]
+        or not persisted["nowrap"]
+        or persisted["documentOverflow"]
+    ):
+        errors.append(
+            f"{route}: code-wrap preference did not survive reload: "
+            f"{persisted}"
+        )
+    controls = driver.find_elements(
+        "css selector",
+        "article.md-content__inner [data-code-wrap-toggle]",
+    )
+    if controls:
+        controls[0].click()
+        wait.until(
+            lambda current: current.execute_script(
+                "return document.documentElement.dataset.codeWrap === 'on';"
+            )
+        )
+    return 3
+
+
 def browser_audit(
     site_dir: Path,
     explicit_chrome: Optional[str],
@@ -1327,6 +1531,50 @@ def browser_audit(
                                 + 'article.md-content__inner pre > code'
                               )
                             ];
+                            const codeBlocks = [
+                              ...document.querySelectorAll(
+                                'article.md-content__inner .highlight'
+                              )
+                            ].filter((block) =>
+                              block.querySelector(':scope > pre > code')
+                            );
+                            const codeControlIssues = codeBlocks.filter(
+                              (block) => {
+                                const toolbar = block.querySelectorAll(
+                                  ':scope > .wc-code-toolbar'
+                                );
+                                const controls = block.querySelectorAll(
+                                  ':scope > .wc-code-toolbar '
+                                  + '> [data-code-wrap-toggle]'
+                                );
+                                const languages = block.querySelectorAll(
+                                  ':scope > .wc-code-toolbar '
+                                  + '> .wc-code-language'
+                                );
+                                const copyControls = block.querySelectorAll(
+                                  ':scope > .wc-code-toolbar '
+                                  + '> .md-code__nav'
+                                );
+                                const strandedCopyControls =
+                                  block.querySelectorAll(
+                                    ':scope > pre > .md-code__nav'
+                                  );
+                                if (
+                                  !block.classList.contains('wc-code-block')
+                                  || toolbar.length !== 1
+                                  || controls.length !== 1
+                                  || languages.length !== 1
+                                  || copyControls.length !== 1
+                                  || strandedCopyControls.length
+                                ) return true;
+                                const button = controls[0];
+                                return button.tagName !== 'BUTTON'
+                                  || button.getAttribute('aria-pressed')
+                                    !== 'true'
+                                  || button.textContent.trim()
+                                    !== '自动换行：开';
+                              }
+                            ).length;
                             const codeOverflow = codeElements.filter((element) =>
                               element.scrollWidth > element.clientWidth + 1
                             ).length;
@@ -1387,6 +1635,8 @@ def browser_audit(
                               inlineMathIssues,
                               displayMathIssues,
                               brokenImages,
+                              codeBlocks: codeBlocks.length,
+                              codeControlIssues,
                               codeOverflow,
                               unwrappedCode,
                               figureIssues,
@@ -1448,6 +1698,12 @@ def browser_audit(
                                 f"{route}: figure audit: "
                                 + "; ".join(stats["figureIssues"])
                             )
+                        if stats["codeControlIssues"]:
+                            errors.append(
+                                f"{route}: {stats['codeControlIssues']} of "
+                                f"{stats['codeBlocks']} code blocks lack one "
+                                "complete language/copy/wrap toolbar"
+                            )
                         if stats["documentOverflow"]:
                             overflow_detail = "; ".join(
                                 f"{item['label']} right={item['right']} "
@@ -1466,12 +1722,12 @@ def browser_audit(
                                     else ""
                                 )
                             )
-                        if mobile and stats["codeOverflow"]:
+                        if stats["codeOverflow"]:
                             errors.append(
                                 f"{route}: {stats['codeOverflow']} code containers "
                                 f"overflow at {width}px"
                             )
-                        if mobile and stats["unwrappedCode"]:
+                        if stats["unwrappedCode"]:
                             errors.append(
                                 f"{route}: {stats['unwrappedCode']} code blocks "
                                 f"lack pre-wrap/overflow-wrap at {width}px"
@@ -1680,6 +1936,35 @@ def browser_audit(
                             errors.append(
                                 f"{route}: official destination is not a clickable link"
                             )
+                        instant_controls = wait.until(
+                            lambda current: current.execute_script(
+                                """
+                                const blocks = [...document.querySelectorAll(
+                                  'article.md-content__inner .highlight'
+                                )].filter((block) =>
+                                  block.querySelector(':scope > pre > code')
+                                );
+                                return {
+                                  blocks: blocks.length,
+                                  controls: blocks.filter((block) =>
+                                    block.querySelectorAll(
+                                      ':scope > .wc-code-toolbar '
+                                      + '> [data-code-wrap-toggle]'
+                                    ).length === 1
+                                  ).length,
+                                };
+                                """
+                            )
+                        )
+                        if (
+                            not instant_controls["blocks"]
+                            or instant_controls["controls"]
+                            != instant_controls["blocks"]
+                        ):
+                            errors.append(
+                                f"{route}: instant navigation did not enhance "
+                                "every code block"
+                            )
                         return_link = driver.find_element(
                             By.CSS_SELECTOR,
                             "article.md-content__inner "
@@ -1729,6 +2014,13 @@ def browser_audit(
                                 current.current_url
                             ).path == topic_path
                         )
+                    visits += code_wrap_interaction_probe(
+                        driver,
+                        wait,
+                        base_url,
+                        route,
+                        errors,
+                    )
                 except Exception as exc:
                     errors.append(
                         "daily archive navigation browser audit failed: "
