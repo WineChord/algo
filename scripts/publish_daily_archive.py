@@ -13,6 +13,8 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
+from daily_language import non_chinese_solution_lines
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -298,6 +300,15 @@ def validate_canonical_source(item: Item, text: str) -> str:
             and "https://codeforces.com/blog/entry/967" not in text
         ):
             raise source_error(item, 1, "Codeforces source needs its usage licence")
+    language_errors = non_chinese_solution_lines(text, item.kind)
+    if language_errors:
+        line_number, line = language_errors[0]
+        raise source_error(
+            item,
+            line_number,
+            "solution prose must be Chinese outside the AtCoder/Codeforces "
+            f"official English statement layer: {line[:120]!r}",
+        )
     return text
 
 

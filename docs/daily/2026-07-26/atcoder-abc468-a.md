@@ -8,28 +8,28 @@ title: "[atcoder] ABC468 A Maximal Value"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
-## Official source information
+## 官方来源信息
 
-- Series and contest: AtCoder Beginner Contest 468 (ABC468)
-- Division / task alias: ABC468 A
-- Official title: Maximal Value
-- Official difficulty: AtCoder does not publish a difficulty label on the task page
-- Score: 100
-- Time limit: 2 seconds
-- Memory limit: 1024 MiB
-- Official task: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_a)
-- Official contest task list: [Open the official contest](https://atcoder.jp/contests/abc468/tasks)
-- Copyright terms: [AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
-- Program interface: GNU++23 full program using standard input and output.
-- Official image: the statement has no problem-specific diagram; the page's “Image” links are editorial-language controls rather than statement figures
+- 系列与比赛：AtCoder Beginner Contest 468（ABC468）
+- 组别／题号别名：ABC468 A
+- 官方标题：Maximal Value
+- 官方难度：AtCoder 题目页未提供难度标签
+- 分值：100
+- 时间限制：2 秒
+- 内存限制：1024 MiB
+- 官方题目：[打开官方题目](https://atcoder.jp/contests/abc468/tasks/abc468_a)
+- 官方比赛题目列表：[打开官方比赛](https://atcoder.jp/contests/abc468/tasks)
+- 版权条款：[AtCoder 使用条款](https://atcoder.jp/tos?lang=en)
+- 程序接口：使用标准输入输出的 GNU++23 完整程序。
+- 官方图片：题面没有题目专属示意图；页面中的“Image”链接是题解语言切换入口，不是题面图片
 
-### Official English entry and short excerpt
+### 官方英文入口与短摘录
 
-Open the [complete original English statement](https://atcoder.jp/contests/abc468/tasks/abc468_a?lang=en) on AtCoder.
+在 AtCoder 查看[完整官方英文题面](https://atcoder.jp/contests/abc468/tasks/abc468_a?lang=en)。
 
 > “You are given an integer sequence of length N.”
 
-AtCoder's ordinary contest statements do not carry a confirmed blanket republication licence. The complete English presentation below is independently written from the official task while preserving its full semantics, input/output contract, constraints, and examples.
+普通 AtCoder 竞赛题面没有已确认的统一再发布许可。下方英文题面依据官方内容独立撰写，并完整保留语义、输入输出契约、约束与样例。
 
 ### Complete English statement
 

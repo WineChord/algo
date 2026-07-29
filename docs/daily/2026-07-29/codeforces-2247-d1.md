@@ -22,8 +22,8 @@ title: "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)"
 - 官方英文题面：[Codeforces 2247D1](https://codeforces.com/contest/2247/problem/D1)
 - 题面许可：[Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
 
-!!! info "Source and licence"
-    Codeforces is the source of the problem below. Its official materials licence permits problem texts to be published in open, non-judging resources when the Codeforces source and a direct problem link remain clearly visible. This page is an educational explanation without automatic judging; it does not reproduce hidden tests, generators, checkers, validators, or separate image assets.
+!!! info "来源与许可"
+    Codeforces 是下方题目的来源。其官方材料许可允许在开放、非判题资源中发布题面，前提是清晰保留 Codeforces 来源和题目直达链接。本页仅用于教学，不提供自动判题，也不复制隐藏测试、生成器、检查器、校验器或独立图片资源。
 
 ### Complete English statement
 

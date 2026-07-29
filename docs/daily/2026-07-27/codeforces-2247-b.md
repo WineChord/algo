@@ -8,25 +8,25 @@ title: "[codeforces] CF Round 1111 Div.2 B Yet Another Constructive"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../math/modular-constructions/">进入知识专题</a></p>
 
-Official problem: [Open the official problem](https://codeforces.com/problemset/problem/2247/B)
+官方题目：[打开 Codeforces 题目页](https://codeforces.com/problemset/problem/2247/B)
 
-Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
+材料许可：[Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
 
-## Official source record
+## 官方原始信息
 
-- Platform and contest: Codeforces, Codeforces Round 1111 (Div. 2).
-- Contest ID: 2247.
-- Official task identity: Div.2 B, title “Yet Another Constructive”.
-- Cross-division aliases: none found in the official problemset API; the title maps only to contest 2247, index B.
-- Official task points: 750.
-- Official problem rating: unavailable in the current official API; it must not be inferred from index B.
-- Official tags: `constructive algorithms`.
-- Limits: 1.5 seconds, 256 MB.
-- Program interface: GNU++23 full program.
-- Official statement images: none.
+- 平台与比赛：Codeforces，Codeforces Round 1111（Div. 2）。
+- 竞赛 ID：2247。
+- 官方题目标识：Div.2 B，标题为 “Yet Another Constructive”。
+- 跨组别别名：官方 problemset API 中未发现其他映射；该标题只对应竞赛 2247 的 B 题。
+- 官方题目分值：750。
+- 官方题目 rating：当前官方 API 未提供，不能根据 B 题序号推断。
+- 官方标签：`constructive algorithms`。
+- 限制：1.5 秒，256 MB。
+- 程序接口：GNU++23 完整程序。
+- 官方题面图片：无。
 
-!!! info "Source and licence"
-    Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
+!!! info "官方来源与材料许可"
+    Codeforces 是本题来源。下方完整英文题面层遵循 Codeforces 材料使用许可，保留来源署名与官方直链；本站仅作教学展示，不提供自动判题，也不复制隐藏测试、生成器、checker 或 validator。
 
 ## Complete English statement
 
@@ -91,37 +91,37 @@ The output is non-unique. In test 2, `[9,17,14]` sums to 40, divisible by 5, whi
 
 样例输出不是唯一答案。第二组中 `[9,17,14]` 的和为 40，可被 5 整除，同时不存在更短的可整除区间；第四组无解。输入输出结构、全部约束和逐字符样例数据以上方官方英文信息为准。
 
-## Prefix-residue model
+## 前缀余数模型
 
-Let
+定义
 
 $$
 p_0=0,\qquad p_i=\sum_{j=1}^{i}a_j\bmod m.
 $$
 
-Subarray $[l,r]$ has sum divisible by $m$ exactly when $p_{l-1}=p_r$. Therefore the shortest divisible-subarray length is exactly the minimum index distance between equal prefix residues.
+子数组 $[l,r]$ 的元素和能被 $m$ 整除，当且仅当 $p_{l-1}=p_r$。因此，最短可整除子数组的长度，就是两个相等前缀余数之间的最小下标距离。
 
-This translation removes the distracting magnitude bound: every residue increment can be represented by a positive value in $[1,m]$, already far below $10^{18}$.
+这个转化消除了元素上界带来的干扰：模 $m$ 意义下的每种增量都能用 $[1,m]$ 内的正整数表示，远小于 $10^{18}$。
 
-## Necessary condition
+## 必要条件
 
-No divisible subarray may have length below $k$, so the first $k$ prefix residues
+不能存在长度小于 $k$ 的可整除子数组，所以前 $k$ 个前缀余数
 
 $$
 p_0,p_1,\ldots,p_{k-1}
 $$
 
-must be pairwise distinct. Only $m$ residues exist. By the pigeonhole principle,
+必须两两不同。余数总共只有 $m$ 种，根据抽屉原理，必须满足
 
 $$
 k\le m
 $$
 
-is necessary.
+。
 
-## Solution 1: exhaustive residue-array search
+## 解法一：穷举数组
 
-For a conceptual brute force, enumerate every array whose values are in $[1,m]$, then test all subarrays. Restricting to $[1,m]$ is complete because these values realize every possible increment modulo $m$.
+作为概念上的暴力解，可以枚举所有元素都位于 $[1,m]$ 的数组，再检查全部子数组。把值域限制在 $[1,m]$ 不会漏解，因为这些正整数已经能实现模 $m$ 下的全部增量。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -168,30 +168,30 @@ int main() {
 }
 ```
 
-- Time: $O(m^n n^2)$.
-- Extra space: $O(n)$ excluding recursion overhead.
-- Bottleneck: the brute force searches sequences instead of exploiting the equal-prefix-residue structure.
+- 时间复杂度：$O(m^n n^2)$。
+- 额外空间复杂度：不计递归栈为 $O(n)$。
+- 瓶颈：暴力在搜索完整数列，没有利用“相等前缀余数”这一核心结构。
 
-## Solution 2: repeat a positive block of sum $m$ — recommended
+## 解法二：重复一个和为 $m$ 的正数块（推荐）
 
-When $k\le m$, split $m$ into $k$ positive integers and repeat that block. A balanced split uses
+当 $k\le m$ 时，把 $m$ 拆成 $k$ 个正整数，并周期性重复这个块。均衡拆分取
 
 $$
 q=\left\lfloor\frac{m}{k}\right\rfloor,\qquad r=m\bmod k,
 $$
 
-with $k-r$ copies of $q$ and $r$ copies of $q+1$.
+其中包含 $k-r$ 个 $q$ 和 $r$ 个 $q+1$。
 
-Every $k$ consecutive values form one rotation of the block, so their sum is exactly $m$. Every shorter consecutive segment in the infinite periodic sequence omits at least one positive block element, so its sum lies strictly between 0 and $m$ and cannot be divisible by $m$.
+任意连续 $k$ 个元素都恰好是该块的一次循环位移，元素和为 $m$。无限周期序列中任意更短的连续段都会漏掉至少一个正数，因此其和严格位于 0 与 $m$ 之间，不可能被 $m$ 整除。
 
-### Correctness proof
+### 正确性证明
 
-- If $k>m$, the pigeonhole argument proves impossibility, so `NO` is correct.
-- If $k\le m$, $q\ge1$, hence every constructed element is positive.
-- Period $k$ makes each length-$k$ window contain every block element exactly once, with sum $m$, so a divisible window of length $k$ exists.
-- Any window of length $d<k$ is a proper cyclic segment of the positive block. Its sum is positive and strictly less than the full block sum $m$, so it is not divisible by $m$.
+- 若 $k>m$，抽屉原理已经证明无解，因此输出 `NO` 正确。
+- 若 $k\le m$，则 $q\ge1$，构造出的每个元素都是正数。
+- 周期为 $k$，所以每个长度为 $k$ 的窗口恰好包含块中每个元素一次，元素和为 $m$，一定存在合法窗口。
+- 任意长度 $d<k$ 的窗口都是正数块的真循环子段，其和大于 0 且严格小于整个块的和 $m$，因此不能被 $m$ 整除。
 
-Thus the minimum divisible length is exactly $k$.
+所以最短可整除子数组长度恰好为 $k$。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -221,20 +221,20 @@ int main() {
 }
 ```
 
-- Time: $O(n)$ per test case; $O(\sum n)$ overall.
-- Extra space: $O(k)$, reducible to $O(1)$ by generating values from the index.
-- Output bound: $\max a_i=\lceil m/k\rceil\le10^9$.
-- Recommendation: remember “equal prefix residues encode divisible subarrays” for the necessity proof, and “repeat a positive composition of $m$” for the construction. The balanced composition minimizes the largest generated element.
+- 时间复杂度：每组 $O(n)$，总计 $O(\sum n)$。
+- 额外空间复杂度：$O(k)$；按下标直接生成时可降为 $O(1)$。
+- 输出上界：$\max a_i=\lceil m/k\rceil\le10^9$。
+- 记忆建议：用“相等前缀余数对应可整除子数组”证明必要性，用“周期重复 $m$ 的正整数拆分”完成构造。均衡拆分还能最小化构造中的最大元素。
 
-## Same-order alternative: sparse jump block
+## 同阶替代方案：稀疏跳跃块
 
-The block
+也可以使用块
 
 $$
 [1,1,\ldots,1,m-k+1]
 $$
 
-also consists of $k$ positive values summing to $m$. It gives a particularly short implementation but can use a much larger maximum value than the balanced block.
+它同样由 $k$ 个正数组成且总和为 $m$。这种实现特别短，但最大元素可能远大于均衡拆分。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -263,30 +263,30 @@ int main() {
 }
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(1)$.
-- Trade-off: simplest generator, but maximum value $m-k+1$ instead of $\lceil m/k\rceil$.
+- 时间复杂度：$O(n)$。
+- 额外空间复杂度：$O(1)$。
+- 权衡：生成器最简单，但最大值为 $m-k+1$，而不是 $\lceil m/k\rceil$。
 
-## Common mistakes
+## 常见错误
 
-- Testing only whether one length-$k$ subarray is divisible and ignoring shorter windows.
-- Looking at array values modulo $k$ instead of prefix sums modulo $m$.
-- Claiming impossibility from $n>m$; repeats are allowed once their distance reaches $k$.
-- Constructing a block with zero entries; all output values must be positive.
-- Forgetting $k=1$: outputting $m$ works because each one-element window is divisible.
-- Printing values outside $10^{18}$; the construction never exceeds $m$.
-- Inferring an official Codeforces rating when the API field is absent.
+- 只检查是否存在长度为 $k$ 的可整除区间，却忽略了更短区间。
+- 对数组元素模 $k$，而不是对前缀和模 $m$。
+- 因 $n>m$ 就判无解；只要相等余数之间的距离达到 $k$，余数可以重复。
+- 构造中出现 0；题目要求所有输出元素都是正数。
+- 忘记 $k=1$：直接输出 $m$ 即可，因为每个单元素窗口都能整除。
+- 输出超过 $10^{18}$ 的值；本构造实际上从不超过 $m$。
+- 官方 API 缺少 rating 时，根据题目序号自行推断。
 
-## Follow-up 1: impose an element cap $B$
+## 追问一：增加元素上界 $B$
 
-**New definition.** Require $1\le a_i\le B$.
+<strong>新定义。</strong>额外要求 $1\le a_i\le B$。
 
-Necessity:
+必要性：
 
-- Prefix residues still require $k\le m$.
-- A length-$k$ divisible subarray has positive sum at least $m$, but its sum is at most $kB$, so $m\le kB$.
+- 前缀余数论证仍然要求 $k\le m$。
+- 一个长度为 $k$、元素和能被 $m$ 整除的子数组，其正整数和至少为 $m$，同时至多为 $kB$，故还需 $m\le kB$。
 
-These conditions are sufficient: a balanced positive composition of $m$ has maximum $\lceil m/k\rceil\le B$.
+这两个条件也充分：把 $m$ 尽量均匀地拆成 $k$ 个正整数，最大项为 $\lceil m/k\rceil\le B$。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -318,15 +318,15 @@ int main() {
 }
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(1)$.
-- Existence criterion: $k\le m\le kB$.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(1)$。
+- 存在性判据：$k\le m\le kB$。
 
-## Follow-up 2: lexicographically smallest period block of sum $m$
+## 追问二：和为 $m$ 的字典序最小周期块
 
-**New definition.** Among positive length-$k$ blocks whose sum is exactly $m$, output the lexicographically smallest block and repeat it.
+<strong>新定义。</strong>在所有长度为 $k$、元素均为正整数且总和恰为 $m$ 的块中，输出字典序最小者，并将它周期性重复。
 
-Make every early position as small as possible: the first $k-1$ values are 1, and the last receives the remainder $m-k+1$.
+要让前面的元素尽可能小，令前 $k-1$ 项全为 1，最后一项承接剩余的 $m-k+1$。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -352,20 +352,20 @@ int main() {
 }
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(1)$.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(1)$。
 
-## Follow-up 3: count periodic sum-$m$ constructions
+## 追问三：统计和为 $m$ 的周期构造数量
 
-**New definition.** Count positive ordered length-$k$ blocks whose sum is exactly $m$, modulo $10^9+7$. Assume $m\le2\cdot10^5$.
+<strong>新定义。</strong>统计长度为 $k$、元素均为正整数且总和恰为 $m$ 的有序块数量，对 $10^9+7$ 取模。设 $m\le2\cdot10^5$。
 
-By stars and bars, the count is
+由隔板法，方案数为
 
 $$
 \binom{m-1}{k-1}
 $$
 
-when $k\le m$, and zero otherwise. Repeating any such block yields a valid original construction.
+其中 $k\le m$ 时公式成立，否则答案为零。任意这样的块周期性重复后，都是原题的合法构造。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -400,14 +400,14 @@ int main() {
 }
 ```
 
-- Time: $O(m+\log\text{MOD})$.
-- Extra space: $O(m)$.
+- 时间复杂度：$O(m+\log\text{MOD})$。
+- 额外空间：$O(m)$。
 
-## Follow-up 4: verify an arbitrary array and recover a witness
+## 追问四：验证任意数组并恢复见证区间
 
-**New definition.** Given a positive integer array, return the shortest divisible-subarray length and one one-based witness interval.
+<strong>新定义。</strong>给定一个正整数数组，返回元素和能被 $m$ 整除的最短子数组长度，以及一个下标从 1 开始的见证区间。
 
-For each prefix residue, the closest previous equal residue gives the shortest divisible subarray ending at the current position. Tracking only the latest occurrence is therefore sufficient.
+对每个前缀余数，与当前位置最近的同余前缀会给出以当前位置结尾的最短合法子数组。因此每个余数只需保存最近一次出现位置。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -447,14 +447,14 @@ int main() {
 }
 ```
 
-- Expected time: $O(n)$.
-- Extra space: $O(\min(n,m))$.
+- 期望时间复杂度：$O(n)$。
+- 额外空间：$O(\min(n,m))$。
 
-## Follow-up 5: streaming shortest length after every append
+## 追问五：流式追加后实时输出最短长度
 
-**New definition.** Positive values arrive online. After each append, output the shortest divisible-subarray length seen so far, or `-1`.
+<strong>新定义。</strong>正整数在线到达；每次追加后，输出目前出现过的最短合法子数组长度，若不存在则输出 `-1`。
 
-Update one prefix residue and its latest occurrence; the global minimum can only decrease.
+每次只需更新一个前缀余数及其最近位置；全局最短长度只可能减小。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -484,14 +484,14 @@ int main() {
 }
 ```
 
-- Expected update time: $O(1)$.
-- Extra space: $O(\min(n,m))$.
+- 单次更新的期望时间复杂度：$O(1)$。
+- 额外空间：$O(\min(n,m))$。
 
-## Follow-up 6: generate a randomized valid construction
+## 追问六：生成随机合法构造
 
-**New definition.** Produce varied deterministic test data from a supplied seed.
+<strong>新定义。</strong>根据给定随机种子生成可复现、形态多样的合法数据。
 
-Choose $k-1$ distinct cut positions in $[1,m-1]$; adjacent differences form a random positive composition of $m$. Floyd’s sampling algorithm selects the cuts in $O(k)$ expected time without iterating to $m$.
+在 $[1,m-1]$ 中选择 $k-1$ 个互不相同的切分点，相邻切分点之差便构成 $m$ 的一个随机正整数拆分。Floyd 采样可在不遍历到 $m$ 的前提下，以期望 $O(k)$ 时间选出这些切分点。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -536,24 +536,24 @@ int main() {
 }
 ```
 
-- Expected time: $O(k\log k+n)$.
-- Extra space: $O(k)$.
+- 期望时间复杂度：$O(k\log k+n)$。
+- 额外空间：$O(k)$。
 
-## Reproducible verification plan
+## 可复现验证
 
-- Compile every program in C++23 mode.
-- Exhaustively test small $1\le k\le n\le10$, $1\le m\le10$: verify the construction exactly when $k\le m$, then enumerate all subarrays to confirm the shortest divisible length.
-- Randomly test the balanced, sparse-jump, capped, and randomized-composition generators against the same $O(n^2)$ checker.
-- Randomly compare the hash-map witness/stream algorithms against complete subarray enumeration.
+- 以 C++23 模式编译每份程序。
+- 穷举 $1\le k\le n\le10$、$1\le m\le10$：核对恰在 $k\le m$ 时存在构造，再枚举全部子数组确认最短合法长度。
+- 将均匀块、稀疏跳跃、带上界和随机拆分四类生成器，与同一个 $O(n^2)$ 检查器随机对拍。
+- 将哈希表见证区间与流式算法，和完整子数组枚举随机对拍。
 
-## Sources
+## 来源
 
-- Official problem: [Open the official problem](https://codeforces.com/problemset/problem/2247/B)
-- Official contest: [Open the official contest](https://codeforces.com/contest/2247)
-- Official contest API: [Open the official contest](https://codeforces.com/api/contest.list?gym=false)
-- Official problemset API: [Open the official problem](https://codeforces.com/api/problemset.problems)
+- 官方题目：[打开官方题目](https://codeforces.com/problemset/problem/2247/B)
+- 官方比赛：[打开官方比赛](https://codeforces.com/contest/2247)
+- 官方比赛 API：[打开官方比赛 API](https://codeforces.com/api/contest.list?gym=false)
+- 官方题库 API：[打开官方题库 API](https://codeforces.com/api/problemset.problems)
 
-## Reference
+## 参考资料
 
 - [官方题目](https://codeforces.com/problemset/problem/2247/B)
 - [对应知识专题](../../math/modular-constructions.md)

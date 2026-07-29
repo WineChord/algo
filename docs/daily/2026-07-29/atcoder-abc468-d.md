@@ -21,8 +21,8 @@ title: "[atcoder] ABC468 D Pre-Palindrome"
 - 官方英文题面：[AtCoder ABC468 D](https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en)
 - 版权条款：[AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
 
-!!! info "Official source and copyright"
-    AtCoder is the official source of this problem. Its Terms of Use state that rights in the service's text, images, programs, and other data belong to AtCoder or the relevant third-party rightsholder. No general open republication licence has been confirmed for ordinary AtCoder Beginner Contest statements. The English presentation below is therefore independently structured and written while preserving the complete problem semantics, data contract, constraints, and examples; use the official problem link above as the authoritative source.
+!!! info "官方来源与版权"
+    AtCoder 是本题的官方来源。其使用条款说明，服务中的文字、图片、程序及其他数据权利归 AtCoder 或相关第三方权利人所有。普通 AtCoder Beginner Contest 题面没有已确认的统一开放再发布许可，因此下方英文题面依据官方内容独立组织与撰写，并完整保留题意、数据契约、约束和样例；事实核验以上方官方题目链接为准。
 
 ### Complete English statement
 

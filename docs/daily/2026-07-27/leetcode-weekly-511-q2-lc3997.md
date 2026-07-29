@@ -8,57 +8,57 @@ title: "[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节�
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../graph/tree-aggregation/">进入知识专题</a></p>
 
-Official problem: [Open the official problem](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
+官方题目：[打开官方题目](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
 
-## Official source record
+## 官方原始信息
 
-- Platform and contest: LeetCode China, 第 511 场周赛.
-- Official problem identity: LC 3997, slug `count-dominant-nodes-in-a-binary-tree`.
-- Official Chinese title: 统计二叉树中支配节点的数量.
-- Official English title: Count Dominant Nodes in a Binary Tree.
-- Official difficulty: 中等 / Medium.
-- Official contest position and points: Q2, 4 points.
-- ZeroTracer community-estimated contest rating: `1426.5661260433`, retrieved 2026-07-27. This is not an official LeetCode difficulty.
-- Official topic tags returned by the current problem API: none.
-- Program interface: LeetCode C++ function signature.
+- 平台与比赛：力扣中国，第 511 场周赛。
+- 官方题目标识：LC 3997，slug 为 `count-dominant-nodes-in-a-binary-tree`。
+- 官方中文标题：统计二叉树中支配节点的数量。
+- 官方英文标题：Count Dominant Nodes in a Binary Tree。
+- 官方难度：中等。
+- 官方比赛位置与分值：Q2，4 分。
+- ZeroTracer 社区估算竞赛分：`1426.5661260433`，获取于 2026-07-27；这不是力扣官方难度。
+- 当前题目接口返回的官方标签：无。
+- 程序接口：力扣 C++ 函数签名。
 
-## Complete problem statement
+## 完整题意
 
-Given the root of a **complete binary tree**, call a node $x$ **dominant** when its value equals the maximum value among every node in the subtree rooted at $x$. Return the total number of dominant nodes.
+给定一棵<strong>完全二叉树</strong>的根节点。若节点 $x$ 的值等于以 $x$ 为根的子树中所有节点值的最大值，则称 $x$ 为<strong>支配节点</strong>。返回支配节点总数。
 
-A complete binary tree has every level except possibly the last completely filled, and its final level is filled from left to right. A subtree rooted at $x$ contains $x$ and all descendants of $x$.
+完全二叉树除最后一层外均被填满，最后一层从左到右连续填充。以 $x$ 为根的子树包含 $x$ 自身及其全部后代。
 
-### Official function signature
+### 官方函数签名
 
 ```text
 int countDominantNodes(TreeNode* root)
 ```
 
-### All official constraints
+### 全部官方约束
 
-- The number of nodes is in $[1,10^5]$.
-- $1\le\texttt{Node.val}\le10^9$.
-- The input is guaranteed to be a complete binary tree.
+- 节点数位于 $[1,10^5]$。
+- $1\le\texttt{Node.val}\le10^9$。
+- 输入保证为完全二叉树。
 
-### All official examples and images
+### 全部官方样例与图片
 
-Example 1 official image:
+样例 1 官方图片：
 
-![Example 1 complete binary tree](../../assets/daily/official/91ca4e925060-tnew.png)
+![样例 1 完全二叉树](../../assets/daily/official/91ca4e925060-tnew.png)
 
-- Official image dimensions: 300 by 193 pixels.
-- Input: `root = [5,3,8,2,4,7,1]`
-- Output: `5`
-- Explanation: leaves 2, 4, 7, and 1 are dominant. Node 8 is also dominant because 8 is the maximum in subtree `[8,7,1]`.
+- 官方图片尺寸：300 × 193 像素。
+- 输入：`root = [5,3,8,2,4,7,1]`
+- 输出：`5`
+- 解释：叶子 2、4、7、1 都是支配节点；节点 8 也是支配节点，因为 8 是子树 `[8,7,1]` 的最大值。
 
-Example 2 official image:
+样例 2 官方图片：
 
-![Example 2 complete binary tree](../../assets/daily/official/4be799b743d8-t9.png)
+![样例 2 完全二叉树](../../assets/daily/official/4be799b743d8-t9.png)
 
-- Official image dimensions: 250 by 183 pixels.
-- Input: `root = [1,2,3,1,2]`
-- Output: `4`
-- Explanation: the three leaves are dominant. The internal node of value 2 with subtree `[2,1,2]` is also dominant.
+- 官方图片尺寸：250 × 183 像素。
+- 输入：`root = [1,2,3,1,2]`
+- 输出：`4`
+- 解释：三个叶子都是支配节点；子树 `[2,1,2]` 的根节点 2 也是支配节点。
 
 ## 中文题意与样例说明
 
@@ -66,29 +66,29 @@ Example 2 official image:
 
 样例 1 的四个叶子天然满足条件，值为 8 的内部节点也是其子树最大值，所以答案为 5。样例 2 的三个叶子和左侧值为 2 的内部节点满足条件，答案为 4。完整二叉树的最后一层从左到右填充；函数签名、全部约束、示例图片和数据以上方官方信息为准。
 
-## Constraint-driven observations
+## 从约束推导
 
-The definition points from descendants toward their ancestor, so postorder is the natural direction: both child-subtree maxima must be known before deciding the parent. Equality matters—if several nodes tie for the subtree maximum, the subtree root is dominant whenever it has that same value.
+定义中的信息从后代流向祖先，因此后序遍历最自然：只有先得到左右子树最大值，才能判断父节点。这里必须注意“等于”：若子树最大值出现多次，只要子树根节点也取到该最大值，它仍是支配节点。
 
-Completeness gives height $O(\log n)$. With $n\le10^5$, recursive postorder is safe here and uses only $O(\log n)$ call-stack frames. The values and answer fit in `int`; no sums are required.
+完全二叉树的高度为 $O(\log n)$。在 $n\le10^5$ 下，递归后序遍历只占用 $O(\log n)$ 层调用栈，足够安全。节点值和答案均可放入 `int`，算法也不涉及求和，不存在整数溢出风险。
 
-Important boundaries:
+关键边界：
 
-- A leaf is always dominant.
-- A one-node tree returns 1.
-- If all values are equal, every node is dominant.
-- The root is dominant exactly when it is a global maximum.
-- A large descendant invalidates every smaller ancestor on its ancestor chain, but not nodes in unrelated subtrees.
+- 叶子节点总是支配节点。
+- 单节点树的答案为 1。
+- 若所有节点值相等，则每个节点都是支配节点。
+- 根节点恰在其值等于全树最大值时成为支配节点。
+- 一个较大的后代会使祖先链上所有较小节点失效，但不会影响无关子树。
 
-## Example 1 postorder evolution
+## 样例 1 的后序状态演化
 
-The leaves return maxima 2, 4, 7, and 1 and each contributes one. Node 3 receives child maxima 2 and 4, so its subtree maximum is 4 and it contributes zero. Node 8 receives 7 and 1, so its subtree maximum remains 8 and it contributes one. Root 5 receives subtree maxima 4 and 8, so its subtree maximum is 8 and it contributes zero. Total: $4+1=5$.
+四个叶子分别返回最大值 2、4、7、1，并各贡献 1。节点 3 收到子树最大值 2 和 4，因此自身子树最大值为 4，不贡献答案。节点 8 收到 7 和 1，自身仍为最大值，贡献 1。根节点 5 收到左右子树最大值 4 和 8，因此全树最大值为 8，根节点不贡献答案。总计 $4+1=5$。
 
-## Solution 1: rescan every subtree
+## 解法一：为每个节点重新扫描子树
 
-For every node, independently traverse its subtree to obtain the maximum, then recurse to count the same property at its children.
+对每个节点独立遍历其整棵子树求最大值，再递归统计左右孩子。
 
-This is a correct brute force because it directly evaluates the definition at each node. In a complete tree, level $d$ contains $2^d$ nodes and each such subtree has $O(n/2^d)$ nodes, so every level costs $O(n)$, for $O(n\log n)$ total. Without completeness, a chain would degrade to $O(n^2)$.
+该暴力解直接逐节点检验定义，因此正确。完全二叉树第 $d$ 层有 $2^d$ 个节点，每棵对应子树包含 $O(n/2^d)$ 个节点，所以每一层总工作量为 $O(n)$，合计 $O(n\log n)$。若没有完全性保证，链状树会退化到 $O(n^2)$。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -109,17 +109,17 @@ public:
 };
 ```
 
-- Time: $O(n\log n)$ for the guaranteed complete tree.
-- Extra space: $O(\log n)$.
-- Bottleneck: every descendant maximum is recomputed once for each ancestor.
+- 时间复杂度：在完全二叉树保证下为 $O(n\log n)$。
+- 额外空间：$O(\log n)$。
+- 瓶颈：每个后代的值会为其每一层祖先重复参与最大值计算。
 
-## Solution 2: one postorder aggregation — recommended
+## 解法二：一次后序聚合（推荐）
 
-Return two facts from each subtree: its maximum and its dominant-node count. Each node is processed once.
+每棵子树同时向父节点返回两个信息：子树最大值与支配节点数量。每个节点只处理一次。
 
-### Correctness proof
+### 正确性证明
 
-Induct on subtree size. The empty subtree returns maximum $-\infty$ and count zero, which is correct. Assume both child results are correct. The current subtree maximum is the maximum of the current value and the two child maxima, so the current node is dominant exactly when its value equals that computed maximum. The dominant nodes in the current subtree are precisely the dominant nodes in the left subtree, those in the right subtree, and possibly the current node; these sets are disjoint. Therefore the returned count and maximum are correct. Induction proves the root result.
+对子树规模做归纳。空树返回最大值 $-\infty$ 和计数 0，显然正确。假设左右子树返回结果均正确，则当前子树最大值就是当前节点值与两个子树最大值的最大者；当前节点恰在自身值等于该最大值时为支配节点。当前子树中的支配节点恰由左子树、右子树以及可能的当前节点组成，三者互不重叠。因此返回的最大值和计数都正确，归纳可得根节点结果正确。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -140,15 +140,15 @@ public:
 };
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(\log n)$ from the guaranteed complete-tree height.
-- Recommendation: remember this postorder “return the aggregate needed by the parent” pattern. It is shorter, asymptotically optimal, and generalizes to arbitrary subtree statistics.
+- 时间复杂度：$O(n)$。
+- 额外空间：由完全二叉树高度决定，为 $O(\log n)$。
+- 记忆建议：优先掌握“后序遍历并返回父节点所需聚合量”的模式。它实现简洁、渐近最优，也容易迁移到其他子树统计问题。
 
-## Same-order alternative: reverse heap order
+## 同阶替代方案：逆序处理隐式堆
 
-Completeness means breadth-first order is exactly the implicit heap order: children of index $i$ are $2i+1$ and $2i+2$. Process that array backward.
+完全二叉树的层序恰好对应隐式堆：下标 $i$ 的两个孩子为 $2i+1$ 与 $2i+2$。将层序节点数组从后向前处理即可。
 
-This avoids recursion but spends $O(n)$ memory. It is useful when the input already arrives in level order or recursion is prohibited.
+该方案避免递归，但需要 $O(n)$ 额外内存；当输入本身就是层序数组或环境禁止递归时很实用。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -183,24 +183,24 @@ public:
 };
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(n)$.
-- Trade-off: more memory than recursive postorder, but no call stack and excellent cache locality for array-form input.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(n)$。
+- 权衡：比递归后序占用更多内存，但没有调用栈；若输入本身是数组，缓存局部性也更好。
 
-## Common mistakes
+## 常见错误
 
-- Using preorder: the parent cannot be decided before descendant maxima are known.
-- Checking `>` instead of equality with the subtree maximum; ties are valid.
-- Comparing only with immediate children rather than all descendants.
-- Confusing this property with “good nodes” on a root-to-node path.
-- Returning the current value instead of the full subtree maximum.
-- Assuming `nullptr` has maximum zero in a generalized version that permits negative values; `INT_MIN` is robust.
+- 使用前序遍历：后代最大值未知时无法判断父节点。
+- 用 `>` 而非与子树最大值比较相等；最大值并列仍然合法。
+- 只与直接孩子比较，而忽略更深后代。
+- 把本题与根到节点路径上的“好节点”概念混淆。
+- 向父节点返回当前节点值，而不是完整子树最大值。
+- 在允许负数的变种中把空树最大值设为 0；使用 `INT_MIN` 更稳健。
 
-## Follow-up 1: strict dominance over proper descendants
+## 追问一：严格大于所有真后代
 
-**New definition.** A node is strictly dominant when its value is greater than every proper descendant. Leaves qualify vacuously.
+<strong>新定义。</strong>若节点值严格大于其所有真后代，则称它严格支配。叶子节点没有真后代，因此自然满足条件。
 
-Equality now invalidates an internal node, so compare with the maximum of the two child subtrees before inserting the current value.
+此时并列最大会使内部节点失效，因此要先比较当前值与左右子树最大值，再把当前值纳入返回的子树最大值。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -221,14 +221,14 @@ public:
 };
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(h)$, where $h$ is tree height.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(h)$，其中 $h$ 为树高。
 
-## Follow-up 2: root-to-node “good nodes”
+## 追问二：根到节点路径上的“好节点”
 
-**New definition.** Count nodes whose value is at least every value on the path from the root to that node.
+<strong>新定义。</strong>统计节点值不小于根到该节点路径上所有值的节点数量。
 
-The original bottom-up aggregate no longer matches the dependency. Carry a prefix maximum top-down instead.
+依赖方向已由“后代到祖先”变成“祖先到后代”，原来的自底向上聚合不再适用，应改为自顶向下传递路径前缀最大值。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -247,15 +247,15 @@ public:
 };
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(h)$.
-- Model change: subtree properties usually aggregate upward; path-prefix properties propagate downward.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(h)$。
+- 模型变化：子树性质通常向上聚合，路径前缀性质通常向下传递。
 
-## Follow-up 3: recover all dominant heap indices
+## 追问三：恢复全部支配节点的堆下标
 
-**New definition.** Return the one-based breadth-first indices of all dominant nodes in increasing order.
+<strong>新定义。</strong>按升序返回所有支配节点从 1 开始的层序下标。
 
-The reverse-heap computation already obtains every subtree maximum; record indices whose root value matches it.
+逆序堆方案已经算出每棵子树的最大值，只需记录节点值与对应子树最大值相等的下标。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -289,14 +289,14 @@ public:
 };
 ```
 
-- Time: $O(n)$.
-- Extra space: $O(n)$, including the output.
+- 时间复杂度：$O(n)$。
+- 额外空间：$O(n)$，包含输出。
 
-## Follow-up 4: online value updates on a complete tree
+## 追问四：完全二叉树上的在线点修改
 
-**New definition.** The tree shape is fixed and stored in one-based heap order. `U i x` changes node $i$ to value $x$; `Q` asks for the current total dominant count.
+<strong>新定义。</strong>树形固定，并按从 1 开始的堆下标存储。`U i x` 把节点 $i$ 的值改为 $x$；`Q` 查询当前支配节点总数。
 
-Only the updated node and its ancestors can change subtree maxima or dominance. Recompute that $O(\log n)$-length path.
+一次修改只会影响该节点及其祖先的子树最大值和支配状态，因此沿长度为 $O(\log n)$ 的祖先链重新计算即可。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -359,16 +359,16 @@ int main() {
 }
 ```
 
-- Build: $O(n)$.
-- Update: $O(\log n)$.
-- Query: $O(1)$.
-- Space: $O(n)$.
+- 构建：$O(n)$。
+- 单次修改：$O(\log n)$。
+- 单次查询：$O(1)$。
+- 空间复杂度：$O(n)$。
 
-## Follow-up 5: value lies among the subtree’s top $k$
+## 追问五：节点值位于子树前 $k$ 大
 
-**New definition.** A node qualifies when fewer than $k$ nodes in its subtree have a strictly larger value. Equal values share rank.
+<strong>新定义。</strong>若子树中严格大于当前节点值的节点不足 $k$ 个，则当前节点合格；相同值共享名次。
 
-Keep only the $k$ largest values from each subtree. If at least $k$ descendants exceed the current value, all those $k$ witnesses survive truncation; otherwise every larger value survives, so the decision is exact.
+每棵子树只保留最大的 $k$ 个值。若至少有 $k$ 个后代值更大，这 $k$ 个见证值截断后仍会保留；否则所有更大值都会保留。因此截断不会影响判断的准确性。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -399,15 +399,15 @@ public:
 };
 ```
 
-- Time: $O(nk\log k)$.
-- Extra space: $O(kh)$ plus temporary merge storage.
-- When $k=1$, this becomes the original non-strict dominance definition.
+- 时间复杂度：$O(nk\log k)$。
+- 额外空间：$O(kh)$，另加合并时的临时空间。
+- 当 $k=1$ 时，退化为原题的非严格支配定义。
 
-## Follow-up 6: arbitrary deep binary tree without recursion
+## 追问六：任意深二叉树的非递归解法
 
-**New definition.** Drop completeness and allow a tree whose height may be $n$.
+<strong>新定义。</strong>去掉完全二叉树保证，允许树高达到 $n$。
 
-The recursive algorithm risks stack overflow. Build a traversal order explicitly, then process it backward as postorder. Unlike the complete-tree heap alternative, this works with arbitrary missing children.
+递归算法可能栈溢出。可以显式构造一次遍历顺序，再逆序处理以模拟后序遍历。它不同于完全二叉树的隐式堆方案，能够处理任意缺失孩子的树形。
 
 <!-- compile:leetcode-tree -->
 ```cpp
@@ -439,24 +439,24 @@ public:
 };
 ```
 
-- Time: expected $O(n)$.
-- Extra space: $O(n)$.
+- 期望时间复杂度：$O(n)$。
+- 额外空间：$O(n)$。
 
-## Reproducible verification plan
+## 可复现验证
 
-- Compile every snippet in C++23 mode with the official `TreeNode` contract supplied by the harness.
-- Generate random complete trees and compare the $O(n\log n)$ subtree-rescan oracle, recursive postorder, and reverse-heap implementations.
-- Include duplicate-heavy, strictly increasing heap-order, strictly decreasing heap-order, all-equal, and one-node trees.
-- For the update tracker, randomly mutate heap positions and compare each query with full bottom-up recomputation.
+- 使用测试框架补齐官方 `TreeNode` 定义，以 C++23 模式编译每个代码片段。
+- 随机生成完全二叉树，将 $O(n\log n)$ 的子树重扫基准、递归后序与逆序堆三种实现互相对拍。
+- 覆盖大量重复值、堆序严格递增、堆序严格递减、全相等与单节点树。
+- 对在线修改结构随机更新堆下标，并将每次查询与完整自底向上重算比较。
 
-## Sources
+## 来源
 
-- Official problem and GraphQL metadata: [Open the official problem](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
-- Official contest discussion and 4-point assignment: [Open the official contest](https://leetcode.cn/discuss/post/3998508/di-511-chang-li-kou-zhou-sai-by-leetcode-4cwf/)
-- Official contest page: [Open the official contest](https://leetcode.cn/contest/weekly-contest-511/)
-- ZeroTracer dataset: [打开来源页面](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)
+- 官方题目与 GraphQL 元数据：[打开官方题目](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
+- 官方比赛讨论与 4 分分值：[打开官方比赛讨论](https://leetcode.cn/discuss/post/3998508/di-511-chang-li-kou-zhou-sai-by-leetcode-4cwf/)
+- 官方比赛页：[打开官方比赛](https://leetcode.cn/contest/weekly-contest-511/)
+- ZeroTracer 数据集：[打开来源页面](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)
 
-## Reference
+## 参考资料
 
 - [官方题目](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
 - [对应知识专题](../../graph/tree-aggregation.md)

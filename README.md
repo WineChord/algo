@@ -46,7 +46,7 @@ mkdocs serve
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
 - `scripts/publish_daily_archive.py`：校验并原样嵌入可发布的每日规范源，再生成页面外壳、日期索引与导航；不改写题面或公式
-- `scripts/check_daily_archive.py`：校验日期顺序、每日账目、完整页面与专题链接
+- `scripts/check_daily_archive.py`：校验日期顺序、每日账目、完整页面、专题链接与题面／中文题解语言边界
 - `scripts/check_typography.py`：中英文、数字、单位与全角标点排版检查
 - `scripts/render_visuals.py`：确定性生成站内 SVG 图示与哈希清单
 - `scripts/check_figures.py`：校验图示安全性、来源、页面锚点与构建结果

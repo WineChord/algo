@@ -10,6 +10,8 @@ import sys
 from pathlib import Path
 from urllib.parse import urlparse
 
+from daily_language import non_chinese_solution_lines
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = ROOT / "docs" / "daily"
@@ -176,19 +178,21 @@ for entry in dates:
         if len(title_heading.findall(text)) != 1:
             fail(f"{page.relative_to(ROOT)}: missing unique title heading")
         if not re.search(
-            r"官方原始信息|Official source (?:information|record|and metadata)",
+            r"官方原始信息|官方来源(?:信息|与元数据)|"
+            r"Official source (?:information|record|and metadata)",
             text,
             re.IGNORECASE,
         ):
             fail(f"{page.relative_to(ROOT)}: missing official source information")
         if not re.search(
-            r"最优结论|最佳实用解|最优：|最优解|推荐解|推荐统一模板|"
+            r"最优结论|最佳实用解|最优：|最优.*解|推荐解|推荐统一模板|"
+            r"（推荐）|"
             r"Optimal O?\(|Optimal solution|recommended",
             text,
             re.IGNORECASE,
         ):
             fail(f"{page.relative_to(ROOT)}: missing optimal-solution section")
-        if "Reference" not in text:
+        if not re.search(r"Reference|参考资料", text):
             fail(f"{page.relative_to(ROOT)}: missing Reference")
         if '<a href="../">' not in text:
             fail(f"{page.relative_to(ROOT)}: missing date-index return link")
@@ -211,6 +215,12 @@ for entry in dates:
                     f"Markdown path instead of a deployed route: {href}"
                 )
         kind = str(item.get("kind"))
+        for line_number, line in non_chinese_solution_lines(text, kind):
+            fail(
+                f"{page.relative_to(ROOT)}:{line_number}: solution prose must be "
+                f"Chinese outside the AtCoder/Codeforces official English "
+                f"statement layer: {line[:120]!r}"
+            )
         if kind in {"AtCoder", "Codeforces"}:
             required_statement_parts = (
                 "Complete English statement",

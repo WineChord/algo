@@ -8,28 +8,28 @@ title: "[codeforces] CF Round 1111 Div.2 A Zero Sum"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
-## Official source information
+## 官方来源信息
 
-- Contest: Codeforces Round 1111 (Div. 2)
-- Contest ID: 2247
-- Division / task aliases: Div.2 A
-- Official title: Zero Sum
-- Official rating: not published in the official API at verification time
-- Time limit: 1 second
-- Memory limit: 256 MB
-- Official problem: [Open the official problem](https://codeforces.com/contest/2247/problem/A)
-- Canonical problemset link: [打开 Codeforces 页面](https://codeforces.com/problemset/problem/2247/A)
-- Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
-- Program interface: GNU++23 full program.
-- Official statement image: none
+- 比赛：Codeforces Round 1111（Div. 2）
+- 比赛 ID：2247
+- 组别／题号别名：Div.2 A
+- 官方标题：Zero Sum
+- 官方等级分：核验时官方 API 未提供
+- 时间限制：1 秒
+- 内存限制：256 MB
+- 官方题目：[打开官方题目](https://codeforces.com/contest/2247/problem/A)
+- 规范题库链接：[打开 Codeforces 页面](https://codeforces.com/problemset/problem/2247/A)
+- 材料许可：[Codeforces 材料使用许可 v0.1](https://codeforces.com/blog/entry/967)
+- 程序接口：GNU++23 完整程序。
+- 官方题面图片：无
 
-### Official English entry and short excerpt
+### 官方英文入口与短摘录
 
-Open the [complete original English statement](https://codeforces.com/contest/2247/problem/A) on Codeforces.
+在 Codeforces 查看[完整官方英文题面](https://codeforces.com/contest/2247/problem/A)。
 
 > “You are given an array a of length n, consisting only of -1 and 1.”
 
-Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
+Codeforces 是本题来源。下方完整英文题面依据 Codeforces 材料使用许可展示，并保留来源署名与官方直达链接；本教学页面不提供自动判题，也不复制隐藏测试、生成器、检查器或校验器。
 
 ### Complete English statement
 

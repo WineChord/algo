@@ -8,26 +8,26 @@ title: "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../math/">进入知识专题</a></p>
 
-## Official source and metadata
+## 官方来源与元数据
 
-- Complete official English statement: [打开 Codeforces 页面](https://codeforces.com/contest/2247/problem/C)
-- Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
-- Contest: Codeforces Round 1111 (Div. 2)
-- Contest ID: 2247
-- Task alias: Div.2 C
-- Official title: Inversion of a Subsequence
-- Official points: 1250
-- Official problem rating: unknown; the current Codeforces API problem object omits `rating`
-- Official tags: `greedy`, `math`
-- Contest status: finished
-- Contest time in Asia/Shanghai: 2026-07-18 22:35 to 2026-07-19 00:35
-- Time limit: 2 seconds
-- Memory limit: 256 megabytes
-- Official statement images: none
-- Program interface: GNU++23 full program, multiple test cases.
+- 完整官方英文题面：[打开 Codeforces 页面](https://codeforces.com/contest/2247/problem/C)
+- 材料许可：[Codeforces 材料使用许可 v0.1](https://codeforces.com/blog/entry/967)
+- 比赛：Codeforces Round 1111（Div. 2）
+- 比赛 ID：2247
+- 题号别名：Div.2 C
+- 官方标题：Inversion of a Subsequence
+- 官方分值：1250
+- 官方题目等级分：未知；当前 Codeforces API 题目对象未提供 `rating`
+- 官方标签：`greedy`、`math`
+- 比赛状态：已结束
+- 北京时间：2026-07-18 22:35 至 2026-07-19 00:35
+- 时间限制：2 秒
+- 内存限制：256 MB
+- 官方题面图片：无
+- 程序接口：GNU++23 完整程序，多组测试。
 
-!!! info "Source and licence"
-    Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
+!!! info "来源与许可"
+    Codeforces 是本题来源。下方完整英文题面依据 Codeforces 材料使用许可展示，并给出来源署名与官方直达链接；本教学页面不提供自动判题，也不复制隐藏测试、生成器、检查器或校验器。
 
 ## Complete English statement
 
@@ -101,28 +101,28 @@ Output
 
 一次操作若直接完成变换，就必须恰好选择当前所有不匹配位置，不能漏选，也不能翻转已经匹配的位置。官方样例依次覆盖原本相同、一次可行、需要利用奇数个当前 1、需要两次操作，以及目标无法到达五种情况。
 
-## Constraint-driven model
+## 从约束建立模型
 
-Let
+记
 
 $$
 D=\{i:a_i\ne b_i\},\qquad
 x=\#\{i\in D:a_i=1\}.
 $$
 
-If one operation solves the task, it must select exactly $D$: selecting a matching position would make it wrong, and omitting a mismatch would leave it wrong. Such an operation is legal exactly when $x$ is odd.
+若一次操作就能完成变换，它必须恰好选择 $D$：选择原本匹配的位置会把它变错，漏掉不匹配位置则无法修正。该操作恰在 $x$ 为奇数时合法。
 
-Two absorbing-boundary observations determine impossibility:
+两个吸收边界决定了无解情形：
 
-1. If $a$ is all zero and $a\ne b$, no operation is available because every selected sum is zero.
-2. If $b$ is all one and $a\ne b$, consider the final operation. It must select exactly the zero positions of the previous state; those selected values sum to zero, so the final operation cannot be legal.
+1. 若 $a$ 全为 0 且 $a\ne b$，任意选择的元素和都是 0，没有合法操作。
+2. 若 $b$ 全为 1 且 $a\ne b$，考察最后一次操作。它必须恰好选择前一状态中的全部 0；这些被选值之和为 0，故最后一步不可能合法。
 
-Outside these cases, every transformation needs at most two operations:
+除上述情况外，任意变换至多需要两次操作：
 
-- if positive even $x\ge2$, split $D$ into two disjoint sets containing odd numbers of current ones;
-- if $x=0$, all mismatches are `0 -> 1`. Since $a$ is not all zero, there is a matched `1`; since $b$ is not all one, there is a matched `0`. Use those two positions as temporary auxiliaries and restore them in the second operation.
+- 若 $x\ge2$ 且为偶数，将 $D$ 拆成两个不相交集合，使二者各含奇数个当前为 1 的位置。
+- 若 $x=0$，所有不匹配都是 `0 -> 1`。由于 $a$ 不全为 0，存在一个已匹配的 `1`；由于 $b$ 不全为 1，还存在一个已匹配的 `0`。把这两个位置作为临时辅助，并在第二次操作中复原。
 
-Therefore the complete answer is
+因此完整答案为
 
 $$
 \begin{cases}
@@ -133,9 +133,9 @@ $$
 \end{cases}
 $$
 
-## Brute-force oracle: BFS over all binary states
+## 暴力基准：在全部二进制状态上做 BFS
 
-For a reduced constraint such as $n\le20$, encode the current array as a bitmask. From state `s`, a flip mask `m` is legal exactly when `popcount(s & m)` is odd; the next state is `s ^ m`.
+在 $n\le20$ 等缩小范围下，可把当前数组编码为位掩码。从状态 `s` 出发，翻转掩码 `m` 恰在 `popcount(s & m)` 为奇数时合法，下一状态为 `s ^ m`。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -178,11 +178,11 @@ int main() {
 }
 ```
 
-There are $2^n$ states and up to $2^n-1$ masks per state, so time is $O(4^n)$ and space is $O(2^n)$. It is far beyond the official bound but is an excellent exhaustive oracle.
+共有 $2^n$ 个状态，每个状态至多尝试 $2^n-1$ 个掩码，因此时间复杂度为 $O(4^n)$，空间复杂度为 $O(2^n)$。它远不能满足官方数据范围，却是极佳的穷举对拍基准。
 
-## Optimal O(n) solution
+## 最优 $O(n)$ 解法
 
-Scan once to determine equality, the number of ones in each array, and $x$, the number of mismatches currently equal to one.
+扫描一次，判断两个数组是否相等，并统计各自的 1 的数量以及当前不匹配位置中 1 的数量 $x$。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -218,49 +218,49 @@ int main() {
 }
 ```
 
-Time complexity is $O(n)$ per case and $O(\sum n)$ overall. Extra space is $O(n)$ for the input arrays.
+每组时间复杂度为 $O(n)$，总时间复杂度为 $O(\sum n)$；输入数组占用 $O(n)$ 额外空间。
 
-### Correctness proof
+### 正确性证明
 
-If $a=b$, zero is clearly optimal. The all-zero source and nontrivial all-one target cases are impossible by the final-operation arguments above.
+若 $a=b$，显然最优答案为 0。由上面的末次操作论证，全零起点与非平凡全一终点均无解。
 
-Assume neither impossible condition holds and $a\ne b$.
+以下假设两个无解条件均不成立，且 $a\ne b$。
 
-- If $x$ is odd, selecting exactly $D$ is legal and solves the task in one operation. Zero operations cannot suffice, so the optimum is one.
-- If $x$ is positive and even, choose one mismatch whose current value is one as the first operation. Put every other mismatch in the second operation. The first selected sum is one; the second set is disjoint and contains $x-1$, an odd number, of unchanged current ones. Every mismatch is flipped exactly once, so two operations solve the task. One operation is impossible because $x$ is even.
-- If $x=0$, choose a matched zero position $i$ and a matched one position $k$. The first operation selects $D\cup\{i,k\}$ and has selected sum one. After it, position $i$ is one and $k$ is zero, so selecting $\{i,k\}$ is also legal and restores both auxiliaries. Every mismatch remains flipped exactly once. Again, one operation is impossible because $x$ is even.
+- 若 $x$ 为奇数，直接选择 $D$ 合法且一次完成。零次操作显然不够，所以最优值为 1。
+- 若 $x$ 为正偶数，第一次选择一个当前值为 1 的不匹配位置，第二次选择其余全部不匹配位置。第一次所选和为 1；第二个集合与它不交，并含有 $x-1$ 个未改变的当前 1，因此也合法。每个不匹配位置恰翻转一次，两次操作足够；又因 $x$ 为偶数，一次操作不可能。
+- 若 $x=0$，选择一个已匹配的 0 位置 $i$ 与一个已匹配的 1 位置 $k$。第一次选择 $D\cup\{i,k\}$，所选和为 1。操作后 $i$ 变为 1、$k$ 变为 0，再选择 $\{i,k\}$ 仍合法，并恢复两个辅助位置。所有不匹配位置仍恰翻转一次；同样因 $x$ 为偶数，一次操作不可能。
 
-All cases return the minimum possible value.
+因此算法在所有情形下都返回最少操作数。
 
-## Sample state evolution
+## 样例状态演化
 
-For `a = [1,0,1,0]`, `b = [0,1,0,1]`, every position is a mismatch and $x=2$.
+对 `a = [1,0,1,0]`、`b = [0,1,0,1]`，每个位置都不匹配，且 $x=2$。
 
-- First select position 1: `[1,0,1,0] -> [0,0,1,0]`.
-- Then select positions 2, 3, 4. Their current sum is 1:
+- 第一次选择位置 1：`[1,0,1,0] -> [0,0,1,0]`。
+- 第二次选择位置 2、3、4，它们当前的元素和为 1：
   `[0,0,1,0] -> [0,1,0,1]`.
 
-The even value $x=2$ rules out one operation, so the optimum is exactly two.
+$x=2$ 为偶数，排除一次完成的可能，所以最优答案恰为 2。
 
-## Boundary cases and common mistakes
+## 边界与常见错误
 
-- Check `a == b` before the all-zero/all-one impossibility tests; equal all-zero and equal all-one arrays require zero operations.
-- Count ones only on mismatch positions when testing the one-operation case.
-- The selected values are evaluated in the current state, not always in the original array.
-- A subsequence need not be contiguous; any ordered set of indices is allowed.
-- For a nontrivial all-one target, inspect the final operation rather than assuming that an existing one can serve as an auxiliary.
-- `x = 0` is not automatically impossible; matched zero and one positions make the two-operation construction work.
-- Do not simulate arbitrary operations at $n=2\cdot10^5$; the answer depends on four sufficient statistics.
+- 必须先判断 `a == b`，再做全零与全一的无解检查；相等的全零或全一数组都只需零次操作。
+- 判断一次操作可行性时，只统计不匹配位置上的 1。
+- 所选元素要按当前状态计算，不一定等于原数组中的值。
+- 子序列不必连续，任意按下标有序的集合都可以。
+- 对非平凡的全一目标，应考察最后一次操作，不能想当然地把现有的 1 当作辅助。
+- `x = 0` 不代表必然无解；已匹配的 0 与 1 可支持两步构造。
+- 在 $n=2\cdot10^5$ 时不要模拟任意操作；答案只依赖四个充分统计量。
 
-## Follow-up 1: output an optimal sequence of operations
+## 追问一：输出一组最优操作
 
-### New definition
+### 新定义
 
-When possible, output the actual index sets for a minimum-operation transformation.
+有解时，输出达到最少操作数的一组实际下标集合。
 
-### Construction
+### 构造
 
-Use the same proof: the mismatch set for one operation, an odd/odd partition when $x\ge2$ is even, or two matched auxiliaries when $x=0$.
+沿用正确性证明中的构造：一次操作时输出全部不匹配位置；当 $x\ge2$ 且为偶数时做奇数/奇数拆分；当 $x=0$ 时使用两个已匹配辅助位置。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -331,17 +331,17 @@ int main() {
 }
 ```
 
-Time is $O(n)$ and the output itself uses $O(n)$ space. Each emitted operation is nonempty and has odd current selected sum.
+时间复杂度为 $O(n)$，输出本身占用 $O(n)$ 空间。每个输出操作均非空，且按当时状态计算的所选元素和为奇数。
 
-## Follow-up 2: the target changes by point flips
+## 追问二：目标数组发生在线单点翻转
 
-### New definition
+### 新定义
 
-Array $a$ is fixed. After each query, one bit of $b$ flips; report the new minimum immediately.
+数组 $a$ 固定。每次询问翻转 $b$ 中一个比特，并立即输出新的最少操作数。
 
-### Method
+### 方法
 
-Maintain four statistics: mismatch count, mismatch positions whose fixed `a` value is one, total ones in $a$, and total ones in $b$.
+维护四个统计量：不匹配位置数、其中固定 `a` 值为 1 的位置数、$a$ 中 1 的总数和 $b$ 中 1 的总数。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -387,17 +387,17 @@ int main() {
 }
 ```
 
-Initialization is $O(n)$; each update and answer is $O(1)$ with $O(n)$ storage for the arrays.
+初始化为 $O(n)$；每次更新与回答均为 $O(1)$，数组存储占用 $O(n)$。
 
-## Follow-up 3: each operation must select exactly two indices
+## 追问三：每次操作必须恰好选择两个位置
 
-### New definition
+### 新定义
 
-Each operation selects exactly two positions, and their current sum must be odd.
+每次操作恰好选择两个位置，且它们当前值之和必须为奇数。
 
-### New invariant
+### 新不变量
 
-The selected bits are one zero and one one. Flipping both simply swaps them, so the total number of ones is invariant. When the totals agree, pair each `1 -> 0` mismatch with one `0 -> 1` mismatch.
+被选中的两个比特必为一个 0 和一个 1；同时翻转等价于交换二者，因此 1 的总数保持不变。当两个数组的 1 数量相等时，把每个 `1 -> 0` 不匹配与一个 `0 -> 1` 不匹配配对即可。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -429,17 +429,17 @@ int main() {
 }
 ```
 
-Time is $O(n)$ and extra space beyond input is $O(1)$. Every operation fixes one mismatch of each direction, proving both feasibility and optimality.
+时间复杂度为 $O(n)$，除输入外只需 $O(1)$ 额外空间。每次操作恰好修复两个方向各一个不匹配，由此同时证明可行性与最优性。
 
-## Follow-up 4: minimum operations first, then minimum weighted flip cost
+## 追问四：先最少操作，再最小化带权翻转成本
 
-### New definition
+### 新定义
 
-Each index has a positive weight $w_i$. The primary objective remains the minimum number of operations; among all such solutions, minimize the sum of weights of every index occurrence in every operation.
+每个下标有正权重 $w_i$。第一目标仍是最少操作数；在所有最少操作方案中，再最小化每次操作中每个下标出现时的权重总和。
 
-### Method
+### 方法
 
-Every mismatch must be flipped at least once. A one-operation solution and the positive-even-$x$ partition flip every mismatch exactly once. When $x=0$, every two-operation solution must use an odd number of matched ones and an odd number of matched zeros as twice-flipped auxiliaries; choose the cheapest one of each type.
+每个不匹配位置至少要翻转一次。一次操作方案以及正偶数 $x$ 的拆分方案都会让每个不匹配位置恰翻转一次。当 $x=0$ 时，任意两步方案都必须使用奇数个已匹配 1 和奇数个已匹配 0 作为翻转两次的辅助位置；分别选择权重最小的一个即可。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -491,17 +491,17 @@ int main() {
 }
 ```
 
-Time is $O(n)$ and extra working space is $O(1)$. With $w_i\le10^9$ and total $n\le2\cdot10^5$, `long long` is sufficient.
+时间复杂度为 $O(n)$，额外工作空间为 $O(1)$。在 $w_i\le10^9$、总 $n\le2\cdot10^5$ 下，`long long` 足够。
 
-## Follow-up 5: each selected subsequence has length at most L
+## 追问五：每次选择的子序列长度至多为 $L$
 
-### New definition
+### 新定义
 
-The original odd-sum rule remains, but an operation may flip at most $L$ positions. For $n\le18$, find the true minimum.
+保留原有奇数和规则，但每次操作至多翻转 $L$ 个位置。在 $n\le18$ 下求真实最少操作数。
 
-### Why the closed form fails
+### 闭式结论为何失效
 
-The one- and two-operation constructions may use more than $L$ positions. The exact arrangement of mismatches now matters, so retain the complete state and run BFS over legal bounded masks.
+原来的一步或两步构造可能选中超过 $L$ 个位置。此时不匹配位置的具体分布会影响答案，必须保留完整状态，并在满足长度上限的合法掩码上做 BFS。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -549,35 +549,35 @@ int main() {
 }
 ```
 
-Time is
+时间复杂度为
 
 $$
 O\!\left(2^n\sum_{k=1}^{L}\binom{n}{k}\right),
 $$
 
-and space is $O(2^n)$. This is deliberately a small-$n$ exact solver; the cap destroys the original sufficient-statistics collapse.
+空间复杂度为 $O(2^n)$。这是刻意面向小规模的精确解法；长度上限破坏了原题只依赖少量充分统计量的结构。
 
-## Reproducible validation
+## 可复现验证
 
-- Every code block is compiled independently as GNU++23 with warnings enabled.
-- The official five-case sample and explicit boundaries `a == b`, all-zero source, all-one target, $x=0$, $x=1$, and positive even $x$ are checked.
-- For every ordered source/target pair through small binary state spaces, the $O(n)$ formula is compared with exhaustive directed BFS.
-- Every constructive output is replayed: each selected set is nonempty, has odd current sum, and reaches the target in the claimed minimum.
-- The online-update statistics are compared after random target flips with full recomputation.
-- The exactly-two-indices formula is compared with its own exhaustive state graph.
-- The weighted tie-break formula is compared with exhaustive one- and two-operation enumeration for small $n$ and random positive weights.
+- 每个代码块都以 GNU++23 模式独立编译，并开启编译警告。
+- 检查官方五组样例，以及 `a == b`、全零起点、全一终点、$x=0$、$x=1$ 与正偶数 $x$ 等明确边界。
+- 在较小的二进制状态空间中枚举每一对有序起点和终点，将 $O(n)$ 公式与有向 BFS 穷举结果对拍。
+- 回放每份构造输出：每个集合必须非空、当前所选和为奇数，并在声称的最少操作数内到达目标。
+- 随机翻转目标数组后，将在线统计量与完整重算比较。
+- 将恰选两个位置的公式与其完整状态图比较。
+- 对小规模与随机正权重，将带权次级目标公式与一步、两步操作的完整枚举比较。
 
-Validation result: all 7 GNU++23 blocks compiled independently with `-Wall -Wextra -pedantic`; no block contains a tab or blank source line, and every indentation depth is a multiple of two spaces. Exhaustive directed state graphs through $n=8$ checked 87380 ordered source/target pairs against the closed form, replayed 85874 constructive answers, and checked the exactly-two-indices variant on the same 87380 pairs. With fixed seed 20260728, 500000 online target flips matched full recomputation and 100000 weighted tie-break cases matched exhaustive one- and two-operation enumeration. All 5 official sample cases passed.
+验证结果：7 个 GNU++23 代码块均以 `-Wall -Wextra -pedantic` 独立编译通过；代码中没有制表符或空白源码行，每级缩进均为两个空格。对 $n\le8$ 的完整有向状态图，共核对 87380 对有序起点/终点与闭式结论，回放 85874 份构造答案，并在同样的 87380 对状态上验证恰选两个位置的变种。使用固定种子 20260728，500000 次在线目标翻转均与完整重算一致，100000 组带权次级目标测试均与一步、两步穷举一致。官方五组样例全部通过。
 
-## Sources
+## 来源
 
-- [Codeforces 2247C official statement](https://codeforces.com/contest/2247/problem/C)
-- [Codeforces Round 1111 official contest page](https://codeforces.com/contest/2247)
-- [Codeforces Round 1111 official editorial](https://codeforces.com/blog/entry/155337)
-- [Codeforces official API problemset data](https://codeforces.com/api/problemset.problems)
-- [Codeforces official API contest list](https://codeforces.com/api/contest.list?gym=false)
+- [Codeforces 2247C 官方题面](https://codeforces.com/contest/2247/problem/C)
+- [Codeforces Round 1111 官方比赛页](https://codeforces.com/contest/2247)
+- [Codeforces Round 1111 官方题解](https://codeforces.com/blog/entry/155337)
+- [Codeforces 官方 API 题库数据](https://codeforces.com/api/problemset.problems)
+- [Codeforces 官方 API 比赛列表](https://codeforces.com/api/contest.list?gym=false)
 
-## Reference
+## 参考资料
 
 - [官方题目](https://codeforces.com/contest/2247/problem/C)
 - [对应知识专题](../../math/index.md)

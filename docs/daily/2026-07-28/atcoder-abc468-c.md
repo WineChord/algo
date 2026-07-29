@@ -8,25 +8,25 @@ title: "[atcoder] ABC468 C Between P and Q"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../math/permutation-ranking/">进入知识专题</a></p>
 
-## Official source and metadata
+## 官方来源与元数据
 
-- Complete official English statement: [打开 AtCoder 页面](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
-- Copyright terms: [AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
-- Contest: AtCoder Beginner Contest 468
-- Task alias: ABC468 C
-- Official title: Between P and Q
-- Official task score: 300 points
-- Official difficulty label: not provided by AtCoder
-- Official contest rated range: 0–1999
-- AtCoder Problems community-estimated difficulty: 282
-- Community estimate retrieved: 2026-07-28
-- Time limit: 2 seconds
-- Memory limit: 1024 MiB
-- Official statement images: none
-- Program interface: GNU++23 full program.
+- 完整官方英文题面：[打开 AtCoder 页面](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
+- 版权条款：[AtCoder 使用条款](https://atcoder.jp/tos?lang=en)
+- 比赛：AtCoder Beginner Contest 468
+- 题号别名：ABC468 C
+- 官方标题：Between P and Q
+- 官方分值：300 分
+- 官方难度标签：AtCoder 未提供
+- 官方比赛评级范围：0–1999
+- AtCoder Problems 社区估算难度：282
+- 社区估算获取日期：2026-07-28
+- 时间限制：2 秒
+- 内存限制：1024 MiB
+- 官方题面图片：无
+- 程序接口：GNU++23 完整程序。
 
-!!! info "Official source and copyright"
-    AtCoder is the authoritative source. Ordinary AtCoder contest statements do not carry a confirmed blanket republication licence, so the complete English statement below is independently written from the official task while preserving its full semantics, data contract, constraints, and examples.
+!!! info "官方来源与版权"
+    AtCoder 是权威来源。普通 AtCoder 竞赛题面没有已确认的统一再发布许可，所以下方英文题面依据官方内容独立整理，并完整保留语义、输入输出契约、约束与样例。
 
 ## Complete English statement
 
@@ -109,47 +109,47 @@ Output
 
 输入依次给出 $N$、排列 $P$ 和排列 $Q$，输出满足条件的排列数量。三组官方样例的答案分别为 2、0、223；第一组的两个合法排列是 $(2,1,3)$ 与 $(2,3,1)$。
 
-## Constraint-driven observations
+## 从约束推导
 
-There are $N!$ permutations. Since $10!=3\,628\,800$, direct enumeration is already feasible and gives a trustworthy baseline. However, enumeration recomputes almost the same lexicographic information for every permutation.
+共有 $N!$ 个排列。由于 $10!=3\,628\,800$，直接枚举已经可行，也能作为可信的暴力基准；但枚举每个排列时都会重复计算高度相似的字典序信息。
 
-Lexicographic order gives every permutation a unique zero-based rank. If `rank(X)` denotes the number of permutations lexicographically smaller than $X$, then
+字典序为每个排列赋予唯一的从零开始排名。若 `rank(X)` 表示字典序严格小于 $X$ 的排列数量，则
 
 $$
 \#\{R:P<R<Q\}=
 \max\!\left(0,\operatorname{rank}(Q)-\operatorname{rank}(P)-1\right).
 $$
 
-The subtraction by one removes the lower endpoint $P$; $Q$ is already excluded because `rank(Q)` counts only permutations smaller than $Q$.
+减去 1 是为了排除下端点 $P$；而 `rank(Q)` 本身只统计小于 $Q$ 的排列，因此 $Q$ 已自然被排除。
 
-All ranks fit in 32-bit signed integers for $N\le10$, but `long long` keeps factorial arithmetic and follow-up extensions explicit.
+在 $N\le10$ 下，所有排名都能放入 32 位有符号整数；实现仍使用 `long long`，使阶乘运算与后续变种的边界更明确。
 
-## Sample walkthrough
+## 样例手推
 
-For $N=3$, the lexicographic order is
+当 $N=3$ 时，排列的字典序为
 
 $$
 123,\ 132,\ 213,\ 231,\ 312,\ 321.
 $$
 
-Thus `rank(132) = 1` and `rank(312) = 4`. The open interval contains
+因此 `rank(132) = 1`，`rank(312) = 4`，开区间内共有
 
 $$
 4-1-1=2
 $$
 
-permutations.
+个排列。
 
-For sample 3, the Lehmer contributions are:
+样例 3 的 Lehmer 码贡献为：
 
 - $P$: $2\cdot6!+4\cdot5!+3\cdot4!+1\cdot3!+2\cdot2!=2002$;
 - $Q$: $3\cdot6!+0\cdot5!+2\cdot4!+3\cdot3!=2226$.
 
-Therefore the answer is $2226-2002-1=223$.
+所以答案是 $2226-2002-1=223$。
 
-## Solution 1: enumerate all permutations
+## 解法一：枚举全部排列
 
-Start from $(1,2,\ldots,N)$ and use `next_permutation`. Every permutation is visited exactly once in lexicographic order, so counting those satisfying `P < current && current < Q` is complete and duplicate-free.
+从 $(1,2,\ldots,N)$ 出发反复调用 `next_permutation`。每个排列都会按字典序恰好访问一次，因此统计满足 `P < current && current < Q` 的排列既完整又不会重复。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -172,11 +172,11 @@ int main() {
 }
 ```
 
-Time complexity is $O(N!\,N)$ because each comparison and permutation successor can inspect $O(N)$ positions. Extra space is $O(N)$. This passes the official bound, but it does not expose the reusable rank structure.
+时间复杂度为 $O(N!\,N)$，因为每次比较和求后继排列都可能检查 $O(N)$ 个位置；额外空间为 $O(N)$。该方案能通过官方范围，但没有揭示可复用的排名结构。
 
-## Solution 2: Lehmer rank with a used array
+## 解法二：使用已用标记数组计算 Lehmer 排名（推荐）
 
-At position $i$, suppose exactly $c_i$ unused values are smaller than $X_i$. Choosing any of them makes the first difference smaller than $X$, and the remaining $N-i-1$ values can be arranged in $(N-i-1)!$ ways. Therefore
+在位置 $i$，设尚未使用且小于 $X_i$ 的值共有 $c_i$ 个。选择其中任意一个都会让该位置成为第一个差异，并使整个排列小于 $X$；剩余 $N-i-1$ 个值有 $(N-i-1)!$ 种排列方式。因此
 
 $$
 \operatorname{rank}(X)=
@@ -217,17 +217,17 @@ int main() {
 }
 ```
 
-Time complexity is $O(N^2)$ and extra space is $O(N)$.
+时间复杂度为 $O(N^2)$，额外空间为 $O(N)$。
 
-### Correctness proof
+### 正确性证明
 
-For a fixed position $i$, every permutation first differing from $X$ at $i$ and using a smaller unused value belongs to exactly one of $c_i$ disjoint blocks. Each block has $(N-i-1)!$ suffix arrangements. Summing these blocks over all positions counts every permutation smaller than $X$ once, at its first differing position, proving the rank formula.
+固定位置 $i$，所有在该位置首次与 $X$ 不同且选用更小未使用值的排列，会被划入 $c_i$ 个互不相交的块；每个块有 $(N-i-1)!$ 种后缀。对所有位置求和后，每个小于 $X$ 的排列都会且只会在其首个差异位置被统计一次，故排名公式成立。
 
-Ranks preserve lexicographic order bijectively. Hence ranks strictly between `rank(P)` and `rank(Q)` correspond one-to-one with permutations strictly between $P$ and $Q$. There are `rank(Q) - rank(P) - 1` such integers when $P<Q$, and none otherwise. The algorithm returns exactly that count.
+排名与字典序一一对应且保持顺序。因此严格位于 `rank(P)` 与 `rank(Q)` 之间的整数排名，与严格位于 $P$ 和 $Q$ 之间的排列一一对应。当 $P<Q$ 时数量为 `rank(Q) - rank(P) - 1`，否则为零，算法恰好返回该值。
 
-## Solution 3: Lehmer rank with a Fenwick tree
+## 解法三：使用树状数组计算 Lehmer 排名
 
-A Fenwick tree stores which values remain unused. The number of unused values below `permutation[i]` becomes a prefix-sum query.
+树状数组维护哪些值尚未使用，小于 `permutation[i]` 的未使用值数量可通过一次前缀和查询得到。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -274,28 +274,28 @@ int main() {
 }
 ```
 
-Time complexity is $O(N\log N)$ and extra space is $O(N)$. Under $N\le10$, the $O(N^2)$ used-array version is the recommended implementation: it has fewer moving parts, a shorter proof, and smaller constants. The Fenwick form is valuable when the same rank primitive must scale.
+时间复杂度为 $O(N\log N)$，额外空间为 $O(N)$。在 $N\le10$ 时，更推荐 $O(N^2)$ 的已用数组版本：组成部件更少、证明更短、常数也更小。需要让同一排名原语扩展到大规模时，树状数组版本才更有价值。
 
-## Boundary cases and common mistakes
+## 边界与常见错误
 
-- $N=1$: the two permutations are identical, so the answer is 0.
-- Adjacent permutations have rank difference 1, hence no strict interior point.
-- If $P=Q$ or $P>Q$, return 0 rather than a negative value.
-- Do not use `abs(rank(P) - rank(Q)) - 1`; the interval is directed.
-- Do not include either endpoint.
-- At each position, count smaller values that are still unused, not all numerically smaller values.
-- Use $(N-i-1)!$, not $(N-i)!$.
-- A set does not preserve the order-statistics count efficiently unless augmented; a Fenwick tree does.
+- $N=1$：两个排列必然相同，答案为 0。
+- 相邻排列的排名差为 1，严格开区间内没有排列。
+- 若 $P=Q$ 或 $P>Q$，应返回 0，而不是负数。
+- 不能使用 `abs(rank(P) - rank(Q)) - 1`，因为区间有方向。
+- 两个端点都不能计入。
+- 每个位置要统计仍未使用的较小值，而不是所有数值上更小的值。
+- 使用 $(N-i-1)!$，不要误写为 $(N-i)!$。
+- 普通集合无法高效给出顺序统计；树状数组可以。
 
-## Follow-up 1: return the k-th permutation in the open interval
+## 追问一：返回开区间内第 $k$ 个排列
 
-### New definition
+### 新定义
 
-Given one-based $k$, output the $k$-th lexicographic permutation $R$ satisfying $P<R<Q$, or `-1` if fewer than $k$ exist.
+给定从 1 开始的 $k$，输出满足 $P<R<Q$ 的第 $k$ 个字典序排列；若不足 $k$ 个则输出 `-1`。
 
-### Method
+### 方法
 
-The first valid rank is `rank(P) + 1`. Convert target rank `rank(P) + k` back to a permutation by repeatedly selecting the factorial-number-system digit.
+第一个合法排名是 `rank(P) + 1`。目标排名为 `rank(P) + k`，依次选择阶乘进制数位即可将该排名还原为排列。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -350,23 +350,23 @@ int main() {
 }
 ```
 
-Ranking costs $O(N^2)$ and vector-based unranking costs $O(N^2)$; space is $O(N)$. A Fenwick order-statistics tree reduces both to $O(N\log N)$.
+排名计算为 $O(N^2)$，基于向量的反排名也为 $O(N^2)$，空间复杂度为 $O(N)$。使用支持顺序统计的树状数组可将两者都降为 $O(N\log N)$。
 
-## Follow-up 2: endpoints are multiset permutations
+## 追问二：端点是可重集合排列
 
-### New definition
+### 新定义
 
-$P$ and $Q$ contain the same multiset rather than distinct values. For $N\le20$, count distinct multiset permutations strictly between them.
+$P$ 与 $Q$ 由同一个可重集合构成，不再要求元素互异。在 $N\le20$ 下，统计严格位于二者之间的不同可重排列数量。
 
-### Why the original formula changes
+### 原公式为何需要变化
 
-Rank differences still solve the interval problem, but a suffix with repeated values has
+排名差仍能解决区间问题，但含重复值的长度为 $r$ 的后缀只有
 
 $$
 \frac{r!}{\prod_v c_v!}
 $$
 
-distinct arrangements rather than $r!$.
+种不同排列，而不是 $r!$ 种。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -409,17 +409,17 @@ int main() {
 }
 ```
 
-With $D$ distinct values, time is $O(ND^2)$ in this transparent implementation because each candidate recomputes a multinomial denominator; space is $O(D)$. All counts fit in signed 64-bit integers for $N\le20$ because $20!<2^{63}$.
+设不同值有 $D$ 种，这个直观实现的时间复杂度为 $O(ND^2)$，因为每个候选值都会重新计算多项式系数分母；空间复杂度为 $O(D)$。由于 $20!<2^{63}$，$N\le20$ 时全部计数都能放入 64 位有符号整数。
 
-## Follow-up 3: N is large and only the answer modulo 1e9+7 is needed
+## 追问三：$N$ 很大且只需模 $10^9+7$ 的答案
 
-### New definition
+### 新定义
 
-$N\le2\cdot10^5$, $P$ and $Q$ remain ordinary permutations, and the answer is requested modulo $M=10^9+7$.
+$N\le2\cdot10^5$，$P,Q$ 仍为普通排列，答案对 $M=10^9+7$ 取模。
 
-### Method
+### 方法
 
-Compare $P$ and $Q$ directly to decide whether the interval is empty. Compute each Lehmer rank modulo $M$ with a Fenwick tree and factorials modulo $M$.
+先直接比较 $P$ 与 $Q$，判断区间是否为空；再用树状数组和模 $M$ 阶乘计算两个 Lehmer 排名的模值。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -472,17 +472,17 @@ int main() {
 }
 ```
 
-Time is $O(N\log N)$ and space is $O(N)$. The direct comparison is essential: modular ranks alone cannot reveal whether the true difference is negative.
+时间复杂度为 $O(N\log N)$，空间复杂度为 $O(N)$。直接比较不可省略，因为只看模意义下的排名无法判断真实差值是否为负。
 
-## Follow-up 4: only position-allowed permutations count
+## 追问四：只统计满足位置限制的排列
 
-### New definition
+### 新定义
 
-$N\le20$. In addition to $P$ and $Q$, a binary matrix `allowed[i][v]` states whether value $v$ may occupy position $i$. Count valid permutations strictly between the endpoints.
+$N\le20$。除 $P,Q$ 外，给定二进制矩阵 `allowed[i][v]`，表示值 $v$ 能否放在位置 $i$。统计严格位于两个端点之间且满足位置限制的排列。
 
-### Why a single rank no longer suffices
+### 单一排名为何不再足够
 
-Factorial blocks are no longer uniform because position constraints affect future choices. Use subset DP to count valid permutations strictly smaller than a bound.
+位置限制会影响后续选择，使阶乘分块不再等长。改用子集动态规划，统计严格小于某个上界的合法排列数量。
 
 <!-- compile:leetcode -->
 ```cpp
@@ -534,28 +534,28 @@ int main() {
 }
 ```
 
-There are $2^N$ used-value masks and at most $N$ transitions per state. Time is $O(N2^N)$ and space is $O(2^N)$. The expression subtracts all valid permutations smaller than $P$ and also removes $P$ itself when it satisfies the constraints.
+共有 $2^N$ 个已用值状态，每个状态至多尝试 $N$ 次转移。时间复杂度为 $O(N2^N)$，空间复杂度为 $O(2^N)$。最终表达式先减去所有小于 $P$ 的合法排列；若 $P$ 本身也满足位置限制，还要将它一并排除。
 
-## Reproducible validation
+## 可复现验证
 
-- Every C++ block is compiled independently as GNU++23 with warnings enabled.
-- The three official samples and boundary cases $N=1$, equal endpoints, reversed endpoints, and adjacent permutations are checked directly.
-- For small $N$, all permutations are enumerated to compare brute interval counts with used-array and Fenwick Lehmer ranks.
-- Rank and unrank are checked as inverse functions over every rank in the tested domains.
-- Multiset ranks are compared with sorted unique permutations.
-- The modular Fenwick version is compared with exact ranks where factorials fit.
-- The position-constraint subset DP is compared with direct enumeration under random allowed matrices.
+- 每个 C++ 代码块都以 GNU++23 模式单独编译，并开启编译警告。
+- 直接检查三组官方样例，以及 $N=1$、端点相等、端点逆序和相邻排列等边界。
+- 对较小的 $N$ 枚举全部排列，将暴力区间计数与已用数组、树状数组两种 Lehmer 排名实现对拍。
+- 在测试范围内逐个排名验证排名与反排名互为逆运算。
+- 将可重集合排名与排序去重后的完整排列列表比较。
+- 在阶乘可精确表示的范围内，将模树状数组版本与精确排名比较。
+- 在随机位置限制矩阵下，将子集动态规划与直接枚举对拍。
 
-Validation result: all 7 GNU++23 blocks compiled independently with `-Wall -Wextra -pedantic`; no block contains a tab or blank source line, and every indentation depth is a multiple of two spaces. With fixed seed 20260728, 409113 ordinary permutations had exact used-array rank, Fenwick rank, and rank/unrank inversion; 511281 multiset permutations matched enumerated ranks; 100000 modular-rank cases and 2000 random position-restriction cases matched their exact or brute-force oracles. All 3 official samples passed.
+验证结果：7 个 GNU++23 代码块均以 `-Wall -Wextra -pedantic` 独立编译通过；代码中没有制表符或空白源码行，每级缩进均为两个空格。使用固定种子 20260728，409113 个普通排列的已用数组排名、树状数组排名以及排名与反排名互逆关系完全一致；511281 个可重排列的排名与枚举一致；100000 组模排名测试和 2000 组随机位置限制测试均与精确算法或暴力基准一致。三组官方样例全部通过。
 
-## Sources
+## 来源
 
-- [ABC468 C official statement](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
-- [ABC468 official contest page](https://atcoder.jp/contests/abc468?lang=en)
-- [ABC468 C official editorial](https://atcoder.jp/contests/abc468/tasks/abc468_c/editorial)
-- [AtCoder Problems model data](https://kenkoooo.com/atcoder/resources/problem-models.json) (retrieved 2026-07-28)
+- [ABC468 C 官方题面](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
+- [ABC468 官方比赛页](https://atcoder.jp/contests/abc468?lang=en)
+- [ABC468 C 官方题解](https://atcoder.jp/contests/abc468/tasks/abc468_c/editorial)
+- [AtCoder Problems 模型数据](https://kenkoooo.com/atcoder/resources/problem-models.json)（获取于 2026-07-28）
 
-## Reference
+## 参考资料
 
 - [官方题目](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
 - [对应知识专题](../../math/permutation-ranking.md)
