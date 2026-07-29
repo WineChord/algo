@@ -22,6 +22,7 @@ HEADERS = """#include <algorithm>
 #include <climits>
 #include <cmath>
 #include <cstdint>
+#include <cstring>
 #include <deque>
 #include <functional>
 #include <iomanip>
