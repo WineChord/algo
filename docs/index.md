@@ -14,6 +14,7 @@
 ## 专题
 
 - [基础技巧](basics/index.md)
+- [贪心与交换论证](basics/greedy-exchange.md)
 - [序列扫描与不变量](basics/sequence-invariants.md)
 - [前缀状态与差分覆盖](basics/prefix-sums-and-difference.md)
 - [极值候选与 Top-K](basics/top-k-extrema.md)
@@ -26,7 +27,7 @@
 - [树上后序聚合](graph/tree-aggregation.md)
 - [动态规划](dp/index.md)
 - [线性递推](dp/linear-recurrences.md)
-- [双序列动态规划](dp/sequence-dp.md)
+- [子序列与双序列动态规划](dp/sequence-dp.md)
 - [数学](math/index.md)
 - [排列排名与 Lehmer 码](math/permutation-ranking.md)
 - [前缀余数与模构造](math/modular-constructions.md)

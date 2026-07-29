@@ -130,6 +130,8 @@ int main() {
 
 ### 双序列
 
+--8<-- "includes/problems/lc-1143.md"
+
 --8<-- "includes/problems/lc-72.md"
 
 ## 正确性检查

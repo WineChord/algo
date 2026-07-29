@@ -47,6 +47,23 @@ tags:
 
 这种“先确认完整边界，再局部反转”的结构避免了中途发现长度不足后回滚。
 
+## 交换起点：消除两条链的长度差
+
+两条无环单链表一旦相交，交点之后必共享同一后缀。若分别从两个头同时前进，较长独有前缀会造成错位；让每个指针走到末尾后改从另一条链起点继续，它们都会走过
+
+$$
+|A|+|B|
+$$
+
+个节点。两条独有前缀的长度差因此被抵消：
+
+- 有交点时，两指针在第一个共享节点相遇；
+- 无交点时，两指针最终同时成为空指针。
+
+比较的是节点身份，不是节点值；算法不改边，也不需要预先计算链长。
+
+--8<-- "includes/problems/lc-160.md"
+
 ## 易错检查
 
 - 改写 `next` 前是否保存了后继；
@@ -80,5 +97,6 @@ tags:
 ## Reference
 
 - [LeetCode 206：反转链表](../problems/index.md#problem-lc-206)
+- [LeetCode 160：相交链表](../problems/index.md#problem-lc-160)
 - [LeetCode 25：K 个一组翻转链表](../problems/index.md#problem-lc-25)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

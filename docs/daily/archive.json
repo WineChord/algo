@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-07-30",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-e",
+          "title": "[atcoder] ABC468 E Sum of Average",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-e.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_e?lang=en",
+          "topic": "../../math/index.md",
+          "source_sha256": "659a8a8671fbb4126f482b3c072d1cbe80bce46d8eae823b79d899d49ae68d61"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-41-lc300",
+          "title": "[力扣 Top 41] LC 300 最长递增子序列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-41-lc300.md",
+          "official": "https://leetcode.cn/problems/longest-increasing-subsequence/",
+          "topic": "../../dp/sequence-dp.md",
+          "source_sha256": "d48f81620f06ff48d81520a0eff87c57ce0674711ff4f73cc3630d0ec9a86079"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-42-lc124",
+          "title": "[力扣 Top 42] LC 124 二叉树中的最大路径和 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-42-lc124.md",
+          "official": "https://leetcode.cn/problems/binary-tree-maximum-path-sum/",
+          "topic": "../../graph/tree-aggregation.md",
+          "source_sha256": "909cb5140010f11d55a938862dd1e2b9f32add7a3ce98fa3f2a5e1fff6d0b97e"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-43-lc416",
+          "title": "[力扣 Top 43] LC 416 分割等和子集 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-43-lc416.md",
+          "official": "https://leetcode.cn/problems/partition-equal-subset-sum/",
+          "topic": "../../dp/index.md",
+          "source_sha256": "b80e9b3ab14237d9779ce7b8e8981a7bc16d755c8a886ded08fa83b3b58760ea"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-44-lc28",
+          "title": "[力扣 Top 44] LC 28 找出字符串中第一个匹配项的下标 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-44-lc28.md",
+          "official": "https://leetcode.cn/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "41fdde7b5be048a7d028b615ed029854a0ea75ad4233d09b8f6b64fa98b15b37"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-45-lc209",
+          "title": "[力扣 Top 45] LC 209 长度最小的子数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-45-lc209.md",
+          "official": "https://leetcode.cn/problems/minimum-size-subarray-sum/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "441835f624b9943627b53a95ed91349676cf7afef789f9d6e6a39a632361d5b4"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-46-lc739",
+          "title": "[力扣 Top 46] LC 739 每日温度 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-46-lc739.md",
+          "official": "https://leetcode.cn/problems/daily-temperatures/",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "de80dcbd9e6753a80e2923ab186b89a464775e7c60609abbaaf42316dfaeeae4"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-47-lc160",
+          "title": "[力扣 Top 47] LC 160 相交链表 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-47-lc160.md",
+          "official": "https://leetcode.cn/problems/intersection-of-two-linked-lists/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "ed972d532a92825b2ad9ccdc9dbe003bf82854026ff2200550c44c43c193fba5"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-48-lc1143",
+          "title": "[力扣 Top 48] LC 1143 最长公共子序列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-48-lc1143.md",
+          "official": "https://leetcode.cn/problems/longest-common-subsequence/",
+          "topic": "../../dp/sequence-dp.md",
+          "source_sha256": "188e2ed49ecb0d6a3a2c6da824de96b43d072b9a7055417f3fe11973d85e07bc"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-49-lc45",
+          "title": "[力扣 Top 49] LC 45 跳跃游戏 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-49-lc45.md",
+          "official": "https://leetcode.cn/problems/jump-game-ii/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "7c466b98ecae7464fa94fa876dd0d5f161707813086b229a044dd4683d37a6aa"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-50-lc32",
+          "title": "[力扣 Top 50] LC 32 最长有效括号 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-50-lc32.md",
+          "official": "https://leetcode.cn/problems/longest-valid-parentheses/",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "6a28bb6c5729fa37643f1c73eaa3f27ca1ae6a28c16afd55bb7b8dde7402b27d"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-512-q1-lc4000",
+          "title": "[力扣竞赛] 第 512 场周赛 Q1 LC 4000 给定数位和的最大整数 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-512-q1-lc4000.md",
+          "official": "https://leetcode.cn/problems/largest-integer-with-given-digit-sum/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "de8890f4e0e7dafa31c8df8fd16bad3290ad00d92de2c67edb62a96790d8258f"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-d2",
+          "title": "[codeforces] CF Round 1111 Div.2 D2 XOR Sorting (Hard Version)",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-d2.md",
+          "official": "https://codeforces.com/contest/2247/problem/D2",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "3661c68c2e9f012cc2a2e56fc423ad1d4ba1a7324318397cff5289d7263db7e7"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-30-lc3014",
+          "title": "[力扣每日一题] 2026-07-30｜LC 3014 输入单词需要的最少按键次数 I",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-30-lc3014.md",
+          "official": "https://leetcode.cn/problems/minimum-number-of-pushes-to-type-word-i/?envType=daily-question&envId=2026-07-30",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "2252dcae4dc53bce7795192596334937170bcf6a805b599062c22df8ff595061"
+        }
+      ]
+    },
+    {
       "date": "2026-07-29",
       "items": [
         {

@@ -1,5 +1,24 @@
 # 更新日志
 
+## 2026-07-30
+
+### 每日训练档案
+
+- 新增 [2026-07-30 每日题目](daily/2026-07-30/index.md)，按 AtCoder、力扣 Top 41–50、力扣第 512 场周赛、Codeforces Round 1111 与力扣每日一题的固定顺序收录 14 道完整题解。
+- [AtCoder ABC468 E](problems/index.md#problem-atcoder-abc468-e) 与 [Codeforces 2247 D2](problems/index.md#problem-codeforces-2247-d2) 在页内提供自包含英文题面层和紧接其后的中文解释；其余题目以及所有算法分析、证明、复杂度、易错点和变种统一使用中文。
+- 每道页面保留可点击的官方题目、对应知识专题、当日列表和前后题导航，并在移动端继续默认自动折行完整 C++。
+
+### 贪心、子序列与可合并摘要
+
+- 新增[贪心与交换论证](basics/greedy-exchange.md)专题，把便宜槽位分配、数位字典序和连续区间 BFS 分层归纳为交换论证、领先法与层边界三类证明。
+- 将原双序列页面扩展为[子序列与双序列动态规划](dp/sequence-dp.md)，从最长递增子序列的最小末尾值推进到最长公共子序列、编辑距离、空间压缩与方案恢复。
+- 扩充[树上后序聚合](graph/tree-aggregation.md)、[链表局部接线](data-structures/linked-lists.md)、[序列扫描](basics/sequence-invariants.md)、[数据结构](data-structures/index.md)与[数学](math/index.md)，补齐单支返回与双支闭合、交换起点、正数窗口、二进制块线段树和交换求和。
+
+### 权威题目条目
+
+- 收录 [AtCoder ABC468 E](problems/index.md#problem-atcoder-abc468-e)、[CF Round 1111 Div.2 D2（2247D2）](problems/index.md#problem-codeforces-2247-d2)和[第 512 场周赛 Q1](problems/index.md#problem-lc-4000)。
+- 收录 [LeetCode 3014](problems/index.md#problem-lc-3014)，以及 [LeetCode Top 41–50](problems/index.md) 的十个连续权威题目条目；全部最优实现采用两空格缩进，并与日期档案复用同一题意和算法结论。
+
 ## 2026-07-29
 
 ### 代码阅读

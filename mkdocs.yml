@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-07-30":
+          - 当日总览: daily/2026-07-30/index.md
+          - "[atcoder] ABC468 E Sum of Average": daily/2026-07-30/atcoder-abc468-e.md
+          - "[力扣 Top 41] LC 300 最长递增子序列 中等": daily/2026-07-30/leetcode-top-41-lc300.md
+          - "[力扣 Top 42] LC 124 二叉树中的最大路径和 困难": daily/2026-07-30/leetcode-top-42-lc124.md
+          - "[力扣 Top 43] LC 416 分割等和子集 中等": daily/2026-07-30/leetcode-top-43-lc416.md
+          - "[力扣 Top 44] LC 28 找出字符串中第一个匹配项的下标 简单": daily/2026-07-30/leetcode-top-44-lc28.md
+          - "[力扣 Top 45] LC 209 长度最小的子数组 中等": daily/2026-07-30/leetcode-top-45-lc209.md
+          - "[力扣 Top 46] LC 739 每日温度 中等": daily/2026-07-30/leetcode-top-46-lc739.md
+          - "[力扣 Top 47] LC 160 相交链表 简单": daily/2026-07-30/leetcode-top-47-lc160.md
+          - "[力扣 Top 48] LC 1143 最长公共子序列 中等": daily/2026-07-30/leetcode-top-48-lc1143.md
+          - "[力扣 Top 49] LC 45 跳跃游戏 II 中等": daily/2026-07-30/leetcode-top-49-lc45.md
+          - "[力扣 Top 50] LC 32 最长有效括号 困难": daily/2026-07-30/leetcode-top-50-lc32.md
+          - "[力扣竞赛] 第 512 场周赛 Q1 LC 4000 给定数位和的最大整数 简单": daily/2026-07-30/leetcode-weekly-512-q1-lc4000.md
+          - "[codeforces] CF Round 1111 Div.2 D2 XOR Sorting (Hard Version)": daily/2026-07-30/codeforces-2247-d2.md
+          - "[力扣每日一题] 2026-07-30｜LC 3014 输入单词需要的最少按键次数 I": daily/2026-07-30/leetcode-daily-2026-07-30-lc3014.md
       - "2026-07-29":
           - 当日总览: daily/2026-07-29/index.md
           - "[atcoder] ABC468 D Pre-Palindrome": daily/2026-07-29/atcoder-abc468-d.md
@@ -178,6 +194,7 @@ nav:
       - 竞赛 C++: guide/cpp.md
   - 基础技巧:
       - 知识地图: basics/index.md
+      - 贪心与交换论证: basics/greedy-exchange.md
       - 序列扫描与不变量: basics/sequence-invariants.md
       - 前缀状态与差分: basics/prefix-sums-and-difference.md
       - 极值候选与 Top-K: basics/top-k-extrema.md
@@ -199,7 +216,7 @@ nav:
   - 动态规划:
       - 知识地图: dp/index.md
       - 线性递推: dp/linear-recurrences.md
-      - 双序列动态规划: dp/sequence-dp.md
+      - 子序列与双序列动态规划: dp/sequence-dp.md
   - 数学:
       - 知识地图: math/index.md
       - 排列排名与 Lehmer 码: math/permutation-ranking.md

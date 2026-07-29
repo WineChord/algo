@@ -45,6 +45,24 @@ $$
 
 若题目同时要求最大值、方案数和恢复节点，就把这些量组成一个结构体统一返回。
 
+## 单支向上、双支闭合：树上最大路径
+
+树上路径经过当前节点时，最多从左子树接入一条单支、从右子树接入一条单支。递归返回给父节点的摘要只能是一条向下路径：
+
+$$
+g(u)=value(u)+\max(0,g(\mathrm{left}_u),g(\mathrm{right}_u)).
+$$
+
+在当前节点闭合的完整路径则可以同时使用两侧：
+
+$$
+value(u)+\max(0,g(\mathrm{left}_u))+\max(0,g(\mathrm{right}_u)).
+$$
+
+完整路径不能继续整体返回父节点，否则当前节点会分叉成三条边，不再是一条简单路径。全负树中不能把全局答案初始化为 0，因为路径必须非空。
+
+--8<-- "includes/problems/lc-124.md"
+
 ## 指针摘要：最近公共祖先
 
 摘要不一定是数值。寻找两个已知节点的最近公共祖先时，递归返回：
@@ -75,5 +93,6 @@ $$
 ## Reference
 
 - [LeetCode 3997：统计二叉树中的支配节点](../problems/index.md#problem-lc-3997)
+- [LeetCode 124：二叉树中的最大路径和](../problems/index.md#problem-lc-124)
 - [LeetCode 236：二叉树的最近公共祖先](../problems/index.md#problem-lc-236)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
