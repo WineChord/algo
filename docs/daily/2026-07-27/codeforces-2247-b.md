@@ -10,6 +10,8 @@ title: "[codeforces] CF Round 1111 Div.2 B Yet Another Constructive"
 
 Official problem: [Open the official problem](https://codeforces.com/problemset/problem/2247/B)
 
+Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
+
 ## Official source record
 
 - Platform and contest: Codeforces, Codeforces Round 1111 (Div. 2).
@@ -23,7 +25,10 @@ Official problem: [Open the official problem](https://codeforces.com/problemset/
 - Program interface: GNU++23 full program.
 - Official statement images: none.
 
-## Complete statement semantics
+!!! info "Source and licence"
+    Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
+
+## Complete English statement
 
 For each test case, given $n,k,m$, construct a positive integer array $a_1,\ldots,a_n$ such that the minimum length of a nonempty contiguous subarray whose sum is divisible by $m$ is exactly $k$.
 

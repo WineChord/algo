@@ -19,35 +19,54 @@ title: "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)"
 - 官方标签：bitmasks、greedy
 - 时间限制：2 秒
 - 内存限制：256 MB
-- 官方链接：[打开官方页面](https://codeforces.com/contest/2247/problem/D1)
+- 官方英文题面：[Codeforces 2247D1](https://codeforces.com/contest/2247/problem/D1)
+- 题面许可：[Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
 
-### 忠实完整题意
+!!! info "Source and licence"
+    Codeforces is the source of the problem below. Its official materials licence permits problem texts to be published in open, non-judging resources when the Codeforces source and a direct problem link remain clearly visible. This page is an educational explanation without automatic judging; it does not reproduce hidden tests, generators, checkers, validators, or separate image assets.
 
-完整官方英文原文请从上方链接查看。这里给出不遗漏语义的教学重述：
+### Complete English statement
 
-对正整数数组 `b`，若允许任意多次交换下标 `i<j` 的元素，但每次必须满足 `(i XOR j) <= k`，并最终能把数组排成非降序，则称 `b` 可被 `k` 排序。定义 `f(b)` 为满足条件的最小非负整数 `k`。
+This is the easy version. Its only difference from the hard version is that $q=0$.
 
-给定数组 `a` 以及 `q` 次持久化单点修改。需要输出初始数组以及每次修改后数组的 `f(a)`。本题是 Easy Version，保证 `q=0`，因此每个测试用例只需处理初始数组。下标从 0 开始。
+All array indices in this problem are zero-based.
 
-### 输入与输出
+Consider an array $b$ of $m$ positive integers. For a non-negative integer $k$, call $b$ **$k$-sortable** if it can be transformed into non-decreasing order by repeating the following operation any number of times, including zero times:
 
-- 第一行是测试用例数 `t`。
-- 每个测试用例先给 `n q`，本题中 `q=0`。
-- 下一行给 `n` 个正整数。
-- 输出每个测试用例的一个答案。
+1. Choose two indices $i,j$ satisfying $0\le i<j\le m-1$ and $i\mathbin{\oplus}j\le k$. The condition concerns the indices, not the values $b_i,b_j$.
+2. Swap $b_i$ and $b_j$.
 
-### 全部约束
+Here, $\oplus$ denotes bitwise XOR. Define $f(b)$ as the smallest non-negative $k$ for which $b$ is $k$-sortable.
 
-- $1\le t\le 10^4$。
-- $1\le n\le 10^6$，且本题 $q=0$。
-- $1\le a_i\le 10^9$。
-- 所有测试用例的 $n$ 之和不超过 $10^6$。
-- 所有测试用例的 $q$ 之和不超过 $10^6$，在本题中为 0。
+You are given an array $a$ of $n$ positive integers together with $q$ point updates. An update $i\ x$ assigns $a_i=x$. Updates are persistent: every update is applied to the state produced by all preceding updates.
 
-### 官方样例
+For each of the $q+1$ states of $a$—the initial state and the state after every update—determine $f(a)$. In this easy version $q=0$, so only the initial state needs an answer.
+
+#### Input
+
+The input contains multiple test cases.
+
+- The first line contains $t$, the number of test cases $(1\le t\le10^4)$.
+- For each test case, the first line contains $n$ and $q$, where $1\le n\le10^6$ and $q=0$.
+- The next line contains $n$ integers $a_0,a_1,\ldots,a_{n-1}$, where $1\le a_i\le10^9$.
+- Formally, the next $q$ lines would each contain $i_j,x_j$, where $0\le i_j<n$ and $1\le x_j\le10^9$, and would perform $a_{i_j}=x_j$. In this version there are no such lines because $q=0$.
+
+#### Constraints
+
+- $1\le t\le10^4$.
+- $1\le n\le10^6$ and $q=0$.
+- $1\le a_i\le10^9$.
+- If updates existed, they would satisfy $0\le i_j<n$ and $1\le x_j\le10^9$.
+- Across all test cases, the sum of $n$ does not exceed $10^6$, and the sum of $q$ does not exceed $10^6$.
+
+#### Output
+
+For each test case, print $q+1$ integers in chronological order: $f(a)$ for the initial array, followed by the value after each update. Because $q=0$ here, each test case produces exactly one integer.
+
+#### Official sample
 
 ```text
-输入
+Input
 3
 3 0
 2 3 4
@@ -55,15 +74,32 @@ title: "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)"
 1000000000 999999999
 6 0
 2 5 3 4 1 6
-输出
+
+Output
 0
 1
 4
 ```
 
-- `[2,3,4]` 已有序，答案为 0。
-- 两个下标只能通过 `0 XOR 1=1` 相连，答案为 1。
-- `[2,5,3,4,1,6]` 的关键跨区间逆序需要把下标 0 与 4 放进同一连通块，答案为 4。
+#### Notes for the example
+
+1. For $a=[2,3,4]$, the initial array is already non-decreasing, so no swap is needed and $f(a)=0$.
+2. For $a=[10^9,10^9-1]$, swapping indices $0$ and $1$ sorts the array. Their XOR is $0\oplus1=1$, hence $f(a)=1$.
+3. For $a=[2,5,3,4,1,6]$, one valid sequence swaps the index pairs $(0,1)$ and $(0,4)$:
+
+   $[2,5,3,4,1,6]\to[5,2,3,4,1,6]\to[1,2,3,4,5,6]$.
+
+   The largest XOR used is $\max(0\oplus1,\ 0\oplus4)=4$. No smaller $k$ is sufficient, so $f(a)=4$.
+
+The official statement contains no illustration required to interpret this task.
+
+### 中文解释
+
+对任意正整数数组 $b$，我们只允许交换满足 $i<j$ 且 $i\oplus j\le k$ 的两个下标。注意限制作用在下标而不是元素值上。若经过任意多次这类交换可以把 $b$ 排成非降序，就称它可以被 $k$-排序；$f(b)$ 是所有可行 $k$ 中的最小值。
+
+完整版本会进行 $q$ 次持久化单点修改，并要求依次输出初始数组及每次修改后的 $f(a)$。本题是 Easy Version，强制 $q=0$，所以每个测试用例只处理读入的初始数组。输入仍保留完整版本的 `n q` 格式，但不会出现修改行；每个测试用例也只输出一个整数。
+
+三组样例分别展示了三种情况：数组原本有序时答案为 0；两个逆序元素需要交换下标 0、1 时答案为 1；第三组需要用到下标对 $(0,4)$，其 XOR 为 4，而且任何更小限制都不足，因此答案为 4。
 
 ## 最优结论
 

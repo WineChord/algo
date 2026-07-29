@@ -20,6 +20,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 
 
 EXPECTED_MATHJAX_VERSION = "3.2.2"
+EXPECTED_MATHJAX_FONT_COUNT = 23
 CODE_WRAP_STORAGE_KEY = "wc-code-wrap-v1"
 BACKTICK = "`"
 BARE_COMMANDS = (
@@ -1157,7 +1158,15 @@ def browser_audit(
                                           window.MathJax.startup.promise
                                         )
                                           .then(() => document.fonts
-                                            ? document.fonts.ready
+                                            ? Promise.all([
+                                                'MJXTEX',
+                                                'MJXTEX-I',
+                                                'MJXTEX-MI',
+                                                'MJXTEX-S1',
+                                              ].map((family) =>
+                                                document.fonts.load(
+                                                  `16px "${family}"`
+                                                )))
                                             : Promise.resolve())
                                           .then(() => new Promise((resolve) =>
                                             requestAnimationFrame(() =>
@@ -1623,6 +1632,31 @@ def browser_audit(
                                   right.right - left.right)
                                 .slice(0, 8)
                               : [];
+                            const mathFontFamilies = [
+                              'MJXTEX',
+                              'MJXTEX-I',
+                              'MJXTEX-MI',
+                              'MJXTEX-S1',
+                            ];
+                            const missingMathFonts = document.fonts
+                              ? mathFontFamilies.filter((family) =>
+                                  !document.fonts.check(`16px "${family}"`)
+                                )
+                              : [];
+                            const mathFontResources = performance
+                              .getEntriesByType('resource')
+                              .map((entry) => entry.name)
+                              .filter((name) =>
+                                /MathJax_[^/]+\\.woff(?:[?#]|$)/.test(name)
+                              );
+                            const remoteMathResources = performance
+                              .getEntriesByType('resource')
+                              .map((entry) => entry.name)
+                              .filter((name) =>
+                                /(?:mathjax|MathJax_)/i.test(name)
+                                && new URL(name, location.href).origin
+                                  !== location.origin
+                              );
                             return {
                               version: window.MathJax
                                 && window.MathJax.version
@@ -1644,6 +1678,9 @@ def browser_audit(
                               article: !!article,
                               documentOverflow,
                               overflowNodes,
+                              missingMathFonts,
+                              mathFontResources,
+                              remoteMathResources,
                             };
                             """
                         )
@@ -1670,6 +1707,20 @@ def browser_audit(
                             errors.append(
                                 f"{route}: MathJax errors: "
                                 + "; ".join(stats["mathErrors"])
+                            )
+                        if stats["wrappers"] and stats["missingMathFonts"]:
+                            errors.append(
+                                f"{route}: local MathJax fonts were not loaded: "
+                                + ", ".join(stats["missingMathFonts"])
+                            )
+                        if stats["wrappers"] and not stats["mathFontResources"]:
+                            errors.append(
+                                f"{route}: no local MathJax font resource was requested"
+                            )
+                        if stats["remoteMathResources"]:
+                            errors.append(
+                                f"{route}: MathJax loaded cross-origin resources: "
+                                + "; ".join(stats["remoteMathResources"])
                             )
                         if stats["raw"]:
                             errors.append(f"{route}: visible prose leaks raw TeX")
@@ -2174,12 +2225,57 @@ def validate_fixtures(errors: list[str]) -> None:
         _, fixture_errors = scan_markdown(Path(f"<fixture:{name}>"), text)
         if not fixture_errors:
             errors.append(f"checker fixture did not reject {name}")
-    good = "$x_i$.\n\n$$\n\\frac{1}{2}\n$$\n\n`$code$`\n"
+    good = (
+        "$x_i$ and $-y$.\n\n"
+        "$$\n"
+        "a_i\\leftarrow-a_i,\\qquad "
+        "a_{i+1}\\rightarrow-a_{i+1}\n"
+        "$$\n\n"
+        "$\\{x_i:1\\le i\\le n\\}$, "
+        "$O(n\\log n)$, and "
+        "$\\sum_{i=1}^{n}\\frac{1}{i}+\\binom{n}{2}$.\n\n"
+        "`$code$`\n"
+    )
     _, fixture_errors = scan_markdown(Path("<fixture:good>"), good)
     if fixture_errors:
         errors.append(
             "checker rejected its valid fixture: " + "; ".join(fixture_errors)
         )
+
+
+def validate_mathjax_assets(root: Path, errors: list[str]) -> None:
+    """Keep the formula renderer and every CHTML font inside the deployed site."""
+    bundle = root / "docs/javascripts/vendor/mathjax/tex-mml-chtml.js"
+    font_dir = root / "docs/assets/vendor/mathjax/woff-v2"
+    licence = root / "docs/assets/vendor/mathjax/LICENSE"
+    notice = root / "docs/assets/vendor/mathjax/NOTICE.txt"
+    config = root / "docs/javascripts/mathjax.js"
+    mkdocs = root / "mkdocs.yml"
+    if not bundle.is_file():
+        errors.append("local MathJax 3.2.2 bundle is missing")
+    if not licence.is_file():
+        errors.append("vendored MathJax licence is missing")
+    if not notice.is_file():
+        errors.append("vendored MathJax source notice is missing")
+    fonts = sorted(font_dir.glob("*.woff")) if font_dir.is_dir() else []
+    if len(fonts) != EXPECTED_MATHJAX_FONT_COUNT:
+        errors.append(
+            "expected "
+            f"{EXPECTED_MATHJAX_FONT_COUNT} local MathJax CHTML fonts, "
+            f"found {len(fonts)}"
+        )
+    config_text = config.read_text(encoding="utf-8")
+    if "fontURL: mathJaxFontUrl" not in config_text:
+        errors.append("MathJax config does not point CHTML at local fonts")
+    mkdocs_text = mkdocs.read_text(encoding="utf-8")
+    if "javascripts/vendor/mathjax/tex-mml-chtml.js" not in mkdocs_text:
+        errors.append("mkdocs.yml does not load the local MathJax bundle")
+    if re.search(
+        r"https?://[^\s]+(?:mathjax|tex-mml-chtml)",
+        mkdocs_text,
+        re.IGNORECASE,
+    ):
+        errors.append("mkdocs.yml still loads MathJax from a remote origin")
 
 
 def parse_args(argv: Optional[Sequence[str]]) -> argparse.Namespace:
@@ -2228,6 +2324,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         )
     errors: list[str] = []
     validate_fixtures(errors)
+    validate_mathjax_assets(root, errors)
     expression_total = 0
     math_files = 0
     for path in paths:

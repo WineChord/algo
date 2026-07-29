@@ -19,18 +19,19 @@ title: "[atcoder] ABC468 A Maximal Value"
 - Memory limit: 1024 MiB
 - Official task: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_a)
 - Official contest task list: [Open the official contest](https://atcoder.jp/contests/abc468/tasks)
+- Copyright terms: [AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
 - Program interface: GNU++23 full program using standard input and output.
 - Official image: the statement has no problem-specific diagram; the page's “Image” links are editorial-language controls rather than statement figures
 
-### Original English statement
+### Official English entry and short excerpt
 
 Open the [complete original English statement](https://atcoder.jp/contests/abc468/tasks/abc468_a?lang=en) on AtCoder.
 
 > “You are given an integer sequence of length N.”
 
-The official metadata, limits, input/output structure, and sample data are preserved below. The remaining prose is a faithful, complete teaching restatement.
+AtCoder's ordinary contest statements do not carry a confirmed blanket republication licence. The complete English presentation below is independently written from the official task while preserving its full semantics, input/output contract, constraints, and examples.
 
-### Faithful complete statement restatement
+### Complete English statement
 
 You are given an integer sequence $A=(A_1,A_2,\ldots,A_N)$ of length $N$. Count the indices $i$ with $1\le i\le N-2$ for which the middle of three consecutive elements is strictly greater than both neighbors:
 

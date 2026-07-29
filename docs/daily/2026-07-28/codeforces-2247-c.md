@@ -11,6 +11,7 @@ title: "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence"
 ## Official source and metadata
 
 - Complete official English statement: [打开 Codeforces 页面](https://codeforces.com/contest/2247/problem/C)
+- Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
 - Contest: Codeforces Round 1111 (Div. 2)
 - Contest ID: 2247
 - Task alias: Div.2 C
@@ -25,7 +26,10 @@ title: "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence"
 - Official statement images: none
 - Program interface: GNU++23 full program, multiple test cases.
 
-## Faithful complete statement semantics
+!!! info "Source and licence"
+    Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
+
+## Complete English statement
 
 Two binary arrays $a$ and $b$ of length $n$ are given. One operation on the current array $a$ is:
 
@@ -90,6 +94,12 @@ Output
 - In case 3, selecting all three ones has odd sum and solves the case once.
 - In case 4, the mismatch set contains two current ones, so one operation is invalid but two suffice.
 - In case 5, the nontrivial target is all ones, which no valid final operation can produce.
+
+## 中文解释
+
+每组给定两个长度为 $n$ 的二进制数组 $a,b$。一次操作选择一个非空子序列，也就是一组严格递增的下标；只有所选位置在当前数组中的元素和为奇数时，才能把这些位置的 0、1 全部翻转。可以进行任意多次操作，要求输出把 $a$ 变成 $b$ 的最少操作数；无法完成时输出 `-1`。
+
+一次操作若直接完成变换，就必须恰好选择当前所有不匹配位置，不能漏选，也不能翻转已经匹配的位置。官方样例依次覆盖原本相同、一次可行、需要利用奇数个当前 1、需要两次操作，以及目标无法到达五种情况。
 
 ## Constraint-driven model
 

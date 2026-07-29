@@ -11,6 +11,7 @@ title: "[atcoder] ABC468 C Between P and Q"
 ## Official source and metadata
 
 - Complete official English statement: [打开 AtCoder 页面](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
+- Copyright terms: [AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
 - Contest: AtCoder Beginner Contest 468
 - Task alias: ABC468 C
 - Official title: Between P and Q
@@ -24,7 +25,10 @@ title: "[atcoder] ABC468 C Between P and Q"
 - Official statement images: none
 - Program interface: GNU++23 full program.
 
-## Faithful complete statement semantics
+!!! info "Official source and copyright"
+    AtCoder is the authoritative source. Ordinary AtCoder contest statements do not carry a confirmed blanket republication licence, so the complete English statement below is independently written from the official task while preserving its full semantics, data contract, constraints, and examples.
+
+## Complete English statement
 
 An integer $N$ and two permutations
 
@@ -98,6 +102,12 @@ Input
 Output
 223
 ```
+
+## 中文解释
+
+给定 $N$ 以及两个由 $1,2,\ldots,N$ 组成的排列 $P,Q$，统计有多少个排列 $R$ 在字典序上严格满足 $P<R<Q$。字典序比较从左到右找到第一个不同位置，该位置数值更小的排列更小；端点 $P,Q$ 本身都不计入。若 $P\ge Q$，开区间为空，答案就是 0。
+
+输入依次给出 $N$、排列 $P$ 和排列 $Q$，输出满足条件的排列数量。三组官方样例的答案分别为 2、0、223；第一组的两个合法排列是 $(2,1,3)$ 与 $(2,3,1)$。
 
 ## Constraint-driven observations
 

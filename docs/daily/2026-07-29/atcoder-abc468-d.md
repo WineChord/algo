@@ -18,54 +18,85 @@ title: "[atcoder] ABC468 D Pre-Palindrome"
 - AtCoder Problems 社区估算难度：683（抓取于 2026-07-29；不是 AtCoder 官方难度）
 - 时间限制：2 秒
 - 内存限制：1024 MiB
-- 官方链接：[打开官方页面](https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en)
+- 官方英文题面：[AtCoder ABC468 D](https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en)
+- 版权条款：[AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
 
-### 忠实完整题意
+!!! info "Official source and copyright"
+    AtCoder is the official source of this problem. Its Terms of Use state that rights in the service's text, images, programs, and other data belong to AtCoder or the relevant third-party rightsholder. No general open republication licence has been confirmed for ordinary AtCoder Beginner Contest statements. The English presentation below is therefore independently structured and written while preserving the complete problem semantics, data contract, constraints, and examples; use the official problem link above as the authoritative source.
 
-官方英文原文请从上方链接查看。这里给出不遗漏语义的教学重述：
+### Complete English statement
 
-给定只含小写英文字母的字符串 `S`。若一个字符串至多改写一个字符后能成为回文串，则称其为好字符串；已经是回文串也属于好字符串。求 `S` 的所有非空连续子串中，好字符串的数量。位置不同的子串即使内容相同，也分别计数。
+Call a lowercase English string **good** when changing no more than one of its characters can make it a palindrome. Changing zero characters is allowed, so every palindrome is good.
 
-### 输入与输出
+For orientation:
 
-输入一行字符串 `S`，输出一个整数表示答案。
+- `a`, `iwai`, and `abcdcza` are good.
+- `abcd` and `atcoder` are not good.
 
-### 全部约束
+You are given a lowercase English string `S`. Count its non-empty contiguous substrings that are good.
 
-- $1\le |S|\le 10^4$。
-- `S` 仅含小写英文字母。
-- 子串数量最多为 $|S|(|S|+1)/2=50\,005\,000$，答案需使用 64 位整数。
+A substring occurrence is identified by its interval in `S`. Consequently, equal strings extracted from different positions are counted as different substrings.
 
-### 全部官方样例
+A substring is contiguous: it is obtained by deleting zero or more characters from the beginning of `S` and zero or more characters from its end. For example, `ab` is a substring of `abc`, whereas `ac` is not.
 
-样例 1：
+#### Constraints
+
+- `S` consists only of lowercase English letters.
+- $1\le |S|\le10^4$.
+
+#### Input
+
+The input is supplied through standard input in this form:
 
 ```text
-输入
+S
+```
+
+#### Output
+
+Print one integer: the number of non-empty good substring occurrences of `S`.
+
+#### Official sample 1
+
+```text
+Input
 ababa
-输出
+
+Output
 13
 ```
 
-15 个子串中，只有位置 $[1,4]$ 的 `abab` 和位置 $[2,5]$ 的 `baba` 需要改写至少两个字符；其余 13 个均为好字符串。
+For example, the interval from the 2nd through the 3rd character produces `ba`, and the complete interval from the 1st through the 5th character produces `ababa`; both are good. There are 15 non-empty substring occurrences in total. Exactly two are not good: `abab` at positions 1 through 4 and `baba` at positions 2 through 5. Hence the answer is 13.
 
-样例 2：
+#### Official sample 2
 
 ```text
-输入
+Input
 atcoder
-输出
+
+Output
 18
 ```
 
-样例 3：
+#### Official sample 3
 
 ```text
-输入
+Input
 abccbacbacb
-输出
+
+Output
 40
 ```
+
+The official statement provides no additional explanation for samples 2 and 3 and contains no illustration required to interpret the task.
+
+### 中文解释
+
+如果一个只含小写字母的字符串通过改写零个或一个位置就能变成回文串，就称它为好字符串；因此原本就是回文串的字符串也合法。例如 `a`、`iwai`、`abcdcza` 是好字符串，而 `abcd`、`atcoder` 不是。
+
+给定字符串 `S`，需要统计其中所有非空连续子串里有多少个是好字符串。这里的子串必须对应 `S` 的一段连续区间，等价于只从原串开头和结尾删去若干字符；`ab` 是 `abc` 的子串，而 `ac` 不是。计数对象是区间而不是去重后的字符串内容，所以两个位置不同的子串即使文本相同，也要分别计数。
+
+输入只有一行 `S`，其中 $1\le |S|\le10^4$ 且所有字符都是小写英文字母；输出一个整数表示好子串区间的总数。第一组样例 `ababa` 共有 15 个非空子串，只有位置 1–4 的 `abab` 和位置 2–5 的 `baba` 无法通过至多一次改写变成回文，因此答案为 13。
 
 ## 最优结论
 

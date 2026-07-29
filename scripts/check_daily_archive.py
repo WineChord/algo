@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -26,6 +27,29 @@ PRIVATE = (
     "邮件发送后",
     "投递状态",
 )
+FORBIDDEN_PLACEHOLDERS = (
+    "官方英文原文请从上方链接查看",
+    "完整官方英文原文请从上方链接查看",
+    "Faithful complete statement semantics",
+    "Complete statement semantics",
+)
+CANONICAL_BODY = re.compile(
+    r"<!-- DAILY_CANONICAL_BODY_START "
+    r"sha256=([0-9a-f]{64}) -->\n"
+    r"(.*?)\n"
+    r"<!-- DAILY_CANONICAL_BODY_END -->",
+    re.DOTALL,
+)
+FORMULA_REGRESSIONS = {
+    "codeforces-2247-a": (
+        r"a_i\leftarrow-a_i,\qquad a_{i+1}\leftarrow-a_{i+1}",
+    ),
+    "atcoder-abc468-c": (
+        r"P=(P_1,P_2,\ldots,P_N),\qquad Q=(Q_1,Q_2,\ldots,Q_N)",
+        r"P<R<Q",
+        r"P\ge Q",
+    ),
+}
 EMAIL_ADDRESS = re.compile(
     r"\b[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@"
     r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
@@ -139,6 +163,12 @@ for entry in dates:
             fail(f"{page.relative_to(ROOT)}: page does not exist")
             continue
         text = page.read_text(encoding="utf-8")
+        for placeholder in FORBIDDEN_PLACEHOLDERS:
+            if placeholder.casefold() in text.casefold():
+                fail(
+                    f"{page.relative_to(ROOT)}: contains statement placeholder "
+                    f"{placeholder!r}"
+                )
         title_heading = re.compile(
             rf"^# {re.escape(str(item.get('title')))}$",
             re.MULTILINE,
@@ -180,6 +210,64 @@ for entry in dates:
                     f"{page.relative_to(ROOT)}: raw HTML href uses a source "
                     f"Markdown path instead of a deployed route: {href}"
                 )
+        kind = str(item.get("kind"))
+        if kind in {"AtCoder", "Codeforces"}:
+            required_statement_parts = (
+                "Complete English statement",
+                "Input",
+                "Output",
+                "constraint",
+                "sample",
+                "中文",
+            )
+            for part in required_statement_parts:
+                if part.casefold() not in text.casefold():
+                    fail(
+                        f"{page.relative_to(ROOT)}: self-contained contest "
+                        f"statement is missing {part!r}"
+                    )
+            if kind == "AtCoder" and "https://atcoder.jp/tos" not in text:
+                fail(
+                    f"{page.relative_to(ROOT)}: missing AtCoder copyright boundary"
+                )
+            if (
+                kind == "Codeforces"
+                and "https://codeforces.com/blog/entry/967" not in text
+            ):
+                fail(
+                    f"{page.relative_to(ROOT)}: missing Codeforces materials licence"
+                )
+        for formula in FORMULA_REGRESSIONS.get(key, ()):
+            if formula not in text:
+                fail(
+                    f"{page.relative_to(ROOT)}: formula regression lost "
+                    f"{formula!r}"
+                )
+        source_sha256 = item.get("source_sha256")
+        if source_sha256 is not None:
+            if not isinstance(source_sha256, str) or not re.fullmatch(
+                r"[0-9a-f]{64}",
+                source_sha256,
+            ):
+                fail(f"{page.relative_to(ROOT)}: invalid source_sha256")
+            matches = CANONICAL_BODY.findall(text)
+            if len(matches) != 1:
+                fail(
+                    f"{page.relative_to(ROOT)}: expected one canonical body marker"
+                )
+            else:
+                marker_sha256, body = matches[0]
+                actual_sha256 = hashlib.sha256(
+                    (body + "\n").encode("utf-8")
+                ).hexdigest()
+                if marker_sha256 != source_sha256:
+                    fail(
+                        f"{page.relative_to(ROOT)}: marker hash differs from manifest"
+                    )
+                if actual_sha256 != source_sha256:
+                    fail(
+                        f"{page.relative_to(ROOT)}: canonical body changed in transit"
+                    )
         if text.count("```cpp") < 2:
             fail(f"{page.relative_to(ROOT)}: expected at least two complete C++ blocks")
         for private in PRIVATE:

@@ -1,3 +1,9 @@
+const mathJaxConfigScript = document.currentScript;
+const mathJaxFontUrl = new URL(
+  "../assets/vendor/mathjax/woff-v2",
+  mathJaxConfigScript.src
+).href.replace(/\/$/, "");
+
 window.MathJax = {
   tex: {
     inlineMath: [["\\(", "\\)"]],
@@ -6,7 +12,8 @@ window.MathJax = {
     processEnvironments: true
   },
   chtml: {
-    matchFontHeight: false
+    matchFontHeight: false,
+    fontURL: mathJaxFontUrl
   },
   options: {
     ignoreHtmlClass: ".*|",

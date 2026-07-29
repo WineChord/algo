@@ -93,7 +93,7 @@ extra_javascript:
   - javascripts/code-wrap.js
   - javascripts/problem-links.js
   - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+  - javascripts/vendor/mathjax/tex-mml-chtml.js
 
 extra:
   social:

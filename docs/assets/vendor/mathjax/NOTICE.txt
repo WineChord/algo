@@ -1,0 +1,10 @@
+MathJax vendor notice
+=====================
+
+- Package: `mathjax`
+- Version: 3.2.2
+- Upstream: [MathJax](https://www.mathjax.org/)
+- npm package integrity: `sha512-Bt+SSVU8eBG27zChVewOicYs7Xsdt40qm4+UpHyX7k0/O9NliPc+x77k1/FEsPsjKPZGJvtRZM1vO+geW0OhGw==`
+- Included files: `tex-mml-chtml.js`, 23 CHTML WOFF fonts, and the upstream Apache-2.0 licence
+
+These files are served locally so a page cannot lose only part of its mathematical alphabet when a third-party font request fails.

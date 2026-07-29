@@ -45,7 +45,7 @@ mkdocs serve
 - `includes/problems/`：可跨专题复用的折叠题目详情
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
-- `scripts/publish_daily_archive.py`：从每日规范源生成档案页面、日期索引与导航
+- `scripts/publish_daily_archive.py`：校验并原样嵌入可发布的每日规范源，再生成页面外壳、日期索引与导航；不改写题面或公式
 - `scripts/check_daily_archive.py`：校验日期顺序、每日账目、完整页面与专题链接
 - `scripts/check_typography.py`：中英文、数字、单位与全角标点排版检查
 - `scripts/render_visuals.py`：确定性生成站内 SVG 图示与哈希清单
@@ -53,6 +53,8 @@ mkdocs serve
 - `scripts/check_cpp.py`：逐个编译 C++ 代码块
 - `scripts/check_rendering.py`：校对 Markdown、公式、构建产物与浏览器渲染
 - `.github/workflows/pages.yml`：GitHub Pages 自动发布
+
+每日档案的规范源必须已经是读者可直接阅读的最终 Markdown：链接、公式、图片、本地资源和代码编译标记均在进入发布器前完成。发布器只负责固定页面外壳和导航；若题面仍有占位文字、旧式公式分隔符、远程图片、运行状态或其他不应公开的内容，它会在写入前报错，而不会猜测、删除或修补原文。
 
 ## License
 

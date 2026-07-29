@@ -10,6 +10,8 @@ title: "[atcoder] ABC468 B Corridor Watch"
 
 Official problem: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en)
 
+Copyright terms: [AtCoder Terms of Use](https://atcoder.jp/tos?lang=en)
+
 ## Official source record
 
 - Platform and contest: AtCoder, AtCoder Beginner Contest 468.
@@ -23,7 +25,10 @@ Official problem: [Open the official problem](https://atcoder.jp/contests/abc468
 - Program interface: GNU++23 full program.
 - Official statement images: none inside the task statement.
 
-## Complete statement semantics
+!!! info "Official source and copyright"
+    AtCoder is the authoritative source. Ordinary AtCoder contest statements do not carry a confirmed blanket republication licence, so the complete English statement below is independently written from the official task while preserving its full semantics, data contract, constraints, and examples.
+
+## Complete English statement
 
 There are $M$ cells in a straight row, numbered $1,\ldots,M$. The length-$M$ string $S$ contains only `G` and `.`. A `G` at position $i$ means a guard stands there. A cell $x$ is watched exactly when at least one guard position $i$ satisfies
 

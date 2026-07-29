@@ -19,18 +19,19 @@ title: "[codeforces] CF Round 1111 Div.2 A Zero Sum"
 - Memory limit: 256 MB
 - Official problem: [Open the official problem](https://codeforces.com/contest/2247/problem/A)
 - Canonical problemset link: [打开 Codeforces 页面](https://codeforces.com/problemset/problem/2247/A)
+- Materials licence: [Codeforces materials usage license v0.1](https://codeforces.com/blog/entry/967)
 - Program interface: GNU++23 full program.
 - Official statement image: none
 
-### Original English statement
+### Official English entry and short excerpt
 
 Open the [complete original English statement](https://codeforces.com/contest/2247/problem/A) on Codeforces.
 
 > “You are given an array a of length n, consisting only of -1 and 1.”
 
-The official metadata, limits, input/output structure, sample data, and note facts are preserved below. The remaining prose is a faithful, complete teaching restatement.
+Codeforces is the source of this problem. The complete English statement below is presented under the Codeforces materials usage licence with source attribution and a direct official link; this educational page does not provide automatic judging or reproduce hidden tests, generators, checkers, or validators.
 
-### Faithful complete statement restatement
+### Complete English statement
 
 For each test case, an array $a$ of length $n$ contains only `-1` and `1`. One operation chooses an adjacent pair $(i,i+1)$ and negates both values:
 

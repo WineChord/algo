@@ -22,7 +22,7 @@ Official problem: [Open the official problem](https://leetcode.cn/problems/count
 - Official topic tags returned by the current problem API: none.
 - Program interface: LeetCode C++ function signature.
 
-## Complete statement semantics
+## Complete problem statement
 
 Given the root of a **complete binary tree**, call a node $x$ **dominant** when its value equals the maximum value among every node in the subtree rooted at $x$. Return the total number of dominant nodes.
 
