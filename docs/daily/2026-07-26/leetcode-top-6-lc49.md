@@ -186,7 +186,11 @@ public:
 };
 ```
 
-时间由排序主导，为 $O(\sum |s_i|\log |s_i|+\sum |G_j|\log |G_j|)$。
+时间由排序主导：
+
+$$
+O\left(\sum_i |s_i|\log |s_i|+\sum_j |G_j|\log |G_j|\right).
+$$
 
 ## Follow-up 2：字符串在线到达
 
