@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import contextlib
+import json
 import re
 import shutil
 import subprocess
@@ -1365,6 +1366,109 @@ def browser_audit(
                             f"{route}: browser audit failed at {width}px "
                             f"after three attempts: {type(exc).__name__}: {exc}"
                         )
+            manifest_path = site_dir.parent / "docs" / "daily" / "archive.json"
+            if manifest_path.is_file():
+                try:
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    date_entries = manifest["dates"]
+                    expected_dates = [entry["date"] for entry in date_entries]
+                    latest = date_entries[0]
+                    first = latest["items"][0]
+                    route = (
+                        f"/daily/{latest['date']}/"
+                        f"{Path(first['page']).stem}/"
+                    )
+                    driver.execute_cdp_cmd(
+                        "Emulation.setDeviceMetricsOverride",
+                        {
+                            "width": 1440,
+                            "height": 1000,
+                            "deviceScaleFactor": 1,
+                            "mobile": False,
+                        },
+                    )
+                    visits += 1
+                    driver.get(base_url + route)
+                    sections = wait.until(
+                        lambda current: current.execute_script(
+                            """
+                            return [...document.querySelectorAll(
+                              'nav.md-nav--primary '
+                              + 'li.md-nav__item--section.md-nav__item--nested'
+                            )].map((item) => {
+                              const container = item.querySelector(
+                                ':scope > .md-nav__container'
+                              );
+                              const text = (
+                                container?.querySelector('a')?.textContent || ''
+                              ).trim();
+                              const input = item.querySelector(
+                                ':scope > input.md-nav__toggle'
+                              );
+                              const nav = item.querySelector(
+                                ':scope > nav.md-nav'
+                              );
+                              return {
+                                text,
+                                active: item.classList.contains(
+                                  'md-nav__item--active'
+                                ),
+                                checked: input?.checked || false,
+                                expanded: nav?.getAttribute('aria-expanded'),
+                                display: nav
+                                  ? getComputedStyle(nav).display
+                                  : null,
+                                height: nav?.getBoundingClientRect().height || 0,
+                                links: nav?.querySelectorAll(
+                                  ':scope > ul > li'
+                                ).length || 0,
+                              };
+                            }).filter((item) =>
+                              /^\\d{4}-\\d{2}-\\d{2}$/.test(item.text)
+                            );
+                            """
+                        )
+                    )
+                    actual_dates = [item["text"] for item in sections]
+                    if actual_dates != expected_dates:
+                        errors.append(
+                            "daily archive navigation dates differ from "
+                            f"archive.json ({actual_dates} versus {expected_dates})"
+                        )
+                    if not sections:
+                        errors.append("daily archive navigation has no date branches")
+                    else:
+                        active = sections[0]
+                        if not (
+                            active["active"]
+                            and active["checked"]
+                            and active["expanded"] == "true"
+                            and active["display"] != "none"
+                            and active["height"] > 0
+                            and active["links"] == 14
+                        ):
+                            errors.append(
+                                "daily archive active date must expose exactly "
+                                "14 problem links"
+                            )
+                        if any(
+                            item["active"]
+                            or item["checked"]
+                            or item["expanded"] != "false"
+                            or item["display"] != "none"
+                            or item["height"] != 0
+                            or item["links"] != 14
+                            for item in sections[1:]
+                        ):
+                            errors.append(
+                                "daily archive inactive dates must retain "
+                                "14 links but stay visually collapsed"
+                            )
+                except Exception as exc:
+                    errors.append(
+                        "daily archive navigation browser audit failed: "
+                        f"{type(exc).__name__}: {exc}"
+                    )
             problem_page = site_dir / "problems" / "index.html"
             changelog_page = site_dir / "changelog" / "index.html"
             if problem_page.is_file() and changelog_page.is_file():

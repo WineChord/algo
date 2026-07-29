@@ -43,7 +43,7 @@ for path in FILES:
             continue
         if in_cpp and not line.strip():
             errors.append(f"{path.relative_to(ROOT)}:{number}: C++ 代码块不能包含空行（起始于第 {fence_line} 行）")
-        if "leetcode.com" in line:
+        if re.search(r"https?://(?:www\.)?leetcode\.com/", line):
             errors.append(f"{path.relative_to(ROOT)}:{number}: 请链接到 leetcode.cn")
     if in_cpp:
         errors.append(f"{path.relative_to(ROOT)}:{fence_line}: C++ 代码块未闭合")
@@ -51,7 +51,8 @@ for path in FILES:
 referenced: set[Path] = set()
 for path in [ROOT / "README.md", *DOCS]:
     text = path.read_text(encoding="utf-8")
-    if PROBLEM_URL.search(text):
+    is_daily_archive = path.is_relative_to(ROOT / "docs" / "daily")
+    if PROBLEM_URL.search(text) and not is_daily_archive:
         errors.append(f"{path.relative_to(ROOT)}: 题目原始链接必须放入默认折叠的题目详情片段")
     for snippet in SNIPPET.findall(text):
         target = ROOT / snippet

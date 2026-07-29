@@ -13,7 +13,16 @@ FILES = [
     *sorted((ROOT / "includes").rglob("*.md")),
 ]
 AUTOCORRECT = ROOT / "node_modules" / ".bin" / "autocorrect"
-AUTOCORRECT_TARGETS = ("README.md", "mkdocs.yml", "docs", "includes")
+AUTOCORRECT_TARGETS = (
+    "README.md",
+    "mkdocs.yml",
+    *[
+        str(path.relative_to(ROOT))
+        for path in sorted((ROOT / "docs").rglob("*.md"))
+        if not path.is_relative_to(ROOT / "docs" / "daily")
+    ],
+    "includes",
+)
 
 HAN = r"\u3400-\u4dbf\u4e00-\u9fff"
 MIXED_SCRIPT = re.compile(

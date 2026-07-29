@@ -37,6 +37,8 @@ jobs:
           npm ci
       - name: Check content
         run: python scripts/check_content.py
+      - name: Check daily archive
+        run: python scripts/check_daily_archive.py
       - name: Check copy typography
         run: python scripts/check_typography.py
       - name: Check media policy

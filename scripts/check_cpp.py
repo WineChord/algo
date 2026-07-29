@@ -29,6 +29,7 @@ HEADERS = """#include <algorithm>
 #include <limits>
 #include <list>
 #include <map>
+#include <mutex>
 #include <numeric>
 #include <queue>
 #include <random>
@@ -68,6 +69,9 @@ struct TreeNode {
       : val(x), left(l), right(r) {}
 };
 """
+LEETCODE_PRELUDE = """#include <bits/stdc++.h>
+using namespace std;
+"""
 
 snippets: list[tuple[Path, int, str, str | None]] = []
 for path in FILES:
@@ -88,6 +92,7 @@ for path in FILES:
             directive = lines[number - 2].strip() if number > 1 else ""
             skip = directive == "<!-- compile:skip -->"
             prelude = {
+                "<!-- compile:leetcode -->": LEETCODE_PRELUDE,
                 "<!-- compile:leetcode-list -->": LIST_NODE_PRELUDE,
                 "<!-- compile:leetcode-tree -->": TREE_NODE_PRELUDE,
             }.get(directive)

@@ -102,6 +102,74 @@ extra:
 
 nav:
   - 首页: index.md
+  # DAILY_ARCHIVE_NAV_START
+  - 每日 14 题:
+      - 总览: daily/index.md
+      - "2026-07-29":
+          - 当日总览: daily/2026-07-29/index.md
+          - "[atcoder] ABC468 D Pre-Palindrome": daily/2026-07-29/atcoder-abc468-d.md
+          - "[力扣 Top 31] LC 279 完全平方数 中等": daily/2026-07-29/leetcode-top-31-lc279.md
+          - "[力扣 Top 32] LC 22 括号生成 中等": daily/2026-07-29/leetcode-top-32-lc22.md
+          - "[力扣 Top 33] LC 27 移除元素 简单": daily/2026-07-29/leetcode-top-33-lc27.md
+          - "[力扣 Top 34] LC 9 回文数 简单": daily/2026-07-29/leetcode-top-34-lc9.md
+          - "[力扣 Top 35] LC 53 最大子数组和 中等": daily/2026-07-29/leetcode-top-35-lc53.md
+          - "[力扣 Top 36] LC 198 打家劫舍 中等": daily/2026-07-29/leetcode-top-36-lc198.md
+          - "[力扣 Top 37] LC 438 找到字符串中所有字母异位词 中等": daily/2026-07-29/leetcode-top-37-lc438.md
+          - "[力扣 Top 38] LC 46 全排列 中等": daily/2026-07-29/leetcode-top-38-lc46.md
+          - "[力扣 Top 39] LC 59 螺旋矩阵 II 中等": daily/2026-07-29/leetcode-top-39-lc59.md
+          - "[力扣 Top 40] LC 236 二叉树的最近公共祖先 中等": daily/2026-07-29/leetcode-top-40-lc236.md
+          - "[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难": daily/2026-07-29/leetcode-weekly-511-q4-lc3999.md
+          - "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)": daily/2026-07-29/codeforces-2247-d1.md
+          - "[力扣每日一题] 2026-07-29｜LC 3518 最小回文排列 II": daily/2026-07-29/leetcode-daily-2026-07-29-lc3518.md
+      - "2026-07-28":
+          - 当日总览: daily/2026-07-28/index.md
+          - "[atcoder] ABC468 C Between P and Q": daily/2026-07-28/atcoder-abc468-c.md
+          - "[力扣 Top 21] LC 20 有效的括号 简单": daily/2026-07-28/leetcode-top-21-lc20.md
+          - "[力扣 Top 22] LC 206 反转链表 简单": daily/2026-07-28/leetcode-top-22-lc206.md
+          - "[力扣 Top 23] LC 21 合并两个有序链表 简单": daily/2026-07-28/leetcode-top-23-lc21.md
+          - "[力扣 Top 24] LC 283 移动零 简单": daily/2026-07-28/leetcode-top-24-lc283.md
+          - "[力扣 Top 25] LC 2235 两整数相加 简单": daily/2026-07-28/leetcode-top-25-lc2235.md
+          - "[力扣 Top 26] LC 239 滑动窗口最大值 困难": daily/2026-07-28/leetcode-top-26-lc239.md
+          - "[力扣 Top 27] LC 121 买卖股票的最佳时机 简单": daily/2026-07-28/leetcode-top-27-lc121.md
+          - "[力扣 Top 28] LC 25 K 个一组翻转链表 困难": daily/2026-07-28/leetcode-top-28-lc25.md
+          - "[力扣 Top 29] LC 704 二分查找 简单": daily/2026-07-28/leetcode-top-29-lc704.md
+          - "[力扣 Top 30] LC 14 最长公共前缀 简单": daily/2026-07-28/leetcode-top-30-lc14.md
+          - "[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等": daily/2026-07-28/leetcode-weekly-511-q3-lc3998.md
+          - "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence": daily/2026-07-28/codeforces-2247-c.md
+          - "[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I": daily/2026-07-28/leetcode-daily-2026-07-28-lc3517.md
+      - "2026-07-27":
+          - 当日总览: daily/2026-07-27/index.md
+          - "[atcoder] ABC468 B Corridor Watch": daily/2026-07-27/atcoder-abc468-b.md
+          - "[力扣 Top 11] LC 2 两数相加 中等": daily/2026-07-27/leetcode-top-11-lc2.md
+          - "[力扣 Top 12] LC 560 和为 K 的子数组 中等": daily/2026-07-27/leetcode-top-12-lc560.md
+          - "[力扣 Top 13] LC 200 岛屿数量 中等": daily/2026-07-27/leetcode-top-13-lc200.md
+          - "[力扣 Top 14] LC 11 盛最多水的容器 中等": daily/2026-07-27/leetcode-top-14-lc11.md
+          - "[力扣 Top 15] LC 4 寻找两个正序数组的中位数 困难": daily/2026-07-27/leetcode-top-15-lc4.md
+          - "[力扣 Top 16] LC 56 合并区间 中等": daily/2026-07-27/leetcode-top-16-lc56.md
+          - "[力扣 Top 17] LC 215 数组中的第 K 个最大元素 中等": daily/2026-07-27/leetcode-top-17-lc215.md
+          - "[力扣 Top 18] LC 88 合并两个有序数组 简单": daily/2026-07-27/leetcode-top-18-lc88.md
+          - "[力扣 Top 19] LC 72 编辑距离 中等": daily/2026-07-27/leetcode-top-19-lc72.md
+          - "[力扣 Top 20] LC 54 螺旋矩阵 中等": daily/2026-07-27/leetcode-top-20-lc54.md
+          - "[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等": daily/2026-07-27/leetcode-weekly-511-q2-lc3997.md
+          - "[codeforces] CF Round 1111 Div.2 B Yet Another Constructive": daily/2026-07-27/codeforces-2247-b.md
+          - "[力扣每日一题] 2026-07-27｜LC 1464 数组中两元素的最大乘积": daily/2026-07-27/leetcode-daily-2026-07-27-lc1464.md
+      - "2026-07-26":
+          - 当日总览: daily/2026-07-26/index.md
+          - "[atcoder] ABC468 A Maximal Value": daily/2026-07-26/atcoder-abc468-a.md
+          - "[力扣 Top 1] LC 3286 穿越网格图的安全路径 中等": daily/2026-07-26/leetcode-top-1-lc3286.md
+          - "[力扣 Top 2] LC 1 两数之和 简单": daily/2026-07-26/leetcode-top-2-lc1.md
+          - "[力扣 Top 3] LC 3 无重复字符的最长子串 中等": daily/2026-07-26/leetcode-top-3-lc3.md
+          - "[力扣 Top 4] LC 146 LRU 缓存 中等": daily/2026-07-26/leetcode-top-4-lc146.md
+          - "[力扣 Top 5] LC 42 接雨水 困难": daily/2026-07-26/leetcode-top-5-lc42.md
+          - "[力扣 Top 6] LC 49 字母异位词分组 中等": daily/2026-07-26/leetcode-top-6-lc49.md
+          - "[力扣 Top 7] LC 5 最长回文子串 中等": daily/2026-07-26/leetcode-top-7-lc5.md
+          - "[力扣 Top 8] LC 128 最长连续序列 中等": daily/2026-07-26/leetcode-top-8-lc128.md
+          - "[力扣 Top 9] LC 15 三数之和 中等": daily/2026-07-26/leetcode-top-9-lc15.md
+          - "[力扣 Top 10] LC 70 爬楼梯 简单": daily/2026-07-26/leetcode-top-10-lc70.md
+          - "[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单": daily/2026-07-26/leetcode-weekly-511-q1-lc3996.md
+          - "[codeforces] CF Round 1111 Div.2 A Zero Sum": daily/2026-07-26/codeforces-2247-a.md
+          - "[力扣每日一题] 2026-07-26｜LC 628 三个数的最大乘积": daily/2026-07-26/leetcode-daily-2026-07-26-lc628.md
+  # DAILY_ARCHIVE_NAV_END
   - 入门与方法:
       - 学习路线: guide/roadmap.md
       - 解题方法: guide/problem-solving.md

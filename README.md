@@ -14,6 +14,7 @@
 - 同时记录正确性依据、复杂度、易错点、追问与相关题目。
 - C++ 实现保持简洁、可读、贴近竞赛现场。
 - 通过知识地图、题型索引和双向链接连接零散题目。
+- 每日 14 题档案按日期保存完整训练批次，并与稳定知识专题互相链接。
 
 ## 本地预览
 
@@ -23,6 +24,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 npm ci
 python scripts/check_content.py
+python scripts/check_daily_archive.py
 python scripts/check_typography.py
 python scripts/check_figures.py
 python scripts/check_cpp.py
@@ -38,10 +40,13 @@ mkdocs serve
 ## 目录
 
 - `docs/`：网站正文
+- `docs/daily/`：按工作日期生成的每日 14 题完整档案
 - `docs/assets/figures/`：可复现 SVG 图示与来源清单
 - `includes/problems/`：可跨专题复用的折叠题目详情
 - `mkdocs.yml`：站点配置与导航
 - `scripts/check_content.py`：内容规范检查
+- `scripts/publish_daily_archive.py`：从每日规范源生成档案页面、日期索引与导航
+- `scripts/check_daily_archive.py`：校验日期顺序、每日账目、完整页面与专题链接
 - `scripts/check_typography.py`：中英文、数字、单位与全角标点排版检查
 - `scripts/render_visuals.py`：确定性生成站内 SVG 图示与哈希清单
 - `scripts/check_figures.py`：校验图示安全性、来源、页面锚点与构建结果

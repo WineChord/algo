@@ -1,0 +1,529 @@
+{
+  "version": 1,
+  "dates": [
+    {
+      "date": "2026-07-29",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-d",
+          "title": "[atcoder] ABC468 D Pre-Palindrome",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-d.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en",
+          "topic": "../../strings/palindrome-centers.md"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-31-lc279",
+          "title": "[力扣 Top 31] LC 279 完全平方数 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-31-lc279.md",
+          "official": "https://leetcode.cn/problems/perfect-squares/",
+          "topic": "../../math/index.md"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-32-lc22",
+          "title": "[力扣 Top 32] LC 22 括号生成 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-32-lc22.md",
+          "official": "https://leetcode.cn/problems/generate-parentheses/",
+          "topic": "../../search/backtracking.md"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-33-lc27",
+          "title": "[力扣 Top 33] LC 27 移除元素 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-33-lc27.md",
+          "official": "https://leetcode.cn/problems/remove-element/",
+          "topic": "../../basics/index.md"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-34-lc9",
+          "title": "[力扣 Top 34] LC 9 回文数 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-34-lc9.md",
+          "official": "https://leetcode.cn/problems/palindrome-number/",
+          "topic": "../../basics/index.md"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-35-lc53",
+          "title": "[力扣 Top 35] LC 53 最大子数组和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-35-lc53.md",
+          "official": "https://leetcode.cn/problems/maximum-subarray/",
+          "topic": "../../dp/linear-recurrences.md"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-36-lc198",
+          "title": "[力扣 Top 36] LC 198 打家劫舍 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-36-lc198.md",
+          "official": "https://leetcode.cn/problems/house-robber/",
+          "topic": "../../dp/linear-recurrences.md"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-37-lc438",
+          "title": "[力扣 Top 37] LC 438 找到字符串中所有字母异位词 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-37-lc438.md",
+          "official": "https://leetcode.cn/problems/find-all-anagrams-in-a-string/",
+          "topic": "../../strings/index.md"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-38-lc46",
+          "title": "[力扣 Top 38] LC 46 全排列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-38-lc46.md",
+          "official": "https://leetcode.cn/problems/permutations/",
+          "topic": "../../search/backtracking.md"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-39-lc59",
+          "title": "[力扣 Top 39] LC 59 螺旋矩阵 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-39-lc59.md",
+          "official": "https://leetcode.cn/problems/spiral-matrix-ii/",
+          "topic": "../../basics/index.md"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-40-lc236",
+          "title": "[力扣 Top 40] LC 236 二叉树的最近公共祖先 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-40-lc236.md",
+          "official": "https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/",
+          "topic": "../../graph/tree-aggregation.md"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-511-q4-lc3999",
+          "title": "[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-511-q4-lc3999.md",
+          "official": "https://leetcode.cn/problems/minimum-number-of-string-groups-through-transformations/",
+          "topic": "../../strings/cyclic-normalization.md"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-d1",
+          "title": "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-d1.md",
+          "official": "https://codeforces.com/contest/2247/problem/D1",
+          "topic": "../../basics/index.md"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-29-lc3518",
+          "title": "[力扣每日一题] 2026-07-29｜LC 3518 最小回文排列 II",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-29-lc3518.md",
+          "official": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-ii/",
+          "topic": "../../strings/palindrome-rearrangements.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-c",
+          "title": "[atcoder] ABC468 C Between P and Q",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-c.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en",
+          "topic": "../../math/permutation-ranking.md"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-21-lc20",
+          "title": "[力扣 Top 21] LC 20 有效的括号 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-21-lc20.md",
+          "official": "https://leetcode.cn/problems/valid-parentheses/",
+          "topic": "../../data-structures/index.md"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-22-lc206",
+          "title": "[力扣 Top 22] LC 206 反转链表 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-22-lc206.md",
+          "official": "https://leetcode.cn/problems/reverse-linked-list/",
+          "topic": "../../data-structures/linked-lists.md"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-23-lc21",
+          "title": "[力扣 Top 23] LC 21 合并两个有序链表 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-23-lc21.md",
+          "official": "https://leetcode.cn/problems/merge-two-sorted-lists/",
+          "topic": "../../data-structures/linked-lists.md"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-24-lc283",
+          "title": "[力扣 Top 24] LC 283 移动零 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-24-lc283.md",
+          "official": "https://leetcode.cn/problems/move-zeroes/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-25-lc2235",
+          "title": "[力扣 Top 25] LC 2235 两整数相加 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-25-lc2235.md",
+          "official": "https://leetcode.cn/problems/add-two-integers/",
+          "topic": "../../basics/index.md"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-26-lc239",
+          "title": "[力扣 Top 26] LC 239 滑动窗口最大值 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-26-lc239.md",
+          "official": "https://leetcode.cn/problems/sliding-window-maximum/",
+          "topic": "../../data-structures/monotonic-queues.md"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-27-lc121",
+          "title": "[力扣 Top 27] LC 121 买卖股票的最佳时机 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-27-lc121.md",
+          "official": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-28-lc25",
+          "title": "[力扣 Top 28] LC 25 K 个一组翻转链表 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-28-lc25.md",
+          "official": "https://leetcode.cn/problems/reverse-nodes-in-k-group/",
+          "topic": "../../data-structures/linked-lists.md"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-29-lc704",
+          "title": "[力扣 Top 29] LC 704 二分查找 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-29-lc704.md",
+          "official": "https://leetcode.cn/problems/binary-search/",
+          "topic": "../../basics/binary-search.md"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-30-lc14",
+          "title": "[力扣 Top 30] LC 14 最长公共前缀 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-30-lc14.md",
+          "official": "https://leetcode.cn/problems/longest-common-prefix/",
+          "topic": "../../strings/index.md"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-511-q3-lc3998",
+          "title": "[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-511-q3-lc3998.md",
+          "official": "https://leetcode.cn/problems/transform-binary-string-using-subsequence-sort/",
+          "topic": "../../basics/prefix-sums-and-difference.md"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-c",
+          "title": "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-c.md",
+          "official": "https://codeforces.com/contest/2247/problem/C",
+          "topic": "../../math/index.md"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-28-lc3517",
+          "title": "[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-28-lc3517.md",
+          "official": "https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/",
+          "topic": "../../strings/palindrome-rearrangements.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-b",
+          "title": "[atcoder] ABC468 B Corridor Watch",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-b.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en",
+          "topic": "../../basics/prefix-sums-and-difference.md"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-11-lc2",
+          "title": "[力扣 Top 11] LC 2 两数相加 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-11-lc2.md",
+          "official": "https://leetcode.cn/problems/add-two-numbers/",
+          "topic": "../../data-structures/index.md"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-12-lc560",
+          "title": "[力扣 Top 12] LC 560 和为 K 的子数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-12-lc560.md",
+          "official": "https://leetcode.cn/problems/subarray-sum-equals-k/",
+          "topic": "../../basics/prefix-sums-and-difference.md"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-13-lc200",
+          "title": "[力扣 Top 13] LC 200 岛屿数量 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-13-lc200.md",
+          "official": "https://leetcode.cn/problems/number-of-islands/",
+          "topic": "../../graph/index.md"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-14-lc11",
+          "title": "[力扣 Top 14] LC 11 盛最多水的容器 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-14-lc11.md",
+          "official": "https://leetcode.cn/problems/container-with-most-water/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-15-lc4",
+          "title": "[力扣 Top 15] LC 4 寻找两个正序数组的中位数 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-15-lc4.md",
+          "official": "https://leetcode.cn/problems/median-of-two-sorted-arrays/",
+          "topic": "../../basics/binary-search.md"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-16-lc56",
+          "title": "[力扣 Top 16] LC 56 合并区间 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-16-lc56.md",
+          "official": "https://leetcode.cn/problems/merge-intervals/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-17-lc215",
+          "title": "[力扣 Top 17] LC 215 数组中的第 K 个最大元素 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-17-lc215.md",
+          "official": "https://leetcode.cn/problems/kth-largest-element-in-an-array/",
+          "topic": "../../data-structures/index.md"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-18-lc88",
+          "title": "[力扣 Top 18] LC 88 合并两个有序数组 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-18-lc88.md",
+          "official": "https://leetcode.cn/problems/merge-sorted-array/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-19-lc72",
+          "title": "[力扣 Top 19] LC 72 编辑距离 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-19-lc72.md",
+          "official": "https://leetcode.cn/problems/edit-distance/",
+          "topic": "../../dp/sequence-dp.md"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-20-lc54",
+          "title": "[力扣 Top 20] LC 54 螺旋矩阵 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-20-lc54.md",
+          "official": "https://leetcode.cn/problems/spiral-matrix/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-511-q2-lc3997",
+          "title": "[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-511-q2-lc3997.md",
+          "official": "https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/",
+          "topic": "../../graph/tree-aggregation.md"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-b",
+          "title": "[codeforces] CF Round 1111 Div.2 B Yet Another Constructive",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-b.md",
+          "official": "https://codeforces.com/problemset/problem/2247/B",
+          "topic": "../../math/modular-constructions.md"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-27-lc1464",
+          "title": "[力扣每日一题] 2026-07-27｜LC 1464 数组中两元素的最大乘积",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-27-lc1464.md",
+          "official": "https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array/",
+          "topic": "../../basics/pair-product-extrema.md"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-a",
+          "title": "[atcoder] ABC468 A Maximal Value",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-a.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_a",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-1-lc3286",
+          "title": "[力扣 Top 1] LC 3286 穿越网格图的安全路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-1-lc3286.md",
+          "official": "https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/",
+          "topic": "../../graph/weighted-parity-states.md"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-2-lc1",
+          "title": "[力扣 Top 2] LC 1 两数之和 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-2-lc1.md",
+          "official": "https://leetcode.cn/problems/two-sum/",
+          "topic": "../../data-structures/hash-and-cache.md"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-3-lc3",
+          "title": "[力扣 Top 3] LC 3 无重复字符的最长子串 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-3-lc3.md",
+          "official": "https://leetcode.cn/problems/longest-substring-without-repeating-characters/",
+          "topic": "../../data-structures/hash-and-cache.md"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-4-lc146",
+          "title": "[力扣 Top 4] LC 146 LRU 缓存 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-4-lc146.md",
+          "official": "https://leetcode.cn/problems/lru-cache/",
+          "topic": "../../data-structures/hash-and-cache.md"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-5-lc42",
+          "title": "[力扣 Top 5] LC 42 接雨水 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-5-lc42.md",
+          "official": "https://leetcode.cn/problems/trapping-rain-water/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-6-lc49",
+          "title": "[力扣 Top 6] LC 49 字母异位词分组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-6-lc49.md",
+          "official": "https://leetcode.cn/problems/group-anagrams/",
+          "topic": "../../data-structures/hash-and-cache.md"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-7-lc5",
+          "title": "[力扣 Top 7] LC 5 最长回文子串 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-7-lc5.md",
+          "official": "https://leetcode.cn/problems/longest-palindromic-substring/",
+          "topic": "../../strings/palindrome-centers.md"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-8-lc128",
+          "title": "[力扣 Top 8] LC 128 最长连续序列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-8-lc128.md",
+          "official": "https://leetcode.cn/problems/longest-consecutive-sequence/",
+          "topic": "../../data-structures/hash-and-cache.md"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-9-lc15",
+          "title": "[力扣 Top 9] LC 15 三数之和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-9-lc15.md",
+          "official": "https://leetcode.cn/problems/3sum/",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-10-lc70",
+          "title": "[力扣 Top 10] LC 70 爬楼梯 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-10-lc70.md",
+          "official": "https://leetcode.cn/problems/climbing-stairs/",
+          "topic": "../../dp/linear-recurrences.md"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-511-q1-lc3996",
+          "title": "[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-511-q1-lc3996.md",
+          "official": "https://leetcode.cn/problems/even-number-of-knight-moves/",
+          "topic": "../../graph/weighted-parity-states.md"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-a",
+          "title": "[codeforces] CF Round 1111 Div.2 A Zero Sum",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-a.md",
+          "official": "https://codeforces.com/contest/2247/problem/A",
+          "topic": "../../basics/sequence-invariants.md"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-26-lc628",
+          "title": "[力扣每日一题] 2026-07-26｜LC 628 三个数的最大乘积",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-26-lc628.md",
+          "official": "https://leetcode.cn/problems/maximum-product-of-three-numbers/",
+          "topic": "../../basics/signed-product-extrema.md"
+        }
+      ]
+    }
+  ]
+}

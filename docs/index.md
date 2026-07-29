@@ -9,6 +9,7 @@
 - [复杂度分析](guide/complexity.md)
 - [竞赛 C++](guide/cpp.md)
 - [题解索引](problems/index.md)
+- [每日 14 题档案](daily/index.md)
 
 ## 专题
 
@@ -35,5 +36,6 @@
 
 ## 其他
 
+- [每日 14 题档案](daily/index.md)
 - [资源](resources.md)
 - [更新日志](changelog.md)
