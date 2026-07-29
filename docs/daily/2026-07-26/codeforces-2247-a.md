@@ -6,7 +6,7 @@ title: "[codeforces] CF Round 1111 Div.2 A Zero Sum"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 13/14 题 · Codeforces</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## Official source information
 
@@ -17,8 +17,8 @@ title: "[codeforces] CF Round 1111 Div.2 A Zero Sum"
 - Official rating: not published in the official API at verification time
 - Time limit: 1 second
 - Memory limit: 256 MB
-- Official problem: https://codeforces.com/contest/2247/problem/A
-- Canonical problemset link: https://codeforces.com/problemset/problem/2247/A
+- Official problem: [Open the official problem](https://codeforces.com/contest/2247/problem/A)
+- Canonical problemset link: [打开 Codeforces 页面](https://codeforces.com/problemset/problem/2247/A)
 - Program interface: GNU++23 full program.
 - Official statement image: none
 
@@ -351,6 +351,6 @@ int main() {
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-weekly-511-q1-lc3996.md">← [力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-daily-2026-07-26-lc628.md">[力扣每日一题] 2026-07-26｜LC 628 三个数的最大乘积 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-weekly-511-q1-lc3996/">← [力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-daily-2026-07-26-lc628/">[力扣每日一题] 2026-07-26｜LC 628 三个数的最大乘积 →</a>
 </nav>

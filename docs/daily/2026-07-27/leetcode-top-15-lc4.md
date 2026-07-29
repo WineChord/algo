@@ -6,9 +6,9 @@ title: "[力扣 Top 15] LC 4 寻找两个正序数组的中位数 困难"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 6/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../basics/binary-search.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../basics/binary-search/">进入知识专题</a></p>
 
-官方题目：https://leetcode.cn/problems/median-of-two-sorted-arrays/
+官方题目：[打开官方题面](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
 
 ## 官方原始信息
 
@@ -378,6 +378,6 @@ public:
 - [对应知识专题](../../basics/binary-search.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-14-lc11.md">← [力扣 Top 14] LC 11 盛最多水的容器 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-16-lc56.md">[力扣 Top 16] LC 56 合并区间 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-14-lc11/">← [力扣 Top 14] LC 11 盛最多水的容器 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-16-lc56/">[力扣 Top 16] LC 56 合并区间 中等 →</a>
 </nav>

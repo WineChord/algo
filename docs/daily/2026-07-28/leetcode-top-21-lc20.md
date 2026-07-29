@@ -6,12 +6,12 @@ title: "[力扣 Top 21] LC 20 有效的括号 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 2/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../data-structures/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../data-structures/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：LeetCode 官方「简单」；非竞赛题，官方分值与 ZeroTracer 社区估算竞赛分均无可用值。
-- 官方链接：https://leetcode.cn/problems/valid-parentheses/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/valid-parentheses/)
 - slug：`valid-parentheses`
 - 函数签名：`bool isValid(string s)`
 - 题意：字符串只含 `()[]{}`。判断每个左括号是否被同类型右括号按正确嵌套顺序闭合，且每个右括号都有对应左括号。
@@ -258,6 +258,6 @@ public:
 - [对应知识专题](../../data-structures/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="atcoder-abc468-c.md">← [atcoder] ABC468 C Between P and Q</a>
-<a class="daily-archive-pager__next" href="leetcode-top-22-lc206.md">[力扣 Top 22] LC 206 反转链表 简单 →</a>
+<a class="daily-archive-pager__previous" href="../atcoder-abc468-c/">← [atcoder] ABC468 C Between P and Q</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-22-lc206/">[力扣 Top 22] LC 206 反转链表 简单 →</a>
 </nav>

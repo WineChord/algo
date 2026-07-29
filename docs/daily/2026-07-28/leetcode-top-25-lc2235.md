@@ -6,12 +6,12 @@ title: "[力扣 Top 25] LC 2235 两整数相加 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 6/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../basics/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../basics/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：LeetCode 官方「简单」；非竞赛题，无官方分值与 ZeroTracer 竞赛分。
-- 官方链接：https://leetcode.cn/problems/add-two-integers/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/add-two-integers/)
 - slug：`add-two-integers`
 - 函数签名：`int sum(int num1, int num2)`
 - 题意：返回两个整数之和。
@@ -202,6 +202,6 @@ public:
 - [对应知识专题](../../basics/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-24-lc283.md">← [力扣 Top 24] LC 283 移动零 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-26-lc239.md">[力扣 Top 26] LC 239 滑动窗口最大值 困难 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-24-lc283/">← [力扣 Top 24] LC 283 移动零 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-26-lc239/">[力扣 Top 26] LC 239 滑动窗口最大值 困难 →</a>
 </nav>

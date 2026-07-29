@@ -6,9 +6,9 @@ title: "[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节�
 
 <p class="daily-archive-kicker">2026-07-27 · 第 12/14 题 · 力扣竞赛</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../graph/tree-aggregation.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../graph/tree-aggregation/">进入知识专题</a></p>
 
-Official problem: <https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/>
+Official problem: [Open the official problem](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
 
 ## Official source record
 
@@ -451,10 +451,10 @@ public:
 
 ## Sources
 
-- Official problem and GraphQL metadata: <https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/>
-- Official contest discussion and 4-point assignment: <https://leetcode.cn/discuss/post/3998508/di-511-chang-li-kou-zhou-sai-by-leetcode-4cwf/>
-- Official contest page: <https://leetcode.cn/contest/weekly-contest-511/>
-- ZeroTracer dataset: <https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt>
+- Official problem and GraphQL metadata: [Open the official problem](https://leetcode.cn/problems/count-dominant-nodes-in-a-binary-tree/)
+- Official contest discussion and 4-point assignment: [Open the official contest](https://leetcode.cn/discuss/post/3998508/di-511-chang-li-kou-zhou-sai-by-leetcode-4cwf/)
+- Official contest page: [Open the official contest](https://leetcode.cn/contest/weekly-contest-511/)
+- ZeroTracer dataset: [打开来源页面](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)
 
 ## Reference
 
@@ -462,6 +462,6 @@ public:
 - [对应知识专题](../../graph/tree-aggregation.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-20-lc54.md">← [力扣 Top 20] LC 54 螺旋矩阵 中等</a>
-<a class="daily-archive-pager__next" href="codeforces-2247-b.md">[codeforces] CF Round 1111 Div.2 B Yet Another Constructive →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-20-lc54/">← [力扣 Top 20] LC 54 螺旋矩阵 中等</a>
+<a class="daily-archive-pager__next" href="../codeforces-2247-b/">[codeforces] CF Round 1111 Div.2 B Yet Another Constructive →</a>
 </nav>

@@ -6,14 +6,14 @@ title: "[力扣 Top 20] LC 54 螺旋矩阵 中等"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 11/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 题号：54
 - 官方中文标题：螺旋矩阵
 - 官方难度：中等
-- 官方链接：https://leetcode.cn/problems/spiral-matrix/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/spiral-matrix/)
 - slug：`spiral-matrix`
 - 函数签名：`vector<int> spiralOrder(vector<vector<int>>& matrix)`
 - 官方竞赛分：未标注。官方题面与本轮核对的官方 GraphQL 元数据均未提供竞赛归属或分值，不作推断。
@@ -441,6 +441,6 @@ public:
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-19-lc72.md">← [力扣 Top 19] LC 72 编辑距离 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-weekly-511-q2-lc3997.md">[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-19-lc72/">← [力扣 Top 19] LC 72 编辑距离 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-weekly-511-q2-lc3997/">[力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等 →</a>
 </nav>

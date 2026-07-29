@@ -6,12 +6,12 @@ title: "[力扣 Top 10] LC 70 爬楼梯 简单"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 11/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../dp/linear-recurrences.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../dp/linear-recurrences/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：简单
-- 官方链接：https://leetcode.cn/problems/climbing-stairs/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/climbing-stairs/)
 - 函数签名：`int climbStairs(int n)`
 
 ### 原始题意
@@ -263,6 +263,6 @@ public:
 - [对应知识专题](../../dp/linear-recurrences.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-9-lc15.md">← [力扣 Top 9] LC 15 三数之和 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-weekly-511-q1-lc3996.md">[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-9-lc15/">← [力扣 Top 9] LC 15 三数之和 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-weekly-511-q1-lc3996/">[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单 →</a>
 </nav>

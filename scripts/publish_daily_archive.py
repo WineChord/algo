@@ -50,6 +50,15 @@ REMOTE_HTML_IMAGE = re.compile(
     r"(?P<suffix>[\"'][^>]*>)",
     re.IGNORECASE,
 )
+MARKDOWN_LINK = re.compile(r"!?\[[^\]\n]*\]\([^)\n]+\)")
+HTML_ANCHOR = re.compile(r"<a\b[^>]*>.*?</a>", re.IGNORECASE)
+HTML_TAG = re.compile(r"<(?!https?://)[^>\n]+>", re.IGNORECASE)
+URL_TOKEN = re.compile(
+    r"<(?P<angle>https?://[^<>\s]+)>"
+    r"|(?P<bare>https?://[^\s<>\"'`]+)",
+    re.IGNORECASE,
+)
+TRAILING_URL_PUNCTUATION = ".,;:!?，。！？；：、)]}"
 OFFICIAL_IMAGE_HOSTS = (
     "assets.leetcode.com",
     "leetcode.cn",
@@ -200,6 +209,104 @@ def typographic_prose(line: str) -> str:
     line = re.sub(rf"([{FULLWIDTH_PUNCTUATION}])([*_]{{2}})[ \t]+", r"\1\2", line)
     line = re.sub(rf"([{FULLWIDTH_PUNCTUATION}])[ \t]+", r"\1", line)
     return line
+
+
+def inline_code_spans(line: str) -> list[tuple[int, int]]:
+    spans: list[tuple[int, int]] = []
+    cursor = 0
+    while cursor < len(line):
+        if line[cursor] != "`":
+            cursor += 1
+            continue
+        run = 1
+        while cursor + run < len(line) and line[cursor + run] == "`":
+            run += 1
+        marker = "`" * run
+        end = line.find(marker, cursor + run)
+        if end < 0:
+            cursor += run
+            continue
+        spans.append((cursor, end + run))
+        cursor = end + run
+    return spans
+
+
+def descriptive_link_label(line: str, offset: int, url: str) -> str:
+    context = line[:offset].casefold()
+    if "official editorial" in context:
+        return "Open the official editorial"
+    if "official contest" in context:
+        return "Open the official contest"
+    if "official problem" in context or "official task" in context:
+        return "Open the official problem"
+    if "official link" in context:
+        return "Open the official page"
+    if "官方题目" in context or "原题" in context:
+        return "打开官方题面"
+    if "官方链接" in context or "官方页面" in context:
+        return "打开官方页面"
+    if "题解" in context or "editorial" in context:
+        return "打开题解"
+    if "比赛" in context or "contest" in context:
+        return "打开比赛页面"
+    host = urlparse(url).netloc.casefold()
+    if "leetcode.cn" in host:
+        return "打开力扣中国页面"
+    if "atcoder.jp" in host:
+        return "打开 AtCoder 页面"
+    if "codeforces.com" in host:
+        return "打开 Codeforces 页面"
+    return "打开来源页面"
+
+
+def linkify_prose_line(line: str) -> str:
+    protected = inline_code_spans(line)
+    protected.extend((match.start(), match.end()) for match in MARKDOWN_LINK.finditer(line))
+    protected.extend((match.start(), match.end()) for match in HTML_ANCHOR.finditer(line))
+    protected.extend((match.start(), match.end()) for match in HTML_TAG.finditer(line))
+    protected.sort()
+
+    def is_protected(start: int, end: int) -> bool:
+        return any(start < right and end > left for left, right in protected)
+
+    output: list[str] = []
+    cursor = 0
+    for match in URL_TOKEN.finditer(line):
+        if is_protected(match.start(), match.end()):
+            continue
+        url = match.group("angle") or match.group("bare")
+        assert url is not None
+        token_end = match.end()
+        suffix = ""
+        if match.group("bare"):
+            trimmed = url.rstrip(TRAILING_URL_PUNCTUATION)
+            suffix = url[len(trimmed) :]
+            url = trimmed
+            token_end -= len(suffix)
+        if not url:
+            continue
+        output.append(line[cursor : match.start()])
+        label = descriptive_link_label(line, match.start(), url)
+        output.append(f"[{label}]({url})")
+        output.append(suffix)
+        cursor = token_end + len(suffix)
+    if not output:
+        return line
+    output.append(line[cursor:])
+    return "".join(output)
+
+
+def linkify_bare_urls(text: str) -> str:
+    """Turn reader-visible URLs into descriptive links without touching code."""
+    result: list[str] = []
+    in_fence = False
+    for line in text.splitlines():
+        if FENCE.match(line):
+            in_fence = not in_fence
+            result.append(line)
+            continue
+        result.append(line if in_fence else linkify_prose_line(line))
+    return "\n".join(result).strip() + "\n"
 
 
 def is_official_image_host(host: str) -> bool:
@@ -486,10 +593,29 @@ def relative_topic(item: Item) -> str:
     return item.topic
 
 
+def deployed_route(markdown_href: str, extra_parent_levels: int = 0) -> str:
+    """Convert a source-relative Markdown path for use inside raw built HTML."""
+    parsed = urlparse(markdown_href)
+    if parsed.scheme or parsed.netloc:
+        return markdown_href
+    path = parsed.path
+    if not path.endswith(".md"):
+        raise ValueError(f"expected a Markdown route, found {markdown_href!r}")
+    if Path(path).name == "index.md":
+        path = path[: -len("index.md")]
+    else:
+        path = path[:-3] + "/"
+    path = "../" * extra_parent_levels + path
+    query = f"?{parsed.query}" if parsed.query else ""
+    fragment = f"#{parsed.fragment}" if parsed.fragment else ""
+    return f"{path}{query}{fragment}"
+
+
 def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
     source = sanitize_source(item.source.read_text(encoding="utf-8"))
     source = normalize_math_delimiters(source)
     source = normalize_headings(vendor_remote_images(source))
+    source = linkify_bare_urls(source)
     source = annotate_cpp_blocks(source)
     links = "\n".join(
         [
@@ -507,7 +633,7 @@ def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
     if previous_item:
         links.append(
             f'<a class="daily-archive-pager__previous" '
-            f'href="{html.escape(previous_item.page_name)}">← '
+            f'href="{html.escape(deployed_route(previous_item.page_name, 1))}">← '
             f'{html.escape(previous_item.title)}</a>'
         )
     else:
@@ -515,7 +641,7 @@ def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
     if next_item:
         links.append(
             f'<a class="daily-archive-pager__next" '
-            f'href="{html.escape(next_item.page_name)}">'
+            f'href="{html.escape(deployed_route(next_item.page_name, 1))}">'
             f'{html.escape(next_item.title)} →</a>'
         )
     else:
@@ -536,8 +662,10 @@ def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
             "",
             (
                 '<p class="daily-archive-utility">'
-                f'<a href="index.md">返回 {work_date} 题目列表</a>'
-                f' · <a href="{html.escape(relative_topic(item))}">进入知识专题</a>'
+                f'<a href="{deployed_route("index.md", 1)}">'
+                f"返回 {work_date} 题目列表</a>"
+                f' · <a href="{html.escape(deployed_route(relative_topic(item), 1))}">'
+                "进入知识专题</a>"
                 "</p>"
             ),
             "",
@@ -559,7 +687,7 @@ def render_date_index(work_date: str, items: list[dict[str, object]]) -> str:
                 f'<li id="daily-{html.escape(str(item["key"]))}">',
                 (
                     f'<span class="daily-run-source">{html.escape(str(item["kind"]))}</span> '
-                    f'<a href="{html.escape(str(item["page"]))}">'
+                    f'<a href="{html.escape(deployed_route(str(item["page"])))}">'
                     f'{html.escape(str(item["title"]))}</a>'
                 ),
                 "</li>",
@@ -567,7 +695,7 @@ def render_date_index(work_date: str, items: list[dict[str, object]]) -> str:
         )
     return "\n".join(
         [
-            f"# {work_date} · 每日 14 题 {{ .daily-archive-date-heading }}",
+            f"# {work_date} · 每日题目 {{ .daily-archive-date-heading }}",
             "",
             (
                 "本日按固定顺序收录 AtCoder 1 题、力扣高频 10 题、"
@@ -588,7 +716,7 @@ def render_date_index(work_date: str, items: list[dict[str, object]]) -> str:
 
 def render_archive_index(dates: list[dict[str, object]]) -> str:
     sections = [
-        "# 每日 14 题档案",
+        "# 每日题目",
         "",
         (
             "这里按工作日期保存每日完整训练批次，与按知识模型组织的"
@@ -632,7 +760,7 @@ def yaml_quote(value: str) -> str:
 def render_nav(dates: list[dict[str, object]]) -> str:
     lines = [
         NAV_START,
-        "  - 每日 14 题:",
+        "  - 每日题目:",
         "      - 总览: daily/index.md",
     ]
     for entry in dates:

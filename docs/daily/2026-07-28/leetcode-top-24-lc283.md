@@ -6,12 +6,12 @@ title: "[力扣 Top 24] LC 283 移动零 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 5/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：LeetCode 官方「简单」；非竞赛题，无官方分值与 ZeroTracer 竞赛分。
-- 官方链接：https://leetcode.cn/problems/move-zeroes/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/move-zeroes/)
 - slug：`move-zeroes`
 - 函数签名：`void moveZeroes(vector<int>& nums)`，结果写回参数。
 - 题意：原地把所有零移到末尾，同时保持非零元素相对顺序。
@@ -180,6 +180,6 @@ public:
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-23-lc21.md">← [力扣 Top 23] LC 21 合并两个有序链表 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-25-lc2235.md">[力扣 Top 25] LC 2235 两整数相加 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-23-lc21/">← [力扣 Top 23] LC 21 合并两个有序链表 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-25-lc2235/">[力扣 Top 25] LC 2235 两整数相加 简单 →</a>
 </nav>

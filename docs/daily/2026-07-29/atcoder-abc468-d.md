@@ -6,7 +6,7 @@ title: "[atcoder] ABC468 D Pre-Palindrome"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 1/14 题 · AtCoder</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../strings/palindrome-centers.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../strings/palindrome-centers/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -18,7 +18,7 @@ title: "[atcoder] ABC468 D Pre-Palindrome"
 - AtCoder Problems 社区估算难度：683（抓取于 2026-07-29；不是 AtCoder 官方难度）
 - 时间限制：2 秒
 - 内存限制：1024 MiB
-- 官方链接：<https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en>
+- 官方链接：[打开官方页面](https://atcoder.jp/contests/abc468/tasks/abc468_d?lang=en)
 
 ### 忠实完整题意
 
@@ -359,5 +359,5 @@ int main() {
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
 <span class="daily-archive-pager__empty"></span>
-<a class="daily-archive-pager__next" href="leetcode-top-31-lc279.md">[力扣 Top 31] LC 279 完全平方数 中等 →</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-31-lc279/">[力扣 Top 31] LC 279 完全平方数 中等 →</a>
 </nav>

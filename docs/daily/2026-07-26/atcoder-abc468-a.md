@@ -6,7 +6,7 @@ title: "[atcoder] ABC468 A Maximal Value"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 1/14 题 · AtCoder</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## Official source information
 
@@ -17,8 +17,8 @@ title: "[atcoder] ABC468 A Maximal Value"
 - Score: 100
 - Time limit: 2 seconds
 - Memory limit: 1024 MiB
-- Official task: https://atcoder.jp/contests/abc468/tasks/abc468_a
-- Official contest task list: https://atcoder.jp/contests/abc468/tasks
+- Official task: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_a)
+- Official contest task list: [Open the official contest](https://atcoder.jp/contests/abc468/tasks)
 - Program interface: GNU++23 full program using standard input and output.
 - Official image: the statement has no problem-specific diagram; the page's “Image” links are editorial-language controls rather than statement figures
 
@@ -322,5 +322,5 @@ int main() {
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
 <span class="daily-archive-pager__empty"></span>
-<a class="daily-archive-pager__next" href="leetcode-top-1-lc3286.md">[力扣 Top 1] LC 3286 穿越网格图的安全路径 中等 →</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-1-lc3286/">[力扣 Top 1] LC 3286 穿越网格图的安全路径 中等 →</a>
 </nav>

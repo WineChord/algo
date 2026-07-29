@@ -6,7 +6,7 @@ title: "[力扣 Top 31] LC 279 完全平方数 中等"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 2/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../math/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../math/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -14,7 +14,7 @@ title: "[力扣 Top 31] LC 279 完全平方数 中等"
 - 题号：LC 279
 - 官方中文标题：完全平方数
 - 官方难度：中等
-- 官方链接：<https://leetcode.cn/problems/perfect-squares/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/perfect-squares/)
 
 ### 原始题意
 
@@ -323,6 +323,6 @@ public:
 - [对应知识专题](../../math/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="atcoder-abc468-d.md">← [atcoder] ABC468 D Pre-Palindrome</a>
-<a class="daily-archive-pager__next" href="leetcode-top-32-lc22.md">[力扣 Top 32] LC 22 括号生成 中等 →</a>
+<a class="daily-archive-pager__previous" href="../atcoder-abc468-d/">← [atcoder] ABC468 D Pre-Palindrome</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-32-lc22/">[力扣 Top 32] LC 22 括号生成 中等 →</a>
 </nav>

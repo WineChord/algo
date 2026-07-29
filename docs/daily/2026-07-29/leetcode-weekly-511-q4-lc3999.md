@@ -6,7 +6,7 @@ title: "[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少�
 
 <p class="daily-archive-kicker">2026-07-29 · 第 12/14 题 · 力扣竞赛</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../strings/cyclic-normalization.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../strings/cyclic-normalization/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -16,7 +16,7 @@ title: "[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少�
 - 官方中文标题：字符串变换后的最少分组数
 - 官方难度：困难
 - ZeroTracer 社区估算竞赛分：2162（抓取于 2026-07-29；不是力扣官方难度）
-- 官方链接：<https://leetcode.cn/problems/minimum-number-of-string-groups-through-transformations/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/minimum-number-of-string-groups-through-transformations/)
 
 ### 原始题意
 
@@ -545,6 +545,6 @@ int main() {
 - [对应知识专题](../../strings/cyclic-normalization.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-40-lc236.md">← [力扣 Top 40] LC 236 二叉树的最近公共祖先 中等</a>
-<a class="daily-archive-pager__next" href="codeforces-2247-d1.md">[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version) →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-40-lc236/">← [力扣 Top 40] LC 236 二叉树的最近公共祖先 中等</a>
+<a class="daily-archive-pager__next" href="../codeforces-2247-d1/">[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version) →</a>
 </nav>

@@ -6,11 +6,11 @@ title: "[力扣 Top 28] LC 25 K 个一组翻转链表 困难"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 9/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../data-structures/linked-lists.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../data-structures/linked-lists/">进入知识专题</a></p>
 
 ## 官方原始信息
 
-- 官方链接：<https://leetcode.cn/problems/reverse-nodes-in-k-group/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
 - slug：`reverse-nodes-in-k-group`
 - 官方难度：困难；官方竞赛分未提供；ZeroTracer 数据集无记录。
 - 函数签名：`ListNode* reverseKGroup(ListNode* head, int k)`
@@ -299,6 +299,6 @@ public:
 - [对应知识专题](../../data-structures/linked-lists.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-27-lc121.md">← [力扣 Top 27] LC 121 买卖股票的最佳时机 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-29-lc704.md">[力扣 Top 29] LC 704 二分查找 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-27-lc121/">← [力扣 Top 27] LC 121 买卖股票的最佳时机 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-29-lc704/">[力扣 Top 29] LC 704 二分查找 简单 →</a>
 </nav>

@@ -6,12 +6,12 @@ title: "[力扣 Top 5] LC 42 接雨水 困难"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 6/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：困难
-- 官方链接：https://leetcode.cn/problems/trapping-rain-water/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/trapping-rain-water/)
 - 函数签名：`int trap(vector<int>& height)`
 
 ### 原始题意
@@ -324,7 +324,7 @@ public:
 
 ## Reference
 
-- 官方题面与接口：https://leetcode.cn/problems/trapping-rain-water/
+- 官方题面与接口：[打开力扣中国页面](https://leetcode.cn/problems/trapping-rain-water/)
 
 ### 延伸阅读
 
@@ -332,6 +332,6 @@ public:
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-4-lc146.md">← [力扣 Top 4] LC 146 LRU 缓存 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-6-lc49.md">[力扣 Top 6] LC 49 字母异位词分组 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-4-lc146/">← [力扣 Top 4] LC 146 LRU 缓存 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-6-lc49/">[力扣 Top 6] LC 49 字母异位词分组 中等 →</a>
 </nav>

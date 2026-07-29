@@ -6,7 +6,7 @@ title: "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 13/14 题 · Codeforces</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../basics/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../basics/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -19,7 +19,7 @@ title: "[codeforces] CF Round 1111 Div.2 D1 XOR Sorting (Easy Version)"
 - 官方标签：bitmasks、greedy
 - 时间限制：2 秒
 - 内存限制：256 MB
-- 官方链接：<https://codeforces.com/contest/2247/problem/D1>
+- 官方链接：[打开官方页面](https://codeforces.com/contest/2247/problem/D1)
 
 ### 忠实完整题意
 
@@ -639,6 +639,6 @@ int main() {
 - [对应知识专题](../../basics/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-weekly-511-q4-lc3999.md">← [力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难</a>
-<a class="daily-archive-pager__next" href="leetcode-daily-2026-07-29-lc3518.md">[力扣每日一题] 2026-07-29｜LC 3518 最小回文排列 II →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-weekly-511-q4-lc3999/">← [力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难</a>
+<a class="daily-archive-pager__next" href="../leetcode-daily-2026-07-29-lc3518/">[力扣每日一题] 2026-07-29｜LC 3518 最小回文排列 II →</a>
 </nav>

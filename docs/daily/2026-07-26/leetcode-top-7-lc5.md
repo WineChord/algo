@@ -6,12 +6,12 @@ title: "[力扣 Top 7] LC 5 最长回文子串 中等"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 8/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../strings/palindrome-centers.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../strings/palindrome-centers/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：中等
-- 官方链接：https://leetcode.cn/problems/longest-palindromic-substring/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/longest-palindromic-substring/)
 - 函数签名：`string longestPalindrome(string s)`
 
 ### 原始题意
@@ -325,6 +325,6 @@ public:
 - [对应知识专题](../../strings/palindrome-centers.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-6-lc49.md">← [力扣 Top 6] LC 49 字母异位词分组 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-8-lc128.md">[力扣 Top 8] LC 128 最长连续序列 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-6-lc49/">← [力扣 Top 6] LC 49 字母异位词分组 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-8-lc128/">[力扣 Top 8] LC 128 最长连续序列 中等 →</a>
 </nav>

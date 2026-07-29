@@ -6,7 +6,7 @@ title: "[力扣 Top 36] LC 198 打家劫舍 中等"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 7/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../dp/linear-recurrences.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../dp/linear-recurrences/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -14,7 +14,7 @@ title: "[力扣 Top 36] LC 198 打家劫舍 中等"
 - 题号：LC 198
 - 官方中文标题：打家劫舍
 - 官方难度：中等
-- 官方链接：<https://leetcode.cn/problems/house-robber/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/house-robber/)
 
 ### 原始题意
 
@@ -294,6 +294,6 @@ public:
 - [对应知识专题](../../dp/linear-recurrences.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-35-lc53.md">← [力扣 Top 35] LC 53 最大子数组和 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-37-lc438.md">[力扣 Top 37] LC 438 找到字符串中所有字母异位词 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-35-lc53/">← [力扣 Top 35] LC 53 最大子数组和 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-37-lc438/">[力扣 Top 37] LC 438 找到字符串中所有字母异位词 中等 →</a>
 </nav>

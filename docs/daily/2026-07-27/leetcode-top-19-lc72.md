@@ -6,14 +6,14 @@ title: "[力扣 Top 19] LC 72 编辑距离 中等"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 10/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../dp/sequence-dp.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../dp/sequence-dp/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 题号：72
 - 官方中文标题：编辑距离
 - 官方难度：中等
-- 官方链接：https://leetcode.cn/problems/edit-distance/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/edit-distance/)
 - slug：`edit-distance`
 - 函数签名：`int minDistance(string word1, string word2)`
 - 官方竞赛分：未标注。官方题面与本轮核对的官方 GraphQL 元数据均未提供竞赛归属或分值，不作推断。
@@ -454,6 +454,6 @@ public:
 - [对应知识专题](../../dp/sequence-dp.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-18-lc88.md">← [力扣 Top 18] LC 88 合并两个有序数组 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-20-lc54.md">[力扣 Top 20] LC 54 螺旋矩阵 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-18-lc88/">← [力扣 Top 18] LC 88 合并两个有序数组 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-20-lc54/">[力扣 Top 20] LC 54 螺旋矩阵 中等 →</a>
 </nav>

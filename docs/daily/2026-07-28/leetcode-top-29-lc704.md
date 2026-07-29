@@ -6,11 +6,11 @@ title: "[力扣 Top 29] LC 704 二分查找 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 10/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../basics/binary-search.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../basics/binary-search/">进入知识专题</a></p>
 
 ## 官方原始信息
 
-- 官方链接：<https://leetcode.cn/problems/binary-search/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/binary-search/)
 - slug：`binary-search`
 - 官方难度：简单；官方竞赛分未提供；ZeroTracer 数据集无记录。
 - 函数签名：`int search(vector<int>& nums, int target)`
@@ -266,6 +266,6 @@ public:
 - [对应知识专题](../../basics/binary-search.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-28-lc25.md">← [力扣 Top 28] LC 25 K 个一组翻转链表 困难</a>
-<a class="daily-archive-pager__next" href="leetcode-top-30-lc14.md">[力扣 Top 30] LC 14 最长公共前缀 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-28-lc25/">← [力扣 Top 28] LC 25 K 个一组翻转链表 困难</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-30-lc14/">[力扣 Top 30] LC 14 最长公共前缀 简单 →</a>
 </nav>

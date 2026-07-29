@@ -6,11 +6,11 @@ title: "[力扣 Top 30] LC 14 最长公共前缀 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 11/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../strings/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../strings/">进入知识专题</a></p>
 
 ## 官方原始信息
 
-- 官方链接：<https://leetcode.cn/problems/longest-common-prefix/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/longest-common-prefix/)
 - slug：`longest-common-prefix`
 - 官方难度：简单；官方竞赛分未提供；ZeroTracer 数据集无记录。
 - 函数签名：`string longestCommonPrefix(vector<string>& strs)`
@@ -313,6 +313,6 @@ public:
 - [对应知识专题](../../strings/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-29-lc704.md">← [力扣 Top 29] LC 704 二分查找 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-weekly-511-q3-lc3998.md">[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-29-lc704/">← [力扣 Top 29] LC 704 二分查找 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-weekly-511-q3-lc3998/">[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等 →</a>
 </nav>

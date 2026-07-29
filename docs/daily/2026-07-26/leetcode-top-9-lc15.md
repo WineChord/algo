@@ -6,12 +6,12 @@ title: "[力扣 Top 9] LC 15 三数之和 中等"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 10/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：中等
-- 官方链接：https://leetcode.cn/problems/3sum/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/3sum/)
 - 函数签名：`vector<vector<int>> threeSum(vector<int>& nums)`
 
 ### 原始题意
@@ -329,6 +329,6 @@ public:
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-8-lc128.md">← [力扣 Top 8] LC 128 最长连续序列 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-10-lc70.md">[力扣 Top 10] LC 70 爬楼梯 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-8-lc128/">← [力扣 Top 8] LC 128 最长连续序列 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-10-lc70/">[力扣 Top 10] LC 70 爬楼梯 简单 →</a>
 </nav>

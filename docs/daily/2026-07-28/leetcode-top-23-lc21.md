@@ -6,17 +6,17 @@ title: "[力扣 Top 23] LC 21 合并两个有序链表 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 4/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../data-structures/linked-lists.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../data-structures/linked-lists/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：LeetCode 官方「简单」；非竞赛题，无官方分值与 ZeroTracer 竞赛分。
-- 官方链接：https://leetcode.cn/problems/merge-two-sorted-lists/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/merge-two-sorted-lists/)
 - slug：`merge-two-sorted-lists`
 - 函数签名：`ListNode* mergeTwoLists(ListNode* list1, ListNode* list2)`
 - 题意：复用两条非递减单链表的全部节点，拼接为一条非递减链表。
 - 示例：`[1,2,4] + [1,3,4] -> [1,1,2,3,4,4]`；`[] + [] -> []`；`[] + [0] -> [0]`。
-- 官方示意图：https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg。
+- 官方示意图：[打开来源页面](https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg)。
 - 约束：每条链节点数 $0\ldots50$；$-100\le\text{Node.val}\le100$；两链均非递减。
 
 ## 约束、样例与边界
@@ -271,6 +271,6 @@ ListNode* mergeWithSharedSuffix(ListNode* a, ListNode* b) {
 - [对应知识专题](../../data-structures/linked-lists.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-22-lc206.md">← [力扣 Top 22] LC 206 反转链表 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-24-lc283.md">[力扣 Top 24] LC 283 移动零 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-22-lc206/">← [力扣 Top 22] LC 206 反转链表 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-24-lc283/">[力扣 Top 24] LC 283 移动零 简单 →</a>
 </nav>

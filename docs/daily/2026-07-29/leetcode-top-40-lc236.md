@@ -6,7 +6,7 @@ title: "[力扣 Top 40] LC 236 二叉树的最近公共祖先 中等"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 11/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../graph/tree-aggregation.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../graph/tree-aggregation/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -14,7 +14,7 @@ title: "[力扣 Top 40] LC 236 二叉树的最近公共祖先 中等"
 - 题号：LC 236
 - 官方中文标题：二叉树的最近公共祖先
 - 官方难度：中等
-- 官方链接：<https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 ### 原始题意
 
@@ -420,6 +420,6 @@ public:
 - [对应知识专题](../../graph/tree-aggregation.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-39-lc59.md">← [力扣 Top 39] LC 59 螺旋矩阵 II 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-weekly-511-q4-lc3999.md">[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-39-lc59/">← [力扣 Top 39] LC 59 螺旋矩阵 II 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-weekly-511-q4-lc3999/">[力扣竞赛] 第 511 场周赛 Q4 LC 3999 字符串变换后的最少分组数 困难 →</a>
 </nav>

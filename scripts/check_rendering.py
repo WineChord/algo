@@ -16,6 +16,7 @@ from html.parser import HTMLParser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Iterable, Optional, Sequence
+from urllib.parse import unquote, urljoin, urlsplit
 
 
 EXPECTED_MATHJAX_VERSION = "3.2.2"
@@ -400,7 +401,9 @@ class GeneratedPageParser(HTMLParser):
         self.math_kind = ""
         self.math_buffer: list[str] = []
         self.skip_depth = 0
+        self.anchor_depth = 0
         self.visible_buffer: list[str] = []
+        self.bare_urls: list[str] = []
         self.expressions: list[str] = []
         self.kinds: list[str] = []
 
@@ -425,6 +428,8 @@ class GeneratedPageParser(HTMLParser):
             self.math_buffer = []
         elif tag in ("pre", "code", "script", "style"):
             self.skip_depth += 1
+        elif tag == "a":
+            self.anchor_depth += 1
 
     def handle_endtag(self, tag: str) -> None:
         if self.math_tag is not None:
@@ -442,6 +447,8 @@ class GeneratedPageParser(HTMLParser):
                 self.math_buffer = []
         elif self.article_depth and tag in ("pre", "code", "script", "style"):
             self.skip_depth = max(0, self.skip_depth - 1)
+        elif self.article_depth and tag == "a":
+            self.anchor_depth = max(0, self.anchor_depth - 1)
         if tag == "article" and self.article_depth:
             self.article_depth -= 1
 
@@ -450,6 +457,8 @@ class GeneratedPageParser(HTMLParser):
             self.math_buffer.append(data)
         elif self.article_depth and not self.skip_depth:
             self.visible_buffer.append(data)
+            if not self.anchor_depth:
+                self.bare_urls.extend(re.findall(r"https?://[^\s<>]+", data))
 
     @property
     def visible_text(self) -> str:
@@ -508,7 +517,129 @@ def compare_generated_site(
                     f"{relative}: generated page leaks raw Markdown "
                     f"{label}: {excerpt!r}"
                 )
+        if parser.bare_urls:
+            errors.append(
+                f"{relative}: generated prose exposes reader-visible URLs "
+                "outside links: "
+                + ", ".join(sorted(set(parser.bare_urls))[:5])
+            )
     return total
+
+
+class SiteLinkParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.hrefs: list[tuple[int, str]] = []
+        self.ids: set[str] = set()
+
+    def handle_starttag(
+        self,
+        tag: str,
+        attrs: Sequence[tuple[str, Optional[str]]],
+    ) -> None:
+        values = dict(attrs)
+        identifier = values.get("id")
+        if identifier:
+            self.ids.add(identifier)
+        if tag == "a" and values.get("href") is not None:
+            self.hrefs.append((self.getpos()[0], str(values["href"])))
+
+
+def html_route(site_dir: Path, page: Path) -> str:
+    relative = page.relative_to(site_dir)
+    if relative.name == "index.html":
+        parent = relative.parent.as_posix()
+        return "/" if parent == "." else f"/{parent}/"
+    return f"/{relative.as_posix()}"
+
+
+def internal_target(
+    site_dir: Path,
+    current_route: str,
+    href: str,
+) -> tuple[Optional[Path], str]:
+    parsed = urlsplit(href)
+    if parsed.scheme and parsed.scheme not in ("http", "https"):
+        return None, ""
+    if parsed.netloc:
+        if parsed.hostname not in {"wineandchord.com", "www.wineandchord.com"}:
+            return None, ""
+        path = unquote(parsed.path)
+        if path == "/algo":
+            path = "/"
+        elif path.startswith("/algo/"):
+            path = path[len("/algo") :]
+        else:
+            return None, ""
+        fragment = unquote(parsed.fragment)
+    else:
+        joined = urlsplit(urljoin(f"https://local.invalid{current_route}", href))
+        path = unquote(joined.path)
+        if path == "/algo":
+            path = "/"
+        elif path.startswith("/algo/"):
+            path = path[len("/algo") :]
+        fragment = unquote(joined.fragment)
+    relative = path.lstrip("/")
+    candidate = site_dir / relative
+    if not relative or path.endswith("/"):
+        candidate /= "index.html"
+    elif candidate.is_dir():
+        candidate /= "index.html"
+    elif not candidate.is_file() and not candidate.suffix:
+        candidate /= "index.html"
+    return candidate, fragment
+
+
+def audit_generated_links(site_dir: Path, errors: list[str]) -> int:
+    pages = sorted(site_dir.glob("**/*.html"))
+    parsers: dict[Path, SiteLinkParser] = {}
+    for page in pages:
+        parser = SiteLinkParser()
+        parser.feed(page.read_text(encoding="utf-8"))
+        parsers[page.resolve()] = parser
+    checked = 0
+    reported: set[tuple[Path, str, str]] = set()
+    for page in pages:
+        parser = parsers[page.resolve()]
+        route = html_route(site_dir, page)
+        for line, href in parser.hrefs:
+            if not href.strip():
+                key = (page, href, "empty")
+                if key not in reported:
+                    errors.append(
+                        f"{page.relative_to(site_dir)}:{line}: link has an empty href"
+                    )
+                    reported.add(key)
+                continue
+            target, fragment = internal_target(site_dir, route, href)
+            if target is None:
+                continue
+            checked += 1
+            if not target.is_file():
+                key = (page, href, "missing")
+                if key not in reported:
+                    errors.append(
+                        f"{page.relative_to(site_dir)}:{line}: internal link "
+                        f"{href!r} resolves to missing {target.relative_to(site_dir)}"
+                    )
+                    reported.add(key)
+                continue
+            if fragment and target.suffix == ".html":
+                target_parser = parsers.get(target.resolve())
+                if target_parser is None:
+                    target_parser = SiteLinkParser()
+                    target_parser.feed(target.read_text(encoding="utf-8"))
+                    parsers[target.resolve()] = target_parser
+                if fragment not in target_parser.ids:
+                    key = (page, href, "fragment")
+                    if key not in reported:
+                        errors.append(
+                            f"{page.relative_to(site_dir)}:{line}: internal link "
+                            f"{href!r} targets missing fragment #{fragment}"
+                        )
+                        reported.add(key)
+    return checked
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -1464,6 +1595,140 @@ def browser_audit(
                                 "daily archive inactive dates must retain "
                                 "14 links but stay visually collapsed"
                             )
+                    visits += 1
+                    driver.get(base_url + "/daily/")
+                    archive_heading = wait.until(
+                        lambda current: current.find_element(
+                            By.CSS_SELECTOR,
+                            "article.md-content__inner h1",
+                        )
+                    )
+                    if archive_heading.text.strip() != "每日题目":
+                        errors.append(
+                            "/daily/: reader-visible archive title must be 每日题目"
+                        )
+                    date_link = wait.until(
+                        lambda current: current.find_element(
+                            By.CSS_SELECTOR,
+                            "article.md-content__inner h2 a",
+                        )
+                    )
+                    date_link.click()
+                    visits += 1
+                    wait.until(
+                        lambda current: urlsplit(current.current_url).path.endswith(
+                            f"/daily/{latest['date']}/"
+                        )
+                    )
+                    problem_links = wait.until(
+                        lambda current: current.find_elements(
+                            By.CSS_SELECTOR,
+                            "article.md-content__inner .daily-run-list a",
+                        )
+                    )
+                    if len(problem_links) != 14:
+                        errors.append(
+                            f"/daily/{latest['date']}/ must expose 14 clickable "
+                            "problem titles"
+                        )
+                    else:
+                        problem_links[0].click()
+                        visits += 1
+                        wait.until(
+                            lambda current: urlsplit(
+                                current.current_url
+                            ).path.endswith(route)
+                        )
+                        heading = wait.until(
+                            lambda current: current.find_element(
+                                By.CSS_SELECTOR,
+                                "article.md-content__inner h1",
+                            )
+                        )
+                        if heading.text.strip() != first["title"]:
+                            errors.append(
+                                f"{route}: clicked title does not match archive.json"
+                            )
+                        link_issues = driver.execute_script(
+                            """
+                            return [...document.querySelectorAll(
+                              'article.md-content__inner a'
+                            )].filter((link) => {
+                              const raw = link.getAttribute('href') || '';
+                              if (!raw.trim()) return true;
+                              const target = new URL(link.href, location.href);
+                              return target.origin === location.origin
+                                && /\\.md(?:$|[?#])/.test(target.pathname);
+                            }).map((link) => link.outerHTML);
+                            """
+                        )
+                        if link_issues:
+                            errors.append(
+                                f"{route}: problem page contains invalid clickable "
+                                f"targets: {link_issues[:3]}"
+                            )
+                        official_present = driver.execute_script(
+                            """
+                            const expected = arguments[0];
+                            return [...document.querySelectorAll(
+                              'article.md-content__inner a'
+                            )].some((link) => link.href === expected);
+                            """,
+                            first["official"],
+                        )
+                        if not official_present:
+                            errors.append(
+                                f"{route}: official destination is not a clickable link"
+                            )
+                        return_link = driver.find_element(
+                            By.CSS_SELECTOR,
+                            "article.md-content__inner "
+                            ".daily-archive-utility a:first-child",
+                        )
+                        return_link.click()
+                        visits += 1
+                        wait.until(
+                            lambda current: urlsplit(
+                                current.current_url
+                            ).path.endswith(f"/daily/{latest['date']}/")
+                        )
+                        driver.get(base_url + route)
+                        visits += 1
+                        next_link = wait.until(
+                            lambda current: current.find_element(
+                                By.CSS_SELECTOR,
+                                "article.md-content__inner "
+                                ".daily-archive-pager__next",
+                            )
+                        )
+                        next_route = (
+                            f"/daily/{latest['date']}/"
+                            f"{Path(latest['items'][1]['page']).stem}/"
+                        )
+                        next_link.click()
+                        visits += 1
+                        wait.until(
+                            lambda current: urlsplit(
+                                current.current_url
+                            ).path.endswith(next_route)
+                        )
+                        driver.get(base_url + route)
+                        visits += 1
+                        topic_link = wait.until(
+                            lambda current: current.find_elements(
+                                By.CSS_SELECTOR,
+                                "article.md-content__inner "
+                                ".daily-archive-utility a",
+                            )[1]
+                        )
+                        topic_path = urlsplit(topic_link.get_attribute("href")).path
+                        topic_link.click()
+                        visits += 1
+                        wait.until(
+                            lambda current: urlsplit(
+                                current.current_url
+                            ).path == topic_path
+                        )
                 except Exception as exc:
                     errors.append(
                         "daily archive navigation browser audit failed: "
@@ -1695,6 +1960,8 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         else:
             generated = compare_generated_site(root, site_dir, paths, errors)
             print(f"generated HTML: {generated} Arithmatex expressions")
+            checked_links = audit_generated_links(site_dir, errors)
+            print(f"generated links: {checked_links} internal routes and fragments")
     if args.browser:
         if site_dir is None:
             site_dir = root / "site"

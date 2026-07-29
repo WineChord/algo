@@ -6,11 +6,11 @@ title: "[atcoder] ABC468 C Between P and Q"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 1/14 题 · AtCoder</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../math/permutation-ranking.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../math/permutation-ranking/">进入知识专题</a></p>
 
 ## Official source and metadata
 
-- Complete official English statement: https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en
+- Complete official English statement: [打开 AtCoder 页面](https://atcoder.jp/contests/abc468/tasks/abc468_c?lang=en)
 - Contest: AtCoder Beginner Contest 468
 - Task alias: ABC468 C
 - Official title: Between P and Q
@@ -552,5 +552,5 @@ Validation result: all 7 GNU++23 blocks compiled independently with `-Wall -Wext
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
 <span class="daily-archive-pager__empty"></span>
-<a class="daily-archive-pager__next" href="leetcode-top-21-lc20.md">[力扣 Top 21] LC 20 有效的括号 简单 →</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-21-lc20/">[力扣 Top 21] LC 20 有效的括号 简单 →</a>
 </nav>

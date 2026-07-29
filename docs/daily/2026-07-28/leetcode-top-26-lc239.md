@@ -6,11 +6,11 @@ title: "[力扣 Top 26] LC 239 滑动窗口最大值 困难"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 7/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../data-structures/monotonic-queues.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../data-structures/monotonic-queues/">进入知识专题</a></p>
 
 ## 官方原始信息
 
-- 官方链接：<https://leetcode.cn/problems/sliding-window-maximum/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/sliding-window-maximum/)
 - slug：`sliding-window-maximum`
 - 官方难度：困难；官方竞赛分未提供；ZeroTracer 数据集无记录。
 - 函数签名：`vector<int> maxSlidingWindow(vector<int>& nums, int k)`
@@ -238,6 +238,6 @@ public:
 - [对应知识专题](../../data-structures/monotonic-queues.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-25-lc2235.md">← [力扣 Top 25] LC 2235 两整数相加 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-27-lc121.md">[力扣 Top 27] LC 121 买卖股票的最佳时机 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-25-lc2235/">← [力扣 Top 25] LC 2235 两整数相加 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-27-lc121/">[力扣 Top 27] LC 121 买卖股票的最佳时机 简单 →</a>
 </nav>

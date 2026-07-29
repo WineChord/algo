@@ -6,9 +6,9 @@ title: "[力扣 Top 13] LC 200 岛屿数量 中等"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 4/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../graph/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../graph/">进入知识专题</a></p>
 
-官方题目：https://leetcode.cn/problems/number-of-islands/
+官方题目：[打开官方题面](https://leetcode.cn/problems/number-of-islands/)
 
 ## 官方原始信息
 
@@ -457,6 +457,6 @@ public:
 - [对应知识专题](../../graph/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-12-lc560.md">← [力扣 Top 12] LC 560 和为 K 的子数组 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-14-lc11.md">[力扣 Top 14] LC 11 盛最多水的容器 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-12-lc560/">← [力扣 Top 12] LC 560 和为 K 的子数组 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-14-lc11/">[力扣 Top 14] LC 11 盛最多水的容器 中等 →</a>
 </nav>

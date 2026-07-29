@@ -6,7 +6,7 @@ title: "[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换�
 
 <p class="daily-archive-kicker">2026-07-28 · 第 12/14 题 · 力扣竞赛</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../basics/prefix-sums-and-difference.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../basics/prefix-sums-and-difference/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -18,8 +18,8 @@ title: "[力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换�
 - **官方难度**：中等
 - **官方竞赛分值**：5 分
 - **ZeroTracer 社区估算竞赛分**：1862.3952723083（抓取日期：2026-07-28；这是社区估算，不是力扣官方难度）
-- **官方题目链接**：<https://leetcode.cn/problems/transform-binary-string-using-subsequence-sort/>
-- **官方比赛链接**：<https://leetcode.cn/contest/weekly-contest-511/>
+- **官方题目链接**：[打开官方题面](https://leetcode.cn/problems/transform-binary-string-using-subsequence-sort/)
+- **官方比赛链接**：[打开比赛页面](https://leetcode.cn/contest/weekly-contest-511/)
 
 ### 原始题意
 
@@ -656,6 +656,6 @@ public:
 - [对应知识专题](../../basics/prefix-sums-and-difference.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-30-lc14.md">← [力扣 Top 30] LC 14 最长公共前缀 简单</a>
-<a class="daily-archive-pager__next" href="codeforces-2247-c.md">[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-30-lc14/">← [力扣 Top 30] LC 14 最长公共前缀 简单</a>
+<a class="daily-archive-pager__next" href="../codeforces-2247-c/">[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence →</a>
 </nav>

@@ -6,12 +6,12 @@ title: "[力扣 Top 1] LC 3286 穿越网格图的安全路径 中等"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 2/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../graph/weighted-parity-states.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../graph/weighted-parity-states/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：中等
-- 官方链接：https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/)
 - 函数签名：`bool findSafeWalk(vector<vector<int>>& grid, int health)`
 
 ### 原始题意
@@ -360,7 +360,7 @@ public:
 
 ## Reference
 
-- 官方题面与接口：https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/
+- 官方题面与接口：[打开力扣中国页面](https://leetcode.cn/problems/find-a-safe-walk-through-a-grid/)
 
 ### 延伸阅读
 
@@ -368,6 +368,6 @@ public:
 - [对应知识专题](../../graph/weighted-parity-states.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="atcoder-abc468-a.md">← [atcoder] ABC468 A Maximal Value</a>
-<a class="daily-archive-pager__next" href="leetcode-top-2-lc1.md">[力扣 Top 2] LC 1 两数之和 简单 →</a>
+<a class="daily-archive-pager__previous" href="../atcoder-abc468-a/">← [atcoder] ABC468 A Maximal Value</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-2-lc1/">[力扣 Top 2] LC 1 两数之和 简单 →</a>
 </nav>

@@ -6,7 +6,7 @@ title: "[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 14/14 题 · 力扣每日一题</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../strings/palindrome-rearrangements.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../strings/palindrome-rearrangements/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -15,7 +15,7 @@ title: "[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I"
 - 官方中文标题：最小回文排列 I
 - 官方英文标题：Smallest Palindromic Rearrangement I
 - 官方难度：中等
-- 官方链接：<https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/?envType=daily-question&envId=2026-07-28>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/smallest-palindromic-rearrangement-i/?envType=daily-question&envId=2026-07-28)
 - 函数签名：`string smallestPalindrome(string s)`
 - 竞赛来源：第 445 场周赛 Q2
 - 官方竞赛分值：4 分
@@ -655,6 +655,6 @@ public:
 - [对应知识专题](../../strings/palindrome-rearrangements.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="codeforces-2247-c.md">← [codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence</a>
+<a class="daily-archive-pager__previous" href="../codeforces-2247-c/">← [codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence</a>
 <span class="daily-archive-pager__empty"></span>
 </nav>

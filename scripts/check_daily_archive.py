@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,10 +32,29 @@ EMAIL_ADDRESS = re.compile(
     r"(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+\b"
 )
 errors: list[str] = []
+RAW_HTML_HREF = re.compile(
+    r"<a\b[^>]*\bhref\s*=\s*[\"']([^\"']*)[\"']",
+    re.IGNORECASE,
+)
 
 
 def fail(message: str) -> None:
     errors.append(message)
+
+
+def deployed_route(markdown_href: str, extra_parent_levels: int = 0) -> str:
+    parsed = urlparse(markdown_href)
+    path = parsed.path
+    if not path.endswith(".md"):
+        raise ValueError(f"expected Markdown route, found {markdown_href!r}")
+    if Path(path).name == "index.md":
+        path = path[: -len("index.md")]
+    else:
+        path = path[:-3] + "/"
+    path = "../" * extra_parent_levels + path
+    query = f"?{parsed.query}" if parsed.query else ""
+    fragment = f"#{parsed.fragment}" if parsed.fragment else ""
+    return f"{path}{query}{fragment}"
 
 
 if not MANIFEST.is_file():
@@ -58,7 +78,7 @@ all_pages: set[Path] = set()
 all_keys: set[tuple[str, str]] = set()
 expected_nav_lines = [
     "  # DAILY_ARCHIVE_NAV_START",
-    "  - 每日 14 题:",
+    "  - 每日题目:",
     "      - 总览: daily/index.md",
 ]
 for entry in dates:
@@ -140,12 +160,26 @@ for entry in dates:
             fail(f"{page.relative_to(ROOT)}: missing optimal-solution section")
         if "Reference" not in text:
             fail(f"{page.relative_to(ROOT)}: missing Reference")
-        if f'href="index.md"' not in text:
+        if '<a href="../">' not in text:
             fail(f"{page.relative_to(ROOT)}: missing date-index return link")
         if str(item.get("official")) not in text:
             fail(f"{page.relative_to(ROOT)}: missing official problem link")
         if str(item.get("topic")) not in text:
             fail(f"{page.relative_to(ROOT)}: missing canonical-topic link")
+        expected_topic_route = deployed_route(str(item.get("topic")), 1)
+        if f'href="{expected_topic_route}"' not in text:
+            fail(
+                f"{page.relative_to(ROOT)}: missing deployed canonical-topic route "
+                f"{expected_topic_route}"
+            )
+        for href in RAW_HTML_HREF.findall(text):
+            if not href:
+                fail(f"{page.relative_to(ROOT)}: raw HTML link has an empty href")
+            if re.search(r"\.md(?:[?#]|$)", href):
+                fail(
+                    f"{page.relative_to(ROOT)}: raw HTML href uses a source "
+                    f"Markdown path instead of a deployed route: {href}"
+                )
         if text.count("```cpp") < 2:
             fail(f"{page.relative_to(ROOT)}: expected at least two complete C++ blocks")
         for private in PRIVATE:
@@ -162,9 +196,22 @@ for entry in dates:
         fail(f"{work_date}: missing date index")
     else:
         date_text = date_index.read_text(encoding="utf-8")
+        if f"# {work_date} · 每日题目 " not in date_text:
+            fail(f"{date_index.relative_to(ROOT)}: missing current reader-visible title")
         for item in items:
-            if isinstance(item, dict) and str(item.get("page")) not in date_text:
-                fail(f"{date_index.relative_to(ROOT)}: missing {item.get('page')}")
+            if not isinstance(item, dict):
+                continue
+            route = deployed_route(str(item.get("page")))
+            if f'href="{route}"' not in date_text:
+                fail(f"{date_index.relative_to(ROOT)}: missing deployed route {route}")
+        for href in RAW_HTML_HREF.findall(date_text):
+            if not href:
+                fail(f"{date_index.relative_to(ROOT)}: raw HTML link has an empty href")
+            if re.search(r"\.md(?:[?#]|$)", href):
+                fail(
+                    f"{date_index.relative_to(ROOT)}: raw HTML href uses a source "
+                    f"Markdown path instead of a deployed route: {href}"
+                )
     expected_nav_lines.append(f'      - "{work_date}":')
     expected_nav_lines.append(f"          - 当日总览: daily/{work_date}/index.md")
     for item in items:
@@ -196,6 +243,8 @@ if not archive_index.is_file():
     fail("docs/daily/index.md does not exist")
 else:
     index_text = archive_index.read_text(encoding="utf-8")
+    if not index_text.startswith("# 每日题目\n"):
+        fail("docs/daily/index.md: missing current reader-visible title")
     for work_date in date_values:
         if f"[{work_date}]({work_date}/index.md)" not in index_text:
             fail(f"docs/daily/index.md: missing {work_date}")

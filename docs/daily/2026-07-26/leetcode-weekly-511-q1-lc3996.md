@@ -6,7 +6,7 @@ title: "[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单
 
 <p class="daily-archive-kicker">2026-07-26 · 第 12/14 题 · 力扣竞赛</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../graph/weighted-parity-states.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../graph/weighted-parity-states/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -16,10 +16,10 @@ title: "[力扣竞赛] 第 511 场周赛 Q1 LC 3996 偶数次骑士移动 简单
 - 官方中文标题：偶数次骑士移动
 - 官方英文标题：Even Number of Knight Moves
 - 难度：简单
-- 官方链接：https://leetcode.cn/problems/even-number-of-knight-moves/
-- 官方竞赛链接：https://leetcode.cn/contest/weekly-contest-511/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/even-number-of-knight-moves/)
+- 官方竞赛链接：[打开力扣中国页面](https://leetcode.cn/contest/weekly-contest-511/)
 - 函数签名：`bool canReach(vector<int>& start, vector<int>& target)`
-- 官方示意图：https://assets.leetcode.com/uploads/2018/10/12/knight.png
+- 官方示意图：[打开来源页面](https://assets.leetcode.com/uploads/2018/10/12/knight.png)
 
 ### 原始题意
 
@@ -273,6 +273,6 @@ public:
 - [对应知识专题](../../graph/weighted-parity-states.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-10-lc70.md">← [力扣 Top 10] LC 70 爬楼梯 简单</a>
-<a class="daily-archive-pager__next" href="codeforces-2247-a.md">[codeforces] CF Round 1111 Div.2 A Zero Sum →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-10-lc70/">← [力扣 Top 10] LC 70 爬楼梯 简单</a>
+<a class="daily-archive-pager__next" href="../codeforces-2247-a/">[codeforces] CF Round 1111 Div.2 A Zero Sum →</a>
 </nav>

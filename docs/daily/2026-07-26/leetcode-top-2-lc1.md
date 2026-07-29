@@ -6,12 +6,12 @@ title: "[力扣 Top 2] LC 1 两数之和 简单"
 
 <p class="daily-archive-kicker">2026-07-26 · 第 3/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-26 题目列表</a> · <a href="../../data-structures/hash-and-cache.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-26 题目列表</a> · <a href="../../../data-structures/hash-and-cache/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：简单
-- 官方链接：https://leetcode.cn/problems/two-sum/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/two-sum/)
 - 函数签名：`vector<int> twoSum(vector<int>& nums, int target)`
 
 ### 原始题意
@@ -252,7 +252,7 @@ public:
 
 ## Reference
 
-- 官方题面与接口：https://leetcode.cn/problems/two-sum/
+- 官方题面与接口：[打开力扣中国页面](https://leetcode.cn/problems/two-sum/)
 
 ### 延伸阅读
 
@@ -260,6 +260,6 @@ public:
 - [对应知识专题](../../data-structures/hash-and-cache.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-1-lc3286.md">← [力扣 Top 1] LC 3286 穿越网格图的安全路径 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-3-lc3.md">[力扣 Top 3] LC 3 无重复字符的最长子串 中等 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-1-lc3286/">← [力扣 Top 1] LC 3286 穿越网格图的安全路径 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-3-lc3/">[力扣 Top 3] LC 3 无重复字符的最长子串 中等 →</a>
 </nav>

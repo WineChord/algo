@@ -6,11 +6,11 @@ title: "[codeforces] CF Round 1111 Div.2 C Inversion of a Subsequence"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 13/14 题 · Codeforces</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../math/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../math/">进入知识专题</a></p>
 
 ## Official source and metadata
 
-- Complete official English statement: https://codeforces.com/contest/2247/problem/C
+- Complete official English statement: [打开 Codeforces 页面](https://codeforces.com/contest/2247/problem/C)
 - Contest: Codeforces Round 1111 (Div. 2)
 - Contest ID: 2247
 - Task alias: Div.2 C
@@ -573,6 +573,6 @@ Validation result: all 7 GNU++23 blocks compiled independently with `-Wall -Wext
 - [对应知识专题](../../math/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-weekly-511-q3-lc3998.md">← [力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-daily-2026-07-28-lc3517.md">[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-weekly-511-q3-lc3998/">← [力扣竞赛] 第 511 场周赛 Q3 LC 3998 使用子序列排序转换二进制字符串 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-daily-2026-07-28-lc3517/">[力扣每日一题] 2026-07-28｜LC 3517 最小回文排列 I →</a>
 </nav>

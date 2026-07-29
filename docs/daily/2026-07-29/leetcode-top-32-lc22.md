@@ -6,7 +6,7 @@ title: "[力扣 Top 32] LC 22 括号生成 中等"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 3/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../search/backtracking.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../search/backtracking/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -14,7 +14,7 @@ title: "[力扣 Top 32] LC 22 括号生成 中等"
 - 题号：LC 22
 - 官方中文标题：括号生成
 - 官方难度：中等
-- 官方链接：<https://leetcode.cn/problems/generate-parentheses/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/generate-parentheses/)
 
 ### 原始题意
 
@@ -366,6 +366,6 @@ public:
 - [对应知识专题](../../search/backtracking.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-31-lc279.md">← [力扣 Top 31] LC 279 完全平方数 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-33-lc27.md">[力扣 Top 33] LC 27 移除元素 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-31-lc279/">← [力扣 Top 31] LC 279 完全平方数 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-33-lc27/">[力扣 Top 33] LC 27 移除元素 简单 →</a>
 </nav>

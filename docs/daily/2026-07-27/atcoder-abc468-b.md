@@ -6,9 +6,9 @@ title: "[atcoder] ABC468 B Corridor Watch"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 1/14 题 · AtCoder</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../basics/prefix-sums-and-difference.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../basics/prefix-sums-and-difference/">进入知识专题</a></p>
 
-Official problem: <https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en>
+Official problem: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en)
 
 ## Official source record
 
@@ -541,10 +541,10 @@ int main() {
 
 ## Sources
 
-- Official task: <https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en>
-- Official contest information and scoring: <https://atcoder.jp/contests/abc468?lang=en>
-- Official editorial: <https://atcoder.jp/contests/abc468/editorial/23735>
-- AtCoder Problems model data: <https://kenkoooo.com/atcoder/resources/problem-models.json>
+- Official task: [Open the official problem](https://atcoder.jp/contests/abc468/tasks/abc468_b?lang=en)
+- Official contest information and scoring: [Open the official contest](https://atcoder.jp/contests/abc468?lang=en)
+- Official editorial: [Open the official editorial](https://atcoder.jp/contests/abc468/editorial/23735)
+- AtCoder Problems model data: [打开来源页面](https://kenkoooo.com/atcoder/resources/problem-models.json)
 
 ## Reference
 
@@ -553,5 +553,5 @@ int main() {
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
 <span class="daily-archive-pager__empty"></span>
-<a class="daily-archive-pager__next" href="leetcode-top-11-lc2.md">[力扣 Top 11] LC 2 两数相加 中等 →</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-11-lc2/">[力扣 Top 11] LC 2 两数相加 中等 →</a>
 </nav>

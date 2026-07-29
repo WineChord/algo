@@ -6,7 +6,7 @@ title: "[力扣 Top 33] LC 27 移除元素 简单"
 
 <p class="daily-archive-kicker">2026-07-29 · 第 4/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-29 题目列表</a> · <a href="../../basics/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-29 题目列表</a> · <a href="../../../basics/">进入知识专题</a></p>
 
 ## 官方原始信息
 
@@ -14,7 +14,7 @@ title: "[力扣 Top 33] LC 27 移除元素 简单"
 - 题号：LC 27
 - 官方中文标题：移除元素
 - 官方难度：简单
-- 官方链接：<https://leetcode.cn/problems/remove-element/>
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/remove-element/)
 
 ### 原始题意
 
@@ -262,6 +262,6 @@ public:
 - [对应知识专题](../../basics/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-32-lc22.md">← [力扣 Top 32] LC 22 括号生成 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-34-lc9.md">[力扣 Top 34] LC 9 回文数 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-32-lc22/">← [力扣 Top 32] LC 22 括号生成 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-34-lc9/">[力扣 Top 34] LC 9 回文数 简单 →</a>
 </nav>

@@ -6,14 +6,14 @@ title: "[力扣 Top 17] LC 215 数组中的第 K 个最大元素 中等"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 8/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../data-structures/index.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../data-structures/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 题号：215
 - 官方中文标题：数组中的第 K 个最大元素
 - 官方难度：中等
-- 官方链接：https://leetcode.cn/problems/kth-largest-element-in-an-array/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
 - slug：`kth-largest-element-in-an-array`
 - 函数签名：`int findKthLargest(vector<int>& nums, int k)`
 - 官方竞赛分：未标注。官方题面与本轮核对的官方 GraphQL 元数据均未提供竞赛归属或分值，不作推断。
@@ -456,6 +456,6 @@ public:
 - [对应知识专题](../../data-structures/index.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-16-lc56.md">← [力扣 Top 16] LC 56 合并区间 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-18-lc88.md">[力扣 Top 18] LC 88 合并两个有序数组 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-16-lc56/">← [力扣 Top 16] LC 56 合并区间 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-18-lc88/">[力扣 Top 18] LC 88 合并两个有序数组 简单 →</a>
 </nav>

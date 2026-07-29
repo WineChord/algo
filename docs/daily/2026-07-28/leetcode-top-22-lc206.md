@@ -6,17 +6,17 @@ title: "[力扣 Top 22] LC 206 反转链表 简单"
 
 <p class="daily-archive-kicker">2026-07-28 · 第 3/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-28 题目列表</a> · <a href="../../data-structures/linked-lists.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-28 题目列表</a> · <a href="../../../data-structures/linked-lists/">进入知识专题</a></p>
 
 ## 官方原始信息
 
 - 难度：LeetCode 官方「简单」；非竞赛题，无官方分值与 ZeroTracer 竞赛分。
-- 官方链接：https://leetcode.cn/problems/reverse-linked-list/
+- 官方链接：[打开官方页面](https://leetcode.cn/problems/reverse-linked-list/)
 - slug：`reverse-linked-list`
 - 函数签名：`ListNode* reverseList(ListNode* head)`
 - 题意：反转单链表并返回新头节点。
 - 示例：`[1,2,3,4,5] -> [5,4,3,2,1]`；`[1,2] -> [2,1]`；`[] -> []`。
-- 官方示意图：https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg 与 https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg。
+- 官方示意图：[打开来源页面](https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg) 与 [打开来源页面](https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg)。
 - 约束：节点数 $0\ldots5000$；$-5000\le\text{Node.val}\le5000$。
 - 官方进阶：分别使用迭代与递归完成。
 
@@ -265,6 +265,6 @@ public:
 - [对应知识专题](../../data-structures/linked-lists.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-21-lc20.md">← [力扣 Top 21] LC 20 有效的括号 简单</a>
-<a class="daily-archive-pager__next" href="leetcode-top-23-lc21.md">[力扣 Top 23] LC 21 合并两个有序链表 简单 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-21-lc20/">← [力扣 Top 21] LC 20 有效的括号 简单</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-23-lc21/">[力扣 Top 23] LC 21 合并两个有序链表 简单 →</a>
 </nav>

@@ -6,9 +6,9 @@ title: "[codeforces] CF Round 1111 Div.2 B Yet Another Constructive"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 13/14 题 · Codeforces</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../math/modular-constructions.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../math/modular-constructions/">进入知识专题</a></p>
 
-Official problem: <https://codeforces.com/problemset/problem/2247/B>
+Official problem: [Open the official problem](https://codeforces.com/problemset/problem/2247/B)
 
 ## Official source record
 
@@ -543,10 +543,10 @@ int main() {
 
 ## Sources
 
-- Official problem: <https://codeforces.com/problemset/problem/2247/B>
-- Official contest: <https://codeforces.com/contest/2247>
-- Official contest API: <https://codeforces.com/api/contest.list?gym=false>
-- Official problemset API: <https://codeforces.com/api/problemset.problems>
+- Official problem: [Open the official problem](https://codeforces.com/problemset/problem/2247/B)
+- Official contest: [Open the official contest](https://codeforces.com/contest/2247)
+- Official contest API: [Open the official contest](https://codeforces.com/api/contest.list?gym=false)
+- Official problemset API: [Open the official problem](https://codeforces.com/api/problemset.problems)
 
 ## Reference
 
@@ -554,6 +554,6 @@ int main() {
 - [对应知识专题](../../math/modular-constructions.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-weekly-511-q2-lc3997.md">← [力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-daily-2026-07-27-lc1464.md">[力扣每日一题] 2026-07-27｜LC 1464 数组中两元素的最大乘积 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-weekly-511-q2-lc3997/">← [力扣竞赛] 第 511 场周赛 Q2 LC 3997 统计二叉树中支配节点的数量 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-daily-2026-07-27-lc1464/">[力扣每日一题] 2026-07-27｜LC 1464 数组中两元素的最大乘积 →</a>
 </nav>

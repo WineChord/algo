@@ -6,9 +6,9 @@ title: "[力扣 Top 14] LC 11 盛最多水的容器 中等"
 
 <p class="daily-archive-kicker">2026-07-27 · 第 5/14 题 · 力扣 Top</p>
 
-<p class="daily-archive-utility"><a href="index.md">返回 2026-07-27 题目列表</a> · <a href="../../basics/sequence-invariants.md">进入知识专题</a></p>
+<p class="daily-archive-utility"><a href="../">返回 2026-07-27 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
-官方题目：https://leetcode.cn/problems/container-with-most-water/
+官方题目：[打开官方题面](https://leetcode.cn/problems/container-with-most-water/)
 
 ## 官方原始信息
 
@@ -279,6 +279,6 @@ public:
 - [对应知识专题](../../basics/sequence-invariants.md)
 
 <nav class="daily-archive-pager" aria-label="当日题目导航">
-<a class="daily-archive-pager__previous" href="leetcode-top-13-lc200.md">← [力扣 Top 13] LC 200 岛屿数量 中等</a>
-<a class="daily-archive-pager__next" href="leetcode-top-15-lc4.md">[力扣 Top 15] LC 4 寻找两个正序数组的中位数 困难 →</a>
+<a class="daily-archive-pager__previous" href="../leetcode-top-13-lc200/">← [力扣 Top 13] LC 200 岛屿数量 中等</a>
+<a class="daily-archive-pager__next" href="../leetcode-top-15-lc4/">[力扣 Top 15] LC 4 寻找两个正序数组的中位数 困难 →</a>
 </nav>

@@ -103,7 +103,7 @@ extra:
 nav:
   - 首页: index.md
   # DAILY_ARCHIVE_NAV_START
-  - 每日 14 题:
+  - 每日题目:
       - 总览: daily/index.md
       - "2026-07-29":
           - 当日总览: daily/2026-07-29/index.md
