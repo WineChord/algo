@@ -47,6 +47,10 @@ tags:
 
 这种“先确认完整边界，再局部反转”的结构避免了中途发现长度不足后回滚。
 
+两两交换是 $k=2$ 的最小分组重连。用虚拟头节点保存当前组前驱，每轮只修改三条边；不足两个节点时后缀自然保持原样。
+
+--8<-- "includes/problems/lc-24.md"
+
 ## 交换起点：消除两条链的长度差
 
 两条无环单链表一旦相交，交点之后必共享同一后缀。若分别从两个头同时前进，较长独有前缀会造成错位；让每个指针走到末尾后改从另一条链起点继续，它们都会走过
@@ -99,4 +103,5 @@ $$
 - [LeetCode 206：反转链表](../problems/index.md#problem-lc-206)
 - [LeetCode 160：相交链表](../problems/index.md#problem-lc-160)
 - [LeetCode 25：K 个一组翻转链表](../problems/index.md#problem-lc-25)
+- [LeetCode 24：两两交换链表中的节点](../problems/index.md#problem-lc-24)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

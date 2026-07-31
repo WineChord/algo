@@ -36,6 +36,18 @@
 
 UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码点或用户可见字符定义，必须先按同一规范解码、归一化，再选择哈希键。
 
+### 覆盖窗口：用缺口总数统一重数约束
+
+最小覆盖子串不仅要求字符种类出现，还要求每种字符达到指定重数。维护每个字符尚缺的数量，以及全部缺口之和：
+
+- 加入仍有缺口的字符时，缺口总数减一；
+- 窗口合法后持续删除左端；
+- 删除使某字符重新短缺时，缺口总数加一并停止收缩。
+
+这样“窗口是否覆盖目标”是常数判断，不需要每次扫描整个字符表。
+
+--8<-- "includes/problems/lc-76.md"
+
 ## LRU：哈希负责定位，链表负责顺序
 
 缓存同时需要两种操作：
@@ -80,5 +92,6 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 
 - [LeetCode 49：字母异位词分组](../problems/index.md#problem-lc-49)
 - [LeetCode 3：无重复字符的最长子串](../problems/index.md#problem-lc-3)
+- [LeetCode 76：最小覆盖子串](../problems/index.md#problem-lc-76)
 - [LeetCode 146：LRU 缓存](../problems/index.md#problem-lc-146)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

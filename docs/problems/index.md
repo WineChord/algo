@@ -88,11 +88,27 @@
 
 --8<-- "includes/problems/lc-3014.md"
 
+--8<-- "includes/problems/lc-55.md"
+
+--8<-- "includes/problems/lc-35.md"
+
+--8<-- "includes/problems/lc-240.md"
+
+--8<-- "includes/problems/lc-4001.md"
+
+--8<-- "includes/problems/lc-3016.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
 
 --8<-- "includes/problems/lc-46.md"
+
+--8<-- "includes/problems/lc-17.md"
+
+--8<-- "includes/problems/lc-51.md"
+
+--8<-- "includes/problems/lc-131.md"
 
 ## 数据结构
 
@@ -125,6 +141,8 @@
 --8<-- "includes/problems/lc-23.md"
 
 --8<-- "includes/problems/lc-160.md"
+
+--8<-- "includes/problems/lc-24.md"
 
 --8<-- "includes/problems/lc-32.md"
 
@@ -162,6 +180,8 @@
 
 --8<-- "includes/problems/lc-1143.md"
 
+--8<-- "includes/problems/atcoder-abc468-f.md"
+
 ## 图论
 
 --8<-- "includes/problems/lc-3286.md"
@@ -193,6 +213,8 @@
 --8<-- "includes/problems/lc-210.md"
 
 --8<-- "includes/problems/lc-1857.md"
+
+--8<-- "includes/problems/codeforces-2247-e.md"
 
 ## 数学
 

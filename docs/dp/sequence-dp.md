@@ -34,6 +34,18 @@ $$
 
 严格递增必须用 `lower_bound`。若改成最长非递减子序列，相等值可以接在后面，应改用 `upper_bound`。只保存 `tails` 不能直接恢复原下标序列；恢复方案还需记录每个位置的前驱及它更新的长度。
 
+### 当前缀最大值固定了部分位置
+
+有些题不会直接询问 LIS，却会先由前缀最大值唯一确定一批位置，再让剩余位置承担“保持严格递增”的自由度。此时应把两类位置分开：
+
+- 新前缀最大值出现的位置由目标排列强制决定；
+- 非前缀最大值只有在保持相对递增时才能被依次生成；
+- 为了最少使用额外操作，需要在这些自由位置中保留尽量长的递增子序列。
+
+因此，LIS 不只是“最长长度”模板，还能度量一个目标序列离某类单调生成过程有多远。
+
+--8<-- "includes/problems/atcoder-abc468-f.md"
+
 ## 两个序列：二维前缀状态
 
 当一次决策同时消耗两个序列的前缀时，最自然的状态通常是二维网格：
@@ -112,5 +124,6 @@ $$
 
 - [Wagner and Fischer, “The string-to-string correction problem”](https://doi.org/10.1145/321796.321811)
 - [LeetCode 300：最长递增子序列](../problems/index.md#problem-lc-300)
+- [AtCoder ABC468 F：Chmax](../problems/index.md#problem-atcoder-abc468-f)
 - [LeetCode 1143：最长公共子序列](../problems/index.md#problem-lc-1143)
 - [LeetCode 72：编辑距离](../problems/index.md#problem-lc-72)

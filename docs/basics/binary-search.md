@@ -60,6 +60,8 @@ int main() {
 - 中点属于区间，不需要访问 `a[n]`；
 - 返回 `n` 可以统一表示“不存在满足条件的元素”。
 
+--8<-- "includes/problems/lc-35.md"
+
 ### 找最后一个满足怎么办
 
 最稳妥的方法通常不是再背一套更新规则，而是转换问题：
@@ -183,6 +185,10 @@ int main() {
 
 --8<-- "includes/problems/lc-33.md"
 
+二维矩阵同时按行、按列有序时，右上角具有更强的二维单调性：当前值过大就能排除整列，过小就能排除整行。它不需要对每一行分别二分，却与二分共享“每一步永久排除一块不可能区域”的证明结构。
+
+--8<-- "includes/problems/lc-240.md"
+
 --8<-- "includes/problems/lc-81.md"
 
 --8<-- "includes/problems/lc-719.md"
@@ -203,3 +209,5 @@ int main() {
 - [std::lower_bound — cppreference](https://en.cppreference.com/w/cpp/algorithm/lower_bound)
 - [LeetCode 704：二分查找](../problems/index.md#problem-lc-704)
 - [LeetCode 34：在排序数组中查找元素的第一个和最后一个位置](../problems/index.md#problem-lc-34)
+- [LeetCode 35：搜索插入位置](../problems/index.md#problem-lc-35)
+- [LeetCode 240：搜索二维矩阵 II](../problems/index.md#problem-lc-240)

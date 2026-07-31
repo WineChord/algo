@@ -1,5 +1,24 @@
 # 更新日志
 
+## 2026-07-31
+
+### 每日训练档案
+
+- 新增 [2026-07-31 每日题目](daily/2026-07-31/index.md)，按 AtCoder、力扣 Top 51–60、力扣第 512 场周赛、Codeforces Round 1111 与力扣每日一题的固定顺序收录 14 道完整题解。
+- [AtCoder ABC468 F](problems/index.md#problem-atcoder-abc468-f) 在页内提供模型独立组织的自包含英文题面层，[Codeforces 2247 E](problems/index.md#problem-codeforces-2247-e) 按官方材料许可呈现完整英文题面；两者随后均紧接中文解释与中文题解。
+- 每道页面保留官方题目、知识专题、当日列表和前后题导航，公式与完整 C++ 在桌面及窄屏下均可直接阅读。
+
+### 单调结构、回溯与局部接线
+
+- 扩充[二分查找](basics/binary-search.md)，把旋转数组、二维单调矩阵与下界插入统一为“每步永久排除不可能区域”的边界证明。
+- 扩充[贪心交换](basics/greedy-exchange.md)、[子序列动态规划](dp/sequence-dp.md)、[回溯](search/backtracking.md)、[滑动窗口](data-structures/hash-and-cache.md)与[链表局部接线](data-structures/linked-lists.md)，补齐可达前缀、加权槽位、前缀最大值与 LIS、预处理合法区间、三类攻击线和两两换边。
+- 在[序列扫描](basics/sequence-invariants.md)加入有序时间流的最近状态归并，在[图论知识地图](graph/index.md)加入先刻画可行区间、再用固定步长连续覆盖的树构造方法。
+
+### 权威题目条目
+
+- 收录 [AtCoder ABC468 F](problems/index.md#problem-atcoder-abc468-f)、[CF Round 1111 Div.2 E（2247E）](problems/index.md#problem-codeforces-2247-e)、[第 512 场周赛 Q2](problems/index.md#problem-lc-4001) 与 [LeetCode 3016](problems/index.md#problem-lc-3016)。
+- 收录 LeetCode Top 51–60 的十个连续权威题目条目；全部最优实现采用两空格缩进，并与日期档案复用同一题意和算法结论。
+
 ## 2026-07-30
 
 ### 每日训练档案

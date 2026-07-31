@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-07-31",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-f",
+          "title": "[atcoder] ABC468 F Chmax",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-f.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_f?lang=en",
+          "topic": "../../dp/sequence-dp.md",
+          "source_sha256": "24f74edd06143b299e37360f35e1298da67372db905892ca7dfe1fe5a9542eb3"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-51-lc33",
+          "title": "[力扣 Top 51] LC 33 搜索旋转排序数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-51-lc33.md",
+          "official": "https://leetcode.cn/problems/search-in-rotated-sorted-array/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "e23f10df22c10bf7f831f54fa95df8d5fe777b4de06b3f21fed0983dc29ca632"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-52-lc55",
+          "title": "[力扣 Top 52] LC 55 跳跃游戏 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-52-lc55.md",
+          "official": "https://leetcode.cn/problems/jump-game/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "b4ae94c7f5365ddac949c8f2b63530fa6ca2042a472f67ac31e366de9497c818"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-53-lc207",
+          "title": "[力扣 Top 53] LC 207 课程表 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-53-lc207.md",
+          "official": "https://leetcode.cn/problems/course-schedule/",
+          "topic": "../../graph/index.md",
+          "source_sha256": "fdc0a7d465b1384dcbde2cbb0a8c33b2fe2bec381ead13160dc82929a4f4d144"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-54-lc240",
+          "title": "[力扣 Top 54] LC 240 搜索二维矩阵 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-54-lc240.md",
+          "official": "https://leetcode.cn/problems/search-a-2d-matrix-ii/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "19d7ea849c30f04ab485b855f77cdb19b10cf165bd2c879bfea099f5c3768f17"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-55-lc131",
+          "title": "[力扣 Top 55] LC 131 分割回文串 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-55-lc131.md",
+          "official": "https://leetcode.cn/problems/palindrome-partitioning/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "4cdebd8adcdd7d2d55b61d30151debac41c779fca89cf7521d6b6019310369d6"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-56-lc17",
+          "title": "[力扣 Top 56] LC 17 电话号码的字母组合 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-56-lc17.md",
+          "official": "https://leetcode.cn/problems/letter-combinations-of-a-phone-number/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "2a3fcb52558eb08b0196395663dd8b58ad1e8ea02bba7a40b73adcb543823ec6"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-57-lc76",
+          "title": "[力扣 Top 57] LC 76 最小覆盖子串 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-57-lc76.md",
+          "official": "https://leetcode.cn/problems/minimum-window-substring/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "b217ae95a6bdb13b1cb0a0ee34cda1958d0e58e754b9ec50ee7d06c43d21a208"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-58-lc51",
+          "title": "[力扣 Top 58] LC 51 N 皇后 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-58-lc51.md",
+          "official": "https://leetcode.cn/problems/n-queens/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "a82e5be52b472bf4a6af396851ea9bccd6fc0f37f59956de6a7d9de391e0b417"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-59-lc35",
+          "title": "[力扣 Top 59] LC 35 搜索插入位置 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-59-lc35.md",
+          "official": "https://leetcode.cn/problems/search-insert-position/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "97a2cecc5206ef46acf7ac4851fd80d9643836cd273a25e26d83ecf844afe14c"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-60-lc24",
+          "title": "[力扣 Top 60] LC 24 两两交换链表中的节点 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-60-lc24.md",
+          "official": "https://leetcode.cn/problems/swap-nodes-in-pairs/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "69602975fa6cf4a9be4fd3029ad27d1335e8d5f376a24fee806e4ea1479cc7eb"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-512-q2-lc4001",
+          "title": "[力扣竞赛] 第 512 场周赛 Q2 LC 4001 聚合两个时间序列 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-512-q2-lc4001.md",
+          "official": "https://leetcode.cn/problems/aggregate-two-time-series/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "f53933fb2685265fa206b55e697e0777c42ac5a0c444f8b87f606f64894bd814"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-e",
+          "title": "[codeforces] CF Round 1111 Div.2 E Build a Tree",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-e.md",
+          "official": "https://codeforces.com/contest/2247/problem/E",
+          "topic": "../../graph/index.md",
+          "source_sha256": "7e7f1eb1b9f1dc41cc831ba4cbd1e2a1bd34020012a75e814e0554eb2dddad1c"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-07-31-lc3016",
+          "title": "[力扣每日一题] 2026-07-31｜LC 3016 输入单词需要的最少按键次数 II",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-07-31-lc3016.md",
+          "official": "https://leetcode.cn/problems/minimum-number-of-pushes-to-type-word-ii/?envType=daily-question&envId=2026-07-31",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "a43107ba30b50850072e4bb2a2b7799fb2bde88baf6662aa582ec067acaf0154"
+        }
+      ]
+    },
+    {
       "date": "2026-07-30",
       "items": [
         {

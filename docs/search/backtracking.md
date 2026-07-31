@@ -45,6 +45,26 @@ $$
 
 若输入允许重复元素，原地交换仍可能在同一层选择相同值。此时需要同层集合去重，或先排序并使用“相同值只允许第一个未使用副本开分支”的规则。
 
+## 每层候选来自当前位置
+
+当第 $i$ 个决策只依赖输入第 $i$ 位时，搜索树就是若干候选集合的笛卡尔积。当前路径长度同时充当输入位置，不需要 `used`；递归到末尾才输出。
+
+--8<-- "includes/problems/lc-17.md"
+
+## 预处理重复判定，再展开方案
+
+若每个分支都要判断一个区间是否回文，直接扫描会在不同分割方案间重复工作。先用 $O(n^2)$ 区间动态规划标记全部回文子串，回溯时就只负责枚举切点：
+
+--8<-- "includes/problems/lc-131.md"
+
+预处理不会降低答案数量带来的输出下界，但能把每条边的合法性检查从线性降为常数。若只求最少切割或方案数，应在同一回文表上改用动态规划，而不是生成全部分割。
+
+## 冲突集合要支持常数撤销
+
+N 皇后逐行放置时，未来只需要知道列、主对角线与副对角线是否已经占用。三类位掩码把一次冲突检查压成常数位运算；递归返回时撤销当前位，恢复进入本层前的状态。
+
+--8<-- "includes/problems/lc-51.md"
+
 ## 复杂度要包含复制答案
 
 全排列有 $n!$ 个答案，每个答案长度为 $n$，因此时间和输出空间下界都是
@@ -89,4 +109,7 @@ $$
 
 - [LeetCode 22：括号生成](../problems/index.md#problem-lc-22)
 - [LeetCode 46：全排列](../problems/index.md#problem-lc-46)
+- [LeetCode 17：电话号码的字母组合](../problems/index.md#problem-lc-17)
+- [LeetCode 51：N 皇后](../problems/index.md#problem-lc-51)
+- [LeetCode 131：分割回文串](../problems/index.md#problem-lc-131)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

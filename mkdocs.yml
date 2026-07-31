@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-07-31":
+          - 当日总览: daily/2026-07-31/index.md
+          - "[atcoder] ABC468 F Chmax": daily/2026-07-31/atcoder-abc468-f.md
+          - "[力扣 Top 51] LC 33 搜索旋转排序数组 中等": daily/2026-07-31/leetcode-top-51-lc33.md
+          - "[力扣 Top 52] LC 55 跳跃游戏 中等": daily/2026-07-31/leetcode-top-52-lc55.md
+          - "[力扣 Top 53] LC 207 课程表 中等": daily/2026-07-31/leetcode-top-53-lc207.md
+          - "[力扣 Top 54] LC 240 搜索二维矩阵 II 中等": daily/2026-07-31/leetcode-top-54-lc240.md
+          - "[力扣 Top 55] LC 131 分割回文串 中等": daily/2026-07-31/leetcode-top-55-lc131.md
+          - "[力扣 Top 56] LC 17 电话号码的字母组合 中等": daily/2026-07-31/leetcode-top-56-lc17.md
+          - "[力扣 Top 57] LC 76 最小覆盖子串 困难": daily/2026-07-31/leetcode-top-57-lc76.md
+          - "[力扣 Top 58] LC 51 N 皇后 困难": daily/2026-07-31/leetcode-top-58-lc51.md
+          - "[力扣 Top 59] LC 35 搜索插入位置 简单": daily/2026-07-31/leetcode-top-59-lc35.md
+          - "[力扣 Top 60] LC 24 两两交换链表中的节点 中等": daily/2026-07-31/leetcode-top-60-lc24.md
+          - "[力扣竞赛] 第 512 场周赛 Q2 LC 4001 聚合两个时间序列 中等": daily/2026-07-31/leetcode-weekly-512-q2-lc4001.md
+          - "[codeforces] CF Round 1111 Div.2 E Build a Tree": daily/2026-07-31/codeforces-2247-e.md
+          - "[力扣每日一题] 2026-07-31｜LC 3016 输入单词需要的最少按键次数 II": daily/2026-07-31/leetcode-daily-2026-07-31-lc3016.md
       - "2026-07-30":
           - 当日总览: daily/2026-07-30/index.md
           - "[atcoder] ABC468 E Sum of Average": daily/2026-07-30/atcoder-abc468-e.md

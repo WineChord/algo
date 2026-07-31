@@ -38,7 +38,11 @@ $$
 
 --8<-- "includes/problems/lc-3014.md"
 
-若字母可以重复，权重变成出现次数，仍按频次降序分配槽位。若每个对象只能进入部分槽位，简单交换可能生成非法方案，应改用匹配、最小费用流或带约束的动态规划。
+若字母可以重复，权重变成出现次数，仍按频次降序分配槽位：
+
+--8<-- "includes/problems/lc-3016.md"
+
+若每个对象只能进入部分槽位，简单交换可能生成非法方案，应改用匹配、最小费用流或带约束的动态规划。
 
 ## 字典序交换：高位先拿最大可行数字
 
@@ -65,6 +69,10 @@ $$
 在当前层结束前提前增加步数，会把同一层拆开；只追踪局部最大跳跃值，又会丢失其他位置提供的更远出边。
 
 --8<-- "includes/problems/lc-45.md"
+
+只问“能否到达”时，不必显式结算 BFS 层；维护扫描前缀能扩张到的最远位置即可。到达当前下标说明它可作为新的起跳点，超过最远边界则说明出现了任何路径都无法跨越的缺口。
+
+--8<-- "includes/problems/lc-55.md"
 
 ## 如何判断贪心是否可信
 
@@ -113,5 +121,7 @@ $$
 
 - [Greedy Algorithms — Algorithms, Fourth Edition](https://algs4.cs.princeton.edu/64greedy/)
 - [LeetCode 45：跳跃游戏 II](../problems/index.md#problem-lc-45)
+- [LeetCode 55：跳跃游戏](../problems/index.md#problem-lc-55)
 - [LeetCode 3014：输入单词需要的最少按键次数 I](../problems/index.md#problem-lc-3014)
+- [LeetCode 3016：输入单词需要的最少按键次数 II](../problems/index.md#problem-lc-3016)
 - [LeetCode 4000：给定数位和的最大整数](../problems/index.md#problem-lc-4000)
