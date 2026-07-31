@@ -8,7 +8,7 @@ title: "[力扣 Top 53] LC 207 课程表 中等"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-07-31 题目列表</a> · <a href="../../../graph/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=fdc0a7d465b1384dcbde2cbb0a8c33b2fe2bec381ead13160dc82929a4f4d144 -->
+<!-- DAILY_CANONICAL_BODY_START sha256=6ddb012959f81c1b237a8a6effa9e3225036295325c717ed2ebadc46898a2921 -->
 ## 官方原始信息
 
 - Top 排名：53
@@ -49,7 +49,8 @@ public:
 
 - $1\le numCourses\le2000$。
 - $0\le prerequisites.length\le5000$。
-- 每个先修关系长度为 2，且 $0\le a_i,b_i<numCourses$。
+- 每个先修关系长度为 2。
+- $0\le a_i,b_i<numCourses$。
 - 所有先修课程对互不相同。
 
 ## 约束推导与建模
