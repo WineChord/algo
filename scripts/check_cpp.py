@@ -70,6 +70,16 @@ struct TreeNode {
       : val(x), left(l), right(r) {}
 };
 """
+RANDOM_LIST_NODE_PRELUDE = """#include <bits/stdc++.h>
+using namespace std;
+class Node {
+public:
+  int val;
+  Node* next;
+  Node* random;
+  explicit Node(int value) : val(value), next(nullptr), random(nullptr) {}
+};
+"""
 LEETCODE_PRELUDE = """#include <bits/stdc++.h>
 using namespace std;
 """
@@ -96,6 +106,7 @@ for path in FILES:
                 "<!-- compile:leetcode -->": LEETCODE_PRELUDE,
                 "<!-- compile:leetcode-list -->": LIST_NODE_PRELUDE,
                 "<!-- compile:leetcode-tree -->": TREE_NODE_PRELUDE,
+                "<!-- compile:leetcode-random-list -->": RANDOM_LIST_NODE_PRELUDE,
             }.get(directive)
         elif in_cpp and line.strip() == "```":
             if not skip:

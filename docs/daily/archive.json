@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-01",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc468-g",
+          "title": "[atcoder] ABC468 G Restricted Permutation",
+          "kind": "AtCoder",
+          "page": "atcoder-abc468-g.md",
+          "official": "https://atcoder.jp/contests/abc468/tasks/abc468_g?lang=en",
+          "topic": "../../math/combinatorial-counting.md",
+          "source_sha256": "095a742ff0a83d16ee8a60a223ef990733ad92847189cb90c4c1b18260533fb8"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-61-lc41",
+          "title": "[力扣 Top 61] LC 41 缺失的第一个正数 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-61-lc41.md",
+          "official": "https://leetcode.cn/problems/first-missing-positive/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "cf179cb796ca9b1583d567b262af1b49b7a21a6a8d79c4b5840e79022ca1576d"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-62-lc105",
+          "title": "[力扣 Top 62] LC 105 从前序与中序遍历序列构造二叉树 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-62-lc105.md",
+          "official": "https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "a60a4b26775ba2a361f8db334a4f69229eacb4741635048d492ef0ec68c64556"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-63-lc26",
+          "title": "[力扣 Top 63] LC 26 删除有序数组中的重复项 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-63-lc26.md",
+          "official": "https://leetcode.cn/problems/remove-duplicates-from-sorted-array/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "55f5d787298bbd0e50851c5eb0998d582e8d42f203a6de70164b5d75f8afc2d0"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-64-lc48",
+          "title": "[力扣 Top 64] LC 48 旋转图像 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-64-lc48.md",
+          "official": "https://leetcode.cn/problems/rotate-image/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "efd68552a737803e1893907ad4294539052cf390f8ed1ad20b9ded32d4d653c4"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-65-lc224",
+          "title": "[力扣 Top 65] LC 224 基本计算器 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-65-lc224.md",
+          "official": "https://leetcode.cn/problems/basic-calculator/",
+          "topic": "../../strings/expression-parsing.md",
+          "source_sha256": "535b37196b2947797147bfed603ce75c79512a75305fba449a397fe1f47f2763"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-66-lc23",
+          "title": "[力扣 Top 66] LC 23 合并 K 个升序链表 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-66-lc23.md",
+          "official": "https://leetcode.cn/problems/merge-k-sorted-lists/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "68ca3d54c41f16df4766e6ef1e3cd7a12ea76219f8f02cfb1e93ce458c079215"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-67-lc234",
+          "title": "[力扣 Top 67] LC 234 回文链表 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-67-lc234.md",
+          "official": "https://leetcode.cn/problems/palindrome-linked-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "c32e4f0254aa84bd86033aad166fa33c3f19bd9e114f1fd0d3b7024e74dab0bf"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-68-lc994",
+          "title": "[力扣 Top 68] LC 994 腐烂的橘子 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-68-lc994.md",
+          "official": "https://leetcode.cn/problems/rotting-oranges/",
+          "topic": "../../graph/index.md",
+          "source_sha256": "cfb5298107c5c994285c2acc2c5fc1cb067cf9305713bc35c15a830c6e16f5f7"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-69-lc138",
+          "title": "[力扣 Top 69] LC 138 随机链表的复制 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-69-lc138.md",
+          "official": "https://leetcode.cn/problems/copy-list-with-random-pointer/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "a93426bb0e02f95f5453c8c7022c225f6b6c6976e2ab5dff99b399d729bbbfb2"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-70-lc102",
+          "title": "[力扣 Top 70] LC 102 二叉树的层序遍历 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-70-lc102.md",
+          "official": "https://leetcode.cn/problems/binary-tree-level-order-traversal/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "303c30e3f20f3800f81fbee83730b934e9bdb508fc8e1eccb8091e82708afaa8"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-512-q3-lc4002",
+          "title": "[力扣竞赛] 第 512 场周赛 Q3 LC 4002 统计有效序列数目 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-512-q3-lc4002.md",
+          "official": "https://leetcode.cn/problems/count-valid-sequences/",
+          "topic": "../../math/combinatorial-counting.md",
+          "source_sha256": "a5ab896157ca4519c5a2d5eb28d60bec162f609996bf0304795dcc2fe9169726"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2247-f",
+          "title": "[codeforces] CF Round 1111 Div.2 F Paths on a Grid",
+          "kind": "Codeforces",
+          "page": "codeforces-2247-f.md",
+          "official": "https://codeforces.com/contest/2247/problem/F",
+          "topic": "../../graph/dominators.md",
+          "source_sha256": "358eb44a45cc30e7f28dc565cab52ae053717e0c19f4fa7e29ef3cc26347b672"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-01-lc486",
+          "title": "[力扣每日一题] 2026-08-01｜LC 486 预测赢家",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-01-lc486.md",
+          "official": "https://leetcode.cn/problems/predict-the-winner/?envType=daily-question&envId=2026-08-01",
+          "topic": "../../dp/interval-dp.md",
+          "source_sha256": "310b0b5b1ee7ecc54d6d0a29ec175fa91de5939a50f6a0822b6471b59747d2af"
+        }
+      ]
+    },
+    {
       "date": "2026-07-31",
       "items": [
         {

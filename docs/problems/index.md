@@ -98,6 +98,12 @@
 
 --8<-- "includes/problems/lc-3016.md"
 
+--8<-- "includes/problems/lc-41.md"
+
+--8<-- "includes/problems/lc-26.md"
+
+--8<-- "includes/problems/lc-48.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -144,6 +150,10 @@
 
 --8<-- "includes/problems/lc-24.md"
 
+--8<-- "includes/problems/lc-234.md"
+
+--8<-- "includes/problems/lc-138.md"
+
 --8<-- "includes/problems/lc-32.md"
 
 --8<-- "includes/problems/codeforces-2247-d2.md"
@@ -182,6 +192,8 @@
 
 --8<-- "includes/problems/atcoder-abc468-f.md"
 
+--8<-- "includes/problems/lc-486.md"
+
 ## 图论
 
 --8<-- "includes/problems/lc-3286.md"
@@ -216,6 +228,12 @@
 
 --8<-- "includes/problems/codeforces-2247-e.md"
 
+--8<-- "includes/problems/lc-102.md"
+
+--8<-- "includes/problems/lc-105.md"
+
+--8<-- "includes/problems/codeforces-2247-f.md"
+
 ## 数学
 
 --8<-- "includes/problems/atcoder-abc468-e.md"
@@ -239,6 +257,10 @@
 --8<-- "includes/problems/luogu-p3383.md"
 
 --8<-- "includes/problems/luogu-p1082.md"
+
+--8<-- "includes/problems/atcoder-abc468-g.md"
+
+--8<-- "includes/problems/lc-4002.md"
 
 ## 字符串
 
@@ -269,6 +291,8 @@
 --8<-- "includes/problems/lc-3518.md"
 
 --8<-- "includes/problems/lc-3999.md"
+
+--8<-- "includes/problems/lc-224.md"
 
 ## 如何使用这份索引
 

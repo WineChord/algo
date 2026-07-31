@@ -1,5 +1,25 @@
 # 更新日志
 
+## 2026-08-01
+
+### 每日训练档案
+
+- 新增 [2026-08-01 每日题目](daily/2026-08-01/index.md)，按 AtCoder、力扣 Top 61–70、力扣第 512 场周赛、Codeforces Round 1111 与力扣每日一题的固定顺序收录 14 道完整题解。
+- [AtCoder ABC468 G](problems/index.md#problem-atcoder-abc468-g) 提供独立组织的自包含英文题面层，[Codeforces 2247 F](problems/index.md#problem-codeforces-2247-f) 按官方材料许可呈现完整英文题面；两者之后的解释、证明、复杂度与变种均进入中文题解层。
+- 每道页面继续复用同一规范源与 canonical C++，并提供官方题目、稳定专题、当日列表和前后题导航。
+
+### 计数、解析、树遍历与区间状态
+
+- 新增[组合计数](math/combinatorial-counting.md)，把隔板法、补集、奇偶代换、唯一第一事件与块收缩乘法组织成一条可迁移推导路径。
+- 新增[二叉树遍历与恢复](graph/tree-traversals.md)、[表达式解析](strings/expression-parsing.md)与[区间动态规划](dp/interval-dp.md)，补齐层边界、遍历唯一性、括号上下文、行动者净优势和滚动方向。
+- 新增[支配关系](graph/dominators.md)，区分存在路径与全称路径约束，并说明 DAG 中由前驱 LCA 构造支配树以及双向支配刻画路径签名的方法。
+- 扩充[链表局部接线](data-structures/linked-lists.md)与[序列扫描](basics/sequence-invariants.md)，加入结构内临时映射、后半反转恢复、值到槽位的循环置换、有序稳定压缩与二维坐标置换。
+
+### 权威题目条目
+
+- 收录 [AtCoder ABC468 G](problems/index.md#problem-atcoder-abc468-g)、[CF Round 1111 Div.2 F（2247F）](problems/index.md#problem-codeforces-2247-f)、[第 512 场周赛 Q3](problems/index.md#problem-lc-4002) 与 [LeetCode 486](problems/index.md#problem-lc-486)。
+- 收录 LeetCode Top 61–70 的十个连续权威题目条目；全部最优实现采用两空格缩进，并与日期档案共享算法结论。
+
 ## 2026-07-31
 
 ### 每日训练档案

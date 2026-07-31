@@ -80,6 +80,7 @@
 - [链表：指针不变量与局部接线](../data-structures/linked-lists.md)；
 - [单调队列：维护仍可能最优的窗口候选](../data-structures/monotonic-queues.md)；
 - [哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。
+- [二叉树遍历：顺序、边界与恢复](../graph/tree-traversals.md)。
 
 ## 阶段 3：动态规划、贪心与图论
 
@@ -98,6 +99,8 @@
 
 最长递增子序列、最长公共子序列、双序列前缀状态与路径恢复见[子序列与双序列动态规划](../dp/sequence-dp.md)。
 
+两端选择、最后切分与滚动方向见[区间动态规划：从两端选择到合并顺序](../dp/interval-dp.md)。
+
 ### 贪心
 
 重点不是“选择当前最优”，而是证明这个选择不会损害全局最优。常见证明有交换论证、领先法、反证法和拟阵结构。
@@ -110,12 +113,14 @@
 
 树上子问题先于父问题的统一接口见[树上后序聚合](../graph/tree-aggregation.md)。
 
+“每条路径都必须经过”的全称路径约束见[支配关系](../graph/dominators.md)。
+
 ## 阶段 4：专题化与比赛化
 
 当基础算法能独立实现后，开始按题型做专题训练：
 
-- 字符串匹配、字典树、字符串哈希、[循环等价类](../strings/cyclic-normalization.md)、[回文重排](../strings/palindrome-rearrangements.md)与[回文中心](../strings/palindrome-centers.md)；
-- 数论、组合计数、[排列排名](../math/permutation-ranking.md)、概率与期望；
+- 字符串匹配、字典树、字符串哈希、[表达式解析](../strings/expression-parsing.md)、[循环等价类](../strings/cyclic-normalization.md)、[回文重排](../strings/palindrome-rearrangements.md)与[回文中心](../strings/palindrome-centers.md)；
+- 数论、[组合计数](../math/combinatorial-counting.md)、[排列排名](../math/permutation-ranking.md)、概率与期望；
 - 树上问题、连通性、网络流；
 - 状态压缩、数位 DP、优化 DP；
 - 计算几何、多项式等进阶主题。

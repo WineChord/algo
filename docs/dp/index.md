@@ -78,6 +78,8 @@ int main() {
 
 同时消耗两个序列前缀的状态设计、编辑距离与路径恢复，见[双序列动态规划](sequence-dp.md)。
 
+每次从区间两端选择、枚举最后切分点以及空间压缩的依赖顺序，见[区间动态规划：从两端选择到合并顺序](interval-dp.md)。
+
 ## 记忆化搜索还是递推
 
 两者描述同一张状态 DAG：
@@ -124,6 +126,8 @@ int main() {
 
 --8<-- "includes/problems/lc-312.md"
 
+--8<-- "includes/problems/lc-486.md"
+
 --8<-- "includes/problems/lc-337.md"
 
 --8<-- "includes/problems/lc-847.md"
@@ -149,3 +153,4 @@ int main() {
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)
 - [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
 - [LeetCode 416：分割等和子集](../problems/index.md#problem-lc-416)
+- [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)

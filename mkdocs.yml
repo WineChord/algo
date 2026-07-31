@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-01":
+          - 当日总览: daily/2026-08-01/index.md
+          - "[atcoder] ABC468 G Restricted Permutation": daily/2026-08-01/atcoder-abc468-g.md
+          - "[力扣 Top 61] LC 41 缺失的第一个正数 困难": daily/2026-08-01/leetcode-top-61-lc41.md
+          - "[力扣 Top 62] LC 105 从前序与中序遍历序列构造二叉树 中等": daily/2026-08-01/leetcode-top-62-lc105.md
+          - "[力扣 Top 63] LC 26 删除有序数组中的重复项 简单": daily/2026-08-01/leetcode-top-63-lc26.md
+          - "[力扣 Top 64] LC 48 旋转图像 中等": daily/2026-08-01/leetcode-top-64-lc48.md
+          - "[力扣 Top 65] LC 224 基本计算器 困难": daily/2026-08-01/leetcode-top-65-lc224.md
+          - "[力扣 Top 66] LC 23 合并 K 个升序链表 困难": daily/2026-08-01/leetcode-top-66-lc23.md
+          - "[力扣 Top 67] LC 234 回文链表 简单": daily/2026-08-01/leetcode-top-67-lc234.md
+          - "[力扣 Top 68] LC 994 腐烂的橘子 中等": daily/2026-08-01/leetcode-top-68-lc994.md
+          - "[力扣 Top 69] LC 138 随机链表的复制 中等": daily/2026-08-01/leetcode-top-69-lc138.md
+          - "[力扣 Top 70] LC 102 二叉树的层序遍历 中等": daily/2026-08-01/leetcode-top-70-lc102.md
+          - "[力扣竞赛] 第 512 场周赛 Q3 LC 4002 统计有效序列数目 中等": daily/2026-08-01/leetcode-weekly-512-q3-lc4002.md
+          - "[codeforces] CF Round 1111 Div.2 F Paths on a Grid": daily/2026-08-01/codeforces-2247-f.md
+          - "[力扣每日一题] 2026-08-01｜LC 486 预测赢家": daily/2026-08-01/leetcode-daily-2026-08-01-lc486.md
       - "2026-07-31":
           - 当日总览: daily/2026-07-31/index.md
           - "[atcoder] ABC468 F Chmax": daily/2026-07-31/atcoder-abc468-f.md
@@ -228,17 +244,22 @@ nav:
   - 图论:
       - 知识地图: graph/index.md
       - 0-1 权与奇偶状态: graph/weighted-parity-states.md
+      - 二叉树遍历与恢复: graph/tree-traversals.md
       - 树上后序聚合: graph/tree-aggregation.md
+      - 支配关系: graph/dominators.md
   - 动态规划:
       - 知识地图: dp/index.md
       - 线性递推: dp/linear-recurrences.md
       - 子序列与双序列动态规划: dp/sequence-dp.md
+      - 区间动态规划: dp/interval-dp.md
   - 数学:
       - 知识地图: math/index.md
+      - 组合计数与唯一分块: math/combinatorial-counting.md
       - 排列排名与 Lehmer 码: math/permutation-ranking.md
       - 前缀余数与模构造: math/modular-constructions.md
   - 字符串:
       - 知识地图: strings/index.md
+      - 表达式解析: strings/expression-parsing.md
       - 循环等价类与规范化: strings/cyclic-normalization.md
       - 回文重排与字典序: strings/palindrome-rearrangements.md
       - 回文中心与半径: strings/palindrome-centers.md
