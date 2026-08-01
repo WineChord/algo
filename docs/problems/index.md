@@ -10,6 +10,8 @@
 
 --8<-- "includes/problems/atcoder-abc468-b.md"
 
+--8<-- "includes/problems/atcoder-abc469-a.md"
+
 --8<-- "includes/problems/lc-1.md"
 
 --8<-- "includes/problems/lc-15.md"
@@ -19,6 +21,8 @@
 --8<-- "includes/problems/lc-88.md"
 
 --8<-- "includes/problems/luogu-p1177.md"
+
+--8<-- "includes/problems/lc-912.md"
 
 --8<-- "includes/problems/lc-11.md"
 
@@ -90,6 +94,8 @@
 
 --8<-- "includes/problems/lc-55.md"
 
+--8<-- "includes/problems/codeforces-2248-a.md"
+
 --8<-- "includes/problems/lc-35.md"
 
 --8<-- "includes/problems/lc-240.md"
@@ -148,6 +154,8 @@
 
 --8<-- "includes/problems/lc-160.md"
 
+--8<-- "includes/problems/lc-19.md"
+
 --8<-- "includes/problems/lc-24.md"
 
 --8<-- "includes/problems/lc-234.md"
@@ -180,6 +188,12 @@
 
 --8<-- "includes/problems/luogu-p1048.md"
 
+--8<-- "includes/problems/lc-322.md"
+
+--8<-- "includes/problems/lc-64.md"
+
+--8<-- "includes/problems/lc-221.md"
+
 --8<-- "includes/problems/lc-312.md"
 
 --8<-- "includes/problems/lc-337.md"
@@ -193,6 +207,8 @@
 --8<-- "includes/problems/atcoder-abc468-f.md"
 
 --8<-- "includes/problems/lc-486.md"
+
+--8<-- "includes/problems/lc-877.md"
 
 ## 图论
 
@@ -231,6 +247,10 @@
 --8<-- "includes/problems/lc-102.md"
 
 --8<-- "includes/problems/lc-105.md"
+
+--8<-- "includes/problems/lc-94.md"
+
+--8<-- "includes/problems/lc-4003.md"
 
 --8<-- "includes/problems/codeforces-2247-f.md"
 
@@ -293,6 +313,10 @@
 --8<-- "includes/problems/lc-3999.md"
 
 --8<-- "includes/problems/lc-224.md"
+
+--8<-- "includes/problems/lc-394.md"
+
+--8<-- "includes/problems/lc-1768.md"
 
 ## 如何使用这份索引
 

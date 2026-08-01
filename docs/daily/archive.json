@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-02",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-a",
+          "title": "[atcoder] ABC469 A Train Car",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-a.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_a?lang=en",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "83fdc486b055cd76583199f65df040ff212569a8a17723bd47f9359425de2ff0"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-71-lc912",
+          "title": "[力扣 Top 71] LC 912 排序数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-71-lc912.md",
+          "official": "https://leetcode.cn/problems/sort-an-array/",
+          "topic": "../../basics/index.md",
+          "source_sha256": "69f810d57a0292e98843fb286c49abb96b48cd1aea9e3dad668d98bd45916143"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-72-lc34",
+          "title": "[力扣 Top 72] LC 34 在排序数组中查找元素的第一个和最后一个位置 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-72-lc34.md",
+          "official": "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "a3894e88d60e720f9122d0970d5b8b325b654acfc54560fdd854afb31ffcd089"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-73-lc322",
+          "title": "[力扣 Top 73] LC 322 零钱兑换 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-73-lc322.md",
+          "official": "https://leetcode.cn/problems/coin-change/",
+          "topic": "../../dp/index.md",
+          "source_sha256": "82c76d47ad9e24e62667526fe66b0d3e53e7f053d61d18839ff3bad5332646e9"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-74-lc64",
+          "title": "[力扣 Top 74] LC 64 最小路径和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-74-lc64.md",
+          "official": "https://leetcode.cn/problems/minimum-path-sum/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "9ea0625f173747c6cd8b77494fff16bfe29d8efbfaed4d3dcbe931d73d91d1b0"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-75-lc394",
+          "title": "[力扣 Top 75] LC 394 字符串解码 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-75-lc394.md",
+          "official": "https://leetcode.cn/problems/decode-string/",
+          "topic": "../../strings/expression-parsing.md",
+          "source_sha256": "b75a0d814761860f22327b5d4fee4c6aba29f6947d438aba5fd1126e7b66e5f1"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-76-lc19",
+          "title": "[力扣 Top 76] LC 19 删除链表的倒数第 N 个结点 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-76-lc19.md",
+          "official": "https://leetcode.cn/problems/remove-nth-node-from-end-of-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "d3fe0ecb4738ca3560c88938b0839983ad3127fd3db13da3eec5ad259437231d"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-77-lc221",
+          "title": "[力扣 Top 77] LC 221 最大正方形 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-77-lc221.md",
+          "official": "https://leetcode.cn/problems/maximal-square/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "a07a52539268d948fca7f0ded5cbc5911525c9d162fe0748fe705753d4af674d"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-78-lc1768",
+          "title": "[力扣 Top 78] LC 1768 交替合并字符串 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-78-lc1768.md",
+          "official": "https://leetcode.cn/problems/merge-strings-alternately/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "eda1f4d8ac90658b019109ffc5b2a1d34fced03598877a54f5cd81d505607989"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-79-lc208",
+          "title": "[力扣 Top 79] LC 208 实现 Trie (前缀树) 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-79-lc208.md",
+          "official": "https://leetcode.cn/problems/implement-trie-prefix-tree/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "b8dae734bde594062253f3a8b4f1d1098fcf8cc316657532b131a69cb9c2ae72"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-80-lc94",
+          "title": "[力扣 Top 80] LC 94 二叉树的中序遍历 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-80-lc94.md",
+          "official": "https://leetcode.cn/problems/binary-tree-inorder-traversal/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "a80e097692c30bf07ac6e6bdafb5c083b5e763e61a2ad4ae70a91f9934ee8e9e"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-512-q4-lc4003",
+          "title": "[力扣竞赛] 第 512 场周赛 Q4 LC 4003 交替方向的最小路径代价 III 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-512-q4-lc4003.md",
+          "official": "https://leetcode.cn/problems/minimum-cost-path-with-alternating-directions-iii/",
+          "topic": "../../graph/weighted-parity-states.md",
+          "source_sha256": "0d3b5c2f19c26e642f214127b48769a7946ba43f745bf6b157223e1307887be2"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-a",
+          "title": "[codeforces] CF Round 1113 Div.2 A You Delete, I Delete",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-a.md",
+          "official": "https://codeforces.com/contest/2248/problem/A",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "523f1b6c918edfc2a0be811dbbad9db72604ba90076e2eaefc49ce7a9536f843"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-02-lc877",
+          "title": "[力扣每日一题] 2026-08-02｜LC 877 石子游戏",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-02-lc877.md",
+          "official": "https://leetcode.cn/problems/stone-game/?envType=daily-question&envId=2026-08-02",
+          "topic": "../../dp/interval-dp.md",
+          "source_sha256": "7d0d9d2b687ee40b96a04c43e89e325a47bebdfdc266a2efd4e673c0bd68a349"
+        }
+      ]
+    },
+    {
       "date": "2026-08-01",
       "items": [
         {

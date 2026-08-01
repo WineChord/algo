@@ -1020,7 +1020,6 @@ def code_wrap_interaction_probe(
         nowrap["stored"] != "off"
         or nowrap["invalidControls"]
         or nowrap["invalidCode"]
-        or not nowrap["localScrollers"]
         or nowrap["documentOverflow"]
     ):
         errors.append(

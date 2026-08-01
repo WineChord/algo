@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-02":
+          - 当日总览: daily/2026-08-02/index.md
+          - "[atcoder] ABC469 A Train Car": daily/2026-08-02/atcoder-abc469-a.md
+          - "[力扣 Top 71] LC 912 排序数组 中等": daily/2026-08-02/leetcode-top-71-lc912.md
+          - "[力扣 Top 72] LC 34 在排序数组中查找元素的第一个和最后一个位置 中等": daily/2026-08-02/leetcode-top-72-lc34.md
+          - "[力扣 Top 73] LC 322 零钱兑换 中等": daily/2026-08-02/leetcode-top-73-lc322.md
+          - "[力扣 Top 74] LC 64 最小路径和 中等": daily/2026-08-02/leetcode-top-74-lc64.md
+          - "[力扣 Top 75] LC 394 字符串解码 中等": daily/2026-08-02/leetcode-top-75-lc394.md
+          - "[力扣 Top 76] LC 19 删除链表的倒数第 N 个结点 中等": daily/2026-08-02/leetcode-top-76-lc19.md
+          - "[力扣 Top 77] LC 221 最大正方形 中等": daily/2026-08-02/leetcode-top-77-lc221.md
+          - "[力扣 Top 78] LC 1768 交替合并字符串 简单": daily/2026-08-02/leetcode-top-78-lc1768.md
+          - "[力扣 Top 79] LC 208 实现 Trie (前缀树) 中等": daily/2026-08-02/leetcode-top-79-lc208.md
+          - "[力扣 Top 80] LC 94 二叉树的中序遍历 简单": daily/2026-08-02/leetcode-top-80-lc94.md
+          - "[力扣竞赛] 第 512 场周赛 Q4 LC 4003 交替方向的最小路径代价 III 困难": daily/2026-08-02/leetcode-weekly-512-q4-lc4003.md
+          - "[codeforces] CF Round 1113 Div.2 A You Delete, I Delete": daily/2026-08-02/codeforces-2248-a.md
+          - "[力扣每日一题] 2026-08-02｜LC 877 石子游戏": daily/2026-08-02/leetcode-daily-2026-08-02-lc877.md
       - "2026-08-01":
           - 当日总览: daily/2026-08-01/index.md
           - "[atcoder] ABC468 G Restricted Permutation": daily/2026-08-01/atcoder-abc468-g.md
@@ -251,6 +267,7 @@ nav:
       - 知识地图: dp/index.md
       - 线性递推: dp/linear-recurrences.md
       - 子序列与双序列动态规划: dp/sequence-dp.md
+      - 网格动态规划: dp/grid-dp.md
       - 区间动态规划: dp/interval-dp.md
   - 数学:
       - 知识地图: math/index.md

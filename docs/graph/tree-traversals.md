@@ -31,6 +31,14 @@ tags:
 
 --8<-- "includes/problems/lc-102.md"
 
+## 中序迭代：祖先栈等待左子树完成
+
+中序遍历的输出时机是“左子树已经完成、右子树尚未开始”。迭代时不断沿左指针压栈；走到空指针后，栈顶就是最深的、左子树已经处理完但自身尚未输出的结点。弹出并输出它，再转向右子树。
+
+每个结点恰好入栈、出栈一次，时间 $O(n)$，空间由树高 $h$ 决定。若要求严格常数辅助空间，可以用 Morris 遍历临时把前驱空右指针接回当前结点，但必须在第二次到达时恢复结构。
+
+--8<-- "includes/problems/lc-94.md"
+
 ## 从前序与中序恢复：根与区间必须同步
 
 无重复值时，前序的下一个未使用元素是当前子树根。它在中序序列中的位置把当前区间唯一切成左、右子树：
@@ -73,4 +81,5 @@ $$
 
 - [LeetCode 102：二叉树的层序遍历](../problems/index.md#problem-lc-102)
 - [LeetCode 105：从前序与中序遍历序列构造二叉树](../problems/index.md#problem-lc-105)
+- [LeetCode 94：二叉树的中序遍历](../problems/index.md#problem-lc-94)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

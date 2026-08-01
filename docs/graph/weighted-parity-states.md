@@ -68,6 +68,14 @@ $$
 
 若要最少操作，目标本身也要选择。可用 DP 状态 `(处理位置, 已选负数数, 当前前缀异或)`，每步选择目标符号，并把当前边是否需要操作计入代价，时间 $O(n^2)$。
 
+## 交替方向：把行动奇偶展开成两层图 { #alternating-direction-state-graph }
+
+若同一格在奇数行动与偶数行动时允许方向和边权不同，只把格子作为节点会丢失决定未来的信息。把状态写成 `(row, column, parity)`，等待与四向移动都翻转奇偶层；目标格入口代价与逆偏好惩罚共同构成非负边权。
+
+所有边非负且每个状态出度至多 5，适合用堆优化 Dijkstra。允许回头意味着简单的行列扫描不再是拓扑序；即使外观仍是网格，也不能套用只向右下的[网格动态规划](../dp/grid-dp.md)。
+
+--8<-- "includes/problems/lc-4003.md"
+
 ## 三类“状态压缩”的边界
 
 - **权值压缩**：边权只有 0/1，堆压成双端队列；
@@ -85,4 +93,5 @@ $$
 - [LeetCode 3286：穿越网格图的安全路径](../problems/index.md#problem-lc-3286)
 - [LeetCode 3996：偶数次骑士移动](../problems/index.md#problem-lc-3996)
 - [Codeforces 2247A](../problems/index.md#problem-codeforces-2247-a)
+- [LeetCode 4003：交替方向的最小路径代价 III](../problems/index.md#problem-lc-4003)
 - [Dijkstra, “A note on two problems in connexion with graphs”](https://doi.org/10.1007/BF01386390)

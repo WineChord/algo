@@ -74,6 +74,14 @@ $$
 
 --8<-- "includes/problems/lc-55.md"
 
+## 删除固定字符：第一处差异决定字典序
+
+从字符串中删除一个指定字符后，两个候选结果长度相同，大小由第一处不同字符决定。要最大化结果，应让更大的后继字符尽早左移；要最小化则让更小的后继字符尽早左移。若不存在对应逆序，删除该字符的最后一次出现不会改变更早前缀。
+
+当两名玩家分别只能删除不同字符，且一次删除不改变另一类字符的相对次序时，可以分别证明双方的支配策略；无需把局部规则未经证明地当成一般极大极小结论。
+
+--8<-- "includes/problems/codeforces-2248-a.md"
+
 ## 如何判断贪心是否可信
 
 ### 先写可行域
@@ -125,3 +133,4 @@ $$
 - [LeetCode 3014：输入单词需要的最少按键次数 I](../problems/index.md#problem-lc-3014)
 - [LeetCode 3016：输入单词需要的最少按键次数 II](../problems/index.md#problem-lc-3016)
 - [LeetCode 4000：给定数位和的最大整数](../problems/index.md#problem-lc-4000)
+- [Codeforces 2248A](../problems/index.md#problem-codeforces-2248-a)

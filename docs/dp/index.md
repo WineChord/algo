@@ -74,6 +74,8 @@ int main() {
 | 概率/期望 DP | `dp[state]` | 条件概率和自环移项 |
 | DAG DP | `dp[u]` | 按拓扑序传播 |
 
+网格只是常见的 DAG 表示。移动方向、局部邻域、哨兵与滚动数组的系统推导见[网格动态规划：方向、邻域与滚动状态](grid-dp.md)。
+
 固定阶递推从递归、记忆化到滚动状态与快速倍增的完整推导，见[线性递推：从递归树到滚动状态](linear-recurrences.md)。
 
 同时消耗两个序列前缀的状态设计、编辑距离与路径恢复，见[双序列动态规划](sequence-dp.md)。
@@ -116,11 +118,21 @@ int main() {
 
 ### 背包
 
+0/1 背包倒序更新，保证每件物品本轮只用一次；完全背包正序更新，允许同一选择继续转移到更大容量。最少硬币数把目标从“最大价值”改成“最少选择次数”，不可达状态必须使用安全的无穷大哨兵。
+
 --8<-- "includes/problems/lc-416.md"
 
 --8<-- "includes/problems/lc-494.md"
 
 --8<-- "includes/problems/luogu-p1048.md"
+
+--8<-- "includes/problems/lc-322.md"
+
+### 网格局部状态
+
+--8<-- "includes/problems/lc-64.md"
+
+--8<-- "includes/problems/lc-221.md"
 
 ### 区间、树形与状态压缩
 
@@ -153,4 +165,6 @@ int main() {
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)
 - [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
 - [LeetCode 416：分割等和子集](../problems/index.md#problem-lc-416)
+- [LeetCode 322：零钱兑换](../problems/index.md#problem-lc-322)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
+- [网格动态规划：方向、邻域与滚动状态](grid-dp.md)

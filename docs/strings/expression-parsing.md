@@ -46,6 +46,14 @@ $$
 
 --8<-- "includes/problems/lc-224.md"
 
+## 重复编码：栈保存父层构造上下文
+
+`k[encoded]` 的方括号同样表示上下文切换，但每层保存的不是算术累计值，而是父层已构造字符串与当前重复次数。遇到 `[` 时入栈并清空子串；遇到 `]` 时把当前子串重复后接回父层。
+
+多位重复次数属于同一个词法单元，不能逐位入栈。复杂度应按解码后长度计算：即使编码很短，输出本身也可能很长，任何完整构造算法都至少要写出每个结果字符一次。
+
+--8<-- "includes/problems/lc-394.md"
+
 ## 一元负号为何不需要特别建树
 
 在只含加减的语法中，起始位置或左括号后的 `-` 可以视为“当前层的下一项符号为负”。例如 `-(2+3)` 在进入括号时把外层符号 `-1` 入栈即可。
@@ -73,5 +81,6 @@ $$
 ## Reference
 
 - [LeetCode 224：基本计算器](../problems/index.md#problem-lc-224)
+- [LeetCode 394：字符串解码](../problems/index.md#problem-lc-394)
 - [Dijkstra, “Shunting Yard Algorithm” — EWD35](https://www.cs.utexas.edu/~EWD/transcriptions/EWD00xx/EWD35.html)
 - [Aho, Lam, Sethi, Ullman, Compilers: Principles, Techniques, and Tools — Pearson](https://www.pearson.com/en-us/subject-catalog/p/compilers-principles-techniques-and-tools/P200000003438)

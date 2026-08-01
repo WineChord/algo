@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-02
+
+### 每日训练档案
+
+- 新增 [2026-08-02 每日 14 题](daily/2026-08-02/index.md)，覆盖 [AtCoder ABC469 A](problems/index.md#problem-atcoder-abc469-a)、力扣 Top 71–80、[第 512 场周赛 Q4](problems/index.md#problem-lc-4003)、[Codeforces Round 1113 Div.2 A](problems/index.md#problem-codeforces-2248-a) 与 [LC 877](problems/index.md#problem-lc-877)。
+
+### 网格状态、解析上下文与不变量
+
+- 新增[网格动态规划](dp/grid-dp.md)，统一从移动方向、局部邻域、哨兵和滚动顺序推导最小路径和与最大正方形，并明确何时必须转向图最短路。
+- 扩充[奇偶状态图](graph/weighted-parity-states.md)、[区间动态规划](dp/interval-dp.md)、[表达式解析](strings/expression-parsing.md)、[链表接线](data-structures/linked-lists.md)与[二叉树遍历](graph/tree-traversals.md)，补入行动奇偶、强不变量、嵌套解码、固定间距和中序祖先栈。
+- 在[基础技巧](basics/index.md)、[序列扫描](basics/sequence-invariants.md)、[贪心交换](basics/greedy-exchange.md)、[动态规划](dp/index.md)与[字符串](strings/index.md)中自然补强排序取舍、双向编号、字典序删除、完全背包、Trie 与双序列交织。
+
+### 权威题目条目
+
+- 新增 [ABC469 A](problems/index.md#problem-atcoder-abc469-a)、[LC 912](problems/index.md#problem-lc-912)、[LC 322](problems/index.md#problem-lc-322)、[LC 64](problems/index.md#problem-lc-64)、[LC 394](problems/index.md#problem-lc-394)、[LC 19](problems/index.md#problem-lc-19)、[LC 221](problems/index.md#problem-lc-221)、[LC 1768](problems/index.md#problem-lc-1768)、[LC 94](problems/index.md#problem-lc-94)、[LC 4003](problems/index.md#problem-lc-4003)、[CF 2248A](problems/index.md#problem-codeforces-2248-a) 与 [LC 877](problems/index.md#problem-lc-877) 的唯一折叠条目。
+- 校正并复用 [LC 34](problems/index.md#problem-lc-34) 与 [LC 208](problems/index.md#problem-lc-208) 的权威实现，避免专题与训练档案维护分叉。
+
 ## 2026-08-01
 
 ### 每日训练档案

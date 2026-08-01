@@ -20,6 +20,12 @@
 
 这里的核心不是循环短，而是贡献具有一种重要性质：**局部性**。若相等平台也算一个峰，单点判定失效，应先把相等值压成连续块，再比较整块两侧。
 
+## 双向编号：同一位置的互补不变量
+
+长度为 $N$ 的线性序列采用一基编号时，同一位置从左、从右的编号之和恒为 $N+1$。这是把“反向扫描”压成常数公式的最小不变量；若接口改成零基编号，两端编号之和则为 $N-1$。
+
+--8<-- "includes/problems/atcoder-abc469-a.md"
+
 ## 补数查询：把内层搜索变成哈希命中
 
 两数之和的暴力枚举覆盖性很直接，但每个右端点都重复寻找补数。扫描到 `nums[i]` 时，未来信息尚不可用，过去信息却可以用哈希表压成“值到下标”的映射。
@@ -168,6 +174,7 @@ $$
 8. 是否存在 `INT_MIN - 1`、`INT_MAX + 1` 或乘加溢出？先提升整数类型。
 9. 值能否映射到唯一槽位，并证明每次交换都会永久定稿至少一个位置？
 10. 二维变换能否分解为若干个容易原地实现的对称置换？
+11. 同一位置从另一端编号时，当前接口是一基还是零基？
 
 ## 交叉练习
 
@@ -184,6 +191,7 @@ $$
 ## Reference
 
 - [AtCoder Beginner Contest 468 A](../problems/index.md#problem-atcoder-abc468-a)
+- [AtCoder Beginner Contest 469 A](../problems/index.md#problem-atcoder-abc469-a)
 - [LeetCode 1：两数之和](../problems/index.md#problem-lc-1)
 - [LeetCode 11：盛最多水的容器](../problems/index.md#problem-lc-11)
 - [LeetCode 41：缺失的第一个正数](../problems/index.md#problem-lc-41)

@@ -70,6 +70,14 @@ $$
 
 --8<-- "includes/problems/lc-160.md"
 
+## 固定间距：把倒数位置转成前驱同步
+
+删除倒数第 $n$ 个结点时，真正需要定位的是它的前驱。把哨兵视为下标 0，让快指针先走 $n+1$ 步，再让快慢指针同步前进；快指针到空时，慢指针恰好停在待删结点前驱。
+
+这里的间距必须按“边数”定义。少走一步会停在待删结点本身，多走一步则会越过前驱。哨兵又把删除原头结点统一成普通的 `slow->next = slow->next->next`。
+
+--8<-- "includes/problems/lc-19.md"
+
 ## 中点、后半反转与结构恢复
 
 判断回文链表时，快慢指针先把链分成前后两半。反转后半段后，两半可以同步向右比较；比较完成再把后半段反转回来，既保留 $O(1)$ 辅助空间，也恢复调用者可见的输入结构。
@@ -120,4 +128,5 @@ $$
 - [LeetCode 160：相交链表](../problems/index.md#problem-lc-160)
 - [LeetCode 25：K 个一组翻转链表](../problems/index.md#problem-lc-25)
 - [LeetCode 24：两两交换链表中的节点](../problems/index.md#problem-lc-24)
+- [LeetCode 19：删除链表的倒数第 N 个结点](../problems/index.md#problem-lc-19)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

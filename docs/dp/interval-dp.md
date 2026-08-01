@@ -38,6 +38,14 @@ $$
 
 --8<-- "includes/problems/lc-486.md"
 
+## 更强不变量何时可以消去 DP
+
+区间 DP 是通用模型，不代表每道两端博弈都必须计算全部区间。若原数组长度为偶数，先手每轮面对的两个端点原下标奇偶性不同，就可以在第一步承诺拿完某一奇偶下标组。总和为奇数时两组和不同，先手选择较大组即可严格获胜。
+
+这个结论同时依赖“偶数堆、总和为奇数、只能取两端”。取消任一条件后，应回到净优势 DP，而不能保留常量答案。好的优化不是把状态表写短，而是证明约束让所有合法实例共享同一结论。
+
+--8<-- "includes/problems/lc-877.md"
+
 ## 递推顺序来自依赖
 
 长度为 1 的区间是初值。更长区间依赖长度少 1 的两个状态，因此可以：
@@ -92,4 +100,5 @@ $$
 
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [LeetCode 312：戳气球](../problems/index.md#problem-lc-312)
+- [LeetCode 877：石子游戏](../problems/index.md#problem-lc-877)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)

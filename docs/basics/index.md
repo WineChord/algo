@@ -36,6 +36,8 @@
 
 如果只需要最大值、次大值或固定数量的候选，完整排序往往计算了过多信息。先用[极值候选与 Top-K](top-k-extrema.md) 判断摘要是否充分；两个非负因子的乘积见[非负两数乘积](pair-product-extrema.md)，允许负数后见[有符号乘积](signed-product-extrema.md)。
 
+若题目同时要求最坏 $O(n\log n)$ 与常数辅助数组空间，堆排序提供确定性保证；若需要稳定性，归并排序更自然；值域很小时还应比较计数排序。算法选择应同时回答时间上界、额外空间、稳定性和输入值域，而不是只写“使用排序”。
+
 代表题目：
 
 --8<-- "includes/problems/lc-628.md"
@@ -45,6 +47,8 @@
 --8<-- "includes/problems/lc-56.md"
 
 --8<-- "includes/problems/luogu-p1177.md"
+
+--8<-- "includes/problems/lc-912.md"
 
 ## 双指针与滑动窗口
 
