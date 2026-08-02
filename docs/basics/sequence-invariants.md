@@ -26,6 +26,10 @@
 
 --8<-- "includes/problems/atcoder-abc469-a.md"
 
+固定半径判定在序列边界常需要额外分支。若题意明确规定边界外状态，可以把它编码成哨兵，使首尾位置也使用同一个窗口谓词。关键是哨兵必须准确表示题目边界语义，而不是随意选择一个“不可能值”。
+
+--8<-- "includes/problems/atcoder-abc469-b.md"
+
 ## 补数查询：把内层搜索变成哈希命中
 
 两数之和的暴力枚举覆盖性很直接，但每个右端点都重复寻找补数。扫描到 `nums[i]` 时，未来信息尚不可用，过去信息却可以用哈希表压成“值到下标”的映射。
@@ -127,6 +131,12 @@ $$
 
 --8<-- "includes/problems/lc-26.md"
 
+### 输出位置映射：直接写入目标槽位
+
+若输出由若干份原序列按固定顺序拼接，每个输入位置映射到哪些目标槽位在扫描前就已确定。直接按映射写入即可；不需要让容器增长过程承担算法语义，也不需要重新扫描已经复制的前缀。
+
+--8<-- "includes/problems/lc-1929.md"
+
 ### 值到槽位：每次交换永久放对一个元素
 
 当答案只关心值域 $[1,n]$ 是否出现时，可以把数组本身当作哈希表：值 $x$ 的目标槽位是下标 $x-1$。只在目标槽位尚未放好时交换，重复值自然停止；每次交换至少永久定稿一个合法值，所以嵌套 `while` 的总交换次数仍为 $O(n)$。
@@ -175,6 +185,8 @@ $$
 9. 值能否映射到唯一槽位，并证明每次交换都会永久定稿至少一个位置？
 10. 二维变换能否分解为若干个容易原地实现的对称置换？
 11. 同一位置从另一端编号时，当前接口是一基还是零基？
+12. 边界外状态能否由语义准确的哨兵统一，而不会引入虚假的合法窗口？
+13. 输出位置是否可由输入下标直接计算，避免不必要的中间容器？
 
 ## 交叉练习
 
@@ -192,8 +204,10 @@ $$
 
 - [AtCoder Beginner Contest 468 A](../problems/index.md#problem-atcoder-abc468-a)
 - [AtCoder Beginner Contest 469 A](../problems/index.md#problem-atcoder-abc469-a)
+- [AtCoder Beginner Contest 469 B](../problems/index.md#problem-atcoder-abc469-b)
 - [LeetCode 1：两数之和](../problems/index.md#problem-lc-1)
 - [LeetCode 11：盛最多水的容器](../problems/index.md#problem-lc-11)
 - [LeetCode 41：缺失的第一个正数](../problems/index.md#problem-lc-41)
 - [LeetCode 48：旋转图像](../problems/index.md#problem-lc-48)
+- [LeetCode 1929：数组串联](../problems/index.md#problem-lc-1929)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

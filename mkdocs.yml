@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-03":
+          - 当日总览: daily/2026-08-03/index.md
+          - "[atcoder] ABC469 B Isolated Seats": daily/2026-08-03/atcoder-abc469-b.md
+          - "[力扣 Top 81] LC 31 下一个排列 中等": daily/2026-08-03/leetcode-top-81-lc31.md
+          - "[力扣 Top 82] LC 139 单词拆分 中等": daily/2026-08-03/leetcode-top-82-lc139.md
+          - "[力扣 Top 83] LC 13 罗马数字转整数 简单": daily/2026-08-03/leetcode-top-83-lc13.md
+          - "[力扣 Top 84] LC 135 分发糖果 困难": daily/2026-08-03/leetcode-top-84-lc135.md
+          - "[力扣 Top 85] LC 152 乘积最大子数组 中等": daily/2026-08-03/leetcode-top-85-lc152.md
+          - "[力扣 Top 86] LC 136 只出现一次的数字 简单": daily/2026-08-03/leetcode-top-86-lc136.md
+          - "[力扣 Top 87] LC 148 排序链表 中等": daily/2026-08-03/leetcode-top-87-lc148.md
+          - "[力扣 Top 88] LC 10 正则表达式匹配 困难": daily/2026-08-03/leetcode-top-88-lc10.md
+          - "[力扣 Top 89] LC 98 验证二叉搜索树 中等": daily/2026-08-03/leetcode-top-89-lc98.md
+          - "[力扣 Top 90] LC 1929 数组串联 简单": daily/2026-08-03/leetcode-top-90-lc1929.md
+          - "[力扣竞赛] 第 513 场周赛 Q1 LC 4010 数对的最大强度 简单": daily/2026-08-03/leetcode-weekly-513-q1-lc4010.md
+          - "[codeforces] CF Round 1113 Div.2 B Merge to Match": daily/2026-08-03/codeforces-2248-b.md
+          - "[力扣每日一题] 2026-08-03｜LC 1406 石子游戏 III": daily/2026-08-03/leetcode-daily-2026-08-03-lc1406.md
       - "2026-08-02":
           - 当日总览: daily/2026-08-02/index.md
           - "[atcoder] ABC469 A Train Car": daily/2026-08-02/atcoder-abc469-a.md
@@ -267,6 +283,8 @@ nav:
       - 知识地图: dp/index.md
       - 线性递推: dp/linear-recurrences.md
       - 子序列与双序列动态规划: dp/sequence-dp.md
+      - 字符串动态规划: dp/string-dp.md
+      - 零和博弈动态规划: dp/game-dp.md
       - 网格动态规划: dp/grid-dp.md
       - 区间动态规划: dp/interval-dp.md
   - 数学:

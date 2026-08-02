@@ -38,6 +38,14 @@ $$
 
 --8<-- "includes/problems/atcoder-abc468-c.md"
 
+## 相邻排名：只改最右侧仍可进位的位置
+
+若不需要计算任意排名，只要求当前排列的字典序后继，可以直接利用后缀结构。最右侧非递增后缀已经是该前缀下能取得的最大尾部；要让整体刚好变大，必须在它左侧最近的上升转折点进位。
+
+进位时从后缀选择严格大于转折值的最小元素。原后缀非递增，因此从右向左遇到的第一个更大值就是该元素；交换后把后缀反转为非递减顺序，得到新前缀下的最小尾部。不存在转折点说明当前排列已经最大，整体反转即回到最小排列。
+
+--8<-- "includes/problems/lc-31.md"
+
 ## 逆变换：从排名恢复排列
 
 给定零基排名 $k$，在位置 $i$ 计算
@@ -90,5 +98,6 @@ $$
 ## Reference
 
 - [AtCoder Beginner Contest 468 C](../problems/index.md#problem-atcoder-abc468-c)
+- [LeetCode 31：下一个排列](../problems/index.md#problem-lc-31)
 - [LeetCode 3518：最小回文排列 II](../problems/index.md#problem-lc-3518)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

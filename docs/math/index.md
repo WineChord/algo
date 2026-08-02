@@ -18,6 +18,10 @@ $$
 \operatorname{lcm}(a,b)=\frac{a}{\gcd(a,b)}\cdot b
 $$
 
+当目标本身是除以最大公约数后的乘积，也应坚持“先除后乘”。这既忠实对应公式，也减小中间乘积；枚举下标对时还要用足够宽的整数承接结果。
+
+--8<-- "includes/problems/lc-4010.md"
+
 ### 扩展欧几里得
 
 扩展欧几里得求整数 $x,y$ 使
@@ -51,6 +55,14 @@ $$
 整数平方判断要在修正浮点平方根后，用足够宽的整数做乘法确认。
 
 --8<-- "includes/problems/lc-279.md"
+
+## 异或代数：成对抵消
+
+异或满足交换律、结合律，且 $x\oplus x=0$、$x\oplus0=x$。因此当所有元素恰好出现两次、只有一个元素出现一次时，扫描顺序和配对位置都无关，全部异或后只剩唯一值。
+
+--8<-- "includes/problems/lc-136.md"
+
+这个结论依赖出现次数模 2。若其余元素出现三次，应按位统计模 3；若有两个只出现一次的元素，则先用总异或的某个非零位把数组分组。
 
 ## 模运算
 
@@ -180,6 +192,10 @@ $$
 
 --8<-- "includes/problems/luogu-p1082.md"
 
+--8<-- "includes/problems/lc-4010.md"
+
+--8<-- "includes/problems/lc-136.md"
+
 ## 易错检查
 
 - 负数取模后是否规范到 $[0,m)$；
@@ -193,4 +209,6 @@ $$
 ## Reference
 
 - [LeetCode 279：完全平方数](../problems/index.md#problem-lc-279)
+- [LeetCode 4010：数对的最大强度](../problems/index.md#problem-lc-4010)
+- [LeetCode 136：只出现一次的数字](../problems/index.md#problem-lc-136)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

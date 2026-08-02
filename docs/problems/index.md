@@ -12,6 +12,8 @@
 
 --8<-- "includes/problems/atcoder-abc469-a.md"
 
+--8<-- "includes/problems/atcoder-abc469-b.md"
+
 --8<-- "includes/problems/lc-1.md"
 
 --8<-- "includes/problems/lc-15.md"
@@ -96,6 +98,10 @@
 
 --8<-- "includes/problems/codeforces-2248-a.md"
 
+--8<-- "includes/problems/lc-135.md"
+
+--8<-- "includes/problems/codeforces-2248-b.md"
+
 --8<-- "includes/problems/lc-35.md"
 
 --8<-- "includes/problems/lc-240.md"
@@ -109,6 +115,8 @@
 --8<-- "includes/problems/lc-26.md"
 
 --8<-- "includes/problems/lc-48.md"
+
+--8<-- "includes/problems/lc-1929.md"
 
 ## 搜索与枚举
 
@@ -162,6 +170,8 @@
 
 --8<-- "includes/problems/lc-138.md"
 
+--8<-- "includes/problems/lc-148.md"
+
 --8<-- "includes/problems/lc-32.md"
 
 --8<-- "includes/problems/codeforces-2247-d2.md"
@@ -210,6 +220,14 @@
 
 --8<-- "includes/problems/lc-877.md"
 
+--8<-- "includes/problems/lc-152.md"
+
+--8<-- "includes/problems/lc-139.md"
+
+--8<-- "includes/problems/lc-10.md"
+
+--8<-- "includes/problems/lc-1406.md"
+
 ## 图论
 
 --8<-- "includes/problems/lc-3286.md"
@@ -250,6 +268,8 @@
 
 --8<-- "includes/problems/lc-94.md"
 
+--8<-- "includes/problems/lc-98.md"
+
 --8<-- "includes/problems/lc-4003.md"
 
 --8<-- "includes/problems/codeforces-2247-f.md"
@@ -281,6 +301,12 @@
 --8<-- "includes/problems/atcoder-abc468-g.md"
 
 --8<-- "includes/problems/lc-4002.md"
+
+--8<-- "includes/problems/lc-31.md"
+
+--8<-- "includes/problems/lc-4010.md"
+
+--8<-- "includes/problems/lc-136.md"
 
 ## 字符串
 
@@ -317,6 +343,8 @@
 --8<-- "includes/problems/lc-394.md"
 
 --8<-- "includes/problems/lc-1768.md"
+
+--8<-- "includes/problems/lc-13.md"
 
 ## 如何使用这份索引
 

@@ -38,6 +38,14 @@ tags:
 
 --8<-- "includes/problems/lc-23.md"
 
+## 自底向上归并：把链表排序压到常数辅助空间
+
+链表无法随机访问中点，但可以按长度 $1,2,4,\ldots$ 依次归并相邻有序段。每轮扫描时先切出两段，再复用有序链表归并把结果接到稳定尾指针之后；段长翻倍后继续，直到覆盖整条链。
+
+自底向上写法避免递归栈。循环不变量是：开始处理段长 `size` 前，链表已经由若干个长度至多为 `size` 的有序段组成；完成一轮后，相邻两段合并为长度至多 `2 * size` 的有序段。
+
+--8<-- "includes/problems/lc-148.md"
+
 ## 分组反转：先证明一组完整
 
 每 $k$ 个节点反转时，先从 `groupPrev` 向后找到本组尾 `kth`：
@@ -129,4 +137,5 @@ $$
 - [LeetCode 25：K 个一组翻转链表](../problems/index.md#problem-lc-25)
 - [LeetCode 24：两两交换链表中的节点](../problems/index.md#problem-lc-24)
 - [LeetCode 19：删除链表的倒数第 N 个结点](../problems/index.md#problem-lc-19)
+- [LeetCode 148：排序链表](../problems/index.md#problem-lc-148)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

@@ -39,6 +39,10 @@ tags:
 
 --8<-- "includes/problems/lc-94.md"
 
+二叉搜索树要求中序序列严格递增。迭代中序只需保存上一个访问值；每弹出一个结点就与它比较，相等也必须判错。用“值域上下界”递归同样正确，但边界应使用 64 位或可空哨兵，避免在最小、最大整数附近溢出。
+
+--8<-- "includes/problems/lc-98.md"
+
 ## 从前序与中序恢复：根与区间必须同步
 
 无重复值时，前序的下一个未使用元素是当前子树根。它在中序序列中的位置把当前区间唯一切成左、右子树：
@@ -82,4 +86,5 @@ $$
 - [LeetCode 102：二叉树的层序遍历](../problems/index.md#problem-lc-102)
 - [LeetCode 105：从前序与中序遍历序列构造二叉树](../problems/index.md#problem-lc-105)
 - [LeetCode 94：二叉树的中序遍历](../problems/index.md#problem-lc-94)
+- [LeetCode 98：验证二叉搜索树](../problems/index.md#problem-lc-98)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

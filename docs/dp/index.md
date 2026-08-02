@@ -80,6 +80,10 @@ int main() {
 
 同时消耗两个序列前缀的状态设计、编辑距离与路径恢复，见[双序列动态规划](sequence-dp.md)。
 
+字典切分的一维前缀可达、文本与模式共同推进的二维状态，见[字符串动态规划：前缀可达与模式匹配](string-dp.md)。
+
+双方最优行动下用“当前行动者最大分差”统一极大极小转移，见[零和博弈动态规划](game-dp.md)。
+
 每次从区间两端选择、枚举最后切分点以及空间压缩的依赖顺序，见[区间动态规划：从两端选择到合并顺序](interval-dp.md)。
 
 ## 记忆化搜索还是递推
@@ -116,6 +120,10 @@ int main() {
 
 --8<-- "includes/problems/lc-300.md"
 
+乘积遇到负数会让最大值与最小值交换角色，因此以当前位置结尾的状态必须同时保留两个极值：
+
+--8<-- "includes/problems/lc-152.md"
+
 ### 背包
 
 0/1 背包倒序更新，保证每件物品本轮只用一次；完全背包正序更新，允许同一选择继续转移到更大容量。最少硬币数把目标从“最大价值”改成“最少选择次数”，不可达状态必须使用安全的无穷大哨兵。
@@ -150,6 +158,14 @@ int main() {
 
 --8<-- "includes/problems/lc-72.md"
 
+### 字符串与博弈
+
+--8<-- "includes/problems/lc-139.md"
+
+--8<-- "includes/problems/lc-10.md"
+
+--8<-- "includes/problems/lc-1406.md"
+
 ## 正确性检查
 
 - 状态是否包含决定未来所需的全部信息；
@@ -167,4 +183,7 @@ int main() {
 - [LeetCode 416：分割等和子集](../problems/index.md#problem-lc-416)
 - [LeetCode 322：零钱兑换](../problems/index.md#problem-lc-322)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
+- [LeetCode 152：乘积最大子数组](../problems/index.md#problem-lc-152)
+- [字符串动态规划：前缀可达与模式匹配](string-dp.md)
+- [零和博弈动态规划](game-dp.md)
 - [网格动态规划：方向、邻域与滚动状态](grid-dp.md)

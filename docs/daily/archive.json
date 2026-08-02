@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-03",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-b",
+          "title": "[atcoder] ABC469 B Isolated Seats",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-b.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_b?lang=en",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "fbd484fa5d493d50404b6b04a65df7f4024e59d5ff240e48addad93327006e68"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-81-lc31",
+          "title": "[力扣 Top 81] LC 31 下一个排列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-81-lc31.md",
+          "official": "https://leetcode.cn/problems/next-permutation/",
+          "topic": "../../math/permutation-ranking.md",
+          "source_sha256": "0e2cac9004624e365946cf79b1296748a7c17ea906f537dead64072d1308e3f3"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-82-lc139",
+          "title": "[力扣 Top 82] LC 139 单词拆分 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-82-lc139.md",
+          "official": "https://leetcode.cn/problems/word-break/",
+          "topic": "../../dp/string-dp.md",
+          "source_sha256": "ad33d9988240e28b5a933a9e61da560bc761fe816d52b7e74e56c4968db778bf"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-83-lc13",
+          "title": "[力扣 Top 83] LC 13 罗马数字转整数 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-83-lc13.md",
+          "official": "https://leetcode.cn/problems/roman-to-integer/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "b79d23143a2c3464f4ac375ac494e26e59b038b2e391700028078b034dbcd4d1"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-84-lc135",
+          "title": "[力扣 Top 84] LC 135 分发糖果 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-84-lc135.md",
+          "official": "https://leetcode.cn/problems/candy/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "2341757358dc94ee862ec9a9a2f791df90ce2d8674a7e3a7b5bdfcde3a5bce0f"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-85-lc152",
+          "title": "[力扣 Top 85] LC 152 乘积最大子数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-85-lc152.md",
+          "official": "https://leetcode.cn/problems/maximum-product-subarray/",
+          "topic": "../../dp/index.md",
+          "source_sha256": "3fa2da32a5d00a585512c52ef54f8cd12ab28220783af2f1b32d0ddee0b0ce3b"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-86-lc136",
+          "title": "[力扣 Top 86] LC 136 只出现一次的数字 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-86-lc136.md",
+          "official": "https://leetcode.cn/problems/single-number/",
+          "topic": "../../math/index.md",
+          "source_sha256": "98fc300cf44589b37900be88892bb21dd8e7cf39281e9911083cc8145cceca9a"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-87-lc148",
+          "title": "[力扣 Top 87] LC 148 排序链表 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-87-lc148.md",
+          "official": "https://leetcode.cn/problems/sort-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "ef2f8c29563e1f99f21c77654ae16bb9dd5e4d9b73280bd3607ce804f61fcfce"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-88-lc10",
+          "title": "[力扣 Top 88] LC 10 正则表达式匹配 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-88-lc10.md",
+          "official": "https://leetcode.cn/problems/regular-expression-matching/",
+          "topic": "../../dp/string-dp.md",
+          "source_sha256": "312d2f80ccda8d55d73e58e68c148f3b00bacc0e2cadaf1d9dfaa043a78a45d3"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-89-lc98",
+          "title": "[力扣 Top 89] LC 98 验证二叉搜索树 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-89-lc98.md",
+          "official": "https://leetcode.cn/problems/validate-binary-search-tree/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "d01b2eb300a7b0e75b1b6869d56d0a522eedcb31429bf162dd7af86682b2f561"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-90-lc1929",
+          "title": "[力扣 Top 90] LC 1929 数组串联 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-90-lc1929.md",
+          "official": "https://leetcode.cn/problems/concatenation-of-array/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "4eedfc7d44469357d87ef4172f02160d45b6bfcaef96524021bca1e8a6c1098c"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-513-q1-lc4010",
+          "title": "[力扣竞赛] 第 513 场周赛 Q1 LC 4010 数对的最大强度 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-513-q1-lc4010.md",
+          "official": "https://leetcode.cn/problems/maximize-pair-strength-using-gcd/",
+          "topic": "../../math/index.md",
+          "source_sha256": "df84edd09a1811b8c209b649f66962c25ac31c1e01b04c3f1d9e3b0bbd2609bc"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-b",
+          "title": "[codeforces] CF Round 1113 Div.2 B Merge to Match",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-b.md",
+          "official": "https://codeforces.com/contest/2248/problem/B",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "e0f4fedcddec1f37c720982bd3ac70f90b6b450001f52f763b1717cdc9b5ca9f"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-03-lc1406",
+          "title": "[力扣每日一题] 2026-08-03｜LC 1406 石子游戏 III",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-03-lc1406.md",
+          "official": "https://leetcode.cn/problems/stone-game-iii/?envType=daily-question&envId=2026-08-03",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "f37c57fd274bd7473ff5b789444216fd53cb5040e2209de51163eec20e44ca82"
+        }
+      ]
+    },
+    {
       "date": "2026-08-02",
       "items": [
         {

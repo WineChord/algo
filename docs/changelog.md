@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-03
+
+### 每日训练档案
+
+- 新增 [2026-08-03 每日 14 题](daily/2026-08-03/index.md)，依次覆盖 [AtCoder ABC469 B](problems/index.md#problem-atcoder-abc469-b)、力扣 Top 81–90、[第 513 场周赛 Q1](problems/index.md#problem-lc-4010)、[Codeforces Round 1113 Div.2 B](problems/index.md#problem-codeforces-2248-b) 与 [LC 1406](problems/index.md#problem-lc-1406)。
+- AtCoder 与 Codeforces 题目均在完整英文题面层之后明确切换到中文解释与题解；全部页面复用同一规范源、完整 C++ 与稳定专题入口。
+
+### 字符串状态、零和博弈与局部不变量
+
+- 新增[字符串动态规划](dp/string-dp.md)，统一字典切分的一维可达前缀、模式匹配的二维前缀状态及路径恢复边界。
+- 新增[零和博弈动态规划](dp/game-dp.md)，用当前行动者最大分差统一有限取法与极大极小递推，并明确滚动状态和区间博弈的边界。
+- 扩充[序列扫描](basics/sequence-invariants.md)、[贪心交换](basics/greedy-exchange.md)、[排列排名](math/permutation-ranking.md)、[链表接线](data-structures/linked-lists.md)、[树遍历](graph/tree-traversals.md)、[数学](math/index.md)与[字符串](strings/index.md)，补入哨兵窗口、单侧下界、见证规范化、字典序后继、迭代归并、严格中序、异或抵消与局部记号解释。
+
+### 权威题目条目
+
+- 新增 [ABC469 B](problems/index.md#problem-atcoder-abc469-b)、[CF 2248B](problems/index.md#problem-codeforces-2248-b)、[LC 4010](problems/index.md#problem-lc-4010)、[LC 1406](problems/index.md#problem-lc-1406) 与力扣 Top 81–90 的唯一折叠条目。
+
 ## 2026-08-02
 
 ### 每日训练档案
