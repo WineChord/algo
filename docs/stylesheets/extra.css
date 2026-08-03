@@ -16,6 +16,15 @@
   overflow-y: hidden;
 }
 
+.md-typeset mjx-assistive-mml,
+.md-typeset mjx-assistive-mml[display="block"] {
+  box-sizing: border-box;
+  width: 1px !important;
+  max-width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
 .md-typeset .md-typeset__table {
   box-sizing: border-box;
   display: block;
