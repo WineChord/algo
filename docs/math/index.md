@@ -117,6 +117,14 @@ ABC468 E 的子数组数量达到 $\Theta(n^2)$，但固定位置 $i$ 后，它�
 
 若后续允许区间加，线性形式还能直接用系数前缀和更新答案；若分母、合法区间集合或目标函数依赖元素值，原有线性分解可能失效。
 
+## 十进制位操作与提前判界
+
+反转一个 32 位有符号整数时，逐次弹出十进制末位并追加到答案即可；真正的难点是不能先执行可能溢出的乘加。把边界除以 10，先比较当前答案与边界商，等于边界商时再比较下一位，就能在仍处于合法整数范围内完成判定。
+
+负数在 C++ 中的除法向零截断、余数与被除数同号，因此正负两侧可以共享同一循环，但临界末位分别对应 7 与 -8。只判断 `answer > INT_MAX / 10` 而忽略相等时的末位，会漏掉真正越界的边界案例。
+
+--8<-- "includes/problems/lc-7.md"
+
 ## 组合计数
 
 基本工具：
@@ -211,4 +219,5 @@ $$
 - [LeetCode 279：完全平方数](../problems/index.md#problem-lc-279)
 - [LeetCode 4010：数对的最大强度](../problems/index.md#problem-lc-4010)
 - [LeetCode 136：只出现一次的数字](../problems/index.md#problem-lc-136)
+- [LeetCode 7：整数反转](../problems/index.md#problem-lc-7)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

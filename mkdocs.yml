@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-04":
+          - 当日总览: daily/2026-08-04/index.md
+          - "[atcoder] ABC469 C Cantrip": daily/2026-08-04/atcoder-abc469-c.md
+          - "[力扣 Top 91] LC 415 字符串相加 简单": daily/2026-08-04/leetcode-top-91-lc415.md
+          - "[力扣 Top 92] LC 226 翻转二叉树 简单": daily/2026-08-04/leetcode-top-92-lc226.md
+          - "[力扣 Top 93] LC 104 二叉树的最大深度 简单": daily/2026-08-04/leetcode-top-93-lc104.md
+          - "[力扣 Top 94] LC 43 字符串相乘 中等": daily/2026-08-04/leetcode-top-94-lc43.md
+          - "[力扣 Top 95] LC 977 有序数组的平方 简单": daily/2026-08-04/leetcode-top-95-lc977.md
+          - "[力扣 Top 96] LC 7 整数反转 中等": daily/2026-08-04/leetcode-top-96-lc7.md
+          - "[力扣 Top 97] LC 16 最接近的三数之和 中等": daily/2026-08-04/leetcode-top-97-lc16.md
+          - "[力扣 Top 98] LC 543 二叉树的直径 简单": daily/2026-08-04/leetcode-top-98-lc543.md
+          - "[力扣 Top 99] LC 707 设计链表 中等": daily/2026-08-04/leetcode-top-99-lc707.md
+          - "[力扣 Top 100] LC 67 二进制求和 简单": daily/2026-08-04/leetcode-top-100-lc67.md
+          - "[力扣竞赛] 第 513 场周赛 Q2 LC 4011 按奇偶比统计子数组 I 中等": daily/2026-08-04/leetcode-weekly-513-q2-lc4011.md
+          - "[codeforces] CF Round 1113 Div.2 C Maximize the Score": daily/2026-08-04/codeforces-2248-c.md
+          - "[力扣每日一题] 2026-08-04｜LC 3731 找出缺失的元素": daily/2026-08-04/leetcode-daily-2026-08-04-lc3731.md
       - "2026-08-03":
           - 当日总览: daily/2026-08-03/index.md
           - "[atcoder] ABC469 B Isolated Seats": daily/2026-08-03/atcoder-abc469-b.md

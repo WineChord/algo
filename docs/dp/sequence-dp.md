@@ -46,6 +46,14 @@ $$
 
 --8<-- "includes/problems/atcoder-abc468-f.md"
 
+## 成对出现区间：把动态删除规范成原序列分块
+
+有些过程会反复删除当前序列中的区间，使后续位置动态变化。若每个值恰出现两次，并且选值时删除两次出现之间的整段，可以用交换论证把任意最优过程规范成原数组上的若干连续块：块内最先选择的值在原序列中恰好包住整块，其余元素随块一起删除。
+
+规范化后，`dp[i]` 只需表示原前缀 $[1,i]$ 的最大得分。单独删除位置 $i$ 给出 `dp[i-1]+1`；若当前位置是某值第二次出现，还可以把它与首次位置之间作为一个完整块，用块长平方加上块前前缀。动态数组上的操作由此降为一次原序列扫描。
+
+--8<-- "includes/problems/codeforces-2248-c.md"
+
 ## 两个序列：二维前缀状态
 
 当一次决策同时消耗两个序列的前缀时，最自然的状态通常是二维网格：
@@ -125,5 +133,6 @@ $$
 - [Wagner and Fischer, “The string-to-string correction problem”](https://doi.org/10.1145/321796.321811)
 - [LeetCode 300：最长递增子序列](../problems/index.md#problem-lc-300)
 - [AtCoder ABC468 F：Chmax](../problems/index.md#problem-atcoder-abc468-f)
+- [Codeforces 2248C：Maximize the Score](../problems/index.md#problem-codeforces-2248-c)
 - [LeetCode 1143：最长公共子序列](../problems/index.md#problem-lc-1143)
 - [LeetCode 72：编辑距离](../problems/index.md#problem-lc-72)

@@ -10,6 +10,14 @@ tags:
 
 链表题的难点通常不是遍历，而是修改一条边时仍保留尚未处理部分的入口。比背模板更可靠的方法，是给每个指针写出它在循环开始时代表的结构。
 
+## 双向哨兵：把空表与边界操作统一成内部接线
+
+在双向链表两端各放一个不承载用户值的哨兵后，真实节点始终位于 `head` 与 `tail` 之间。插入只需连接前驱、新节点、后继三者，删除只需让前驱与后继越过目标；头插、尾插、空表插入和删到空表不再需要独立分支。
+
+维护长度后，按下标查找可以从更近的一端出发。链表仍不支持真正的随机访问：这一优化只把最坏步数从接近 $n$ 缩到两端距离的较小值，频繁大规模下标操作应换用数组、块状结构或隐式平衡树。
+
+--8<-- "includes/problems/lc-707.md"
+
 ## 单链表的最小状态
 
 反转链表时维护：
@@ -138,4 +146,5 @@ $$
 - [LeetCode 24：两两交换链表中的节点](../problems/index.md#problem-lc-24)
 - [LeetCode 19：删除链表的倒数第 N 个结点](../problems/index.md#problem-lc-19)
 - [LeetCode 148：排序链表](../problems/index.md#problem-lc-148)
+- [LeetCode 707：设计链表](../problems/index.md#problem-lc-707)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

@@ -76,6 +76,14 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 
 --8<-- "includes/problems/lc-3998.md"
 
+## 前缀序关系：从比例约束到动态秩统计
+
+若子数组中偶数个数为 $x$、奇数个数为 $y$，比例条件 $x/y\le a/b$ 可以先交叉相乘，再给偶数赋权 $+b$、奇数赋权 $-a$。区间权重不大于 0 等价于右前缀值不大于左前缀值，于是问题从“枚举区间内部”变成“对每个右端点统计此前不小于当前值的前缀数”。
+
+静态离散化后，Fenwick 树维护前缀值频次与秩查询，可以在 $O(n\log n)$ 时间统计全部序对。本题还要求 $y>0$；全偶数区间的权重严格为正，本来就不会满足区间权重不大于 0，因此无需额外扣除。若另一种变换会让 $y=0$ 也落入不等式，才需要单独排除退化区间。
+
+--8<-- "includes/problems/lc-4011.md"
+
 ## 前缀和与差分如何选择
 
 | 需求 | 保存的信息 | 典型复杂度 |
@@ -94,10 +102,13 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 3. 区间修改是否可以延迟到最后统一恢复？
 4. 查询与修改是否在线交错？
 5. 前缀累加、答案计数或边界 $r+1$ 是否可能溢出或越界？
+6. 比例或线性约束能否交叉相乘后写成两个前缀值的序关系？
+7. 需要的是哈希等值计数，还是 Fenwick 树维护的动态秩计数？
 
 ## Reference
 
 - [LeetCode 560：和为 K 的子数组](../problems/index.md#problem-lc-560)
 - [LeetCode 1109：航班预订统计](../problems/index.md#problem-lc-1109)
 - [LeetCode 304：二维区域和检索](../problems/index.md#problem-lc-304)
+- [LeetCode 4011：按奇偶比统计子数组 I](../problems/index.md#problem-lc-4011)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

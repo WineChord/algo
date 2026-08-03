@@ -172,6 +172,34 @@ $$
 
 --8<-- "includes/problems/lc-48.md"
 
+## 单调映射、阈值事件与输出顺序
+
+扫描不一定只在原数组上移动一个方向。只要能证明某个候选集合的极值、阈值事件或输出顺序具有单调性，同样可以让每一步永久定稿。
+
+### 绝对值两端最大：平方数组倒序定稿
+
+非递减数组可能横跨负数与非负数，直接平方会破坏原顺序，但当前未处理元素的最大绝对值一定在两端。比较两端绝对值，把较大者的平方写入答案末尾，再收缩对应边界；每一步都永久确定当前最大剩余平方。
+
+--8<-- "includes/problems/lc-977.md"
+
+### 固定首项：目标关系决定双指针方向
+
+三数之和接近目标时，排序后固定首项，另外两个指针之间的和随左指针右移而增大、随右指针左移而减小。当前和偏小时，左移右指针只会让它更小；当前和偏大时，右移左指针只会让它更大。因此比较结果唯一决定不会漏掉更优答案的移动方向。
+
+--8<-- "includes/problems/lc-16.md"
+
+### 有限值域：存在表与输出顺序对齐
+
+若答案要求按值递增列出某个短整数区间内未出现的值，排序输入不是必要步骤。先用存在表记录输入，再按值域从小到大扫描，既能直接按要求输出，也把复杂度写成输入规模与值域宽度之和。值域很大且输出稀疏时，这一模型应改为排序后输出缺失区间。
+
+--8<-- "includes/problems/lc-3731.md"
+
+### 前缀资源：第 $k$ 个需求事件决定阈值
+
+当资源只能随扫描增加，且每次真正消耗资源的事件都要求此前至少再取得一个位置时，第 $k$ 个需求事件的位置就是完成前 $k$ 次行动必须达到的最小前缀。没有第 $k$ 个需求事件时，完整长度成为统一答案。这里保存事件位置，比对每个询问重新模拟更直接。
+
+--8<-- "includes/problems/atcoder-abc469-c.md"
+
 ## 选择检查表
 
 1. 贡献是否只依赖固定邻域？直接枚举窗口。
@@ -187,6 +215,9 @@ $$
 11. 同一位置从另一端编号时，当前接口是一基还是零基？
 12. 边界外状态能否由语义准确的哨兵统一，而不会引入虚假的合法窗口？
 13. 输出位置是否可由输入下标直接计算，避免不必要的中间容器？
+14. 映射后序列虽不再整体有序，极值是否仍必在当前两端？
+15. 输出顺序能否直接作为值域扫描顺序，省去排序？
+16. 每个询问是否只由第 $k$ 个阈值事件的位置决定？
 
 ## 交叉练习
 
@@ -205,9 +236,13 @@ $$
 - [AtCoder Beginner Contest 468 A](../problems/index.md#problem-atcoder-abc468-a)
 - [AtCoder Beginner Contest 469 A](../problems/index.md#problem-atcoder-abc469-a)
 - [AtCoder Beginner Contest 469 B](../problems/index.md#problem-atcoder-abc469-b)
+- [AtCoder Beginner Contest 469 C](../problems/index.md#problem-atcoder-abc469-c)
 - [LeetCode 1：两数之和](../problems/index.md#problem-lc-1)
 - [LeetCode 11：盛最多水的容器](../problems/index.md#problem-lc-11)
 - [LeetCode 41：缺失的第一个正数](../problems/index.md#problem-lc-41)
 - [LeetCode 48：旋转图像](../problems/index.md#problem-lc-48)
 - [LeetCode 1929：数组串联](../problems/index.md#problem-lc-1929)
+- [LeetCode 977：有序数组的平方](../problems/index.md#problem-lc-977)
+- [LeetCode 16：最接近的三数之和](../problems/index.md#problem-lc-16)
+- [LeetCode 3731：找出缺失的元素](../problems/index.md#problem-lc-3731)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

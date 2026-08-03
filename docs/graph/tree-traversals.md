@@ -31,6 +31,16 @@ tags:
 
 --8<-- "includes/problems/lc-102.md"
 
+## 层序边界上的结构变换与深度
+
+若一次变换只依赖当前节点及其直接孩子，BFS 可以在节点出队时完成局部修改，再把修改后的孩子加入队列。翻转二叉树就是把每个节点的左右指针交换；各局部交换作用于不同父节点的两条出边，覆盖全部节点后即得到全树镜像。
+
+--8<-- "includes/problems/lc-226.md"
+
+最大深度也可以直接由层序边界计数：每次固定队列中当前层的节点数，完整处理后深度加一。DFS 返回子树深度同样是 $O(n)$；两者分别把额外空间绑定到最大层宽 $w$ 与树高 $h$，应按树形和栈限制选择。
+
+--8<-- "includes/problems/lc-104.md"
+
 ## 中序迭代：祖先栈等待左子树完成
 
 中序遍历的输出时机是“左子树已经完成、右子树尚未开始”。迭代时不断沿左指针压栈；走到空指针后，栈顶就是最深的、左子树已经处理完但自身尚未输出的结点。弹出并输出它，再转向右子树。
@@ -80,6 +90,7 @@ $$
 - 中序与后序恢复：后序从末尾取根，并先构造右子树；
 - 前序与后序恢复：一般不唯一，满二叉树等附加条件可恢复；
 - 在线修改树结构：静态遍历序列不再足以维护全部信息。
+- 局部交换是否会改变接下来应访问的孩子，入队时机是否与变换后的结构一致。
 
 ## Reference
 
@@ -87,4 +98,6 @@ $$
 - [LeetCode 105：从前序与中序遍历序列构造二叉树](../problems/index.md#problem-lc-105)
 - [LeetCode 94：二叉树的中序遍历](../problems/index.md#problem-lc-94)
 - [LeetCode 98：验证二叉搜索树](../problems/index.md#problem-lc-98)
+- [LeetCode 226：翻转二叉树](../problems/index.md#problem-lc-226)
+- [LeetCode 104：二叉树的最大深度](../problems/index.md#problem-lc-104)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

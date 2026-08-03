@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-04",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-c",
+          "title": "[atcoder] ABC469 C Cantrip",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-c.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_c?lang=en",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "b89a76f0a261653c440ace765bc669370fac10999a3bda3a7806e35df3b6f85b"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-91-lc415",
+          "title": "[力扣 Top 91] LC 415 字符串相加 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-91-lc415.md",
+          "official": "https://leetcode.cn/problems/add-strings/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "a228afdea79a2ef1c8827eeb8dd7d32e1fa815c9d9f21eb02ada9d28c96776e4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-92-lc226",
+          "title": "[力扣 Top 92] LC 226 翻转二叉树 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-92-lc226.md",
+          "official": "https://leetcode.cn/problems/invert-binary-tree/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "8fa2a3e9345bf71d2095c885943214e3cabd27575b83ad9f0687f243e1f9e062"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-93-lc104",
+          "title": "[力扣 Top 93] LC 104 二叉树的最大深度 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-93-lc104.md",
+          "official": "https://leetcode.cn/problems/maximum-depth-of-binary-tree/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "d2d1dc57979a7aa36b6e9ebdc961ddb64ff5f7725a2e0d163514744c5d58b18a"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-94-lc43",
+          "title": "[力扣 Top 94] LC 43 字符串相乘 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-94-lc43.md",
+          "official": "https://leetcode.cn/problems/multiply-strings/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "94b48633f09cc3d633d69232c814aeca14ed3034bfb077038dba40dab9fd11f2"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-95-lc977",
+          "title": "[力扣 Top 95] LC 977 有序数组的平方 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-95-lc977.md",
+          "official": "https://leetcode.cn/problems/squares-of-a-sorted-array/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "e9d141c74dd1f01725d41560994ebd80d8ad6871fd2435ac70a3580dcf72ce6d"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-96-lc7",
+          "title": "[力扣 Top 96] LC 7 整数反转 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-96-lc7.md",
+          "official": "https://leetcode.cn/problems/reverse-integer/",
+          "topic": "../../math/index.md",
+          "source_sha256": "8c6f10baece161935343f9739f626983f2805d8de466dbe72e9ad1fc886dd7f3"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-97-lc16",
+          "title": "[力扣 Top 97] LC 16 最接近的三数之和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-97-lc16.md",
+          "official": "https://leetcode.cn/problems/3sum-closest/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "17275d1646b2e897b7b50cc1b8dc152714a1e5a3861721674d82aa39b1b95cfb"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-98-lc543",
+          "title": "[力扣 Top 98] LC 543 二叉树的直径 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-98-lc543.md",
+          "official": "https://leetcode.cn/problems/diameter-of-binary-tree/",
+          "topic": "../../graph/tree-aggregation.md",
+          "source_sha256": "84d2934b768963a7b650c27aa8315a0e9a062ab69b87d541e2bdcdb52dcfe9e6"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-99-lc707",
+          "title": "[力扣 Top 99] LC 707 设计链表 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-99-lc707.md",
+          "official": "https://leetcode.cn/problems/design-linked-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "ebf43ff4c365931394875278b1e48831e808062f8d2c894827c21c4dc1e7607c"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-100-lc67",
+          "title": "[力扣 Top 100] LC 67 二进制求和 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-100-lc67.md",
+          "official": "https://leetcode.cn/problems/add-binary/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "bfa2c45e8c72b208e30a8d4ebe85eb3e82eee9dddaa07be6936720ef10986555"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-513-q2-lc4011",
+          "title": "[力扣竞赛] 第 513 场周赛 Q2 LC 4011 按奇偶比统计子数组 I 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-513-q2-lc4011.md",
+          "official": "https://leetcode.cn/problems/count-subarrays-with-even-odd-ratio-i/",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "82644428a2da6a606e2e06f59b791a3defec37f5058e8d9ba901d72af245ed23"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-c",
+          "title": "[codeforces] CF Round 1113 Div.2 C Maximize the Score",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-c.md",
+          "official": "https://codeforces.com/contest/2248/problem/C",
+          "topic": "../../dp/sequence-dp.md",
+          "source_sha256": "20359fd64e94d0e4d1971a6609ab50876fd556b3ad92c088128835c98f2ad82b"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-04-lc3731",
+          "title": "[力扣每日一题] 2026-08-04｜LC 3731 找出缺失的元素",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-04-lc3731.md",
+          "official": "https://leetcode.cn/problems/find-missing-elements/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "652e61356a29fb45e354a502c55052de3a5e2c188b6e29c1e729a719b73ebc5c"
+        }
+      ]
+    },
+    {
       "date": "2026-08-03",
       "items": [
         {

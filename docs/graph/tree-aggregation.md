@@ -63,6 +63,14 @@ $$
 
 --8<-- "includes/problems/lc-124.md"
 
+## 直径：向上只交一支，节点处合并两支
+
+树的直径按边数计时，递归返回当前节点向下能延伸的最大边数。父节点只能接走左右两侧中较长的一支；但以当前节点作为最高点闭合的完整路径可以同时使用左右两支，其长度就是两侧向下深度之和。
+
+这和最大路径和共享“单支返回、双支闭合”的接口，但没有节点权与负权截断。把深度误写成节点数，或把已经闭合的双支路径继续返回父节点，都会造成偏一或非法分叉。
+
+--8<-- "includes/problems/lc-543.md"
+
 ## 指针摘要：最近公共祖先
 
 摘要不一定是数值。寻找两个已知节点的最近公共祖先时，递归返回：
@@ -95,4 +103,5 @@ $$
 - [LeetCode 3997：统计二叉树中的支配节点](../problems/index.md#problem-lc-3997)
 - [LeetCode 124：二叉树中的最大路径和](../problems/index.md#problem-lc-124)
 - [LeetCode 236：二叉树的最近公共祖先](../problems/index.md#problem-lc-236)
+- [LeetCode 543：二叉树的直径](../problems/index.md#problem-lc-543)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

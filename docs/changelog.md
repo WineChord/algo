@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-04
+
+### 每日训练档案
+
+- 新增 [2026-08-04 每日 14 题](daily/2026-08-04/index.md)，依次覆盖 [AtCoder ABC469 C](problems/index.md#problem-atcoder-abc469-c)、力扣 Top 91–100、[第 513 场周赛 Q2](problems/index.md#problem-lc-4011)、[Codeforces Round 1113 Div.2 C](problems/index.md#problem-codeforces-2248-c) 与 [LC 3731](problems/index.md#problem-lc-3731)。
+- AtCoder 与 Codeforces 页面保留自包含英文题面层，并在明确边界后进入中文解释、推导、证明与变种；其余页面正文统一使用中文。
+
+### 单调扫描、逐位算术与可合并摘要
+
+- 扩充[序列扫描](basics/sequence-invariants.md)，把绝对值两端极值、固定首项双指针、有限值域输出和第 $k$ 个阈值事件纳入同一条“每步永久定稿”读者路径。
+- 扩充[字符串](strings/index.md)、[二叉树遍历](graph/tree-traversals.md)、[树上后序聚合](graph/tree-aggregation.md)与[链表接线](data-structures/linked-lists.md)，补齐逐位加乘、镜像与深度、树直径及双向哨兵。
+- 扩充[前缀状态](basics/prefix-sums-and-difference.md)、[序列动态规划](dp/sequence-dp.md)与[数学](math/index.md)，补入比例约束的前缀序统计、动态删除的原序列分块及乘加前溢出门禁。
+
+### 权威题目条目
+
+- 新增 [ABC469 C](problems/index.md#problem-atcoder-abc469-c)、[CF 2248C](problems/index.md#problem-codeforces-2248-c)、[LC 4011](problems/index.md#problem-lc-4011)、[LC 3731](problems/index.md#problem-lc-3731) 与力扣 Top 91–100 的唯一折叠条目。
+
 ## 2026-08-03
 
 ### 每日训练档案
