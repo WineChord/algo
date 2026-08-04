@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-05":
+          - 当日总览: daily/2026-08-05/index.md
+          - "[atcoder] ABC469 D The Big Two": daily/2026-08-05/atcoder-abc469-d.md
+          - "[力扣 Top 101] LC 69 x 的平方根 简单": daily/2026-08-05/leetcode-top-101-lc69.md
+          - "[力扣 Top 102] LC 647 回文子串 中等": daily/2026-08-05/leetcode-top-102-lc647.md
+          - "[力扣 Top 103] LC 92 反转链表 II 中等": daily/2026-08-05/leetcode-top-103-lc92.md
+          - "[力扣 Top 104] LC 347 前 K 个高频元素 中等": daily/2026-08-05/leetcode-top-104-lc347.md
+          - "[力扣 Top 105] LC 169 多数元素 简单": daily/2026-08-05/leetcode-top-105-lc169.md
+          - "[力扣 Top 106] LC 287 寻找重复数 中等": daily/2026-08-05/leetcode-top-106-lc287.md
+          - "[力扣 Top 107] LC 179 最大数 中等": daily/2026-08-05/leetcode-top-107-lc179.md
+          - "[力扣 Top 108] LC 202 快乐数 简单": daily/2026-08-05/leetcode-top-108-lc202.md
+          - "[力扣 Top 109] LC 141 环形链表 简单": daily/2026-08-05/leetcode-top-109-lc141.md
+          - "[力扣 Top 110] LC 84 柱状图中最大的矩形 困难": daily/2026-08-05/leetcode-top-110-lc84.md
+          - "[力扣竞赛] 第 513 场周赛 Q3 LC 4012 统计每个班次结束后的未完成任务数 中等": daily/2026-08-05/leetcode-weekly-513-q3-lc4012.md
+          - "[codeforces] CF Round 1113 Div.2 D Good Pair Queries": daily/2026-08-05/codeforces-2248-d.md
+          - "[力扣每日一题] 2026-08-05｜LC 3310 移除可疑的方法": daily/2026-08-05/leetcode-daily-2026-08-05-lc3310.md
       - "2026-08-04":
           - 当日总览: daily/2026-08-04/index.md
           - "[atcoder] ABC469 C Cantrip": daily/2026-08-04/atcoder-abc469-c.md
@@ -287,10 +303,12 @@ nav:
   - 数据结构:
       - 知识地图: data-structures/index.md
       - 链表与局部接线: data-structures/linked-lists.md
+      - 单调栈: data-structures/monotonic-stacks.md
       - 单调队列: data-structures/monotonic-queues.md
       - 哈希分组与 LRU: data-structures/hash-and-cache.md
   - 图论:
       - 知识地图: graph/index.md
+      - 函数图: graph/functional-graphs.md
       - 0-1 权与奇偶状态: graph/weighted-parity-states.md
       - 二叉树遍历与恢复: graph/tree-traversals.md
       - 树上后序聚合: graph/tree-aggregation.md

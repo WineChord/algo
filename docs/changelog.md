@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-05
+
+### 每日训练档案
+
+- 新增 [2026-08-05 每日 14 题](daily/2026-08-05/index.md)，依次覆盖 [AtCoder ABC469 D](problems/index.md#problem-atcoder-abc469-d)、力扣 Top 101–110、[第 513 场周赛 Q3](problems/index.md#problem-lc-4012)、[Codeforces Round 1113 Div.2 D](problems/index.md#problem-codeforces-2248-d) 与 [LC 3310](problems/index.md#problem-lc-3310)。
+- AtCoder 与 Codeforces 页面保留自包含英文题面层，随后进入中文解释、算法递进、证明与变种；其余页面正文统一使用中文。
+
+### 函数图、单调栈与边界定位
+
+- 新增[函数图](graph/functional-graphs.md)，统一唯一后继轨迹中的尾、环、入口、Floyd、拓扑删点与多次后继查询。
+- 新增[单调栈](data-structures/monotonic-stacks.md)，从等待未来边界的候选语义推导摊还复杂度、严格性与柱状图面积。
+- 扩充[图论](graph/index.md)、[二分查找](basics/binary-search.md)、[链表接线](data-structures/linked-lists.md)、[回文中心](strings/palindrome-centers.md)、[极值候选](basics/top-k-extrema.md)、[序列扫描](basics/sequence-invariants.md)、[字符串](strings/index.md)与[贪心交换](basics/greedy-exchange.md)，补入可达闭包、二元顶点覆盖、整数平方根、循环任务定位、区间反转、频率桶、异值抵消、拼接比较与四类计数不等式。
+
+### 权威题目条目
+
+- 新增 [ABC469 D](problems/index.md#problem-atcoder-abc469-d)、[CF 2248D](problems/index.md#problem-codeforces-2248-d)、[LC 4012](problems/index.md#problem-lc-4012)、[LC 3310](problems/index.md#problem-lc-3310) 与力扣 Top 101–110 的唯一折叠条目。
+
 ## 2026-08-04
 
 ### 每日训练档案

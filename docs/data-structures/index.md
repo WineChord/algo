@@ -41,13 +41,11 @@
 - 单调栈寻找左/右侧第一个更大或更小元素；
 - 撤销操作。
 
+单调栈的候选语义、严格性、摊还证明和柱状图迁移，见[单调栈：等待未来关闭的边界](monotonic-stacks.md)。
+
 代表题目：
 
 --8<-- "includes/problems/lc-20.md"
-
---8<-- "includes/problems/lc-84.md"
-
---8<-- "includes/problems/lc-739.md"
 
 --8<-- "includes/problems/lc-32.md"
 

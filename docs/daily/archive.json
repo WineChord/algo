@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-05",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-d",
+          "title": "[atcoder] ABC469 D The Big Two",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-d.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_d?lang=en",
+          "topic": "../../graph/index.md",
+          "source_sha256": "b99eca3e0d5b9a468e06f63c7e781b2a84286ded1cd221e035bc31152b5300cf"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-101-lc69",
+          "title": "[力扣 Top 101] LC 69 x 的平方根 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-101-lc69.md",
+          "official": "https://leetcode.cn/problems/sqrtx/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "9c8cbb93c29225e3696d30fbea6d61f4228031af96263fb88af7f9f00a8924b0"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-102-lc647",
+          "title": "[力扣 Top 102] LC 647 回文子串 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-102-lc647.md",
+          "official": "https://leetcode.cn/problems/palindromic-substrings/",
+          "topic": "../../strings/palindrome-centers.md",
+          "source_sha256": "f2def2f7d7dfa8457c02fd9bcee328bf516881cc7ff4dc367b0046ee1909f34a"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-103-lc92",
+          "title": "[力扣 Top 103] LC 92 反转链表 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-103-lc92.md",
+          "official": "https://leetcode.cn/problems/reverse-linked-list-ii/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "4947024dadad486aa7e5a374d862df6226d536becd1792e2a5df478188ef2c34"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-104-lc347",
+          "title": "[力扣 Top 104] LC 347 前 K 个高频元素 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-104-lc347.md",
+          "official": "https://leetcode.cn/problems/top-k-frequent-elements/",
+          "topic": "../../basics/top-k-extrema.md",
+          "source_sha256": "97ec3c1a88e6398717a54248c407f556de6be804cc7e8355fa7ef1e818915519"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-105-lc169",
+          "title": "[力扣 Top 105] LC 169 多数元素 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-105-lc169.md",
+          "official": "https://leetcode.cn/problems/majority-element/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "e1e105912bb5d11724846dc3989d2de53cf2e9d1b00cabe2999cddc8daeaaa17"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-106-lc287",
+          "title": "[力扣 Top 106] LC 287 寻找重复数 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-106-lc287.md",
+          "official": "https://leetcode.cn/problems/find-the-duplicate-number/",
+          "topic": "../../graph/functional-graphs.md",
+          "source_sha256": "b9d7795ec81ee48b597d95361f804cdc2dc2069b7b42b0df5e944f2eeebe5577"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-107-lc179",
+          "title": "[力扣 Top 107] LC 179 最大数 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-107-lc179.md",
+          "official": "https://leetcode.cn/problems/largest-number/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "87377ab796d880889280467cb52467919baef13f1ea384e38b3f67fe3ab96883"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-108-lc202",
+          "title": "[力扣 Top 108] LC 202 快乐数 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-108-lc202.md",
+          "official": "https://leetcode.cn/problems/happy-number/",
+          "topic": "../../graph/functional-graphs.md",
+          "source_sha256": "c292727a7579faa446b9b3e1ffeac788c0994a4c990e370d810124ae47cbc251"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-109-lc141",
+          "title": "[力扣 Top 109] LC 141 环形链表 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-109-lc141.md",
+          "official": "https://leetcode.cn/problems/linked-list-cycle/",
+          "topic": "../../graph/functional-graphs.md",
+          "source_sha256": "3cecd3308962a8d71ea25413a1b25f4e4f827fc6aaa612006b85e6217899ab0f"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-110-lc84",
+          "title": "[力扣 Top 110] LC 84 柱状图中最大的矩形 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-110-lc84.md",
+          "official": "https://leetcode.cn/problems/largest-rectangle-in-histogram/",
+          "topic": "../../data-structures/monotonic-stacks.md",
+          "source_sha256": "753f23249edd82f62888518af6815910486dcebab8405d62e8b9547bc583d75f"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-513-q3-lc4012",
+          "title": "[力扣竞赛] 第 513 场周赛 Q3 LC 4012 统计每个班次结束后的未完成任务数 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-513-q3-lc4012.md",
+          "official": "https://leetcode.cn/problems/count-of-unfinished-tasks-after-each-shift/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "98c95446f2206eb21666c3d04ec202b2daf70c3e8359b3cc76c929ba10fa8a74"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-d",
+          "title": "[codeforces] CF Round 1113 Div.2 D Good Pair Queries",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-d.md",
+          "official": "https://codeforces.com/contest/2248/problem/D",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "7c266fe2236f83fb85f3ece855d0c0ab1a29176647230955a8a87d1692107093"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-05-lc3310",
+          "title": "[力扣每日一题] 2026-08-05｜LC 3310 移除可疑的方法",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-05-lc3310.md",
+          "official": "https://leetcode.cn/problems/remove-methods-from-project/",
+          "topic": "../../graph/index.md",
+          "source_sha256": "b619299c6ff0cada8ab4311a09992da3089e08f03e7bbf9f30b5526cc3a74431"
+        }
+      ]
+    },
+    {
       "date": "2026-08-04",
       "items": [
         {

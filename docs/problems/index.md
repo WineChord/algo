@@ -16,6 +16,16 @@
 
 --8<-- "includes/problems/atcoder-abc469-c.md"
 
+--8<-- "includes/problems/lc-69.md"
+
+--8<-- "includes/problems/lc-347.md"
+
+--8<-- "includes/problems/lc-169.md"
+
+--8<-- "includes/problems/lc-4012.md"
+
+--8<-- "includes/problems/codeforces-2248-d.md"
+
 --8<-- "includes/problems/lc-1.md"
 
 --8<-- "includes/problems/lc-15.md"
@@ -186,6 +196,8 @@
 
 --8<-- "includes/problems/lc-32.md"
 
+--8<-- "includes/problems/lc-92.md"
+
 --8<-- "includes/problems/codeforces-2247-d2.md"
 
 --8<-- "includes/problems/lc-684.md"
@@ -294,6 +306,16 @@
 
 --8<-- "includes/problems/codeforces-2247-f.md"
 
+--8<-- "includes/problems/atcoder-abc469-d.md"
+
+--8<-- "includes/problems/lc-141.md"
+
+--8<-- "includes/problems/lc-202.md"
+
+--8<-- "includes/problems/lc-287.md"
+
+--8<-- "includes/problems/lc-3310.md"
+
 ## 数学
 
 --8<-- "includes/problems/atcoder-abc468-e.md"
@@ -373,6 +395,10 @@
 --8<-- "includes/problems/lc-43.md"
 
 --8<-- "includes/problems/lc-67.md"
+
+--8<-- "includes/problems/lc-647.md"
+
+--8<-- "includes/problems/lc-179.md"
 
 ## 如何使用这份索引
 

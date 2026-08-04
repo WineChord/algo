@@ -78,6 +78,7 @@
 - [搜索与枚举知识地图](../search/index.md)；
 - [回溯：只展开仍可能完成的前缀](../search/backtracking.md)；
 - [链表：指针不变量与局部接线](../data-structures/linked-lists.md)；
+- [单调栈：等待未来关闭的边界](../data-structures/monotonic-stacks.md)；
 - [单调队列：维护仍可能最优的窗口候选](../data-structures/monotonic-queues.md)；
 - [哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。
 - [二叉树遍历：顺序、边界与恢复](../graph/tree-traversals.md)。
@@ -115,7 +116,7 @@
 
 ### 图论
 
-先把 DFS、BFS、拓扑排序和最短路练熟，再进入最小生成树、强连通分量、最近公共祖先和网络流。详见[图论知识地图](../graph/index.md)与 [0-1 权、二分图和操作奇偶](../graph/weighted-parity-states.md)。
+先把 DFS、BFS、拓扑排序和最短路练熟，再进入函数图、最小生成树、强连通分量、最近公共祖先和网络流。详见[图论知识地图](../graph/index.md)、[函数图：唯一后继、环与入口](../graph/functional-graphs.md)与 [0-1 权、二分图和操作奇偶](../graph/weighted-parity-states.md)。
 
 树上子问题先于父问题的统一接口见[树上后序聚合](../graph/tree-aggregation.md)。
 

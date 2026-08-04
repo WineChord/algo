@@ -77,6 +77,12 @@ int main() {
 
 若只需要判断是否存在，标准库写法更短：`binary_search(nums.begin(), nums.end(), target)`。
 
+### 整数平方根：在答案值域找最后一个合法值
+
+对非负整数 $x$，谓词 $m^2\le x$ 随 $m$ 单调，因此可以二分最大的合法整数。实现时用 `m <= x / m` 代替直接计算 `m * m`，同时处理 $m=0$，就能避免乘法溢出。
+
+--8<-- "includes/problems/lc-69.md"
+
 ## 4. 左右边界：LeetCode 34 { #leetcode-34 }
 
 --8<-- "includes/problems/lc-34.md"
@@ -110,6 +116,12 @@ int main() {
 ### LeetCode 410：最小化最大段和
 
 --8<-- "includes/problems/lc-410.md"
+
+### 前缀和定位：一次跨过整轮，再找当前边界
+
+循环任务先用总和跳过完整轮次，再在一轮前缀和中用 `upper_bound` 找当前时长能完成的最长前缀。这里不是二分答案本身，而是在单调前缀数组中定位第一个超出预算的位置。
+
+--8<-- "includes/problems/lc-4012.md"
 
 ## 6. 在分割线上二分：两个有序数组的中位数
 
