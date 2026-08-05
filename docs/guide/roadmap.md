@@ -78,6 +78,7 @@
 - [搜索与枚举知识地图](../search/index.md)；
 - [回溯：只展开仍可能完成的前缀](../search/backtracking.md)；
 - [链表：指针不变量与局部接线](../data-structures/linked-lists.md)；
+- [增广栈：让每个版本携带可恢复摘要](../data-structures/augmented-stacks.md)；
 - [单调栈：等待未来关闭的边界](../data-structures/monotonic-stacks.md)；
 - [单调队列：维护仍可能最优的窗口候选](../data-structures/monotonic-queues.md)；
 - [哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。

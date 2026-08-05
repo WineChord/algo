@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-06
+
+### 每日训练档案
+
+- 新增 [2026-08-06 每日 14 题](daily/2026-08-06/index.md)，依次覆盖 [AtCoder ABC469 E](problems/index.md#problem-atcoder-abc469-e)、力扣 Top 111–120、[第 513 场周赛 Q4](problems/index.md#problem-lc-4013)、[Codeforces Round 1113 Div.2 E](problems/index.md#problem-codeforces-2248-e) 与 [LC 3345](problems/index.md#problem-lc-3345)。
+- AtCoder 与 Codeforces 页面保留自包含英文题面层，随后进入中文解释、算法递进、证明与变种；其余页面正文统一使用中文。
+
+### 可恢复摘要、前缀序与周期分解
+
+- 新增[增广栈](data-structures/augmented-stacks.md)，从“每层即一个版本”推导不可逆聚合、双栈队列与持久化边界。
+- 扩充[二分查找](basics/binary-search.md)、[序列扫描](basics/sequence-invariants.md)、[贪心交换](basics/greedy-exchange.md)、[链表接线](data-structures/linked-lists.md)、[函数图](graph/functional-graphs.md)、[回溯](search/backtracking.md)、[字符串动态规划](dp/string-dp.md)、[前缀状态](basics/prefix-sums-and-difference.md)与[数学](math/index.md)，补入区间比率、三次翻转、矩阵内嵌标记、相邻正收益、环入口、拉链重排、子集树、固定宽度解码、动态秩统计、周期奖励与数位积零边界。
+
+### 权威题目条目
+
+- 新增 [ABC469 E](problems/index.md#problem-atcoder-abc469-e)、[CF 2248E](problems/index.md#problem-codeforces-2248-e)、[LC 4013](problems/index.md#problem-lc-4013)、[LC 3345](problems/index.md#problem-lc-3345) 与力扣 Top 111–120 的唯一折叠条目。
+
 ## 2026-08-05
 
 ### 每日训练档案

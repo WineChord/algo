@@ -20,6 +20,7 @@
 - [极值候选与 Top-K](basics/top-k-extrema.md)
 - [数据结构](data-structures/index.md)
 - [链表与局部接线](data-structures/linked-lists.md)
+- [增广栈与可恢复摘要](data-structures/augmented-stacks.md)
 - [单调队列](data-structures/monotonic-queues.md)
 - [哈希分组与 LRU](data-structures/hash-and-cache.md)
 - [图论](graph/index.md)

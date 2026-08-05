@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-06",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-e",
+          "title": "[atcoder] ABC469 E Pro Exam Eligibility",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-e.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_e?lang=en",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "774370faabd1e81be8430015cf73ed4a73fdf25953d34d7ff45db63ec9de50e5"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-111-lc189",
+          "title": "[力扣 Top 111] LC 189 轮转数组 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-111-lc189.md",
+          "official": "https://leetcode.cn/problems/rotate-array/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "8f11518e67164382000f2b40459bc7ed7c434f03b45ac25042889e05c10fb846"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-112-lc155",
+          "title": "[力扣 Top 112] LC 155 最小栈 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-112-lc155.md",
+          "official": "https://leetcode.cn/problems/min-stack/",
+          "topic": "../../data-structures/augmented-stacks.md",
+          "source_sha256": "bed301087303b8b6e860c3e0177e262736e0940aa15766136592994350a36ada"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-113-lc122",
+          "title": "[力扣 Top 113] LC 122 买卖股票的最佳时机 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-113-lc122.md",
+          "official": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "0eaf3dffd28afaa1d43d04d22ecace5715ef47155fce561e89502d97d147bf2a"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-114-lc142",
+          "title": "[力扣 Top 114] LC 142 环形链表 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-114-lc142.md",
+          "official": "https://leetcode.cn/problems/linked-list-cycle-ii/",
+          "topic": "../../graph/functional-graphs.md",
+          "source_sha256": "cb3d958d645910459c16380f4b18d8f5a8f1bab53bbdaa69d7edfd9ae60e9d17"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-115-lc143",
+          "title": "[力扣 Top 115] LC 143 重排链表 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-115-lc143.md",
+          "official": "https://leetcode.cn/problems/reorder-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "a572633b49d052c5a1ee42c392ba77b8f1a2c30672e4a7d9b26bdb75c6067894"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-116-lc203",
+          "title": "[力扣 Top 116] LC 203 移除链表元素 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-116-lc203.md",
+          "official": "https://leetcode.cn/problems/remove-linked-list-elements/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "aa3072be3ececbec9d3716f47e358c34773c3c8acc15f18cb9bd464e6b71aab0"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-117-lc78",
+          "title": "[力扣 Top 117] LC 78 子集 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-117-lc78.md",
+          "official": "https://leetcode.cn/problems/subsets/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "451845af6c9c85b3f65287c1f71adc5264185a7e5d4f4c9e2958099956fabede"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-118-lc91",
+          "title": "[力扣 Top 118] LC 91 解码方法 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-118-lc91.md",
+          "official": "https://leetcode.cn/problems/decode-ways/",
+          "topic": "../../dp/string-dp.md",
+          "source_sha256": "4323ad3113451184033bbb9c0b79a355ba8f74ee0d803d00a32315ace308049a"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-119-lc73",
+          "title": "[力扣 Top 119] LC 73 矩阵置零 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-119-lc73.md",
+          "official": "https://leetcode.cn/problems/set-matrix-zeroes/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "86a6e35f2e333a268a738e9ea382b0aa10b3287c09f2a2a43b39aed02de3cbff"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-120-lc74",
+          "title": "[力扣 Top 120] LC 74 搜索二维矩阵 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-120-lc74.md",
+          "official": "https://leetcode.cn/problems/search-a-2d-matrix/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "ba6c9aa1b76f391b2874c6fd28d623993fdcd05bf318d8f7c619541c41f2cedc"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-weekly-513-q4-lc4013",
+          "title": "[力扣竞赛] 第 513 场周赛 Q4 LC 4013 按奇偶比统计子数组 II 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-513-q4-lc4013.md",
+          "official": "https://leetcode.cn/problems/count-subarrays-with-even-odd-ratio-ii/",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "04916242f0eeabdb3379baba03274505455615829ddcb11514a6808378421f6f"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-e",
+          "title": "[codeforces] CF Round 1113 Div.2 E Excuse for Breaks",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-e.md",
+          "official": "https://codeforces.com/contest/2248/problem/E",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "53ff20519054949fec06cdf05d9525d09833cc003bc5cc945c8458891557a376"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-06-lc3345",
+          "title": "[力扣每日一题] 2026-08-06｜LC 3345 最小可整除数位乘积 I",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-06-lc3345.md",
+          "official": "https://leetcode.cn/problems/smallest-divisible-digit-product-i/",
+          "topic": "../../math/index.md",
+          "source_sha256": "8741cb6cda20a0b211a0555f7e3191cac443507f13b7830be1533065e0440471"
+        }
+      ]
+    },
+    {
       "date": "2026-08-05",
       "items": [
         {

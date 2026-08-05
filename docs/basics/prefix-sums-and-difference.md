@@ -84,6 +84,10 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 
 --8<-- "includes/problems/lc-4011.md"
 
+同一变换在规模扩大后不再能枚举所有前缀对。对每个右前缀 $V_r$，需要统计此前满足 $V_l\ge V_r$ 的数量；坐标压缩保留大小关系，Fenwick 树则把“已见前缀的动态秩”维护为对数时间查询。
+
+--8<-- "includes/problems/lc-4013.md"
+
 ## 前缀和与差分如何选择
 
 | 需求 | 保存的信息 | 典型复杂度 |
@@ -111,4 +115,5 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 - [LeetCode 1109：航班预订统计](../problems/index.md#problem-lc-1109)
 - [LeetCode 304：二维区域和检索](../problems/index.md#problem-lc-304)
 - [LeetCode 4011：按奇偶比统计子数组 I](../problems/index.md#problem-lc-4011)
+- [LeetCode 4013：按奇偶比统计子数组 II](../problems/index.md#problem-lc-4013)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

@@ -16,6 +16,24 @@
 
 --8<-- "includes/problems/atcoder-abc469-c.md"
 
+--8<-- "includes/problems/atcoder-abc469-e.md"
+
+--8<-- "includes/problems/lc-189.md"
+
+--8<-- "includes/problems/lc-122.md"
+
+--8<-- "includes/problems/lc-73.md"
+
+--8<-- "includes/problems/lc-74.md"
+
+--8<-- "includes/problems/lc-4013.md"
+
+--8<-- "includes/problems/codeforces-2248-e.md"
+
+--8<-- "includes/problems/lc-3345.md"
+
+--8<-- "includes/problems/lc-78.md"
+
 --8<-- "includes/problems/lc-69.md"
 
 --8<-- "includes/problems/lc-347.md"
@@ -152,6 +170,12 @@
 
 ## 数据结构
 
+--8<-- "includes/problems/lc-155.md"
+
+--8<-- "includes/problems/lc-143.md"
+
+--8<-- "includes/problems/lc-203.md"
+
 --8<-- "includes/problems/lc-2.md"
 
 --8<-- "includes/problems/lc-206.md"
@@ -208,6 +232,8 @@
 
 ## 动态规划
 
+--8<-- "includes/problems/lc-91.md"
+
 --8<-- "includes/problems/lc-70.md"
 
 --8<-- "includes/problems/lc-198.md"
@@ -255,6 +281,8 @@
 --8<-- "includes/problems/codeforces-2248-c.md"
 
 ## 图论
+
+--8<-- "includes/problems/lc-142.md"
 
 --8<-- "includes/problems/lc-3286.md"
 

@@ -43,11 +43,15 @@
 
 单调栈的候选语义、严格性、摊还证明和柱状图迁移，见[单调栈：等待未来关闭的边界](monotonic-stacks.md)。
 
+若查询目标是整个栈前缀的最小值、最大值或其他可合并摘要，应让每一层同时保存当时的聚合状态。弹栈便等价于回到上一版本；完整模型见[增广栈：让每个版本携带可恢复摘要](augmented-stacks.md)。
+
 代表题目：
 
 --8<-- "includes/problems/lc-20.md"
 
 --8<-- "includes/problems/lc-32.md"
+
+--8<-- "includes/problems/lc-155.md"
 
 ### 队列与双端队列
 

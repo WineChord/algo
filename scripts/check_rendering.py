@@ -1113,6 +1113,8 @@ def browser_audit(
         try:
             for width, height, mobile in (
                 (1440, 1000, False),
+                (1024, 900, False),
+                (430, 932, True),
                 (390, 844, True),
             ):
                 baseline_probed = False
@@ -1492,6 +1494,28 @@ def browser_audit(
                                 'mjx-merror, .MathJax_Error'
                               )
                             ].map((node) => node.textContent.trim());
+                            const formulaGeometryIssues = wrappers.filter(
+                              (element) => {
+                                const container = element.querySelector(
+                                  ':scope > mjx-container'
+                                );
+                                const math = container
+                                  ? container.querySelector(':scope > mjx-math')
+                                  : null;
+                                if (!container || !math) return true;
+                                const containerRect =
+                                  container.getBoundingClientRect();
+                                const mathRect = math.getBoundingClientRect();
+                                const style = getComputedStyle(container);
+                                return containerRect.width <= 0
+                                  || containerRect.height <= 0
+                                  || mathRect.width <= 0
+                                  || mathRect.height <= 0
+                                  || style.display === 'none'
+                                  || style.visibility === 'hidden'
+                                  || Number.parseFloat(style.opacity) === 0;
+                              }
+                            ).length;
                             const badOverflow = wrappers.filter((element) => {
                               if (element.tagName !== 'DIV') return false;
                               if (element.scrollWidth <= element.clientWidth + 1) {
@@ -1664,6 +1688,7 @@ def browser_audit(
                               wrappers: wrappers.length,
                               invalid,
                               mathErrors,
+                              formulaGeometryIssues,
                               badOverflow,
                               inlineMathIssues,
                               displayMathIssues,
@@ -1706,6 +1731,12 @@ def browser_audit(
                             errors.append(
                                 f"{route}: MathJax errors: "
                                 + "; ".join(stats["mathErrors"])
+                            )
+                        if stats["formulaGeometryIssues"]:
+                            errors.append(
+                                f"{route}: "
+                                f"{stats['formulaGeometryIssues']} formulas "
+                                "are empty, hidden, or have zero-size output"
                             )
                         if stats["wrappers"] and stats["missingMathFonts"]:
                             errors.append(
