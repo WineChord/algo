@@ -8,7 +8,7 @@ title: "[codeforces] CF Round 1113 Div.2 F Matrix Elimination"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-09 题目列表</a> · <a href="../../../basics/greedy-exchange/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=0a14ac164a2cc3b738afbf13cc76568883cb6564eb1f1de806a20be2bf99a28f -->
+<!-- DAILY_CANONICAL_BODY_START sha256=fc7a27f4a982c503ce19651120ee4efdbd28d0c537a7b29bae87d5bb6cae8470 -->
 [Official problem: Codeforces 2248F - Matrix Elimination](https://codeforces.com/contest/2248/problem/F)
 
 ## 官方来源与元数据
@@ -133,10 +133,11 @@ Output
 
 For the first test case, two valid operations are $(1,3,2,3)$ and $(2,3,1,3)$. They produce
 
-| $-1$ | $-31$ | $6$ |
-|---:|---:|---:|
-| $5$ | $-5$ | $20$ |
-| $0$ | $-20$ | $14$ |
+```text
+-1 -31 6
+5 -5 20
+0 -20 14
+```
 
 The seven peaks are $(1,1),(1,3),(2,2),(2,3),(3,1),(3,2),(3,3)$. In particular, $-1\ge5+0-31+6=-20$ for $(1,1)$, and $0\ge-20+14-1+5=-2$ for $(3,1)$. Cell $(2,1)$ is not a peak because $5<-5+20-1+0=14$. Fewer than two operations cannot create seven peaks.
 
