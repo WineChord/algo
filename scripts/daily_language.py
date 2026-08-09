@@ -9,6 +9,7 @@ import re
 CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 HEADING = re.compile(r"^(#{2,4})\s+(.+?)\s*$")
 FENCE = re.compile(r"^\s*```")
+BLOCK_MATH_DELIMITER = re.compile(r"(?<!\\)\$\$")
 ENGLISH_WORD = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)?")
 URL = re.compile(r"https?://[^)\s]+")
 LINK_ONLY = re.compile(r"^\s*[-*]?\s*\[[^\]]+\]\([^)]*\)\s*[。.]?\s*$")
@@ -52,6 +53,7 @@ def non_chinese_solution_lines(text: str, kind: str) -> list[tuple[int, str]]:
     contest = kind in {"AtCoder", "Codeforces"}
     in_frontmatter = False
     in_fence = False
+    in_block_math = False
     in_official_english = False
     findings: list[tuple[int, str]] = []
     for line_number, line in enumerate(text.splitlines(), 1):
@@ -66,6 +68,11 @@ def non_chinese_solution_lines(text: str, kind: str) -> list[tuple[int, str]]:
             in_fence = not in_fence
             continue
         if in_fence:
+            continue
+        block_math_delimiters = len(BLOCK_MATH_DELIMITER.findall(line))
+        if in_block_math or block_math_delimiters:
+            if block_math_delimiters % 2 == 1:
+                in_block_math = not in_block_math
             continue
         heading = HEADING.match(line)
         if contest and heading:

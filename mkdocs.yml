@@ -106,6 +106,22 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-09":
+          - 当日总览: daily/2026-08-09/index.md
+          - "[atcoder] ABC469 F GCD Maximum Spanning Tree": daily/2026-08-09/atcoder-abc469-f.md
+          - "[力扣 Top 121] LC 238 除了自身以外数组的乘积 中等": daily/2026-08-09/leetcode-top-121-lc238.md
+          - "[力扣 Top 122] LC 1004 最大连续 1 的个数 III 中等": daily/2026-08-09/leetcode-top-122-lc1004.md
+          - "[力扣 Top 123] LC 39 组合总和 中等": daily/2026-08-09/leetcode-top-123-lc39.md
+          - "[力扣 Top 124] LC 61 旋转链表 中等": daily/2026-08-09/leetcode-top-124-lc61.md
+          - "[力扣 Top 125] LC 746 使用最小花费爬楼梯 简单": daily/2026-08-09/leetcode-top-125-lc746.md
+          - "[力扣 Top 126] LC 295 数据流的中位数 困难": daily/2026-08-09/leetcode-top-126-lc295.md
+          - "[力扣 Top 127] LC 6 Z 字形变换 中等": daily/2026-08-09/leetcode-top-127-lc6.md
+          - "[力扣 Top 128] LC 93 复原 IP 地址 中等": daily/2026-08-09/leetcode-top-128-lc93.md
+          - "[力扣 Top 129] LC 349 两个数组的交集 简单": daily/2026-08-09/leetcode-top-129-lc349.md
+          - "[力扣 Top 130] LC 437 路径总和 III 中等": daily/2026-08-09/leetcode-top-130-lc437.md
+          - "[力扣竞赛] 第 188 场双周赛 Q1 LC 4006 统计有效前缀数目 简单": daily/2026-08-09/leetcode-biweekly-188-q1-lc4006.md
+          - "[codeforces] CF Round 1113 Div.2 F Matrix Elimination": daily/2026-08-09/codeforces-2248-f.md
+          - "[力扣每日一题] 2026-08-09｜LC 1140 石子游戏 II": daily/2026-08-09/leetcode-daily-2026-08-09-lc1140.md
       - "2026-08-06":
           - 当日总览: daily/2026-08-06/index.md
           - "[atcoder] ABC469 E Pro Exam Eligibility": daily/2026-08-06/atcoder-abc469-e.md

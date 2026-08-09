@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-09
+
+### 每日训练档案
+
+- 新增 [2026-08-09 每日 14 题](daily/2026-08-09/index.md)，依次覆盖 [AtCoder ABC469 F](problems/index.md#problem-atcoder-abc469-f)、力扣 Top 121–130、[第 188 场双周赛 Q1](problems/index.md#problem-lc-4006)、[Codeforces Round 1113 Div.2 F](problems/index.md#problem-codeforces-2248-f) 与 [LC 1140](problems/index.md#problem-lc-1140)。
+- AtCoder 与 Codeforces 页面保留自包含英文题面层，随后进入中文解释、算法递进、证明与变种；其余页面正文统一使用中文。
+
+### 隐式边层、窗口预算与可撤销路径状态
+
+- 扩充[图论](graph/index.md)，用按公约数降序的隐式边层与并查集模拟完全图上的最大生成树，避免显式生成平方级边集。
+- 扩充[前缀状态](basics/prefix-sums-and-difference.md)、[哈希与滑动窗口](data-structures/hash-and-cache.md)、[回溯](search/backtracking.md)、[链表接线](data-structures/linked-lists.md)、[线性递推](dp/linear-recurrences.md)、[字符串](strings/index.md)、[树上聚合](graph/tree-aggregation.md)与[博弈动态规划](dp/game-dp.md)，补入除自身聚合、预算窗口、有限值域集合、固定段切分、循环位移、带代价台阶、周期坐标、根路径前缀撤销与动态动作上限。
+- 扩充[序列扫描](basics/sequence-invariants.md)与[贪心交换](basics/greedy-exchange.md)，补入可重排交替序列的前缀平衡判据，以及全局操作逐点支配局部操作的适用边界。
+
+### 权威题目条目
+
+- 新增 [ABC469 F](problems/index.md#problem-atcoder-abc469-f)、[CF 2248F](problems/index.md#problem-codeforces-2248-f)、[LC 4006](problems/index.md#problem-lc-4006)、[LC 1140](problems/index.md#problem-lc-1140) 与力扣 Top 121–130 的唯一折叠条目；校正并复用 [LC 295](problems/index.md#problem-lc-295) 的权威实现。
+
 ## 2026-08-06
 
 ### 每日训练档案

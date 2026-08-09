@@ -2,6 +2,151 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-09",
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-f",
+          "title": "[atcoder] ABC469 F GCD Maximum Spanning Tree",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-f.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_f?lang=en",
+          "topic": "../../graph/index.md",
+          "source_sha256": "d698a2b2ff2de2eb17f6ecdf06481dee0e781ad37237e25b49bac3d33c3b1976"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-121-lc238",
+          "title": "[力扣 Top 121] LC 238 除了自身以外数组的乘积 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-121-lc238.md",
+          "official": "https://leetcode.cn/problems/product-of-array-except-self/",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "fc9441fca2024195505447d1966a5c5c81ebd834f9b72a156c0dfeb118fe3e3b"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-top-122-lc1004",
+          "title": "[力扣 Top 122] LC 1004 最大连续 1 的个数 III 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-122-lc1004.md",
+          "official": "https://leetcode.cn/problems/max-consecutive-ones-iii/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "b152cdfda4dcd35c59873935e026a8c3e70d774a13b92cc9230499d2255717a2"
+        },
+        {
+          "position": 4,
+          "key": "leetcode-top-123-lc39",
+          "title": "[力扣 Top 123] LC 39 组合总和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-123-lc39.md",
+          "official": "https://leetcode.cn/problems/combination-sum/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "cce22567536ae4b45739062b9966064933c3882973d270dfc168482d2e1b71b4"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-top-124-lc61",
+          "title": "[力扣 Top 124] LC 61 旋转链表 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-124-lc61.md",
+          "official": "https://leetcode.cn/problems/rotate-list/",
+          "topic": "../../data-structures/linked-lists.md",
+          "source_sha256": "367b158d8e0e2cacb681d1a80ea7e894691f39bfd7b4b7ad1f4b3e1c22a9e391"
+        },
+        {
+          "position": 6,
+          "key": "leetcode-top-125-lc746",
+          "title": "[力扣 Top 125] LC 746 使用最小花费爬楼梯 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-125-lc746.md",
+          "official": "https://leetcode.cn/problems/min-cost-climbing-stairs/",
+          "topic": "../../dp/linear-recurrences.md",
+          "source_sha256": "4f1d5d4c54d0690bf571847c7b8f109691559d971c6b8e873e3712b4634ff054"
+        },
+        {
+          "position": 7,
+          "key": "leetcode-top-126-lc295",
+          "title": "[力扣 Top 126] LC 295 数据流的中位数 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-126-lc295.md",
+          "official": "https://leetcode.cn/problems/find-median-from-data-stream/",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "c613cacf6f9edaa1a6c74344ccdfe3f0682e5076fc6b3301c76ba7b1549b4a0d"
+        },
+        {
+          "position": 8,
+          "key": "leetcode-top-127-lc6",
+          "title": "[力扣 Top 127] LC 6 Z 字形变换 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-127-lc6.md",
+          "official": "https://leetcode.cn/problems/zigzag-conversion/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "8442da6e4ac75383f13386dca665e4db9a8b7be7cf78c19b1adbdb0bd8e12e13"
+        },
+        {
+          "position": 9,
+          "key": "leetcode-top-128-lc93",
+          "title": "[力扣 Top 128] LC 93 复原 IP 地址 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-128-lc93.md",
+          "official": "https://leetcode.cn/problems/restore-ip-addresses/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "81ce420af822f914c329bfbee26600604bbbc724c1461de6ecb498406250e187"
+        },
+        {
+          "position": 10,
+          "key": "leetcode-top-129-lc349",
+          "title": "[力扣 Top 129] LC 349 两个数组的交集 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-129-lc349.md",
+          "official": "https://leetcode.cn/problems/intersection-of-two-arrays/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "c3013d8f0843f88341234679e75ec13b474985278245d4d2e6a8e831d05c06de"
+        },
+        {
+          "position": 11,
+          "key": "leetcode-top-130-lc437",
+          "title": "[力扣 Top 130] LC 437 路径总和 III 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-130-lc437.md",
+          "official": "https://leetcode.cn/problems/path-sum-iii/",
+          "topic": "../../graph/tree-aggregation.md",
+          "source_sha256": "5a11f80f8ae91f8e9eb2a063cddf9e6e0a2acc5cf458e965a93c3ba463f5ae46"
+        },
+        {
+          "position": 12,
+          "key": "leetcode-biweekly-188-q1-lc4006",
+          "title": "[力扣竞赛] 第 188 场双周赛 Q1 LC 4006 统计有效前缀数目 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-188-q1-lc4006.md",
+          "official": "https://leetcode.cn/problems/count-valid-prefixes/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "90f22130e9ff3ffb05ffea181edced44a0f5115368f813c2c6b189ec64c329f1"
+        },
+        {
+          "position": 13,
+          "key": "codeforces-2248-f",
+          "title": "[codeforces] CF Round 1113 Div.2 F Matrix Elimination",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-f.md",
+          "official": "https://codeforces.com/contest/2248/problem/F",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "0a14ac164a2cc3b738afbf13cc76568883cb6564eb1f1de806a20be2bf99a28f"
+        },
+        {
+          "position": 14,
+          "key": "leetcode-daily-2026-08-09-lc1140",
+          "title": "[力扣每日一题] 2026-08-09｜LC 1140 石子游戏 II",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-09-lc1140.md",
+          "official": "https://leetcode.cn/problems/stone-game-ii/",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "6135d3d8d80d515a6cd5e06947d95712f816678cebff55dd10f2dcb4f21f1cf1"
+        }
+      ]
+    },
+    {
       "date": "2026-08-06",
       "items": [
         {
