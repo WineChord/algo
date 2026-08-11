@@ -50,6 +50,18 @@ $$
 
 若当前行只依赖上一行，可以压成一维。覆盖 `dp[j]` 前要明确每个值的时间层：更新前的 `dp[j]` 是上方，更新后的 `dp[j-1]` 是左方；还需要左上状态时，必须先把旧 `dp[j]` 保存到临时变量。循环方向不是实现细节，而是状态语义的一部分。
 
+### 障碍是“清空状态”，不是跳过更新
+
+路径计数遇到障碍格时，该格不存在合法路径，状态必须立即置零。仅写 `continue` 会留下上一行同列的旧值，让后续格错误地把路径穿过障碍。对可走格，原地转移为
+
+$$
+dp[j]\leftarrow dp[j]+dp[j-1],
+$$
+
+其中右侧旧 `dp[j]` 来自上方，新 `dp[j-1]` 来自左方。起点用 `dp[0]=1` 作为唯一空前缀；若起点本身受阻，它在第一次更新时自然归零。原题保证最终答案不超过 $2\times10^9$，教学实现用更宽整数保存中间值，避免把接口上界误当作过程永不溢出的证明。
+
+--8<-- "includes/problems/lc-63.md"
+
 ## 什么时候应改成图最短路
 
 下面任一变化都会破坏简单的行列拓扑序：
@@ -74,4 +86,5 @@ $$
 
 - [LeetCode 64：最小路径和](../problems/index.md#problem-lc-64)
 - [LeetCode 221：最大正方形](../problems/index.md#problem-lc-221)
+- [LeetCode 63：不同路径 II](../problems/index.md#problem-lc-63)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)

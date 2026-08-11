@@ -1840,6 +1840,7 @@ def browser_audit(
                     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
                     date_entries = manifest["dates"]
                     expected_dates = [entry["date"] for entry in date_entries]
+                    expected_counts = [len(entry["items"]) for entry in date_entries]
                     latest = date_entries[0]
                     first = latest["items"][0]
                     route = (
@@ -1913,24 +1914,27 @@ def browser_audit(
                             and active["expanded"] == "true"
                             and active["display"] != "none"
                             and active["height"] > 0
-                            and active["links"] == 14
+                            and active["links"] == expected_counts[0]
                         ):
                             errors.append(
                                 "daily archive active date must expose exactly "
-                                "14 problem links"
+                                f"{expected_counts[0]} problem links"
                             )
-                        if any(
+                        inactive_issues = any(
                             item["active"]
                             or item["checked"]
                             or item["expanded"] != "false"
                             or item["display"] != "none"
                             or item["height"] != 0
-                            or item["links"] != 14
-                            for item in sections[1:]
-                        ):
+                            or item["links"] != expected_count
+                            for item, expected_count in zip(
+                                sections[1:], expected_counts[1:], strict=True
+                            )
+                        )
+                        if inactive_issues:
                             errors.append(
                                 "daily archive inactive dates must retain "
-                                "14 links but stay visually collapsed"
+                                "their manifest links but stay visually collapsed"
                             )
                     visits += 1
                     driver.get(base_url + "/daily/")
@@ -1963,10 +1967,10 @@ def browser_audit(
                             "article.md-content__inner .daily-run-list a",
                         )
                     )
-                    if len(problem_links) != 14:
+                    if len(problem_links) != expected_counts[0]:
                         errors.append(
-                            f"/daily/{latest['date']}/ must expose 14 clickable "
-                            "problem titles"
+                            f"/daily/{latest['date']}/ must expose "
+                            f"{expected_counts[0]} clickable problem titles"
                         )
                     else:
                         problem_links[0].click()

@@ -113,6 +113,20 @@ $$
 
 $f(n)=F_{n+1}$。矩阵快速幂或 Fibonacci 快速倍增可在 $O(\log n)$ 时间计算；对模数取余时还要检查乘法是否需要 `__int128`。
 
+### 非交换对象先消元，再寻找线性坐标
+
+递推对象不一定一开始就是数。若每一项是群元素，直接把所有历史元素放进状态往往会得到笨重的群乘积矩阵；先利用逆元消去公共片段，可能把递推降到少数数值坐标。
+
+ABC469 G 中，轮转与反转生成二面体群。令 $P=K+1$，操作串按新到旧连接得到的群元素满足
+
+$$
+g_n=g_{n-1}^2g_{n-P}^{-1}.
+$$
+
+写成方向 $d_n\in\{1,-1\}$ 与偏移 $o_n$ 后，方向满足 $d_n=d_{n-P}$，偏移则成为系数以 $P$ 为周期的 $P$ 阶线性递推。此时才适合把一个完整周期合成矩阵并快速幂。这里的关键路径是“群结构消元 → 选择封闭坐标 → 周期系数矩阵”，而不是直接对原字符串递推。
+
+--8<-- "includes/problems/atcoder-abc469-g.md"
+
 ## 何时不能直接滚动
 
 - 后续需要恢复完整方案；
@@ -127,4 +141,5 @@ $f(n)=F_{n+1}$。矩阵快速幂或 Fibonacci 快速倍增可在 $O(\log n)$ 时
 - [LeetCode 70：爬楼梯](../problems/index.md#problem-lc-70)
 - [LeetCode 53：最大子数组和](../problems/index.md#problem-lc-53)
 - [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
+- [AtCoder ABC469 G：K-nacci Operations](../problems/index.md#problem-atcoder-abc469-g)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

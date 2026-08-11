@@ -136,6 +136,17 @@ int main() {
 
 --8<-- "includes/problems/lc-322.md"
 
+### 有增益交易：按首个可泵阈值分层
+
+余额可达问题若同时存在净减少与净增加，按余额递推通常会出现环。一个有效的拆分点是“最便宜的净增益交易” $M$：
+
+- $h<M$ 时买不起任何增资交易，余额只下降，可按余额做 DAG DP；
+- $h\ge M$ 时可重复增资获得任意大缓冲，门槛约束最终退化为净变化生成群的 gcd 同余条件。
+
+低区间仍要保留每种净减少量的最小完整付款额；只看净损失会忽略“先付款、后返利”的负担条件。高区间则还要单独证明存在无返利终局，不能把同余可达误当作已经能精确归零。CF 2248G 用两次 bitset 分别并行化无界背包与低区间存在性查询，展示了 DP 与数论尾部如何在同一状态空间交接。
+
+--8<-- "includes/problems/codeforces-2248-g.md"
+
 ### 网格局部状态
 
 --8<-- "includes/problems/lc-64.md"
@@ -182,6 +193,7 @@ int main() {
 - [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
 - [LeetCode 416：分割等和子集](../problems/index.md#problem-lc-416)
 - [LeetCode 322：零钱兑换](../problems/index.md#problem-lc-322)
+- [Codeforces 2248G：No Balance Left](../problems/index.md#problem-codeforces-2248-g)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [LeetCode 152：乘积最大子数组](../problems/index.md#problem-lc-152)
 - [字符串动态规划：前缀可达与模式匹配](string-dp.md)

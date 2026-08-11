@@ -64,6 +64,14 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 
 --8<-- "includes/problems/lc-349.md"
 
+### 频次聚合：互补组的贡献何时可以直接相加
+
+若一个方案由两个值组成、目标只取决于二者之和，哈希频次可以把具体元素压成互补值对。能否把每对贡献直接累加，取决于同一目标下不同互补对是否争用元素。
+
+LC 4007 中，固定栅栏高度 $H$ 后，长度 $x$ 只能与 $H-x$ 配对；不同无序互补对互不共享长度桶，同长度对则单独贡献 $\lfloor count[x]/2\rfloor$。因此每个互补对的最大组数可以独立累加到 `width[H]`。如果一组允许三块木板，同一个长度可能出现在多个三元组中，独立性立即消失，必须改成集合打包或状态压缩。
+
+--8<-- "includes/problems/lc-4007.md"
+
 ## LRU：哈希负责定位，链表负责顺序
 
 缓存同时需要两种操作：
@@ -110,4 +118,5 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 - [LeetCode 3：无重复字符的最长子串](../problems/index.md#problem-lc-3)
 - [LeetCode 76：最小覆盖子串](../problems/index.md#problem-lc-76)
 - [LeetCode 146：LRU 缓存](../problems/index.md#problem-lc-146)
+- [LeetCode 4007：栅栏的最宽宽度](../problems/index.md#problem-lc-4007)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

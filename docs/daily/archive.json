@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-11",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc469-g",
+          "title": "[atcoder] ABC469 G K-nacci Operations",
+          "kind": "AtCoder",
+          "page": "atcoder-abc469-g.md",
+          "official": "https://atcoder.jp/contests/abc469/tasks/abc469_g?lang=en",
+          "topic": "../../dp/linear-recurrences.md",
+          "source_sha256": "bcede6abfa5a2a65f4511d8cea40ad0cbb5d5eb9808a5020368011265e9ba4a9"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-131-lc63",
+          "title": "[力扣 Top 131] LC 63 不同路径 II 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-131-lc63.md",
+          "official": "https://leetcode.cn/problems/unique-paths-ii/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "9ed6adf1358a45b86f9e3cd3b99b6e5ad2d81e839882e21e1b148e922efcacbf"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-188-q2-lc4007",
+          "title": "[力扣竞赛] 第 188 场双周赛 Q2 LC 4007 栅栏的最宽宽度 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-188-q2-lc4007.md",
+          "official": "https://leetcode.cn/problems/maximum-width-of-a-fence/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "43ae8fb995f863c02337e3bff285ad111153462c195d6fcc5581dd701cfdbe0b"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2248-g",
+          "title": "[codeforces] CF Round 1113 Div.2 G No Balance Left",
+          "kind": "Codeforces",
+          "page": "codeforces-2248-g.md",
+          "official": "https://codeforces.com/contest/2248/problem/G",
+          "topic": "../../dp/index.md",
+          "source_sha256": "197a37b88feed5faf034fb9d7006959148919a9d8c2dd6b3014165c3dc2bef83"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-11-lc2996",
+          "title": "[力扣每日一题] 2026-08-11｜LC 2996 大于等于顺序前缀和的最小缺失整数",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-11-lc2996.md",
+          "official": "https://leetcode.cn/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "a9b25507a8ed52d5325eb66c826fade50856203a24fe2df406cb7000366df072"
+        }
+      ]
+    },
+    {
       "date": "2026-08-09",
       "items": [
         {

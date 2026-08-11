@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publish one verified 14-problem workday into the chronological archive."""
+"""Publish one verified daily work batch into the chronological archive."""
 
 from __future__ import annotations
 
@@ -355,19 +355,23 @@ def build_items(spec_paths: list[Path], roots: list[Path]) -> list[Item]:
 
 
 def validate_ledger(items: list[Item]) -> None:
-    if len(items) != 14:
-        raise ValueError(f"a workday must contain exactly 14 items, found {len(items)}")
+    top_count = len(items) - 4
+    if top_count not in {1, 10}:
+        raise ValueError(
+            "a workday must contain either 5 or 14 items, "
+            f"found {len(items)}"
+        )
     kinds = [item.kind for item in items]
     expected = [
         "AtCoder",
-        *(["力扣 Top"] * 10),
+        *(["力扣 Top"] * top_count),
         "力扣竞赛",
         "Codeforces",
         "力扣每日一题",
     ]
     if kinds != expected:
-        raise ValueError(f"invalid 1+10+1+1+1 order: {kinds}")
-    if len({item.title for item in items}) != 14:
+        raise ValueError(f"invalid 1+{top_count}+1+1+1 order: {kinds}")
+    if len({item.title for item in items}) != len(items):
         raise ValueError("daily subjects must be unique")
 
 
@@ -439,7 +443,7 @@ def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
             "",
             (
                 f'<p class="daily-archive-kicker">{work_date} · '
-                f"第 {item.position}/14 题 · {item.kind}</p>"
+                f"第 {item.position}/{len(items)} 题 · {item.kind}</p>"
             ),
             "",
             (
@@ -466,6 +470,7 @@ def render_problem_page(work_date: str, item: Item, items: list[Item]) -> str:
 
 
 def render_date_index(work_date: str, items: list[dict[str, object]]) -> str:
+    top_count = sum(item["kind"] == "力扣 Top" for item in items)
     rows = []
     for item in items:
         rows.extend(
@@ -484,7 +489,7 @@ def render_date_index(work_date: str, items: list[dict[str, object]]) -> str:
             f"# {work_date} · 每日题目 {{ .daily-archive-date-heading }}",
             "",
             (
-                "本日按固定顺序收录 AtCoder 1 题、力扣高频 10 题、"
+                f"本日按固定顺序收录 AtCoder 1 题、力扣高频 {top_count} 题、"
                 "力扣竞赛 1 题、Codeforces 1 题和力扣每日一题 1 题。"
                 "每页都保留完整题面信息、约束推导、从朴素到最优的解法、"
                 "正确性、完整 C++ 与高价值变种。"
@@ -511,7 +516,7 @@ def render_archive_index(dates: list[dict[str, object]]) -> str:
         ),
         "",
         "日期按新到旧排列。进入任意题目后，左侧导航只展开当前日期，"
-        "可以在同一天的 14 道题之间连续阅读。",
+        "可以在同一天的完整训练题目之间连续阅读。",
         "",
     ]
     for entry in dates:
@@ -635,7 +640,15 @@ def main() -> None:
         for entry in manifest["dates"]
         if isinstance(entry, dict) and entry.get("date") != args.date
     ]
-    dates.append({"date": args.date, "items": item_records})
+    top_count = sum(item["kind"] == "力扣 Top" for item in item_records)
+    dates.append(
+        {
+            "date": args.date,
+            "expected_count": len(item_records),
+            "top_count": top_count,
+            "items": item_records,
+        }
+    )
     dates.sort(key=lambda entry: str(entry["date"]), reverse=True)
     manifest["dates"] = dates
     ARCHIVE.mkdir(parents=True, exist_ok=True)

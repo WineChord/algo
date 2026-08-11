@@ -113,22 +113,35 @@ for entry in dates:
         continue
     work_date = str(entry.get("date"))
     items = entry.get("items")
-    if not isinstance(items, list) or len(items) != 14:
-        fail(f"{work_date}: expected exactly 14 items")
+    if not isinstance(items, list):
+        fail(f"{work_date}: items must be an array")
+        continue
+    expected_count = entry.get("expected_count", len(items))
+    top_count = entry.get(
+        "top_count",
+        sum(item.get("kind") == "力扣 Top" for item in items if isinstance(item, dict)),
+    )
+    if (expected_count, top_count) not in {(5, 1), (14, 10)}:
+        fail(
+            f"{work_date}: expected_count/top_count must be 5/1 or 14/10"
+        )
+        continue
+    if len(items) != expected_count:
+        fail(f"{work_date}: expected exactly {expected_count} items")
         continue
     kinds = [str(item.get("kind")) for item in items if isinstance(item, dict)]
     expected_kinds = [
         "AtCoder",
-        *(["力扣 Top"] * 10),
+        *(["力扣 Top"] * top_count),
         "力扣竞赛",
         "Codeforces",
         "力扣每日一题",
     ]
     if kinds != expected_kinds:
-        fail(f"{work_date}: invalid 1+10+1+1+1 item order")
+        fail(f"{work_date}: invalid 1+{top_count}+1+1+1 item order")
     positions = [item.get("position") for item in items if isinstance(item, dict)]
-    if positions != list(range(1, 15)):
-        fail(f"{work_date}: positions must be 1 through 14")
+    if positions != list(range(1, expected_count + 1)):
+        fail(f"{work_date}: positions must be 1 through {expected_count}")
     titles = [str(item.get("title")) for item in items if isinstance(item, dict)]
     if len(titles) != len(set(titles)):
         fail(f"{work_date}: subjects must be unique")
@@ -287,8 +300,10 @@ for entry in dates:
             fail(f"{page.relative_to(ROOT)}: contains an email address")
         if re.search(r"提交 [`0-9a-f]{7,}", text):
             fail(f"{page.relative_to(ROOT)}: contains private submission evidence")
-    if top_ranks and top_ranks != list(range(top_ranks[0], top_ranks[0] + 10)):
-        fail(f"{work_date}: Top ranks must be ten consecutive values")
+    if top_ranks and top_ranks != list(
+        range(top_ranks[0], top_ranks[0] + top_count)
+    ):
+        fail(f"{work_date}: Top ranks must be {top_count} consecutive values")
     date_index = ARCHIVE / work_date / "index.md"
     if not date_index.is_file():
         fail(f"{work_date}: missing date index")

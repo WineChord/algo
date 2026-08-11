@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-11
+
+### 每日训练档案
+
+- 新增 [2026-08-11 每日 5 题](daily/2026-08-11/index.md)：[AtCoder ABC469 G](problems/index.md#problem-atcoder-abc469-g)、[力扣 Top 131](problems/index.md#problem-lc-63)、[力扣第 188 场双周赛 Q2](problems/index.md#problem-lc-4007)、[Codeforces Round 1113 Div.2 G](problems/index.md#problem-codeforces-2248-g) 与 [LC 2996](problems/index.md#problem-lc-2996)。
+- 日期档案兼容历史 14 题与新的 5 题账目；两种结构共享同一规范正文、权威题目片段和专题入口。
+
+### 群递推、阈值可达与互补频次
+
+- 扩充[线性递推](dp/linear-recurrences.md)，加入二面体群消元、周期方向与周期系数矩阵的推导路径。
+- 扩充[动态规划](dp/index.md)与[网格动态规划](dp/grid-dp.md)，补入净增益阈值下的 DAG/gcd 分层，以及障碍清零与一维状态时间层。
+- 扩充[哈希分组](data-structures/hash-and-cache.md)与[序列扫描](basics/sequence-invariants.md)，补入互补频次的独立贡献判据，以及顺序前缀边界与全局缺失值的两阶段模型。
+
+### 权威题目条目
+
+- 新增 [ABC469 G](problems/index.md#problem-atcoder-abc469-g)、[LC 63](problems/index.md#problem-lc-63)、[LC 4007](problems/index.md#problem-lc-4007)、[CF 2248G](problems/index.md#problem-codeforces-2248-g) 与 [LC 2996](problems/index.md#problem-lc-2996) 的唯一折叠条目。
+
 ## 2026-08-09
 
 ### 每日训练档案
