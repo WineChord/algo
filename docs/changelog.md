@@ -1,5 +1,20 @@
 # 更新日志
 
+## 2026-08-12
+
+### 每日训练档案
+
+- 新增 [2026-08-12 每日 5 题](daily/2026-08-12/index.md)：[AtCoder ARC226 A](problems/index.md#problem-atcoder-arc226-a)、[力扣 Top 132](problems/index.md#problem-lc-18)、[力扣第 188 场双周赛 Q3](problems/index.md#problem-lc-4008)、[Codeforces Round 1116 Div.2 A](problems/index.md#problem-codeforces-2256-a) 与 [LC 2958](problems/index.md#problem-lc-2958)。
+
+### 区间图、顺序下界与窗口频次
+
+- 扩充[奇偶状态图](graph/weighted-parity-states.md)，加入区间重叠图在最大活跃数为 2 时的森林结构，以及扫描连通分量计数二染色的推导。
+- 扩充[序列扫描](basics/sequence-invariants.md)、[前缀状态](basics/prefix-sums-and-difference.md)与[哈希滑动窗口](data-structures/hash-and-cache.md)，补入四数和分层去重、一步进入单调闭包、差分增强后的顺序资源下界和逐值频次上限。
+
+### 权威题目条目
+
+- 新增 [ARC226 A](problems/index.md#problem-atcoder-arc226-a)、[LC 18](problems/index.md#problem-lc-18)、[LC 4008](problems/index.md#problem-lc-4008)、[CF 2256A](problems/index.md#problem-codeforces-2256-a) 与 [LC 2958](problems/index.md#problem-lc-2958) 的唯一折叠条目。
+
 ## 2026-08-11
 
 ### 每日训练档案

@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-12",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc226-a",
+          "title": "[atcoder] ARC226 A Meeting Division",
+          "kind": "AtCoder",
+          "page": "atcoder-arc226-a.md",
+          "official": "https://atcoder.jp/contests/arc226/tasks/arc226_a?lang=en",
+          "topic": "../../graph/weighted-parity-states.md",
+          "source_sha256": "86995098e59773ba5f81fdae7fdbf55a04d5872657e64cfc989f7c37b4d3aa0a"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-132-lc18",
+          "title": "[力扣 Top 132] LC 18 四数之和 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-132-lc18.md",
+          "official": "https://leetcode.cn/problems/4sum/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "32dc8bf66de2d636bd4aa03a54e18b0061268039381f003df1ef770807201f20"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-188-q3-lc4008",
+          "title": "[力扣竞赛] 第 188 场双周赛 Q3 LC 4008 击败所有怪物的最小初始强度 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-188-q3-lc4008.md",
+          "official": "https://leetcode.cn/problems/minimum-initial-strength-to-defeat-all-monsters/",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "4d264835b912a529684b36e71928640f4cc160e91c634d96e6293d72b28757c4"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-a",
+          "title": "[codeforces] CF Round 1116 Div.2 A Three Numbers on the Blackboard",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-a.md",
+          "official": "https://codeforces.com/contest/2256/problem/A",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "316c5f24663f044862d24a472acde91e3384d9b0f01ec3f0e457caa99a77b2eb"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-12-lc2958",
+          "title": "[力扣每日一题] 2026-08-12｜LC 2958 最多 K 个重复元素的最长子数组",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-12-lc2958.md",
+          "official": "https://leetcode.cn/problems/length-of-longest-subarray-with-at-most-k-frequency/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "22a48a7252463209474522fdb5060099a9a07f83c5dd83129ac0e0efa2033b5a"
+        }
+      ]
+    },
+    {
       "date": "2026-08-11",
       "expected_count": 5,
       "top_count": 1,

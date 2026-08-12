@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-12":
+          - 当日总览: daily/2026-08-12/index.md
+          - "[atcoder] ARC226 A Meeting Division": daily/2026-08-12/atcoder-arc226-a.md
+          - "[力扣 Top 132] LC 18 四数之和 中等": daily/2026-08-12/leetcode-top-132-lc18.md
+          - "[力扣竞赛] 第 188 场双周赛 Q3 LC 4008 击败所有怪物的最小初始强度 中等": daily/2026-08-12/leetcode-biweekly-188-q3-lc4008.md
+          - "[codeforces] CF Round 1116 Div.2 A Three Numbers on the Blackboard": daily/2026-08-12/codeforces-2256-a.md
+          - "[力扣每日一题] 2026-08-12｜LC 2958 最多 K 个重复元素的最长子数组": daily/2026-08-12/leetcode-daily-2026-08-12-lc2958.md
       - "2026-08-11":
           - 当日总览: daily/2026-08-11/index.md
           - "[atcoder] ABC469 G K-nacci Operations": daily/2026-08-11/atcoder-abc469-g.md

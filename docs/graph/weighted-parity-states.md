@@ -68,6 +68,16 @@ $$
 
 若要最少操作，目标本身也要选择。可用 DP 状态 `(处理位置, 已选负数数, 当前前缀异或)`，每步选择目标符号，并把当前边是否需要操作计入代价，时间 $O(n^2)$。
 
+## 区间重叠图：扫描连通分量并计数二染色
+
+当每个对象是数轴区间、相交对象不能选择同一类别时，冲突关系构成区间图。若题目保证任意时刻最多两个区间同时活跃，则区间图不会出现三角形；区间图是弦图，因此无三角形就必为森林，也就一定可以二染色。
+
+端点互异时，按坐标扫描开始与结束事件即可同时统计连通分量：遇到开始事件且当前没有活跃区间，说明后续开启一个新分量；否则新节点与现有活跃节点相连，仍属于同一分量。结束事件只减少活跃数。若共有 $C$ 个分量，每个非空二分分量有且仅有两种整体翻色方式，答案就是 $2^C$。
+
+--8<-- "includes/problems/atcoder-arc226-a.md"
+
+这一压缩依赖两条结构边界：端点若允许相同，必须先规定闭区间或开区间以及同坐标事件顺序；若允许同时活跃三个区间，就可能出现奇环，不能只数分量，必须显式检测二分性。
+
 ## 交替方向：把行动奇偶展开成两层图 { #alternating-direction-state-graph }
 
 若同一格在奇数行动与偶数行动时允许方向和边权不同，只把格子作为节点会丢失决定未来的信息。把状态写成 `(row, column, parity)`，等待与四向移动都翻转奇偶层；目标格入口代价与逆偏好惩罚共同构成非负边权。
@@ -93,5 +103,6 @@ $$
 - [LeetCode 3286：穿越网格图的安全路径](../problems/index.md#problem-lc-3286)
 - [LeetCode 3996：偶数次骑士移动](../problems/index.md#problem-lc-3996)
 - [Codeforces 2247A](../problems/index.md#problem-codeforces-2247-a)
+- [AtCoder ARC226 A](../problems/index.md#problem-atcoder-arc226-a)
 - [LeetCode 4003：交替方向的最小路径代价 III](../problems/index.md#problem-lc-4003)
 - [Dijkstra, “A note on two problems in connexion with graphs”](https://doi.org/10.1007/BF01386390)

@@ -28,6 +28,8 @@ def _is_english_analysis_line(line: str) -> bool:
     stripped = line.strip()
     if not stripped or stripped.startswith(("<!--", "![", "$$", "\\")):
         return False
+    if re.fullmatch(r"# \[(?:atcoder|codeforces)\] .+", stripped):
+        return False
     if stripped.startswith(("<nav", "</nav", "<a ", "<p ", "<span", "<img")):
         return False
     if LINK_ONLY.fullmatch(stripped):

@@ -71,6 +71,18 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 
 --8<-- "includes/problems/atcoder-abc468-b.md"
 
+### 差分恢复后的前缀下界
+
+区间差分只负责把多条增强恢复成每个位置的总增益；恢复后仍要问“什么初始资源能通过固定顺序的全部检查”。若处理位置 $i$ 前已经永久消耗前缀和 $S_i$，而临时增强 $b_i$ 只参与当前检查，则仅当 $b_i<m_i$ 时形成下界
+
+$$
+X\ge S_i+m_i-b_i.
+$$
+
+增强足以覆盖当前怪物时，这个位置没有下界，不能错误地把它写成 $X\ge S_i$。扫描所有真实下界取最大值，就把区间聚合与顺序资源约束清楚分成两层。
+
+--8<-- "includes/problems/lc-4008.md"
+
 ## 前缀支配：排序操作的可达性
 
 二进制子序列按非降序放回时，只会把某些 `0` 移到更左、把某些 `1` 移到更右。于是可达目标必须满足两个守恒条件：
@@ -124,4 +136,5 @@ ABC468 B 中，每名守卫覆盖一个截断后的区间；所有覆盖区间�
 - [LeetCode 304：二维区域和检索](../problems/index.md#problem-lc-304)
 - [LeetCode 4011：按奇偶比统计子数组 I](../problems/index.md#problem-lc-4011)
 - [LeetCode 4013：按奇偶比统计子数组 II](../problems/index.md#problem-lc-4013)
+- [LeetCode 4008：击败所有怪物的最小初始强度](../problems/index.md#problem-lc-4008)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
