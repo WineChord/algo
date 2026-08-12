@@ -168,6 +168,10 @@
 
 --8<-- "includes/problems/lc-2996.md"
 
+--8<-- "includes/problems/atcoder-arc226-b.md"
+
+--8<-- "includes/problems/lc-162.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -256,7 +260,11 @@
 
 --8<-- "includes/problems/luogu-p3367.md"
 
+--8<-- "includes/problems/lc-2213.md"
+
 ## 动态规划
+
+--8<-- "includes/problems/lc-4009.md"
 
 --8<-- "includes/problems/lc-91.md"
 
@@ -453,6 +461,8 @@
 --8<-- "includes/problems/lc-3518.md"
 
 --8<-- "includes/problems/lc-3999.md"
+
+--8<-- "includes/problems/codeforces-2256-b.md"
 
 --8<-- "includes/problems/lc-224.md"
 

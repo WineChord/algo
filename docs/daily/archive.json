@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-13",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc226-b",
+          "title": "[atcoder] ARC226 B Bin-ary Packing",
+          "kind": "AtCoder",
+          "page": "atcoder-arc226-b.md",
+          "official": "https://atcoder.jp/contests/arc226/tasks/arc226_b?lang=en",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "c773807bd1865ae195d764f700a1878524968f96a0da7840c7b91efa1bdfe26d"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-133-lc162",
+          "title": "[力扣 Top 133] LC 162 寻找峰值 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-133-lc162.md",
+          "official": "https://leetcode.cn/problems/find-peak-element/",
+          "topic": "../../basics/binary-search.md",
+          "source_sha256": "d9a6cef3c2cdaee317098a5c147bc1b040a6b517cad53faa155b3ef93cf1880f"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-188-q4-lc4009",
+          "title": "[力扣竞赛] 第 188 场双周赛 Q4 LC 4009 最小化最大可能等待时间 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-188-q4-lc4009.md",
+          "official": "https://leetcode.cn/problems/minimum-possible-maximum-waiting-time/",
+          "topic": "../../dp/index.md",
+          "source_sha256": "7f3024b7115cb6f72b0ab7ab23a17357433da8c4aad205b6634fd47fad221357"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-b",
+          "title": "[codeforces] CF Round 1116 Div.2 B Domino Tiles",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-b.md",
+          "official": "https://codeforces.com/contest/2256/problem/B",
+          "topic": "../../strings/index.md",
+          "source_sha256": "c7060887a1495fc50b4a4b050920f20d31a7094629211a2958c1c9fc442aaf7d"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-13-lc2213",
+          "title": "[力扣每日一题] 2026-08-13｜LC 2213 由单个字符重复的最长子字符串",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-13-lc2213.md",
+          "official": "https://leetcode.cn/problems/longest-substring-of-one-repeating-character/",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "5fde5436d974c69e98c0938dd02b944931c33b6b99f4435255e47cbef0688ee3"
+        }
+      ]
+    },
+    {
       "date": "2026-08-12",
       "expected_count": 5,
       "top_count": 1,

@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-13
+
+### 每日训练档案
+
+- 新增 [2026-08-13 每日 5 题](daily/2026-08-13/index.md)：[AtCoder ARC226 B](problems/index.md#problem-atcoder-arc226-b)、[力扣 Top 133](problems/index.md#problem-lc-162)、[力扣第 188 场双周赛 Q4](problems/index.md#problem-lc-4009)、[Codeforces Round 1116 Div.2 B](problems/index.md#problem-codeforces-2256-b) 与 [LC 2213](problems/index.md#problem-lc-2213)。
+
+### 尺度下界、相对时间与可合并摘要
+
+- 扩充[贪心交换](basics/greedy-exchange.md)，加入整除重量链上的逐尺度容量下界及其同时充分性边界。
+- 扩充[二分查找](basics/binary-search.md)与[动态规划](dp/index.md)，补入非单调函数上的坡向存在性二分，以及双机调度中消去绝对时钟的相对忙碌状态。
+- 扩充[数据结构](data-structures/index.md)与[字符串](strings/index.md)，补入最长同字符段的可合并线段树摘要，以及消去共享中项后得到的隔位约束与四周期候选。
+
+### 权威题目条目
+
+- 新增 [ARC226 B](problems/index.md#problem-atcoder-arc226-b)、[LC 162](problems/index.md#problem-lc-162)、[LC 4009](problems/index.md#problem-lc-4009)、[CF 2256B](problems/index.md#problem-codeforces-2256-b) 与 [LC 2213](problems/index.md#problem-lc-2213) 的唯一折叠条目。
+
 ## 2026-08-12
 
 ### 每日训练档案

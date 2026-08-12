@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-13":
+          - 当日总览: daily/2026-08-13/index.md
+          - "[atcoder] ARC226 B Bin-ary Packing": daily/2026-08-13/atcoder-arc226-b.md
+          - "[力扣 Top 133] LC 162 寻找峰值 中等": daily/2026-08-13/leetcode-top-133-lc162.md
+          - "[力扣竞赛] 第 188 场双周赛 Q4 LC 4009 最小化最大可能等待时间 困难": daily/2026-08-13/leetcode-biweekly-188-q4-lc4009.md
+          - "[codeforces] CF Round 1116 Div.2 B Domino Tiles": daily/2026-08-13/codeforces-2256-b.md
+          - "[力扣每日一题] 2026-08-13｜LC 2213 由单个字符重复的最长子字符串": daily/2026-08-13/leetcode-daily-2026-08-13-lc2213.md
       - "2026-08-12":
           - 当日总览: daily/2026-08-12/index.md
           - "[atcoder] ARC226 A Meeting Division": daily/2026-08-12/atcoder-arc226-a.md

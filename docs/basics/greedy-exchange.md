@@ -130,6 +130,14 @@ $$
 
 --8<-- "includes/problems/codeforces-2248-f.md"
 
+## 整除尺度下界：离散包裹的可同时满足条件
+
+只看总重量平均值，通常不足以判断不可分割物品能否装入多个等容量容器；大件数量还会形成更强的离散下界。若所有重量构成整除链，则可以逐尺度把大件折算成当前尺度单位：容量在每个尺度上必须容纳这些单位，而链式整除又让这组必要条件同时充分。
+
+二进制重量尤其简洁。从高位向低位递推单位数 $U_k=A_k+2U_{k+1}$，每层给出容量下界 $2^k\lceil U_k/N\rceil$。最终答案取全部下界的最大值；这不是“平均负载贪心”，而是利用整除结构把装箱的组合约束压成层级守恒量。若重量不再整除，尺度下界仍然必要，却通常不再充分。
+
+--8<-- "includes/problems/atcoder-arc226-b.md"
+
 ## 如何判断贪心是否可信
 
 ### 先写可行域
@@ -184,3 +192,4 @@ $$
 - [Codeforces 2248A](../problems/index.md#problem-codeforces-2248-a)
 - [LeetCode 135：分发糖果](../problems/index.md#problem-lc-135)
 - [Codeforces 2248B](../problems/index.md#problem-codeforces-2248-b)
+- [AtCoder ARC226 B](../problems/index.md#problem-atcoder-arc226-b)

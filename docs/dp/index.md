@@ -147,6 +147,14 @@ int main() {
 
 --8<-- "includes/problems/codeforces-2248-g.md"
 
+### 相对时间状态：让绝对时钟退出动态规划
+
+多台机器按事件推进时，直接保存绝对开始时间往往会制造无必要的大值域。站在“当前任务刚被释放”的时刻，只保存每台机器还要忙多久；把任务交给机器 $j$ 后，等待量就是该机剩余忙碌时间，另一台机器在等待期间同步减少。这样一次转移同时完成时间推进与机器选择。
+
+若资源上限也很小，状态可以进一步包含各机器剩余资源。同一状态的未来完全一致，只需保留到达它时的最小历史代价；逐层处理任务，某层无后继时就精确得到能完成的最大前缀。机器数扩大后状态维数会指数增长，说明“小机器数”而非“小任务数”才是该模型的关键参数。
+
+--8<-- "includes/problems/lc-4009.md"
+
 ### 网格局部状态
 
 --8<-- "includes/problems/lc-64.md"
@@ -194,6 +202,7 @@ int main() {
 - [LeetCode 416：分割等和子集](../problems/index.md#problem-lc-416)
 - [LeetCode 322：零钱兑换](../problems/index.md#problem-lc-322)
 - [Codeforces 2248G：No Balance Left](../problems/index.md#problem-codeforces-2248-g)
+- [LeetCode 4009：最小化最大可能等待时间](../problems/index.md#problem-lc-4009)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [LeetCode 152：乘积最大子数组](../problems/index.md#problem-lc-152)
 - [字符串动态规划：前缀可达与模式匹配](string-dp.md)
