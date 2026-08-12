@@ -8,7 +8,7 @@ title: "[codeforces] CF Round 1116 Div.2 A Three Numbers on the Blackboard"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-12 题目列表</a> · <a href="../../../basics/sequence-invariants/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=316c5f24663f044862d24a472acde91e3384d9b0f01ec3f0e457caa99a77b2eb -->
+<!-- DAILY_CANONICAL_BODY_START sha256=d61ab12e19acbc2d4c59a0386714840307e9e75279553a735f9250accbb9ff47 -->
 [Official problem: Codeforces 2256A — Three Numbers on the Blackboard](https://codeforces.com/contest/2256/problem/A)
 
 [Materials usage license](https://codeforces.com/blog/entry/967)
@@ -202,9 +202,9 @@ int main() {
 
 设初始排序为 $x\le y\le z$。
 
-**下界。**第一次操作后，状态总能写成 $p\le q\le p+q$，其极差为 $q$；三种首步分别给出极差 $z,z,y$。从这种加和态继续：替换 $p$ 后极差为 $p+q$，替换 $q$ 后极差也为 $p+q$，替换 $p+q$ 则状态不变。因此第一次操作之后，极差永不下降。任何非空序列都至少为首步三种极差的最小值 $y$。零步方案固定为 $z-x$，故任意方案至少为 $\min(z-x,y)$。
+下界：第一次操作后，状态总能写成 $p\le q\le p+q$，其极差为 $q$；三种首步分别给出极差 $z,z,y$。从这种加和态继续：替换 $p$ 后极差为 $p+q$，替换 $q$ 后极差也为 $p+q$，替换 $p+q$ 则状态不变。因此第一次操作之后，极差永不下降。任何非空序列都至少为首步三种极差的最小值 $y$。零步方案固定为 $z-x$，故任意方案至少为 $\min(z-x,y)$。
 
-**可达性。**零步直接实现 $z-x$。把 $z$ 替换为 $x+y$ 后得到 $x\le y\le x+y$，极差为 $y$。两种候选都可达，所以它们的较小值可达。上下界相等，公式正确。
+可达性：零步直接实现 $z-x$。把 $z$ 替换为 $x+y$ 后得到 $x\le y\le x+y$，极差为 $y$。两种候选都可达，所以它们的较小值可达。上下界相等，公式正确。
 
 ## 样例手推、边界与易错点
 

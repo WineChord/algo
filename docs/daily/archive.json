@@ -24,7 +24,7 @@
           "page": "leetcode-top-132-lc18.md",
           "official": "https://leetcode.cn/problems/4sum/",
           "topic": "../../basics/sequence-invariants.md",
-          "source_sha256": "32dc8bf66de2d636bd4aa03a54e18b0061268039381f003df1ef770807201f20"
+          "source_sha256": "0eb34f5b3bc707763dec36ab161c2f05dfff986cafbfdcc04f96130a73d776f4"
         },
         {
           "position": 3,
@@ -44,7 +44,7 @@
           "page": "codeforces-2256-a.md",
           "official": "https://codeforces.com/contest/2256/problem/A",
           "topic": "../../basics/sequence-invariants.md",
-          "source_sha256": "316c5f24663f044862d24a472acde91e3384d9b0f01ec3f0e457caa99a77b2eb"
+          "source_sha256": "d61ab12e19acbc2d4c59a0386714840307e9e75279553a735f9250accbb9ff47"
         },
         {
           "position": 5,
