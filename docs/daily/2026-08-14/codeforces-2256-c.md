@@ -8,7 +8,7 @@ title: "[codeforces] CF Round 1116 Div.1 A / Div.2 C Hot Potatoes at the Fairy W
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-14 题目列表</a> · <a href="../../../dp/game-dp/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=d983d6eb22e89a6bf63d472e670ec49c925d851b63120067312486ead25e4f02 -->
+<!-- DAILY_CANONICAL_BODY_START sha256=e8209032be6a7fac59c79a7a9de1839b4c853f67a82be683b623ce661d45ff8d -->
 [Official problem: Codeforces 2256C - Hot Potatoes at the Fairy Warehouse](https://codeforces.com/contest/2256/problem/C)
 
 ## 官方来源与元数据
@@ -250,15 +250,15 @@ int main() {
 
 ## 正确性证明
 
-**引理一：**若只剩一轮，Red 的最优终局得分是 $F(s)$。
+**引理一**：若只剩一轮，Red 的最优终局得分是 $F(s)$。
 
 证明：轮初每条 `10` 边都允许源持有者传递。Red 源传递使 Red 得分加 1，Blue 源传递使 Red 得分减 1，且不同合法源的目的互异。双方分别执行所有严格有利动作后，三类贡献正好是 $F$ 的定义。证毕。
 
-**引理二：**Red 在一轮中的任意合法传递子集都不能增大后继状态的 $F$；Blue 的任意合法传递子集都不能减小它。
+**引理二**：Red 在一轮中的任意合法传递子集都不能增大后继状态的 $F$；Blue 的任意合法传递子集都不能减小它。
 
 证明：单次 Red、Blue 传递的 $\Delta F$ 分别不大于 0、不小于 0；同队合法传递互不冲突，逐个应用即可。证毕。
 
-**定理：**一次环形扫描输出双方最优分数。
+**定理**：一次环形扫描输出双方最优分数。
 
 证明：由引理二，在任何非末轮，Red 全保留保证后继 $F\ge F(s)$，Blue 全保留保证后继 $F\le F(s)$；两者同时全保留达到相等，故当前 $F$ 是鞍点值。向后归纳，前 $k-1$ 轮可全部保留，最后一轮由引理一处理。扫描代码正是在初态同步执行末轮全部有利传递，因此 Red 得分为 $F(s)$。土豆总数守恒，Blue 得分为 $P-F(s)$。证毕。
 
