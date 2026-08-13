@@ -172,6 +172,8 @@
 
 --8<-- "includes/problems/lc-162.md"
 
+--8<-- "includes/problems/lc-4014.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -252,6 +254,8 @@
 
 --8<-- "includes/problems/lc-2958.md"
 
+--8<-- "includes/problems/lc-3090.md"
+
 --8<-- "includes/problems/codeforces-2247-d2.md"
 
 --8<-- "includes/problems/lc-684.md"
@@ -269,6 +273,8 @@
 --8<-- "includes/problems/lc-91.md"
 
 --8<-- "includes/problems/lc-70.md"
+
+--8<-- "includes/problems/lc-509.md"
 
 --8<-- "includes/problems/lc-198.md"
 
@@ -317,6 +323,8 @@
 --8<-- "includes/problems/lc-746.md"
 
 --8<-- "includes/problems/lc-1140.md"
+
+--8<-- "includes/problems/codeforces-2256-c.md"
 
 --8<-- "includes/problems/lc-63.md"
 
@@ -405,6 +413,8 @@
 --8<-- "includes/problems/codeforces-2247-b.md"
 
 --8<-- "includes/problems/codeforces-2247-c.md"
+
+--8<-- "includes/problems/atcoder-arc226-c.md"
 
 --8<-- "includes/problems/lc-279.md"
 

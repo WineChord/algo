@@ -37,6 +37,12 @@ $$
 
 更新时必须先算 `current`，再整体滚动；先覆盖 `previousOne` 会丢失旧状态。$n\le45$ 时答案仍在 32 位有符号整数范围内，扩大约束后应改用更宽类型或取模。
 
+### 同一递推，不同状态下标
+
+Fibonacci 数与爬楼梯都满足二阶递推，但基例语义不同：Fibonacci 定义 $F_0=0,F_1=1$，爬楼梯的方案数则满足 $f(1)=1,f(2)=2$，也就是 $f(n)=F_{n+1}$。复用滚动模板时，必须先写清“变量当前代表哪个下标”，不能只因转移式相同就照搬返回值。
+
+--8<-- "includes/problems/lc-509.md"
+
 ## 正确性证明模板
 
 按 $i$ 归纳：
@@ -139,6 +145,7 @@ $$
 ## Reference
 
 - [LeetCode 70：爬楼梯](../problems/index.md#problem-lc-70)
+- [LeetCode 509：斐波那契数](../problems/index.md#problem-lc-509)
 - [LeetCode 53：最大子数组和](../problems/index.md#problem-lc-53)
 - [LeetCode 198：打家劫舍](../problems/index.md#problem-lc-198)
 - [AtCoder ABC469 G：K-nacci Operations](../problems/index.md#problem-atcoder-abc469-g)

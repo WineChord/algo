@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-14
+
+### 每日训练档案
+
+- 新增 [2026-08-14 每日 5 题](daily/2026-08-14/index.md)：[AtCoder ARC226 C](problems/index.md#problem-atcoder-arc226-c)、[力扣 Top 134](problems/index.md#problem-lc-509)、[力扣第 514 场周赛 Q1](problems/index.md#problem-lc-4014)、[Codeforces Round 1116 Div.1 A / Div.2 C](problems/index.md#problem-codeforces-2256-c) 与 [LC 3090](problems/index.md#problem-lc-3090)。
+
+### 偶性上界、乘法交换与末轮值函数
+
+- 扩充[模构造](math/modular-constructions.md)，加入从行列偶性上界到奇数正方形递归构造的完整路径。
+- 扩充[线性递推](dp/linear-recurrences.md)与[贪心交换](basics/greedy-exchange.md)，补入同递推不同基例的下标语义，以及大折扣匹配大价格的乘法交换证明。
+- 扩充[博弈动态规划](dp/game-dp.md)与[哈希滑动窗口](data-structures/hash-and-cache.md)，补入末轮值函数诱导的早轮鞍点，以及固定字符集下的逐值频次窗口。
+
+### 权威题目条目
+
+- 新增 [ARC226 C](problems/index.md#problem-atcoder-arc226-c)、[LC 509](problems/index.md#problem-lc-509)、[LC 4014](problems/index.md#problem-lc-4014)、[CF 2256C / 2255A](problems/index.md#problem-codeforces-2256-c) 与 [LC 3090](problems/index.md#problem-lc-3090) 的唯一折叠条目。
+
 ## 2026-08-13
 
 ### 每日训练档案

@@ -42,6 +42,19 @@ $$
 
 --8<-- "includes/problems/lc-3016.md"
 
+### 乘法收益：大折扣匹配大价格
+
+百分比折扣 `d` 用于价格 `p` 时，节省量是 $pd/100$。原价总和固定，因此最低总价等价于最大化价格与折扣的乘积和。若 $p_1\ge p_2$、$d_1\ge d_2$，同序配对相对交叉配对多出的节省分子为
+
+$$
+p_1d_1+p_2d_2-p_1d_2-p_2d_1
+=(p_1-p_2)(d_1-d_2)\ge0.
+$$
+
+反复交换逆序配对后，价格与折扣都按降序逐项匹配。原题折扣均为正，所以最优解还会使用尽可能多的折扣；若允许零或负折扣，这一步必须改为只保留正收益项。金额先整体乘 100 用整数累计，最后只除一次，可同时避免浮点累积误差与溢出误判。
+
+--8<-- "includes/problems/lc-4014.md"
+
 若每个对象只能进入部分槽位，简单交换可能生成非法方案，应改用匹配、最小费用流或带约束的动态规划。
 
 ## 字典序交换：高位先拿最大可行数字
@@ -188,6 +201,7 @@ $$
 - [LeetCode 55：跳跃游戏](../problems/index.md#problem-lc-55)
 - [LeetCode 3014：输入单词需要的最少按键次数 I](../problems/index.md#problem-lc-3014)
 - [LeetCode 3016：输入单词需要的最少按键次数 II](../problems/index.md#problem-lc-3016)
+- [LeetCode 4014：应用折扣后的最低总价](../problems/index.md#problem-lc-4014)
 - [LeetCode 4000：给定数位和的最大整数](../problems/index.md#problem-lc-4000)
 - [Codeforces 2248A](../problems/index.md#problem-codeforces-2248-a)
 - [LeetCode 135：分发糖果](../problems/index.md#problem-lc-135)

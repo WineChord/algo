@@ -50,6 +50,10 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 
 --8<-- "includes/problems/lc-2958.md"
 
+当字符集固定且很小、频次上限固定为 2 时，同一不变量可以用定长数组实现。每次右扩后只检查新字符的计数，超限就移动左端直到恢复合法；数组替代哈希只改变常数，不改变窗口证明。
+
+--8<-- "includes/problems/lc-3090.md"
+
 这里的单调性来自频次约束：右扩不会让已有频次下降，左缩不会让任何频次上升。若约束改为“恰好出现 $k$ 次”或允许带负权的综合成本，合法窗口不再对收缩单调，必须改用计数差、前缀状态或离线询问。
 
 ### 覆盖窗口：用缺口总数统一重数约束
@@ -128,4 +132,5 @@ LC 4007 中，固定栅栏高度 $H$ 后，长度 $x$ 只能与 $H-x$ 配对；�
 - [LeetCode 146：LRU 缓存](../problems/index.md#problem-lc-146)
 - [LeetCode 4007：栅栏的最宽宽度](../problems/index.md#problem-lc-4007)
 - [LeetCode 2958：最多 K 个重复元素的最长子数组](../problems/index.md#problem-lc-2958)
+- [LeetCode 3090：每个字符最多出现两次的最长子字符串](../problems/index.md#problem-lc-3090)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

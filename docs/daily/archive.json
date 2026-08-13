@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-14",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc226-c",
+          "title": "[atcoder] ARC226 C Square Corner Packing",
+          "kind": "AtCoder",
+          "page": "atcoder-arc226-c.md",
+          "official": "https://atcoder.jp/contests/arc226/tasks/arc226_c?lang=en",
+          "topic": "../../math/modular-constructions.md",
+          "source_sha256": "235d0ea2688691a6f2fde32a6a996f1597fab2cc9f23b305fb2e39196a4f5e5f"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-134-lc509",
+          "title": "[力扣 Top 134] LC 509 斐波那契数 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-134-lc509.md",
+          "official": "https://leetcode.cn/problems/fibonacci-number/",
+          "topic": "../../dp/linear-recurrences.md",
+          "source_sha256": "fdbc13fe24a7b064b433e3ac791df9e80b09738745b91545c5384e097064eee5"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-514-q1-lc4014",
+          "title": "[力扣竞赛] 第 514 场周赛 Q1 LC 4014 应用折扣后的最低总价 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-514-q1-lc4014.md",
+          "official": "https://leetcode.cn/problems/minimum-total-price-after-applying-discounts/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "ccac6bfbdcb026477af13d4b588d4173389db9e3dae0de8fc266f79ae3a8f368"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-c",
+          "title": "[codeforces] CF Round 1116 Div.1 A / Div.2 C Hot Potatoes at the Fairy Warehouse",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-c.md",
+          "official": "https://codeforces.com/contest/2256/problem/C",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "d983d6eb22e89a6bf63d472e670ec49c925d851b63120067312486ead25e4f02"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-14-lc3090",
+          "title": "[力扣每日一题] 2026-08-14｜LC 3090 每个字符最多出现两次的最长子字符串",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-14-lc3090.md",
+          "official": "https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "8dfd83da718623a92d230b17e14be82c0ed87d20d0ccfb85c0d573aa74226cf3"
+        }
+      ]
+    },
+    {
       "date": "2026-08-13",
       "expected_count": 5,
       "top_count": 1,
