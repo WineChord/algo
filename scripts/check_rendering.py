@@ -54,6 +54,8 @@ BARE_COMMANDS = (
     "partial",
     "left",
     "right",
+    "quad",
+    "qquad",
     "operatorname",
     "mathrm",
     "mathbf",
@@ -1109,6 +1111,7 @@ def browser_audit(
     rendered = 0
     version = "unknown"
     visits = 0
+    seen_math_fonts: set[str] = set()
     with serve_directory(site_dir) as base_url:
         try:
             for width, height, mobile in (
@@ -1158,17 +1161,34 @@ def browser_audit(
                                         Promise.resolve(
                                           window.MathJax.startup.promise
                                         )
-                                          .then(() => document.fonts
-                                            ? Promise.all([
-                                                'MJXTEX',
-                                                'MJXTEX-I',
-                                                'MJXTEX-MI',
-                                                'MJXTEX-S1',
-                                              ].map((family) =>
+                                          .then(() => {
+                                            if (!document.fonts) {
+                                              return Promise.resolve();
+                                            }
+                                            const families = [...new Set(
+                                              [...document.querySelectorAll(
+                                                'mjx-container, '
+                                                + 'mjx-container *'
+                                              )].flatMap((node) =>
+                                                getComputedStyle(node)
+                                                  .fontFamily.split(',')
+                                                  .map((family) => family
+                                                    .trim()
+                                                    .replace(
+                                                      /^["']|["']$/g,
+                                                      ''
+                                                    ))
+                                              ).filter((family) =>
+                                                family.startsWith('MJX')
+                                              )
+                                            )];
+                                            return Promise.all(families.map(
+                                              (family) =>
                                                 document.fonts.load(
                                                   `16px "${family}"`
-                                                )))
-                                            : Promise.resolve())
+                                                )
+                                            ));
+                                          })
                                           .then(() => new Promise((resolve) =>
                                             requestAnimationFrame(() =>
                                               requestAnimationFrame(resolve))))
@@ -1655,12 +1675,19 @@ def browser_audit(
                                   right.right - left.right)
                                 .slice(0, 8)
                               : [];
-                            const mathFontFamilies = [
-                              'MJXTEX',
-                              'MJXTEX-I',
-                              'MJXTEX-MI',
-                              'MJXTEX-S1',
-                            ];
+                            const mathFontFamilies = [...new Set(
+                              [...document.querySelectorAll(
+                                'mjx-container, mjx-container *'
+                              )].flatMap((node) =>
+                                getComputedStyle(node).fontFamily.split(',')
+                                  .map((family) => family.trim().replace(
+                                    /^["']|["']$/g,
+                                    ''
+                                  ))
+                              ).filter((family) =>
+                                family.startsWith('MJX')
+                              )
+                            )];
                             const missingMathFonts = document.fonts
                               ? mathFontFamilies.filter((family) =>
                                   !document.fonts.check(`16px "${family}"`)
@@ -1704,6 +1731,7 @@ def browser_audit(
                               overflowNodes,
                               missingMathFonts,
                               mathFontResources,
+                              mathFontFamilies,
                               remoteMathResources,
                             };
                             """
@@ -1711,6 +1739,7 @@ def browser_audit(
                         if stats["version"]:
                             version = stats["version"]
                         rendered += stats["wrappers"]
+                        seen_math_fonts.update(stats["mathFontFamilies"])
                         if (
                             stats["wrappers"]
                             and stats["version"] != EXPECTED_MATHJAX_VERSION
@@ -2236,6 +2265,13 @@ def browser_audit(
             driver.execute_cdp_cmd("Emulation.clearDeviceMetricsOverride", {})
         finally:
             driver.quit()
+    required_math_fonts = {"MJXTEX", "MJXTEX-I", "MJXTEX-S1"}
+    missing_required_fonts = sorted(required_math_fonts - seen_math_fonts)
+    if missing_required_fonts:
+        errors.append(
+            "browser audit never rendered required local MathJax fonts: "
+            + ", ".join(missing_required_fonts)
+        )
     return rendered, version, visits
 
 
@@ -2254,6 +2290,7 @@ def validate_fixtures(errors: list[str]) -> None:
         "unclosed": "Bad $x.",
         "brace": "$x_{i$",
         "plain": r"Bad \frac{1}{2}.",
+        "spacing-command": "$x,qquad y$",
     }
     for name, text in bad.items():
         _, fixture_errors = scan_markdown(Path(f"<fixture:{name}>"), text)

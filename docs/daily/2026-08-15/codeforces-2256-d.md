@@ -8,7 +8,7 @@ title: "[codeforces] CF Round 1116 Div.1 B / Div.2 D A Ribbon for Tomorrow"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-15 题目列表</a> · <a href="../../../math/combinatorial-counting/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=bd7cd645ca54dc8f15434154b0318efd2c6aa6a46ef946c8391a3a3258221b5e -->
+<!-- DAILY_CANONICAL_BODY_START sha256=48ea84d121cd162474348bc79de69705728e1a247c1b79b27844b5e344b762ff -->
 [Official problem: Codeforces 2256D - A Ribbon for Tomorrow](https://codeforces.com/contest/2256/problem/D)
 
 ## 官方来源与元数据
@@ -152,7 +152,7 @@ int main() {
 考虑局部形态
 
 $$
-x^Ay^Bx^C,qquad x\ne y,quad A,B,C\ge1.
+x^Ay^Bx^C,\qquad x\ne y,\quad A,B,C\ge1.
 $$
 
 若 $A\ge2$，反转首尾都是 $x$ 的子串 $x^2y^Bx$，会产生
