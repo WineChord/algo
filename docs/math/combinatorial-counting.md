@@ -32,6 +32,20 @@ $$
 
 这两个公式的区别来自变量下界，不能只凭外形记忆。
 
+## 固定段数：把游程长度化为两个独立组成
+
+二进制串若固定首尾字符与相邻变化次数，0-run 和 1-run 的数量便固定。再固定 0、1 的总数后，一个结果串只剩两组自由度：把全部 0 分配给若干个非空 0-run，把全部 1 分配给若干个非空 1-run。
+
+设 0 的数量与 run 数分别为 $z,r_0$，1 的数量与 run 数分别为 $o,r_1$。两种颜色的 run 在串中的交替骨架已经由首字符确定，长度选择互不共享自由度，因此方案数是
+
+$$
+\binom{z-1}{r_0-1}\binom{o-1}{r_1-1}.
+$$
+
+缺少某种颜色时要单独约定：只有“数量为 0 且 run 数也为 0”才贡献 1 种空分配。更重要的是，计数前必须证明允许操作既保持这些 run 数，又能在相邻同色 run 间逐单位搬运长度；只有必要不变量而没有可达性构造，组合公式仍可能多算。
+
+--8<-- "includes/problems/codeforces-2256-d.md"
+
 ## 先数补集：乘积奇偶转成逐项条件
 
 “乘积为偶数”直接枚举偶数位置会产生大量重叠，因为一个序列可以包含多个偶数。它的补集却非常简单：乘积为奇数，当且仅当每一项都是奇数。
@@ -94,5 +108,6 @@ $$
 ## Reference
 
 - [AtCoder Beginner Contest 468 G](../problems/index.md#problem-atcoder-abc468-g)
+- [Codeforces 2256D / 2255B：A Ribbon for Tomorrow](../problems/index.md#problem-codeforces-2256-d)
 - [LeetCode 4002：统计有效序列数目](../problems/index.md#problem-lc-4002)
 - [Concrete Mathematics, Second Edition — Pearson](https://www.pearson.com/en-us/subject-catalog/p/concrete-mathematics-a-foundation-for-computer-science/P200000000425)

@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-15",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc226-d",
+          "title": "[atcoder] ARC226 D Penta-Queue",
+          "kind": "AtCoder",
+          "page": "atcoder-arc226-d.md",
+          "official": "https://atcoder.jp/contests/arc226/tasks/arc226_d?lang=en",
+          "topic": "../../data-structures/index.md",
+          "source_sha256": "3ca0144e5b595f215fbc69fe9db02a012079ca962116d59d71fc11e5ce6c8c93"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-135-lc85",
+          "title": "[力扣 Top 135] LC 85 最大矩形 困难",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-135-lc85.md",
+          "official": "https://leetcode.cn/problems/maximal-rectangle/",
+          "topic": "../../data-structures/monotonic-stacks.md",
+          "source_sha256": "232e3d26afb08701445de5b1e7f2b1d5be2474b149869a045b422f69d6cf821b"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-514-q2-lc4015",
+          "title": "[力扣竞赛] 第 514 场周赛 Q2 LC 4015 树的加权和 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-514-q2-lc4015.md",
+          "official": "https://leetcode.cn/problems/weighted-sum-of-a-tree/",
+          "topic": "../../graph/tree-aggregation.md",
+          "source_sha256": "296598442518aa2450dd0c93d71c212f3fb1601e7bef9343b94bf78456501717"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-d",
+          "title": "[codeforces] CF Round 1116 Div.1 B / Div.2 D A Ribbon for Tomorrow",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-d.md",
+          "official": "https://codeforces.com/contest/2256/problem/D",
+          "topic": "../../math/combinatorial-counting.md",
+          "source_sha256": "bd7cd645ca54dc8f15434154b0318efd2c6aa6a46ef946c8391a3a3258221b5e"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-15-lc3702",
+          "title": "[力扣每日一题] 2026-08-15｜LC 3702 按位异或非零的最长子序列",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-15-lc3702.md",
+          "official": "https://leetcode.cn/problems/longest-subsequence-with-non-zero-bitwise-xor/",
+          "topic": "../../math/index.md",
+          "source_sha256": "5c01a3078be33eab4fdceeef9629641b5104cb7e40338f1efa2a067d716e02b5"
+        }
+      ]
+    },
+    {
       "date": "2026-08-14",
       "expected_count": 5,
       "top_count": 1,

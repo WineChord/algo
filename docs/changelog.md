@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-15
+
+### 每日训练档案
+
+- 新增 [2026-08-15 每日 5 题](daily/2026-08-15/index.md)：[AtCoder ARC226 D](problems/index.md#problem-atcoder-arc226-d)、[力扣 Top 135](problems/index.md#problem-lc-85)、[力扣第 514 场周赛 Q2](problems/index.md#problem-lc-4015)、[Codeforces Round 1116 Div.1 B / Div.2 D](problems/index.md#problem-codeforces-2256-d) 与 [LC 3702](problems/index.md#problem-lc-3702)。
+
+### 分层归并、二维边界与组成计数
+
+- 扩充[数据结构知识地图](data-structures/index.md)，补入受限 FIFO 接口下的分层稳定归并、基数选择与移动次数摊还证明。
+- 扩充[单调栈](data-structures/monotonic-stacks.md)与[树上聚合](graph/tree-aggregation.md)，加入二维矩阵逐行柱状图迁移，以及全局树高与逐点深度需要分阶段计算的边界。
+- 扩充[组合计数](math/combinatorial-counting.md)与[异或代数](math/index.md)，补入固定 run 骨架上的两组正整数组成，以及总异或为零时删除一个元素的三分结论。
+
+### 权威题目条目
+
+- 新增 [ARC226 D](problems/index.md#problem-atcoder-arc226-d)、[LC 85](problems/index.md#problem-lc-85)、[LC 4015](problems/index.md#problem-lc-4015)、[CF 2256D / 2255B](problems/index.md#problem-codeforces-2256-d) 与 [LC 3702](problems/index.md#problem-lc-3702) 的唯一折叠条目。
+
 ## 2026-08-14
 
 ### 每日训练档案

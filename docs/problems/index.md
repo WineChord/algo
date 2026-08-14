@@ -214,6 +214,8 @@
 
 --8<-- "includes/problems/lc-84.md"
 
+--8<-- "includes/problems/lc-85.md"
+
 --8<-- "includes/problems/lc-739.md"
 
 --8<-- "includes/problems/lc-239.md"
@@ -265,6 +267,8 @@
 --8<-- "includes/problems/luogu-p3367.md"
 
 --8<-- "includes/problems/lc-2213.md"
+
+--8<-- "includes/problems/atcoder-arc226-d.md"
 
 ## 动态规划
 
@@ -404,6 +408,8 @@
 
 --8<-- "includes/problems/lc-437.md"
 
+--8<-- "includes/problems/lc-4015.md"
+
 ## 数学
 
 --8<-- "includes/problems/atcoder-abc468-e.md"
@@ -439,6 +445,10 @@
 --8<-- "includes/problems/lc-4010.md"
 
 --8<-- "includes/problems/lc-136.md"
+
+--8<-- "includes/problems/lc-3702.md"
+
+--8<-- "includes/problems/codeforces-2256-d.md"
 
 --8<-- "includes/problems/lc-7.md"
 
