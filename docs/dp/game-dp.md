@@ -47,6 +47,23 @@ $$
 
 --8<-- "includes/problems/codeforces-2256-c.md"
 
+## 非标准终局：先写清“何时输”，再压缩状态
+
+并非所有轮流行动题都适合分差 DP。若一次行动会在当前和整除 3 时立即让行动者失败，而石子耗尽又固定判后手获胜，终局规则既不对称，也不是可加得分。此时应先按模 3 压缩石子计数，再分析安全行动序列，而不是强行定义分差。
+
+在石子游戏 IX 中，余数为 0 的石子不会改变当前和，只会交换行动节奏；余数为 1、2 的石子决定下一步能否避开 0。去掉所有 0 后，安全选择几乎被当前余数强制。于是只需比较 $c_0$ 的奇偶以及 $c_1,c_2$ 的数量关系：
+
+$$
+\begin{aligned}
+c_0\text{ 为偶数}&:\quad c_1>0\land c_2>0,\\
+c_0\text{ 为奇数}&:\quad |c_1-c_2|>2.
+\end{aligned}
+$$
+
+这个常数状态结论来自对强制序列的完整分类。若“凑成 0”改为得分而非立即失败、耗尽时的胜者改变，或模数从 3 扩大，原分类都可能失效，应回到计数状态上的极大极小或重新寻找周期结构。
+
+--8<-- "includes/problems/lc-2029.md"
+
 ## 与区间博弈的边界
 
 只从一个方向取走元素时，剩余局面由单个后缀下标确定；允许从左右两端取时，状态必须扩为区间 $(l,r)$。若不同玩家拥有不同动作集合，单一“当前行动者视角”可能不再足够，还需加入轮次或玩家类型。
@@ -80,5 +97,6 @@ $$
 - [LeetCode 1406：石子游戏 III](../problems/index.md#problem-lc-1406)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [Codeforces 2256C / 2255A：Hot Potatoes at the Fairy Warehouse](../problems/index.md#problem-codeforces-2256-c)
+- [LeetCode 2029：石子游戏 IX](../problems/index.md#problem-lc-2029)
 - [区间动态规划：从两端选择到合并顺序](interval-dp.md)
 - [动态规划知识地图](index.md)

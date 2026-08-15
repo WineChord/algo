@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-16
+
+### 每日训练档案
+
+- 新增 [2026-08-16 每日 5 题](daily/2026-08-16/index.md)：[AtCoder ARC226 E](problems/index.md#problem-atcoder-arc226-e)、[力扣 Top 136](problems/index.md#problem-lc-118)、[力扣第 514 场周赛 Q3](problems/index.md#problem-lc-4016)、[Codeforces Round 1116 Div.1 C / Div.2 E](problems/index.md#problem-codeforces-2256-e) 与 [LC 2029](problems/index.md#problem-lc-2029)。
+
+### 仿射特征、精确延迟与几何分割
+
+- 扩充[模构造](math/modular-constructions.md)，加入模重心在仿射变换与反色下的协变性、交换存在性证明，以及 Rule 90 的幂零延迟线与二维边界契约。
+- 扩充[组合计数](math/combinatorial-counting.md)，补入杨辉三角递推、输出规模下界及其与乘法公式的适用边界。
+- 扩充[网格动态规划](dp/grid-dp.md)与[博弈动态规划](dp/game-dp.md)，加入不相交轴对齐形状的分割线完备性，以及非标准立即失败终局下的模 3 强制序列分类。
+
+### 权威题目条目
+
+- 新增 [ARC226 E](problems/index.md#problem-atcoder-arc226-e)、[LC 118](problems/index.md#problem-lc-118)、[LC 4016](problems/index.md#problem-lc-4016)、[CF 2256E / 2255C](problems/index.md#problem-codeforces-2256-e) 与 [LC 2029](problems/index.md#problem-lc-2029) 的唯一折叠条目。
+
 ## 2026-08-15
 
 ### 每日训练档案

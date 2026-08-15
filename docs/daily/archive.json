@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-16",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc226-e",
+          "title": "[atcoder] ARC226 E Cellular Messenger",
+          "kind": "AtCoder",
+          "page": "atcoder-arc226-e.md",
+          "official": "https://atcoder.jp/contests/arc226/tasks/arc226_e?lang=en",
+          "topic": "../../math/modular-constructions.md",
+          "source_sha256": "27a9b30d792599e4db465c9baf6916c8a503d0215da49cfc0f0010262d6e1481"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-136-lc118",
+          "title": "[力扣 Top 136] LC 118 杨辉三角 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-136-lc118.md",
+          "official": "https://leetcode.cn/problems/pascals-triangle/",
+          "topic": "../../math/combinatorial-counting.md",
+          "source_sha256": "184f023b6dba5cfd97d8e1b0d91b50c15710e6bf44fb4f5e76765a79a3f1baa4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-514-q3-lc4016",
+          "title": "[力扣竞赛] 第 514 场周赛 Q3 LC 4016 两个不重叠子正方形的最大面积 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-514-q3-lc4016.md",
+          "official": "https://leetcode.cn/problems/maximum-area-of-two-non-overlapping-square-submatrices/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "88a41186c00d899847f5cecada59ee1a49b1eadc0d17d21741e7ed2c6d2e11f4"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-e",
+          "title": "[codeforces] CF Round 1116 Div.1 C / Div.2 E Even If the World Turns",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-e.md",
+          "official": "https://codeforces.com/contest/2256/problem/E",
+          "topic": "../../math/modular-constructions.md",
+          "source_sha256": "856a8747e950a5d50b756776e7515cf0e4ca5be6309bc5d8624f01f6224ab198"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-16-lc2029",
+          "title": "[力扣每日一题] 2026-08-16｜LC 2029 石子游戏 IX",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-16-lc2029.md",
+          "official": "https://leetcode.cn/problems/stone-game-ix/",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "b59c3296533fd8c585d4b540217278ca8c1d841e62eb55718d37e7fd732ab6e9"
+        }
+      ]
+    },
+    {
       "date": "2026-08-15",
       "expected_count": 5,
       "top_count": 1,

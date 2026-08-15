@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-16":
+          - 当日总览: daily/2026-08-16/index.md
+          - "[atcoder] ARC226 E Cellular Messenger": daily/2026-08-16/atcoder-arc226-e.md
+          - "[力扣 Top 136] LC 118 杨辉三角 简单": daily/2026-08-16/leetcode-top-136-lc118.md
+          - "[力扣竞赛] 第 514 场周赛 Q3 LC 4016 两个不重叠子正方形的最大面积 中等": daily/2026-08-16/leetcode-weekly-514-q3-lc4016.md
+          - "[codeforces] CF Round 1116 Div.1 C / Div.2 E Even If the World Turns": daily/2026-08-16/codeforces-2256-e.md
+          - "[力扣每日一题] 2026-08-16｜LC 2029 石子游戏 IX": daily/2026-08-16/leetcode-daily-2026-08-16-lc2029.md
       - "2026-08-15":
           - 当日总览: daily/2026-08-15/index.md
           - "[atcoder] ARC226 D Penta-Queue": daily/2026-08-15/atcoder-arc226-d.md

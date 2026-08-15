@@ -75,6 +75,34 @@ $$
 
 --8<-- "includes/problems/atcoder-arc226-c.md"
 
+## 模重心：让特征随对称变换一起移动
+
+当棋盘会被循环平移、旋转或镜像时，编码不能依赖某个固定角落。对模 $n$ 的正方形网格，把黑格集合记为 $B$、黑格数记为 $w$；若 $\gcd(w,n)=1$，可在 $\mathbb Z_n^2$ 中定义模重心
+
+$$
+P(B)=w^{-1}\sum_{p\in B}p.
+$$
+
+对任意可逆仿射变换 $p\mapsto Mp+t$，重心满足 $P\mapsto MP+t$，所以它与棋盘使用同一坐标契约。正方形整张棋盘的坐标和在 $\mathbb Z_n^2$ 中为零；反色后黑格数变成 $n^2-w\equiv-w\pmod n$，因此重心仍保持不变。若编码端只交换一个黑格 $a$ 与一个白格 $b$，坐标和恰改变 $b-a$，便可把重心移动到目标位置。
+
+还必须证明所需的黑白对确实存在。假设沿目标位移 $\delta$ 的每个黑格后继仍为黑格，那么平移轨道会迫使整条轨道同色；结合 $\gcd(w,n)=1$ 可推出矛盾。这个存在性证明是构造的一部分，不能用“通常找得到”代替。反色结论也不能无条件降维或推广到矩形：全域坐标和与新权重的模关系变化后，必须重新核对。
+
+--8<-- "includes/problems/codeforces-2256-e.md"
+
+## 线性元胞自动机：固定边界中的精确延迟线
+
+总数型规则看似只会统计邻居，却可以借固定轨道把有效邻居数限制在两个相邻信号位，从而实现异或递推
+
+$$
+x'_c=x_{c-1}\oplus x_{c+1}.
+$$
+
+这就是一维 Rule 90。对长度 $L=2^q-1$、两端补零的路径，其特征多项式在 $\mathbb F_2$ 上化为 $x^L$，因此转移矩阵满足 $A^L=0$。更强的端点格林函数还给出：从左端注入的一个脉冲会在恰好 $L-1$ 步到达右端，而更早时刻该位置为零。于是连续注入的消息按固定延迟逐位输出，最后又被幂零性彻底清空。
+
+把这个代数协议嵌回二维时，要分别证明内部列确实执行 Rule 90、发送端不会被覆盖规则误翻转、接收端只在正确时刻读取，以及有限边界外的零不会被意外激活。只验证自动机中间部分，不足以证明完整构造。
+
+--8<-- "includes/problems/atcoder-arc226-e.md"
+
 ## 构造题的验证顺序
 
 1. **存在性**：构造是否真的产生至少一个目标模式；
@@ -89,4 +117,6 @@ $$
 
 - [Codeforces 2247B](../problems/index.md#problem-codeforces-2247-b)
 - [AtCoder ARC226 C: Square Corner Packing](../problems/index.md#problem-atcoder-arc226-c)
+- [Codeforces 2256E / 2255C: Even If the World Turns](../problems/index.md#problem-codeforces-2256-e)
+- [AtCoder ARC226 E: Cellular Messenger](../problems/index.md#problem-atcoder-arc226-e)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

@@ -80,6 +80,20 @@ $$
 
 --8<-- "includes/problems/atcoder-abc468-g.md"
 
+## 杨辉三角：输出规模就是复杂度下界
+
+组合数满足帕斯卡递推
+
+$$
+\binom rc=\binom{r-1}{c-1}+\binom{r-1}{c},
+$$
+
+两侧边界均为 1。按行生成时，第 $r$ 行只依赖上一行，既不需要阶乘，也没有除法与整除风险。若题目要求返回前 $n$ 行，输出本身含有 $\Theta(n^2)$ 个整数，所以 $O(n^2)$ 时间与返回结果所占的 $O(n^2)$ 空间已经达到下界。
+
+用乘法公式逐项生成单行也能达到同阶复杂度，但必须处理整除顺序与中间乘法溢出；递推版的证明和实现都更稳定。只有需要随机访问很少几个组合数、处理大量模意义询问，或 $n$ 远大于可完整输出的规模时，才应转向乘法公式、阶乘逆元或 Lucas 定理。
+
+--8<-- "includes/problems/lc-118.md"
+
 ## 取模组合数的适用边界
 
 当模数 $p$ 为质数且所需阶乘下标小于 $p$ 时，可以预处理阶乘和逆阶乘：
@@ -110,4 +124,5 @@ $$
 - [AtCoder Beginner Contest 468 G](../problems/index.md#problem-atcoder-abc468-g)
 - [Codeforces 2256D / 2255B：A Ribbon for Tomorrow](../problems/index.md#problem-codeforces-2256-d)
 - [LeetCode 4002：统计有效序列数目](../problems/index.md#problem-lc-4002)
+- [LeetCode 118：杨辉三角](../problems/index.md#problem-lc-118)
 - [Concrete Mathematics, Second Edition — Pearson](https://www.pearson.com/en-us/subject-catalog/p/concrete-mathematics-a-foundation-for-computer-science/P200000000425)

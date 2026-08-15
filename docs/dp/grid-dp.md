@@ -40,6 +40,16 @@ $$
 
 --8<-- "includes/problems/lc-221.md"
 
+## 两个不重叠形状：把几何关系压成分割线
+
+两个轴对齐矩形若不相交，则它们的行区间不相交，或列区间不相交；因此总存在一条水平或竖直分割线把二者完全隔开。这个几何事实把“枚举两块区域”降成“枚举分割线”。
+
+对全 1 正方形，先用右下角 DP 求每个位置能结束的最大边长，同时按行、按列维护前缀区域内的最大边长；再反向扫描得到后缀区域的对应摘要。若两块正方形必须同边长，跨一条分割线的最优值是两侧最大边长的较小者；若目标改为面积和，则应保留两侧各自的最大面积再相加，摘要含义不能照搬。
+
+这类方法成立的核心不是“试四个方向”，而是证明所有不相交关系都被水平或竖直分离覆盖。旋转矩形仍成立；允许任意角度、要求只是不覆盖某些关键格，或形状可以互相穿插时，分割线覆盖性会失效。
+
+--8<-- "includes/problems/lc-4016.md"
+
 ## 哨兵与空间压缩
 
 给 DP 表增加一圈零或无穷大哨兵，可以把首行、首列与普通位置统一到同一转移。哨兵值必须匹配目标：
@@ -86,5 +96,6 @@ $$
 
 - [LeetCode 64：最小路径和](../problems/index.md#problem-lc-64)
 - [LeetCode 221：最大正方形](../problems/index.md#problem-lc-221)
+- [LeetCode 4016：两个不重叠子正方形的最大面积](../problems/index.md#problem-lc-4016)
 - [LeetCode 63：不同路径 II](../problems/index.md#problem-lc-63)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)
