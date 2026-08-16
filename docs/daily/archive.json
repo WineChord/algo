@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-17",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-a",
+          "title": "[atcoder] ARC227 A Fermat Point of Binary Strings",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-a.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_a?lang=en",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "80c2a25a5077ffef48e00b3dd99cd219db7ae3de0e3b86e037921947c3b843b9"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-137-lc516",
+          "title": "[力扣 Top 137] LC 516 最长回文子序列 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-137-lc516.md",
+          "official": "https://leetcode.cn/problems/longest-palindromic-subsequence/",
+          "topic": "../../strings/palindrome-centers.md",
+          "source_sha256": "13f966365b05999b5d14ae35af75a621c8fc162396b7788ba8108a4199a2d0dc"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-514-q4-lc4017",
+          "title": "[力扣竞赛] 第 514 场周赛 Q4 LC 4017 数组中的峰值 II 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-514-q4-lc4017.md",
+          "official": "https://leetcode.cn/problems/peaks-in-array-ii/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "fd4a17dc41097baea6d80fde4c4430aca6ae8b818837a413502ebb8aec35e732"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2256-f",
+          "title": "[codeforces] CF Round 1116 Div.1 D / Div.2 F How Long Until Nothing Remains?",
+          "kind": "Codeforces",
+          "page": "codeforces-2256-f.md",
+          "official": "https://codeforces.com/problemset/problem/2256/F?locale=en",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "48e6ecb9ef8908cb20f1eea19cf5d9e346bdb63f97b0352c34dfe49f0a06e1de"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-17-lc1563",
+          "title": "[力扣每日一题] 2026-08-17｜LC 1563 石子游戏 V",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-17-lc1563.md",
+          "official": "https://leetcode.cn/problems/stone-game-v/",
+          "topic": "../../dp/interval-dp.md",
+          "source_sha256": "a2cd675cad8f73d9f8153c1c984849b1664769580265fb5d05f8405e0b146df8"
+        }
+      ]
+    },
+    {
       "date": "2026-08-16",
       "expected_count": 5,
       "top_count": 1,

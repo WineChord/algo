@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-17":
+          - 当日总览: daily/2026-08-17/index.md
+          - "[atcoder] ARC227 A Fermat Point of Binary Strings": daily/2026-08-17/atcoder-arc227-a.md
+          - "[力扣 Top 137] LC 516 最长回文子序列 中等": daily/2026-08-17/leetcode-top-137-lc516.md
+          - "[力扣竞赛] 第 514 场周赛 Q4 LC 4017 数组中的峰值 II 困难": daily/2026-08-17/leetcode-weekly-514-q4-lc4017.md
+          - "[codeforces] CF Round 1116 Div.1 D / Div.2 F How Long Until Nothing Remains?": daily/2026-08-17/codeforces-2256-f.md
+          - "[力扣每日一题] 2026-08-17｜LC 1563 石子游戏 V": daily/2026-08-17/leetcode-daily-2026-08-17-lc1563.md
       - "2026-08-16":
           - 当日总览: daily/2026-08-16/index.md
           - "[atcoder] ARC226 E Cellular Messenger": daily/2026-08-16/atcoder-arc226-e.md

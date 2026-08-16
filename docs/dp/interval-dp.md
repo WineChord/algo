@@ -78,6 +78,18 @@ $$
 
 --8<-- "includes/problems/lc-312.md"
 
+## 正值切分：单调分界与候选最大值
+
+有些切分型状态看似必须枚举全部切点，但约束会让合法切点分成连续两段。若数组元素全为
+正数，固定区间左端和右端后让切点右移，左段和严格增加、右段和严格减少；谓词“左和不
+大于右和”只会从真变假一次。
+
+这时优化分两步：先用单调指针找到最后一个合法左侧切点，再分别维护“保留左段”和“保留
+右段”的候选最大值。必须单独处理两边恰好相等的分界，因为该切点可以保留任一侧。若允许
+负数，左右和不再单调，这一优化立即失去依据，应退回完整切点枚举或寻找新的结构。
+
+--8<-- "includes/problems/lc-1563.md"
+
 ## 数值、方案与计数需要不同状态
 
 - 只求最优值：可滚动压缩；
@@ -101,4 +113,5 @@ $$
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [LeetCode 312：戳气球](../problems/index.md#problem-lc-312)
 - [LeetCode 877：石子游戏](../problems/index.md#problem-lc-877)
+- [LeetCode 1563：石子游戏 V](../problems/index.md#problem-lc-1563)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)

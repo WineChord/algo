@@ -79,6 +79,12 @@ $$
 
 时间、空间均为 $O(n^2)$。
 
+只求长度时可以把状态压成一维。让左端从右向左枚举、右端从左向右扩张：更新前的
+`dp[right]` 是下一行同右端状态，更新后的 `dp[right - 1]` 是本行左邻状态，再用一个
+变量保存尚未覆盖的内部对角状态。若循环方向颠倒，三个值会来自错误的时间层。
+
+--8<-- "includes/problems/lc-516.md"
+
 ### 在前面添加最少字符变成回文
 
 问题转化为最长回文前缀。对 `s + "#" + reverse(s)` 求 KMP 前缀函数，末项就是最长回文前缀长度；把剩余后缀逆序加到前面，时间 $O(n)$。
@@ -96,4 +102,5 @@ $$
 
 - [Manacher, “A New Linear-Time ‘On-Line’ Algorithm for Finding the Smallest Initial Palindrome of a String”](https://doi.org/10.1145/321892.321896)
 - [LeetCode 5：最长回文子串](../problems/index.md#problem-lc-5)
+- [LeetCode 516：最长回文子序列](../problems/index.md#problem-lc-516)
 - [AtCoder Beginner Contest 468 D：Pre-Palindrome](../problems/index.md#problem-atcoder-abc468-d)

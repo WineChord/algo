@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-17
+
+### 每日训练档案
+
+- 新增 [2026-08-17 每日 5 题](daily/2026-08-17/index.md)：[AtCoder ARC227 A](problems/index.md#problem-atcoder-arc227-a)、[力扣 Top 137](problems/index.md#problem-lc-516)、[力扣第 514 场周赛 Q4](problems/index.md#problem-lc-4017)、[Codeforces Round 1116 Div.1 D / Div.2 F](problems/index.md#problem-codeforces-2256-f) 与 [LC 1563](problems/index.md#problem-lc-1563)。
+
+### 稳定中位数、动态峰贡献与单调切分
+
+- 扩充[贪心交换](basics/greedy-exchange.md)，加入稳定匹配后的逐坐标中位数，以及二次幂超递增容量下的最大剩余需求交换证明。
+- 扩充[序列扫描](basics/sequence-invariants.md)，把局部峰判定推进到“首个内部峰唯一归属 + 相邻峰距离动态聚合”。
+- 扩充[回文专题](strings/palindrome-centers.md)与[区间动态规划](dp/interval-dp.md)，加入最长回文子序列的一维时间层，以及正值切分中的单调分界和双向候选最大值。
+
+### 权威题目条目
+
+- 新增 [ARC227 A](problems/index.md#problem-atcoder-arc227-a)、[LC 516](problems/index.md#problem-lc-516)、[LC 4017](problems/index.md#problem-lc-4017)、[CF 2256F / 2255D](problems/index.md#problem-codeforces-2256-f) 与 [LC 1563](problems/index.md#problem-lc-1563) 的唯一折叠条目。
+
 ## 2026-08-16
 
 ### 每日训练档案
