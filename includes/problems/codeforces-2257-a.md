@@ -3,7 +3,7 @@
 ??? problem "Codeforces 2257A: Creating Abbreviations"
     [打开原题 ↗](https://codeforces.com/contest/2257/problem/A?locale=en){ .problem-source }
 
-    **难度与分值**：官方分值 500；官方 rating 未给出；官方标签 strings（2026-08-18）
+    **难度与分值**：官方分值 500；官方 rating 未给出；官方标签 brute force、strings（2026-08-18）
 
     **题意**：初始单词可重复使用并按首字母组成新缩写；判断给定的全部目标缩写能否按某种顺序创建。
 

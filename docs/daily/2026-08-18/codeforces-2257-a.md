@@ -8,7 +8,7 @@ title: "[codeforces] CF Round 1117 Div.2 A Creating Abbreviations"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-18 题目列表</a> · <a href="../../../strings/">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=9a99f90c4c27cfe0cfedfc0ffa80497befcf97b2902a61be501e6821e4febb0b -->
+<!-- DAILY_CANONICAL_BODY_START sha256=70fe73f9661e785a8e8bba2f8ec4b274f067227628784d358dfae6d3c4a548db -->
 [Official problem: Codeforces Round 1117 (Div. 2), A — Creating Abbreviations](https://codeforces.com/contest/2257/problem/A?locale=en)
 
 ## 官方来源与元数据
@@ -16,7 +16,7 @@ title: "[codeforces] CF Round 1117 Div.2 A Creating Abbreviations"
 - 比赛 ID：2257；正式比赛名：Codeforces Round 1117 (Div. 2)。
 - 题目：Div.2 A — Creating Abbreviations，没有跨组别别名。
 - 官方分值：500；官方当前未给出 problem rating。
-- 官方标签：`strings`，核对于 2026-08-18 的实时官方 API。
+- 官方标签：`brute force`、`strings`，核对于 2026-08-18 的实时官方 API。
 - 时间限制：1 秒；内存限制：256 MB。
 - 题面没有理解所必需的图片。
 
@@ -280,7 +280,8 @@ $c$ 可用，那么新加入缩写的第一个字符必须是 $c$；但生成这
 - 只检查缩写的第一个字符；后续每个字符也必须对应一个可选单词。
 - 忘记原题允许同一单词重复使用，错误地按首字母频次限制重复字符。
 - 大小写映射错位；初始词为小写、目标缩写为大写，位号都应归一到 0 到 25。
-- 把缓存中的短暂元数据当成稳定事实；应以发布前实时官方 API 的 `strings` 标签为准。
+- 把缓存中的短暂元数据当成稳定事实；应以发布前实时官方 API 的 `brute force`、
+  `strings` 标签为准。
 
 ## 验证说明
 
