@@ -178,6 +178,10 @@
 
 --8<-- "includes/problems/codeforces-2256-f.md"
 
+--8<-- "includes/problems/atcoder-arc227-b.md"
+
+--8<-- "includes/problems/lc-4024.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -275,6 +279,8 @@
 --8<-- "includes/problems/atcoder-arc226-d.md"
 
 --8<-- "includes/problems/lc-4017.md"
+
+--8<-- "includes/problems/lc-3471.md"
 
 ## 动态规划
 
@@ -523,6 +529,8 @@
 --8<-- "includes/problems/lc-6.md"
 
 --8<-- "includes/problems/lc-516.md"
+
+--8<-- "includes/problems/codeforces-2257-a.md"
 
 ## 如何使用这份索引
 

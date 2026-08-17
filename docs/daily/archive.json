@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-18",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-b",
+          "title": "[atcoder] ARC227 B Know Your Place",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-b.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_b?lang=en",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "e4f9465bfb3dcdc16094d3413c585e76412958c910bb879b43b15a41e4f1ff1d"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-138-lc459",
+          "title": "[力扣 Top 138] LC 459 重复的子字符串 简单",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-138-lc459.md",
+          "official": "https://leetcode.cn/problems/repeated-substring-pattern/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "d2b0d29853539ee7f16ae03a2dcc65474f977b52afedb0820b9ccd857d058761"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-515-q1-lc4024",
+          "title": "[力扣竞赛] 第 515 场周赛 Q1 LC 4024 最近的可用无人机 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-515-q1-lc4024.md",
+          "official": "https://leetcode.cn/problems/nearest-available-drone/",
+          "topic": "../../basics/top-k-extrema.md",
+          "source_sha256": "699283eaaad0ddd297648b15cdb185aed9781d4a0b752c0e198469e9e5a3ee11"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-a",
+          "title": "[codeforces] CF Round 1117 Div.2 A Creating Abbreviations",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-a.md",
+          "official": "https://codeforces.com/contest/2257/problem/A?locale=en",
+          "topic": "../../strings/index.md",
+          "source_sha256": "9a99f90c4c27cfe0cfedfc0ffa80497befcf97b2902a61be501e6821e4febb0b"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-18-lc3471",
+          "title": "[力扣每日一题] 2026-08-18｜LC 3471 找出最大的几近缺失整数",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-18-lc3471.md",
+          "official": "https://leetcode.cn/problems/find-the-largest-almost-missing-integer/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "9672cbd7dc2bb62004e743e352154474446dae157d90c1fb3df25b9568bde3f9"
+        }
+      ]
+    },
+    {
       "date": "2026-08-17",
       "expected_count": 5,
       "top_count": 1,

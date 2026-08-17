@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-18
+
+### 每日训练档案
+
+- 新增 [2026-08-18 每日 5 题](daily/2026-08-18/index.md)：[AtCoder ARC227 B](problems/index.md#problem-atcoder-arc227-b)、[力扣 Top 138](problems/index.md#problem-lc-459)、[力扣第 515 场周赛 Q1](problems/index.md#problem-lc-4024)、[Codeforces Round 1117 Div.2 A](problems/index.md#problem-codeforces-2257-a) 与 [LC 3471](problems/index.md#problem-lc-3471)。
+
+### 强制引入、周期边界与能力闭包
+
+- 扩充[序列扫描](basics/sequence-invariants.md)，加入唯一首次引入时刻、强制事件优先与 LIFO 暂存构造。
+- 扩充[字符串](strings/index.md)，补齐 KMP 最长 border 到完整周期的整除条件，以及新缩写不扩大首字母能力集合的闭包不变量。
+- 扩充[极值候选](basics/top-k-extrema.md)与[哈希滑动窗口](data-structures/hash-and-cache.md)，加入可行性过滤后的稳定 `argmin`，以及位置到窗口起点区间的覆盖计数。
+
+### 权威题目条目
+
+- 新增 [ARC227 B](problems/index.md#problem-atcoder-arc227-b)、[LC 4024](problems/index.md#problem-lc-4024)、[CF 2257A](problems/index.md#problem-codeforces-2257-a) 与 [LC 3471](problems/index.md#problem-lc-3471) 的唯一折叠条目；校正并复用 [LC 459](problems/index.md#problem-lc-459) 的权威实现。
+
 ## 2026-08-17
 
 ### 每日训练档案
