@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-19",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-c",
+          "title": "[atcoder] ARC227 C Follow the Letters",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-c.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_c?lang=en",
+          "topic": "../../strings/index.md",
+          "source_sha256": "f5e2be04b2766aac536aef460a5c5fb3e9f85641b5091c13a6db31041d6f111d"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-139-lc79",
+          "title": "[力扣 Top 139] LC 79 单词搜索 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-139-lc79.md",
+          "official": "https://leetcode.cn/problems/word-search/",
+          "topic": "../../search/backtracking.md",
+          "source_sha256": "d522506117b337326aa8b2772bd5695e7b83fadcaed8114babfff8101edda621"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-515-q2-lc4025",
+          "title": "[力扣竞赛] 第 515 场周赛 Q2 LC 4025 交通灯的最大等待时间 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-515-q2-lc4025.md",
+          "official": "https://leetcode.cn/problems/minimize-the-maximum-waiting-time-at-synchronized-traffic-lights/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "0ebf5af5346cbc0775ae2649a43b7241aeb7120878decbcbe51b753b97cc4c99"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-b",
+          "title": "[codeforces] CF Round 1117 Div.2 B Gigantomachy",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-b.md",
+          "official": "https://codeforces.com/contest/2257/problem/B?locale=en",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "866a3478c7e9e6ac74e829093e7a12bc9f2933a85df0c1f4ee2c3158e34ffd60"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-19-lc1386",
+          "title": "[力扣每日一题] 2026-08-19｜LC 1386 安排电影院座位",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-19-lc1386.md",
+          "official": "https://leetcode.cn/problems/cinema-seat-allocation/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "667b96e6e1e56cfc68083a757aaf0acacc8749f7f9cfd3c912ad8ce29b62fdf3"
+        }
+      ]
+    },
+    {
       "date": "2026-08-18",
       "expected_count": 5,
       "top_count": 1,

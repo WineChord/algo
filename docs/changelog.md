@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-19
+
+### 每日训练档案
+
+- 新增 [2026-08-19 每日 5 题](daily/2026-08-19/index.md)：[AtCoder ARC227 C](problems/index.md#problem-atcoder-arc227-c)、[力扣 Top 139](problems/index.md#problem-lc-79)、[力扣第 515 场周赛 Q2](problems/index.md#problem-lc-4025)、[Codeforces Round 1117 Div.2 B](problems/index.md#problem-codeforces-2257-b) 与 [LC 1386](problems/index.md#problem-lc-1386)。
+
+### 周期同余类、可撤销路径与稀疏异常
+
+- 扩充[字符串](strings/index.md)，把最小周期从静态重复判定推进到圆环合并过程的不可合并同余类与可达构造。
+- 扩充[回溯](search/backtracking.md)与[序列扫描](basics/sequence-invariants.md)，加入网格简单路径的原地撤销状态，以及无容量独立选择下的支配极值压缩。
+- 扩充[博弈动态规划](dp/game-dp.md)与[哈希滑动窗口](data-structures/hash-and-cache.md)，补入强制过程的耐久望远镜和“规则基线加稀疏异常修正”模型。
+
+### 权威题目条目
+
+- 新增 [ARC227 C](problems/index.md#problem-atcoder-arc227-c)、[LC 79](problems/index.md#problem-lc-79)、[LC 4025](problems/index.md#problem-lc-4025)、[CF 2257B](problems/index.md#problem-codeforces-2257-b) 与 [LC 1386](problems/index.md#problem-lc-1386) 的唯一折叠条目。
+
 ## 2026-08-18
 
 ### 每日训练档案

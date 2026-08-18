@@ -269,6 +269,19 @@ LC 2996 的顺序前缀必须从首项开始，且相邻值每次恰好增加一
 
 --8<-- "includes/problems/atcoder-abc469-c.md"
 
+### 独立选择：整组候选压成一个充分极值
+
+若每个对象都能独立选择同一组资源，资源又没有容量限制，逐对象逐资源枚举往往重复计算
+同一支配关系。同步交通灯中，绿灯更长的灯在每个周期内始终支配更短的灯，因此整组灯只需
+保留最大绿灯时长 $G$。车辆到达余数小于 $G$ 时等待为零，否则所有灯都已经转红，只能等到
+下一周期；再对各车等待取最大值即可。
+
+这个压缩依赖三条结构：周期同步、每辆车只关心自己的等待、灯没有容量上限。若灯有独立
+相位，单个最长时长不再支配；若灯有容量或车辆会排队，选择之间产生耦合，需要匹配、流或
+调度状态。
+
+--8<-- "includes/problems/lc-4025.md"
+
 ### 周期重置：任意时长拆成整周期与余数
 
 状态每走满 $n$ 步就重置，而总分每周期增加固定量时，长度 $x$ 的结果可写成“完整周期贡献 + 余数前缀贡献”。若还允许在两段输入之间插入重置符号，表面上无限长的见证便可规约到有限余数类。
@@ -311,6 +324,7 @@ LC 2996 的顺序前缀必须从首项开始，且相邻值每次恰好增加一
 
 ## Reference
 
+- [LeetCode 4025：交通灯的最大等待时间](../problems/index.md#problem-lc-4025)
 - [AtCoder Beginner Contest 468 A](../problems/index.md#problem-atcoder-abc468-a)
 - [AtCoder Beginner Contest 469 A](../problems/index.md#problem-atcoder-abc469-a)
 - [AtCoder Beginner Contest 469 B](../problems/index.md#problem-atcoder-abc469-b)

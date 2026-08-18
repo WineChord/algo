@@ -182,6 +182,8 @@
 
 --8<-- "includes/problems/lc-4024.md"
 
+--8<-- "includes/problems/lc-4025.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -197,6 +199,8 @@
 --8<-- "includes/problems/lc-39.md"
 
 --8<-- "includes/problems/lc-93.md"
+
+--8<-- "includes/problems/lc-79.md"
 
 ## 数据结构
 
@@ -282,6 +286,8 @@
 
 --8<-- "includes/problems/lc-3471.md"
 
+--8<-- "includes/problems/lc-1386.md"
+
 ## 动态规划
 
 --8<-- "includes/problems/lc-4009.md"
@@ -355,6 +361,8 @@
 --8<-- "includes/problems/lc-4008.md"
 
 --8<-- "includes/problems/codeforces-2248-g.md"
+
+--8<-- "includes/problems/codeforces-2257-b.md"
 
 ## 图论
 
@@ -531,6 +539,8 @@
 --8<-- "includes/problems/lc-516.md"
 
 --8<-- "includes/problems/codeforces-2257-a.md"
+
+--8<-- "includes/problems/atcoder-arc227-c.md"
 
 ## 如何使用这份索引
 

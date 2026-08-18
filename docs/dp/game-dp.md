@@ -64,6 +64,22 @@ $$
 
 --8<-- "includes/problems/lc-2029.md"
 
+## 强制过程：先求每方耐久，再比较先后手
+
+若双方没有策略选择，逐回合模拟和博弈 DP 都保留了不必要的时间维。对一条非增山脉
+$(h_1,\ldots,h_k)$，从第 $i$ 座跳到下一座需要 $h_i-h_{i+1}+1$ 次受击，末山归零还需
+$h_k$ 次；望远镜求和后，整条山脉的耐久只有
+
+$$
+H=h_1+k-1.
+$$
+
+胜负于是只剩两个耐久耗尽事件的先后。先手 Bea 在每轮先攻击，所以相等时也由她先让对手
+认输；判定为 $H_A\ge H_B$。若任一方每回合可选择攻击目标、跳跃规则依赖历史，或攻击伤害
+由策略决定，这种常数状态会失效，才需要回到显式博弈状态。
+
+--8<-- "includes/problems/codeforces-2257-b.md"
+
 ## 与区间博弈的边界
 
 只从一个方向取走元素时，剩余局面由单个后缀下标确定；允许从左右两端取时，状态必须扩为区间 $(l,r)$。若不同玩家拥有不同动作集合，单一“当前行动者视角”可能不再足够，还需加入轮次或玩家类型。
@@ -94,6 +110,7 @@ $$
 
 ## Reference
 
+- [Codeforces 2257B：Gigantomachy](../problems/index.md#problem-codeforces-2257-b)
 - [LeetCode 1406：石子游戏 III](../problems/index.md#problem-lc-1406)
 - [LeetCode 486：预测赢家](../problems/index.md#problem-lc-486)
 - [Codeforces 2256C / 2255A：Hot Potatoes at the Fairy Warehouse](../problems/index.md#problem-codeforces-2256-c)

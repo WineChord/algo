@@ -80,6 +80,18 @@ int main() {
 
 --8<-- "includes/problems/lc-459.md"
 
+### 周期不变量也能给动态合并过程下界
+
+当多个对象在周期串对应的圆环上接受同一字符指令时，相差一个最小周期 $p$ 的两个起点会
+看到完全相同的后续字符序列。每次移动距离相同，因此相对位移始终为 $p$，这些对象永远
+不能合并；最小占用数至少是 $N/p$。
+
+下界要配合构造才能成为答案。重复执行整串时，每个基本周期末端的代表恰好绕行一周，
+同周期区间内的其他对象则不断向前合并；执行足够多轮后只剩每个周期一个代表。这里 KMP
+不仅判断字符串能否重复，还把静态最小周期转成动态系统的不可合并同余类。
+
+--8<-- "includes/problems/atcoder-arc227-c.md"
+
 --8<-- "includes/problems/luogu-p3375.md"
 
 ## Trie
@@ -232,6 +244,7 @@ $$
 
 ## Reference
 
+- [AtCoder ARC227 C：Follow the Letters](../problems/index.md#problem-atcoder-arc227-c)
 - [LeetCode 13：罗马数字转整数](../problems/index.md#problem-lc-13)
 - [LeetCode 415：字符串相加](../problems/index.md#problem-lc-415)
 - [LeetCode 43：字符串相乘](../problems/index.md#problem-lc-43)
