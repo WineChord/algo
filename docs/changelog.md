@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-20
+
+### 每日训练档案
+
+- 新增 [2026-08-20 每日 5 题](daily/2026-08-20/index.md)：[AtCoder ARC227 D](problems/index.md#problem-atcoder-arc227-d)、[力扣 Top 140](problems/index.md#problem-lc-199)、[力扣第 515 场周赛 Q3](problems/index.md#problem-lc-4026)、[Codeforces Round 1117 Div.2 C](problems/index.md#problem-codeforces-2257-c) 与 [LC 3069](problems/index.md#problem-lc-3069)。
+
+### 二坐标见证、极端拼接与树上观测
+
+- 新增[多数闭包](math/majority-closure.md)，把指数生成过程压缩为二坐标共同见证定理，并给出位集冲突图实现与适用边界。
+- 扩充[贪心交换](basics/greedy-exchange.md)与[序列扫描](basics/sequence-invariants.md)，加入最早前缀和最晚后缀的可达拼接，以及实时末元素驱动的最小充分状态。
+- 扩充[二叉树遍历](graph/tree-traversals.md)与[树上聚合](graph/tree-aggregation.md)，补入观察方向优先的逐层首次到达，以及删边连通块诱导观测等价类的紧下界构造。
+
+### 权威题目条目
+
+- 新增 [ARC227 D](problems/index.md#problem-atcoder-arc227-d)、[LC 199](problems/index.md#problem-lc-199)、[LC 4026](problems/index.md#problem-lc-4026)、[CF 2257C](problems/index.md#problem-codeforces-2257-c) 与 [LC 3069](problems/index.md#problem-lc-3069) 的唯一折叠条目。
+
 ## 2026-08-19
 
 ### 每日训练档案

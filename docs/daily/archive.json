@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-20",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-d",
+          "title": "[atcoder] ARC227 D Median of Binary Strings",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-d.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_d?lang=en",
+          "topic": "../../math/majority-closure.md",
+          "source_sha256": "9143ed2a973a05a7c30ad494d186689460a0a8eb8c1844917a33cc4ac5217bc2"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-140-lc199",
+          "title": "[力扣 Top 140] LC 199 二叉树的右视图 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-140-lc199.md",
+          "official": "https://leetcode.cn/problems/binary-tree-right-side-view/",
+          "topic": "../../graph/tree-traversals.md",
+          "source_sha256": "0e8000d45cc89f45e28f01db7e7a9983bc4c2705664f3af3c568777e6c21a2d0"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-515-q3-lc4026",
+          "title": "[力扣竞赛] 第 515 场周赛 Q3 LC 4026 工位的最大间隔 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-515-q3-lc4026.md",
+          "official": "https://leetcode.cn/problems/maximum-gap-between-stations/",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "ad4cdef42ab232435be0ff5017b900944b8b591fe9aee8f8b2f48ddb54e168f3"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-c",
+          "title": "[codeforces] CF Round 1117 Div.2 C Spying on the Beaver",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-c.md",
+          "official": "https://codeforces.com/contest/2257/problem/C?locale=en",
+          "topic": "../../graph/tree-aggregation.md",
+          "source_sha256": "5ef7488941babb959dec1cc54eaa6b9253d1315833a9f5672543ded7eb1b8910"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-20-lc3069",
+          "title": "[力扣每日一题] 2026-08-20｜LC 3069 将元素分配到两个数组中 I",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-20-lc3069.md",
+          "official": "https://leetcode.cn/problems/distribute-elements-into-two-arrays-i/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "3c7e47cc05473308fe37c2dca06d8f25b02ce0a6ef0d75dd5db7d4b69f6c86af"
+        }
+      ]
+    },
+    {
       "date": "2026-08-19",
       "expected_count": 5,
       "top_count": 1,

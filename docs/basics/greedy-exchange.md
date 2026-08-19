@@ -176,6 +176,28 @@ $x$ 的后续容量包交换。这个两分证明比“优先照顾最大值”�
 
 --8<-- "includes/problems/codeforces-2256-f.md"
 
+## 极端嵌入：最早前缀与最晚后缀拼接
+
+当一个模式串必须按顺序嵌入文本，左到右贪心给出每个模式位置的最早可达坐标，右到左
+贪心则给出最晚可达坐标。只看某一次完整贪心嵌入，会把所有相邻距离绑在同一个方案里；
+若目标是让某一处相邻距离尽可能大，应先固定分界，再分别把两侧推向极端。
+
+固定分界 $i-1\mid i$。任何合法嵌入 $p$ 都有
+
+$$
+earliest_{i-1}\le p_{i-1}<p_i\le latest_i.
+$$
+
+因此距离至多为 $latest_i-earliest_{i-1}$。另一方面，最早前缀与最晚后缀可以在该分界
+直接拼接：任取一个完整嵌入作为中间见证，就得到
+$earliest_{i-1}<latest_i$，连接处仍严格递增。于是每个分界的上界都可达到，再对全部分界
+取最大值即可。
+
+--8<-- "includes/problems/lc-4026.md"
+
+这个模型依赖前缀选择只限制后续下界、后缀选择只限制此前上界。若加入总成本、容量或相邻
+距离共同约束，两侧极值可能无法独立拼接，需要动态规划、流或答案二分。
+
 ## 如何判断贪心是否可信
 
 ### 先写可行域
@@ -234,3 +256,4 @@ $x$ 的后续容量包交换。这个两分证明比“优先照顾最大值”�
 - [AtCoder ARC226 B](../problems/index.md#problem-atcoder-arc226-b)
 - [AtCoder ARC227 A](../problems/index.md#problem-atcoder-arc227-a)
 - [Codeforces 2256F / 2255D](../problems/index.md#problem-codeforces-2256-f)
+- [LeetCode 4026：工位的最大间隔](../problems/index.md#problem-lc-4026)

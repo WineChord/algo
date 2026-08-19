@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-20":
+          - 当日总览: daily/2026-08-20/index.md
+          - "[atcoder] ARC227 D Median of Binary Strings": daily/2026-08-20/atcoder-arc227-d.md
+          - "[力扣 Top 140] LC 199 二叉树的右视图 中等": daily/2026-08-20/leetcode-top-140-lc199.md
+          - "[力扣竞赛] 第 515 场周赛 Q3 LC 4026 工位的最大间隔 中等": daily/2026-08-20/leetcode-weekly-515-q3-lc4026.md
+          - "[codeforces] CF Round 1117 Div.2 C Spying on the Beaver": daily/2026-08-20/codeforces-2257-c.md
+          - "[力扣每日一题] 2026-08-20｜LC 3069 将元素分配到两个数组中 I": daily/2026-08-20/leetcode-daily-2026-08-20-lc3069.md
       - "2026-08-19":
           - 当日总览: daily/2026-08-19/index.md
           - "[atcoder] ARC227 C Follow the Letters": daily/2026-08-19/atcoder-arc227-c.md
@@ -419,6 +426,7 @@ nav:
       - 区间动态规划: dp/interval-dp.md
   - 数学:
       - 知识地图: math/index.md
+      - 多数闭包与局部见证: math/majority-closure.md
       - 组合计数与唯一分块: math/combinatorial-counting.md
       - 排列排名与 Lehmer 码: math/permutation-ranking.md
       - 前缀余数与模构造: math/modular-constructions.md

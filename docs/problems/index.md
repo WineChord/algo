@@ -184,6 +184,10 @@
 
 --8<-- "includes/problems/lc-4025.md"
 
+--8<-- "includes/problems/lc-4026.md"
+
+--8<-- "includes/problems/lc-3069.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -436,6 +440,10 @@
 
 --8<-- "includes/problems/lc-4015.md"
 
+--8<-- "includes/problems/lc-199.md"
+
+--8<-- "includes/problems/codeforces-2257-c.md"
+
 ## 数学
 
 --8<-- "includes/problems/atcoder-abc468-e.md"
@@ -483,6 +491,8 @@
 --8<-- "includes/problems/lc-118.md"
 
 --8<-- "includes/problems/lc-7.md"
+
+--8<-- "includes/problems/atcoder-arc227-d.md"
 
 ## 字符串
 

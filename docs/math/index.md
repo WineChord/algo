@@ -178,6 +178,13 @@ $$
 \begin{bmatrix}1\\0\end{bmatrix}
 $$
 
+## 闭包与局部见证
+
+生成运算会不断扩张对象集合时，显式枚举闭包通常不是第一选择。应先寻找一个不可生成目标
+必然违反的低维投影，并证明这些局部条件是否也足以递归构造全局对象。三元逐位多数运算
+具有精确的二坐标见证定理：目标可达，当且仅当它选择的任意两个坐标比特都在某个初始对象
+中共同出现。完整证明、冲突图表示与失效边界见[多数闭包：从生成过程到二坐标见证](majority-closure.md)。
+
 ## 概率与期望
 
 期望的线性性不要求随机变量独立：
@@ -236,4 +243,5 @@ $$
 - [LeetCode 4010：数对的最大强度](../problems/index.md#problem-lc-4010)
 - [LeetCode 136：只出现一次的数字](../problems/index.md#problem-lc-136)
 - [LeetCode 7：整数反转](../problems/index.md#problem-lc-7)
+- [AtCoder ARC227 D：Median of Binary Strings](../problems/index.md#problem-atcoder-arc227-d)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

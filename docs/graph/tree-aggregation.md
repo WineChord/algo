@@ -99,6 +99,24 @@ $$
 
 --8<-- "includes/problems/lc-236.md"
 
+## 切边形成观测签名：先数连通块，再构造紧下界
+
+在根树上选择若干边作为摄像头时，一个节点的观测可以理解为根路径经过哪些已选边。删去
+这些边后，同一连通块内的节点观测完全相同，不同块的观测不同。于是“让 $m$ 个目标节点
+两两可区分”先给出一个与树形无关的下界：删 $k$ 条边只有 $k+1$ 个连通块，所以
+$k\ge m-1$。
+
+紧构造的难点是让每个目标独占一块。保留一个深度最小的目标，不切它的父边；对其余每个
+目标切父边。被切目标的后代目标会在自己的父边继续被切走，而保留目标不可能位于任何更深
+被切目标的子树中。因此根块只保留一个目标，每个切出块也只保留一个目标，正好用 $m-1$
+条边达到下界。
+
+--8<-- "includes/problems/codeforces-2257-c.md"
+
+这类题应先问“观测等价类是否就是删边连通块”，再决定是否需要 DFS 或 DSU。若边有不同
+费用，最少条数下界不再等于最低费用；若部分边不可选，还需在每段目标祖先链上处理可行
+切点。
+
 ## 递归、显式栈与更新
 
 - 树高有保证时，递归最贴近定义；
@@ -120,4 +138,5 @@ $$
 - [LeetCode 124：二叉树中的最大路径和](../problems/index.md#problem-lc-124)
 - [LeetCode 236：二叉树的最近公共祖先](../problems/index.md#problem-lc-236)
 - [LeetCode 543：二叉树的直径](../problems/index.md#problem-lc-543)
+- [Codeforces 2257C](../problems/index.md#problem-codeforces-2257-c)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
