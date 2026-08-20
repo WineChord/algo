@@ -8,7 +8,7 @@ title: "[力扣 Top 141] LC 62 不同路径 中等"
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-21 题目列表</a> · <a href="../../../dp/grid-dp/#grid-path-bijection">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=ce742478e2b665cae141018bd181ca38f339a1eb2f2329c357ca525671418d4d -->
+<!-- DAILY_CANONICAL_BODY_START sha256=6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4 -->
 [力扣官方题目：62. 不同路径](https://leetcode.cn/problems/unique-paths/)
 
 ## 官方原始信息
@@ -76,7 +76,7 @@ $O(\min(m,n))$、额外空间 $O(1)$。
 
 对 $m=3,n=3$，路径长度为 4，其中恰有 2 个 `D`。选择 `D` 所在的两个位置即可：
 `DDRR`、`DRDR`、`DRRD`、`RDDR`、`RDRD`、`RRDD`，共
-$\binom42=6$ 条。
+$\binom{4}{2}=6$ 条。
 
 对 $m=1,n=100$，必须连续向右 99 次；组合式为 $\binom{99}{0}=1$。对称交换 $m,n$ 不会
 改变答案，这也是实现自测的重要不变量。

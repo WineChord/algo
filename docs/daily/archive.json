@@ -24,7 +24,7 @@
           "page": "leetcode-top-141-lc62.md",
           "official": "https://leetcode.cn/problems/unique-paths/",
           "topic": "../../dp/grid-dp.md#grid-path-bijection",
-          "source_sha256": "ce742478e2b665cae141018bd181ca38f339a1eb2f2329c357ca525671418d4d"
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
         },
         {
           "position": 3,
@@ -54,7 +54,7 @@
           "page": "leetcode-daily-2026-08-21-lc3116.md",
           "official": "https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/",
           "topic": "../../basics/binary-search.md#inclusion-exclusion-count",
-          "source_sha256": "0c6b86afcc40175c7581a2608437da452eb9ecb527f434ff15cfa9a05c5f31dd"
+          "source_sha256": "cce1df8fe3758235e04b7a965781a60c6f89322cf40d2657900e7fc6d1116722"
         }
       ]
     },

@@ -8,7 +8,7 @@ title: "[力扣每日一题] 2026-08-21｜LC 3116 单面值组合的第 K 小金
 
 <p class="daily-archive-utility"><a href="../">返回 2026-08-21 题目列表</a> · <a href="../../../basics/binary-search/#inclusion-exclusion-count">进入知识专题</a></p>
 
-<!-- DAILY_CANONICAL_BODY_START sha256=0c6b86afcc40175c7581a2608437da452eb9ecb527f434ff15cfa9a05c5f31dd -->
+<!-- DAILY_CANONICAL_BODY_START sha256=cce1df8fe3758235e04b7a965781a60c6f89322cf40d2657900e7fc6d1116722 -->
 [力扣官方题目：3116. 单面值组合的第 K 小金额](https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/)
 
 ## 官方原始信息
@@ -309,7 +309,7 @@ public:
 ## 变种二：只统计恰好能由一种面额产生的金额
 
 新定义：金额必须被恰好一个面额整除。若一个数被 $r$ 个面额整除，则大小为 $s$ 的交集子集
-共有 $\binom rs$ 个；权重改为 $s(-1)^{s-1}$ 后，所有 $r>1$ 的贡献抵消，$r=1$ 留下 1。
+共有 $\binom{r}{s}$ 个；权重改为 $s(-1)^{s-1}$ 后，所有 $r>1$ 的贡献抵消，$r=1$ 留下 1。
 因此仍可二分，判定复杂度 $O(2^m m)$。
 
 <!-- compile:function -->
