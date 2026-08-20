@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-21",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-e",
+          "title": "[atcoder] ARC227 E Shift and XOR Switches",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-e.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_e?lang=en",
+          "topic": "../../math/index.md#binary-polynomial-carry",
+          "source_sha256": "3d7f29bb340a44ac8ea47edf4e904210de1a543ccb50de78d061b7b644f2f2b3"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md#grid-path-bijection",
+          "source_sha256": "ce742478e2b665cae141018bd181ca38f339a1eb2f2329c357ca525671418d4d"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-515-q4-lc4027",
+          "title": "[力扣竞赛] 第 515 场周赛 Q4 LC 4027 电梯请求 III 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-515-q4-lc4027.md",
+          "official": "https://leetcode.cn/problems/elevator-requests-iii/",
+          "topic": "../../dp/subset-dp.md",
+          "source_sha256": "d987ab1dfdf7c88dc7a652aa5ab67f9f70a513869a6a2aa779a5742db83c5d43"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-d",
+          "title": "[codeforces] CF Round 1117 Div.2 D Bermuda Rectangle",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-d.md",
+          "official": "https://codeforces.com/contest/2257/problem/D",
+          "topic": "../../math/combinatorial-counting.md#divisor-staircase",
+          "source_sha256": "4e3824cc33e69f8b029a5925300c6b30fa61e1bfb1f0604f5c0ec8dcd5c01ddd"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-21-lc3116",
+          "title": "[力扣每日一题] 2026-08-21｜LC 3116 单面值组合的第 K 小金额",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-21-lc3116.md",
+          "official": "https://leetcode.cn/problems/kth-smallest-amount-with-single-denomination-combination/",
+          "topic": "../../basics/binary-search.md#inclusion-exclusion-count",
+          "source_sha256": "0c6b86afcc40175c7581a2608437da452eb9ecb527f434ff15cfa9a05c5f31dd"
+        }
+      ]
+    },
+    {
       "date": "2026-08-20",
       "expected_count": 5,
       "top_count": 1,

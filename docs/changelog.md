@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-21
+
+### 每日训练档案
+
+- 新增 [2026-08-21 每日 5 题](daily/2026-08-21/index.md)：[AtCoder ARC227 E](problems/index.md#problem-atcoder-arc227-e)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 515 场周赛 Q4](problems/index.md#problem-lc-4027)、[Codeforces Round 1117 Div.2 D](problems/index.md#problem-codeforces-2257-d) 与 [LC 3116](problems/index.md#problem-lc-3116)。
+
+### 指数进位、子集顺序与单调计数
+
+- 扩充[数学知识地图](math/index.md)，加入特征 2 多项式因子的二倍指数进位、奇数部分拆链与规范因子唯一恢复。
+- 新增[子集动态规划](dp/subset-dp.md)，系统整理“已完成集合 + 最后对象”、释放时刻、同位置压缩、恢复方案和计数扩展；同时扩充[网格动态规划](dp/grid-dp.md)中的路径—移动串组合双射。
+- 扩充[二分查找](basics/binary-search.md)与[组合计数](math/combinatorial-counting.md)，加入 LCM 容斥计数、支配面额消除，以及共享原点矩形并集的因数阶梯前缀。
+
+### 权威题目条目
+
+- 新增 [ARC227 E](problems/index.md#problem-atcoder-arc227-e)、[LC 62](problems/index.md#problem-lc-62)、[LC 4027](problems/index.md#problem-lc-4027)、[CF 2257D](problems/index.md#problem-codeforces-2257-d) 与 [LC 3116](problems/index.md#problem-lc-3116) 的唯一折叠条目。
+
 ## 2026-08-20
 
 ### 每日训练档案

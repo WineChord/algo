@@ -135,6 +135,14 @@ $$
 
 --8<-- "includes/problems/lc-410.md"
 
+### 容斥计数判定：第 k 个倍数并集元素 { #inclusion-exclusion-count }
+
+当答案是若干倍数集合并集中的第 $k$ 小值，候选值 $x$ 的判定是“并集中不超过 $x$ 的不同元素是否至少有 $k$ 个”。子集交集由 LCM 描述，容斥能精确计数；先删除被更小面额支配的集合并合并相同 LCM 的系数，可以把单次判定压到真正不同的交集摘要数。
+
+上界可取最小面额乘 $k$：最小面额自己的前 $k$ 个倍数已经保证判定为真。LCM 计算必须在乘法前用上界截断，答案和计数都使用 64 位整数。
+
+--8<-- "includes/problems/lc-3116.md"
+
 ### 前缀和定位：一次跨过整轮，再找当前边界
 
 循环任务先用总和跳过完整轮次，再在一轮前缀和中用 `upper_bound` 找当前时长能完成的最长前缀。这里不是二分答案本身，而是在单调前缀数组中定位第一个超出预算的位置。
@@ -249,3 +257,4 @@ int main() {
 - [LeetCode 34：在排序数组中查找元素的第一个和最后一个位置](../problems/index.md#problem-lc-34)
 - [LeetCode 35：搜索插入位置](../problems/index.md#problem-lc-35)
 - [LeetCode 240：搜索二维矩阵 II](../problems/index.md#problem-lc-240)
+- [LeetCode 3116：单面值组合的第 K 小金额](../problems/index.md#problem-lc-3116)

@@ -94,6 +94,22 @@ $$
 
 --8<-- "includes/problems/lc-118.md"
 
+## 容斥的交集先按 LCM 聚合
+
+多个面额的倍数集合并集可用容斥计数。一个非空子集的公共倍数集合由其最小公倍数决定，不超过 $x$ 的元素数是 $\lfloor x/\operatorname{lcm}\rfloor$。不同子集可能产生相同 LCM；先把它们的正负系数合并，既减少每次判定的工作量，也把“集合身份”压成真正影响答案的代数摘要。
+
+计算 LCM 时要先除以 gcd，并在乘法前按查询上界判溢出。若某面额是更小面额的倍数，它对应的集合完全被包含，可以在容斥前删除。这样的支配消除不会改变并集，却可能显著缩小指数级子集数。
+
+--8<-- "includes/problems/lc-3116.md"
+
+## 因数阶梯：并集边界转成单调前缀 { #divisor-staircase }
+
+面积固定的整数边长矩形由因数对决定。把所有候选矩形放在同一原点后，每一列的并集高度等于“不小于列号的最小因数”对应的互补因数，因此沿列形成单调阶梯。按相邻因数差预处理阶梯面积后，二维单位格并集查询只剩一个因数阈值二分和两个前缀面积之差。
+
+这里的关键不是直接套容斥，而是利用所有集合共享原点，证明截面并集始终是前缀。若矩形可以平移或旋转，截面不再嵌套，阶梯摘要就会失效。
+
+--8<-- "includes/problems/codeforces-2257-d.md"
+
 ## 取模组合数的适用边界
 
 当模数 $p$ 为质数且所需阶乘下标小于 $p$ 时，可以预处理阶乘和逆阶乘：
@@ -118,6 +134,8 @@ $$
 4. 收缩一个结构后，外部对象是否仍可独立排列？
 5. 乘法分解中的各段是否真的没有共享自由度？
 6. 组合数公式的模数条件与预处理范围是否满足？
+7. 多个交集是否可按 LCM、gcd 或其他等价摘要先聚合？
+8. 几何并集在固定截面上是否形成嵌套前缀？
 
 ## Reference
 
@@ -125,4 +143,6 @@ $$
 - [Codeforces 2256D / 2255B：A Ribbon for Tomorrow](../problems/index.md#problem-codeforces-2256-d)
 - [LeetCode 4002：统计有效序列数目](../problems/index.md#problem-lc-4002)
 - [LeetCode 118：杨辉三角](../problems/index.md#problem-lc-118)
+- [LeetCode 3116：单面值组合的第 K 小金额](../problems/index.md#problem-lc-3116)
+- [Codeforces 2257D：Bermuda Rectangle](../problems/index.md#problem-codeforces-2257-d)
 - [Concrete Mathematics, Second Edition — Pearson](https://www.pearson.com/en-us/subject-catalog/p/concrete-mathematics-a-foundation-for-computer-science/P200000000425)

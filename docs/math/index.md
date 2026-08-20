@@ -129,6 +129,20 @@ ABC468 E 的子数组数量达到 $\Theta(n^2)$，但固定位置 $i$ 后，它�
 
 若后续允许区间加，线性形式还能直接用系数前缀和更新答案；若分母、合法区间集合或目标函数依赖元素值，原有线性分解可能失效。
 
+## 特征 2 多项式与指数进位 { #binary-polynomial-carry }
+
+把 01 序列看作 $\mathbb F_2[x]$ 上的多项式时，移位异或对应乘以 $1+x^a$。特征 2 带来恒等式
+
+$$
+(1+x^a)^2=1+x^{2a},
+$$
+
+所以两个相同因子会像二进制位一样向两倍指数进位。每个正指数唯一分解为“奇数部分乘二次幂”，于是所有指数按奇数部分拆成互不进位的倍增链。只要还能证明规范因子集合可从最终多项式唯一恢复，计数就能转为各链的两状态数位 DP，而不必枚举开关子集。
+
+截断环中的越界因子会消失；链尾剩余进位因此不影响低于截断次数的系数。若底域不是特征 2、操作不是异或或移位方向改变，上述平方恒等式与链独立性都必须重新检查。
+
+--8<-- "includes/problems/atcoder-arc227-e.md"
+
 ## 十进制位操作与提前判界
 
 反转一个 32 位有符号整数时，逐次弹出十进制末位并追加到答案即可；真正的难点是不能先执行可能溢出的乘加。把边界除以 10，先比较当前答案与边界商，等于边界商时再比较下一位，就能在仍处于合法整数范围内完成判定。
@@ -244,4 +258,5 @@ $$
 - [LeetCode 136：只出现一次的数字](../problems/index.md#problem-lc-136)
 - [LeetCode 7：整数反转](../problems/index.md#problem-lc-7)
 - [AtCoder ARC227 D：Median of Binary Strings](../problems/index.md#problem-atcoder-arc227-d)
+- [AtCoder ARC227 E：Shift and XOR Switches](../problems/index.md#problem-atcoder-arc227-e)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

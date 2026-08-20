@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-21":
+          - 当日总览: daily/2026-08-21/index.md
+          - "[atcoder] ARC227 E Shift and XOR Switches": daily/2026-08-21/atcoder-arc227-e.md
+          - "[力扣 Top 141] LC 62 不同路径 中等": daily/2026-08-21/leetcode-top-141-lc62.md
+          - "[力扣竞赛] 第 515 场周赛 Q4 LC 4027 电梯请求 III 困难": daily/2026-08-21/leetcode-weekly-515-q4-lc4027.md
+          - "[codeforces] CF Round 1117 Div.2 D Bermuda Rectangle": daily/2026-08-21/codeforces-2257-d.md
+          - "[力扣每日一题] 2026-08-21｜LC 3116 单面值组合的第 K 小金额": daily/2026-08-21/leetcode-daily-2026-08-21-lc3116.md
       - "2026-08-20":
           - 当日总览: daily/2026-08-20/index.md
           - "[atcoder] ARC227 D Median of Binary Strings": daily/2026-08-20/atcoder-arc227-d.md
@@ -424,6 +431,7 @@ nav:
       - 零和博弈动态规划: dp/game-dp.md
       - 网格动态规划: dp/grid-dp.md
       - 区间动态规划: dp/interval-dp.md
+      - 子集动态规划: dp/subset-dp.md
   - 数学:
       - 知识地图: math/index.md
       - 多数闭包与局部见证: math/majority-closure.md

@@ -72,6 +72,14 @@ $$
 
 --8<-- "includes/problems/lc-63.md"
 
+## 无障碍路径：递推与组合双射 { #grid-path-bijection }
+
+没有障碍、权值和额外状态时，到达每个格的方案数仍可用二维或一维 DP 递推；但移动串恰含固定数量的向右与向下步骤，因此路径与“选择哪些位置向下”的集合形成双射。组合数把整张状态图压成一个闭式计数，时间从 $O(mn)$ 降为 $O(\min(m,n))$。
+
+这一步优化依赖非常强的对称性。加入障碍后，不同移动串不再等价；加入权值、恢复具体路径或限制转弯次数后，也必须回到能表达局部限制的状态。面试中应先给出一维 DP 作为稳健通解，再说明无障碍版本可用组合数。
+
+--8<-- "includes/problems/lc-62.md"
+
 ## 什么时候应改成图最短路
 
 下面任一变化都会破坏简单的行列拓扑序：
@@ -98,4 +106,5 @@ $$
 - [LeetCode 221：最大正方形](../problems/index.md#problem-lc-221)
 - [LeetCode 4016：两个不重叠子正方形的最大面积](../problems/index.md#problem-lc-4016)
 - [LeetCode 63：不同路径 II](../problems/index.md#problem-lc-63)
+- [LeetCode 62：不同路径](../problems/index.md#problem-lc-62)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)
