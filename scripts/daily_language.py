@@ -15,6 +15,7 @@ URL = re.compile(r"https?://[^)\s]+")
 LINK_ONLY = re.compile(r"^\s*[-*]?\s*\[[^\]]+\]\([^)]*\)\s*[。.]?\s*$")
 OFFICIAL_ENGLISH_START = {
     "Complete English statement",
+    "Complete English statement — model-authored presentation based on the official task",
     "Official English entry and short excerpt",
 }
 ALLOWED_ENGLISH_HEADINGS = {"Reference", "Sources"}

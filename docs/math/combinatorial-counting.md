@@ -110,6 +110,22 @@ $$
 
 --8<-- "includes/problems/codeforces-2257-d.md"
 
+## 按值插入排列：活跃间隙与预算上界 { #active-gap-budget-dp }
+
+当计数对象是“元素值互异的排列”，而代价由相邻值差组成时，按位置填表往往同时背负排列与
+取值两种维度。反过来按值从小到大插入，每个值至多出现一次；真正影响未来的只剩：当前较小
+元素之间哪些间隙最终还会放入更大值。
+
+若一个活跃间隙跨过当前数值层，最终会产生左右两条跨层边，因此代价增加 2。把当前值插入
+某个活跃间隙后，该间隙拆成左右两个；未来活跃子间隙数可以是 0、1、2，对应间隙总数减少
+1、不变或增加 1。中间情形还要区分左活跃与右活跃，转移系数是两倍。
+
+状态压缩之外还要寻找数值上界。若活跃间隙从 1 增长到 $g$，每次增长都要支付元素自身与新
+跨层边，累计至少为 $g^2+2g-3$。当总预算只有 $N$ 时，间隙数自然只有 $O(\sqrt N)$；这类
+“状态量的历史累计就是资源下界”常能把看似平方的 DP 压到根号层级。
+
+--8<-- "includes/problems/atcoder-arc227-f.md"
+
 ## 取模组合数的适用边界
 
 当模数 $p$ 为质数且所需阶乘下标小于 $p$ 时，可以预处理阶乘和逆阶乘：
@@ -136,6 +152,7 @@ $$
 6. 组合数公式的模数条件与预处理范围是否满足？
 7. 多个交集是否可按 LCM、gcd 或其他等价摘要先聚合？
 8. 几何并集在固定截面上是否形成嵌套前缀？
+9. 按值插入时，未来结构能否压成活跃间隙数，并由累计预算限制其上界？
 
 ## Reference
 
@@ -145,4 +162,5 @@ $$
 - [LeetCode 118：杨辉三角](../problems/index.md#problem-lc-118)
 - [LeetCode 3116：单面值组合的第 K 小金额](../problems/index.md#problem-lc-3116)
 - [Codeforces 2257D：Bermuda Rectangle](../problems/index.md#problem-codeforces-2257-d)
+- [AtCoder ARC227 F：Erase and Raise](../problems/index.md#problem-atcoder-arc227-f)
 - [Concrete Mathematics, Second Edition — Pearson](https://www.pearson.com/en-us/subject-catalog/p/concrete-mathematics-a-foundation-for-computer-science/P200000000425)

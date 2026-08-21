@@ -190,6 +190,10 @@
 
 --8<-- "includes/problems/lc-3116.md"
 
+--8<-- "includes/problems/lc-4020.md"
+
+--8<-- "includes/problems/codeforces-2257-e.md"
+
 ## 搜索与枚举
 
 --8<-- "includes/problems/lc-22.md"
@@ -503,6 +507,10 @@
 --8<-- "includes/problems/atcoder-arc227-e.md"
 
 --8<-- "includes/problems/codeforces-2257-d.md"
+
+--8<-- "includes/problems/atcoder-arc227-f.md"
+
+--8<-- "includes/problems/lc-3622.md"
 
 ## 字符串
 

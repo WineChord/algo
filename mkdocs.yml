@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-22":
+          - 当日总览: daily/2026-08-22/index.md
+          - "[atcoder] ARC227 F Erase and Raise": daily/2026-08-22/atcoder-arc227-f.md
+          - "[力扣 Top 141] LC 62 不同路径 中等": daily/2026-08-22/leetcode-top-141-lc62.md
+          - "[力扣竞赛] 第 189 场双周赛 Q1 LC 4020 电梯请求 I 简单": daily/2026-08-22/leetcode-biweekly-189-q1-lc4020.md
+          - "[codeforces] CF Round 1117 Div.2 E Busy Beaver": daily/2026-08-22/codeforces-2257-e.md
+          - "[力扣每日一题] 2026-08-22｜LC 3622 判断整除性": daily/2026-08-22/leetcode-daily-2026-08-22-lc3622.md
       - "2026-08-21":
           - 当日总览: daily/2026-08-21/index.md
           - "[atcoder] ARC227 E Shift and XOR Switches": daily/2026-08-21/atcoder-arc227-e.md

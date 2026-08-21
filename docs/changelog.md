@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-22
+
+### 每日训练档案
+
+- 新增 [2026-08-22 每日 5 题](daily/2026-08-22/index.md)：[AtCoder ARC227 F](problems/index.md#problem-atcoder-arc227-f)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 189 场双周赛 Q1](problems/index.md#problem-lc-4020)、[Codeforces Round 1117 Div.2 E](problems/index.md#problem-codeforces-2257-e) 与 [LC 3622](problems/index.md#problem-lc-3622)。
+
+### 活跃间隙、资源闭包与数位聚合
+
+- 扩充[组合计数](math/combinatorial-counting.md)，加入按值插入排列、活跃间隙转移与累计预算诱导的根号状态上界。
+- 扩充[序列扫描](basics/sequence-invariants.md)与[贪心交换](basics/greedy-exchange.md)，补入固定服务顺序的相邻距离和，以及带准入资金的最短非负段闭包。
+- 扩充[数学知识地图](math/index.md)，加入数字和与数字积的单次取位聚合、零数字边界和大整数表示边界。
+
+### 权威题目条目
+
+- 新增 [ARC227 F](problems/index.md#problem-atcoder-arc227-f)、[LC 4020](problems/index.md#problem-lc-4020)、[CF 2257E](problems/index.md#problem-codeforces-2257-e) 与 [LC 3622](problems/index.md#problem-lc-3622) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-21
 
 ### 每日训练档案

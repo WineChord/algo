@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-22",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-arc227-f",
+          "title": "[atcoder] ARC227 F Erase and Raise",
+          "kind": "AtCoder",
+          "page": "atcoder-arc227-f.md",
+          "official": "https://atcoder.jp/contests/arc227/tasks/arc227_f?lang=en",
+          "topic": "../../math/combinatorial-counting.md#active-gap-budget-dp",
+          "source_sha256": "1070e56a59d3ce284c546a3a391f2dab2b6fa4ca8d8162d0a4d865cba04e0d26"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md#grid-path-bijection",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-189-q1-lc4020",
+          "title": "[力扣竞赛] 第 189 场双周赛 Q1 LC 4020 电梯请求 I 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-189-q1-lc4020.md",
+          "official": "https://leetcode.cn/problems/elevator-requests-i/",
+          "topic": "../../basics/sequence-invariants.md#fixed-order-path-length",
+          "source_sha256": "1361a5b981fca67b2e8afb3221f707c850e8e6830a03a23b8e66fc0e7e641227"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-e",
+          "title": "[codeforces] CF Round 1117 Div.2 E Busy Beaver",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-e.md",
+          "official": "https://codeforces.com/contest/2257/problem/E",
+          "topic": "../../basics/greedy-exchange.md#nonnegative-segment-closure",
+          "source_sha256": "2b2e34a794311ef38277bac1241c701023ad257da70f9a8dbc04276d401c8a50"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-22-lc3622",
+          "title": "[力扣每日一题] 2026-08-22｜LC 3622 判断整除性",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-22-lc3622.md",
+          "official": "https://leetcode.cn/problems/check-divisibility-by-digit-sum-and-product/",
+          "topic": "../../math/index.md#digit-sum-product-divisibility",
+          "source_sha256": "c55e58e831d28a7fabe3cb88bb386dc92f0278058548c5e70142d5287275378a"
+        }
+      ]
+    },
+    {
       "date": "2026-08-21",
       "expected_count": 5,
       "top_count": 1,
