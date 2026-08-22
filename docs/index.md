@@ -23,6 +23,7 @@
 - [增广栈与可恢复摘要](data-structures/augmented-stacks.md)
 - [单调队列](data-structures/monotonic-queues.md)
 - [哈希分组与 LRU](data-structures/hash-and-cache.md)
+- [Min-Plus 区间转移](data-structures/min-plus-segment-tree.md)
 - [图论](graph/index.md)
 - [0-1 权与奇偶状态](graph/weighted-parity-states.md)
 - [树上后序聚合](graph/tree-aggregation.md)

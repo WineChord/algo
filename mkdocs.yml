@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-23":
+          - 当日总览: daily/2026-08-23/index.md
+          - "[atcoder] ABC472 A A": daily/2026-08-23/atcoder-abc472-a.md
+          - "[力扣 Top 141] LC 62 不同路径 中等": daily/2026-08-23/leetcode-top-141-lc62.md
+          - "[力扣竞赛] 第 189 场双周赛 Q2 LC 4021 得到旋转回文字符串的最少操作次数 I 中等": daily/2026-08-23/leetcode-biweekly-189-q2-lc4021.md
+          - "[codeforces] CF Round 1117 Div.2 F1 Beaver's Jumping Track (Easy Version)": daily/2026-08-23/codeforces-2257-f1.md
+          - "[力扣每日一题] 2026-08-23｜LC 1927 求和游戏": daily/2026-08-23/leetcode-daily-2026-08-23-lc1927.md
       - "2026-08-22":
           - 当日总览: daily/2026-08-22/index.md
           - "[atcoder] ARC227 F Erase and Raise": daily/2026-08-22/atcoder-arc227-f.md
@@ -423,6 +430,7 @@ nav:
       - 单调栈: data-structures/monotonic-stacks.md
       - 单调队列: data-structures/monotonic-queues.md
       - 哈希分组与 LRU: data-structures/hash-and-cache.md
+      - Min-Plus 区间转移: data-structures/min-plus-segment-tree.md
   - 图论:
       - 知识地图: graph/index.md
       - 函数图: graph/functional-graphs.md

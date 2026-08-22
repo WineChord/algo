@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-23
+
+### 每日训练档案
+
+- 新增 [2026-08-23 每日 5 题](daily/2026-08-23/index.md)：[AtCoder ABC472 A](problems/index.md#problem-atcoder-abc472-a)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 189 场双周赛 Q2](problems/index.md#problem-lc-4021)、[Codeforces Round 1117 Div.2 F1](problems/index.md#problem-codeforces-2257-f1) 与 [LC 1927](problems/index.md#problem-lc-1927)。
+
+### 边界转移、带权旋转与博弈势能
+
+- 新增 [Min-Plus 区间转移](data-structures/min-plus-segment-tree.md)，系统整理局部 DP 的边界状态、min-plus 复合、非交换区间查询、短块传递与真实端点。
+- 扩充[字符串知识地图](strings/index.md)与[循环等价类](strings/cyclic-normalization.md)，加入位置守恒的逐字符映射，以及旋转带权时不能直接规范化的边界。
+- 扩充[博弈动态规划](dp/game-dp.md)，用一维势能统一左右问号位置、数字选择与先后手策略。
+
+### 权威题目条目
+
+- 新增 [ABC472 A](problems/index.md#problem-atcoder-abc472-a)、[LC 4021](problems/index.md#problem-lc-4021)、[CF 2257F1](problems/index.md#problem-codeforces-2257-f1) 与 [LC 1927](problems/index.md#problem-lc-1927) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-22
 
 ### 每日训练档案

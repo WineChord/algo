@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-23",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc472-a",
+          "title": "[atcoder] ABC472 A A",
+          "kind": "AtCoder",
+          "page": "atcoder-abc472-a.md",
+          "official": "https://atcoder.jp/contests/abc472/tasks/abc472_a?lang=en",
+          "topic": "../../strings/index.md#problem-atcoder-abc472-a",
+          "source_sha256": "b9ed3f8b36c1db0475e897aa4e421c628fa8545402ab09a1bafbd7cdafb3737d"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md#grid-path-bijection",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-189-q2-lc4021",
+          "title": "[力扣竞赛] 第 189 场双周赛 Q2 LC 4021 得到旋转回文字符串的最少操作次数 I 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-189-q2-lc4021.md",
+          "official": "https://leetcode.cn/problems/minimum-operations-to-make-a-rotated-palindrome-i/",
+          "topic": "../../strings/cyclic-normalization.md#problem-lc-4021",
+          "source_sha256": "76bad14789a33bdfe32c3889ff459e43730b5775a59c6ff72c4539ceaf062b84"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-f1",
+          "title": "[codeforces] CF Round 1117 Div.2 F1 Beaver's Jumping Track (Easy Version)",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-f1.md",
+          "official": "https://codeforces.com/contest/2257/problem/F1",
+          "topic": "../../data-structures/min-plus-segment-tree.md#problem-codeforces-2257-f1",
+          "source_sha256": "88ac3da99ddf05cb70491a573102818a4e2bc128289e1d4c23739dbb4a22a850"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-23-lc1927",
+          "title": "[力扣每日一题] 2026-08-23｜LC 1927 求和游戏",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-23-lc1927.md",
+          "official": "https://leetcode.cn/problems/sum-game/",
+          "topic": "../../dp/game-dp.md#problem-lc-1927",
+          "source_sha256": "a5acd9cc49f8d79243d13f5a15e2d70661d0487494d9e405b8c53c94c9f435ea"
+        }
+      ]
+    },
+    {
       "date": "2026-08-22",
       "expected_count": 5,
       "top_count": 1,

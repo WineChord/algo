@@ -82,6 +82,7 @@
 - [单调栈：等待未来关闭的边界](../data-structures/monotonic-stacks.md)；
 - [单调队列：维护仍可能最优的窗口候选](../data-structures/monotonic-queues.md)；
 - [哈希分组、滑动窗口与 LRU](../data-structures/hash-and-cache.md)。
+- [Min-Plus 转移：把区间动态规划变成可维护摘要](../data-structures/min-plus-segment-tree.md)；
 - [二叉树遍历：顺序、边界与恢复](../graph/tree-traversals.md)。
 
 ## 阶段 3：动态规划、贪心与图论
