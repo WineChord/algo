@@ -18,6 +18,8 @@
 
 --8<-- "includes/problems/atcoder-abc469-e.md"
 
+--8<-- "includes/problems/atcoder-abc472-b.md"
+
 --8<-- "includes/problems/lc-189.md"
 
 --8<-- "includes/problems/lc-122.md"
@@ -280,6 +282,8 @@
 
 --8<-- "includes/problems/codeforces-2257-f1.md"
 
+--8<-- "includes/problems/codeforces-2257-f2.md"
+
 --8<-- "includes/problems/lc-3090.md"
 
 --8<-- "includes/problems/codeforces-2247-d2.md"
@@ -381,6 +385,8 @@
 --8<-- "includes/problems/lc-4027.md"
 
 --8<-- "includes/problems/lc-1927.md"
+
+--8<-- "includes/problems/lc-1872.md"
 
 ## 图论
 
@@ -515,6 +521,8 @@
 --8<-- "includes/problems/atcoder-arc227-f.md"
 
 --8<-- "includes/problems/lc-3622.md"
+
+--8<-- "includes/problems/lc-4022.md"
 
 ## 字符串
 

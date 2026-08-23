@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-24":
+          - 当日总览: daily/2026-08-24/index.md
+          - "[atcoder] ABC472 B Break a Stick": daily/2026-08-24/atcoder-abc472-b.md
+          - "[力扣 Top 141] LC 62 不同路径 中等": daily/2026-08-24/leetcode-top-141-lc62.md
+          - "[力扣竞赛] 第 189 场双周赛 Q3 LC 4022 无限字符串里第 K 个数字 中等": daily/2026-08-24/leetcode-biweekly-189-q3-lc4022.md
+          - "[codeforces] CF Round 1117 Div.2 F2 Beaver's Jumping Track (Hard Version)": daily/2026-08-24/codeforces-2257-f2.md
+          - "[力扣每日一题] 2026-08-24｜LC 1872 石子游戏 VIII": daily/2026-08-24/leetcode-daily-2026-08-24-lc1872.md
       - "2026-08-23":
           - 当日总览: daily/2026-08-23/index.md
           - "[atcoder] ABC472 A A": daily/2026-08-23/atcoder-abc472-a.md

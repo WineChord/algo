@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-24
+
+### 每日训练档案
+
+- 新增 [2026-08-24 每日 5 题](daily/2026-08-24/index.md)：[AtCoder ABC472 B](problems/index.md#problem-atcoder-abc472-b)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 189 场双周赛 Q3](problems/index.md#problem-lc-4022)、[Codeforces Round 1117 Div.2 F2](problems/index.md#problem-codeforces-2257-f2) 与 [LC 1872](problems/index.md#problem-lc-1872)。
+
+### 前缀平衡、数位定位、分块转移与合并博弈
+
+- 扩充[前缀状态](basics/prefix-sums-and-difference.md)，加入单切口平衡的总和—滚动前缀化简，以及负权和多段切分的模型边界。
+- 扩充[数学知识地图](math/index.md)，把无限数字串位置拆成等位数段计数与块内周期置换两层。
+- 扩充 [Min-Plus 区间转移](data-structures/min-plus-segment-tree.md)，加入百万平台下的真实内存核算、平台分块、两档代价右乘和按序状态查询。
+- 扩充[博弈动态规划](dp/game-dp.md)，加入前缀合并局面压缩与后缀最优值的一维递推。
+
+### 权威题目条目
+
+- 新增 [ABC472 B](problems/index.md#problem-atcoder-abc472-b)、[LC 4022](problems/index.md#problem-lc-4022)、[CF 2257F2](problems/index.md#problem-codeforces-2257-f2) 与 [LC 1872](problems/index.md#problem-lc-1872) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-23
 
 ### 每日训练档案

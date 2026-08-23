@@ -99,6 +99,26 @@ CF 2257F1 中，到达一个格子的最优代价只依赖前 $x\le5$ 个格子�
 
 --8<-- "includes/problems/codeforces-2257-f1.md"
 
+### 百万平台：先算矩阵真实字节，再决定分块
+
+F2 把平台数放大到 $10^6$、边界宽度放大到 $x\le10$。若仍为每个平台保存一份
+$x\times x$ 的 64 位矩阵，单矩阵约 800 字节，叶子尚未计入树上内部节点就已接近 800 MB；
+算法次数看似可行，内存模型却已经失败。
+
+稳定做法是把连续 $B$ 个平台合成一个块矩阵，线段树只保存 $O(n/B)$ 个矩阵；查询两端不足
+一块的部分直接作用于状态向量。单平台矩阵的每个输出列只有两档付费次数，任意矩阵右乘它时，
+可以用输入列的前后缀最小值在 $O(x^2)$ 完成，避免建块重新落回 $O(nx^3)$。这形成三个层级：
+
+1. 单平台保留短段的同坐标零代价旁路；
+2. 块内按平台顺序做结构化右乘；
+3. 块间用非交换的 min-plus 线段树按原序复合。
+
+查询无需先构造总矩阵，把规范覆盖节点从左到右直接作用于状态向量，可把树上部分从
+$O(x^3\log(n/B))$ 降到 $O(x^2\log(n/B))$。分块不是纯常数优化，而是同时满足内存上限与
+时间上限的第二层摘要。
+
+--8<-- "includes/problems/codeforces-2257-f2.md"
+
 ## 何时换一种半环
 
 边界转移不只能够保存最小代价：
@@ -123,4 +143,5 @@ CF 2257F1 中，到达一个格子的最优代价只依赖前 $x\le5$ 个格子�
 ## Reference
 
 - [Codeforces 2257F1：Beaver's Jumping Track (Easy Version)](../problems/index.md#problem-codeforces-2257-f1)
+- [Codeforces 2257F2：Beaver's Jumping Track (Hard Version)](../problems/index.md#problem-codeforces-2257-f2)
 - [数据结构知识地图](index.md)

@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-24",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc472-b",
+          "title": "[atcoder] ABC472 B Break a Stick",
+          "kind": "AtCoder",
+          "page": "atcoder-abc472-b.md",
+          "official": "https://atcoder.jp/contests/abc472/tasks/abc472_b?lang=en",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "374201606981820b2795e51fae6591c3d6cab649cd7ad80ac7ffd3d9c64fc632"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-189-q3-lc4022",
+          "title": "[力扣竞赛] 第 189 场双周赛 Q3 LC 4022 无限字符串里第 K 个数字 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-189-q3-lc4022.md",
+          "official": "https://leetcode.cn/problems/k-th-digit-in-infinite-string/",
+          "topic": "../../math/index.md",
+          "source_sha256": "f16fcced41fe5de0dfecb102aeaa975af5b25f8a5047632a037bdcb95ae234dc"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2257-f2",
+          "title": "[codeforces] CF Round 1117 Div.2 F2 Beaver's Jumping Track (Hard Version)",
+          "kind": "Codeforces",
+          "page": "codeforces-2257-f2.md",
+          "official": "https://codeforces.com/contest/2257/problem/F2",
+          "topic": "../../data-structures/min-plus-segment-tree.md",
+          "source_sha256": "cba0047b52048f40f3075cc5a879bc0a341cf80a0c38b53007b58af42ec7d671"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-24-lc1872",
+          "title": "[力扣每日一题] 2026-08-24｜LC 1872 石子游戏 VIII",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-24-lc1872.md",
+          "official": "https://leetcode.cn/problems/stone-game-viii/",
+          "topic": "../../dp/game-dp.md",
+          "source_sha256": "80ff203c622bca51d7d68f20a53b4b7d06da7ab1abe9377d076fc94cac8822c8"
+        }
+      ]
+    },
+    {
       "date": "2026-08-23",
       "expected_count": 5,
       "top_count": 1,
