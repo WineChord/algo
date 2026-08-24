@@ -90,6 +90,16 @@ $$
 
 --8<-- "includes/problems/lc-1563.md"
 
+## 一维访问：已完成集合为何是连续区间
+
+在线段上从起点移动并服务所有静态请求时，走过的最左点与最右点之间已经没有未完成请求。将请求楼层与起点一起排序后，已完成集合始终对应一个连续区间；下一次首次到达的新请求只能是区间左侧或右侧的相邻点。因此状态只需保存区间两端和当前停靠侧，而不必保存任意子集。
+
+若还有 $q$ 个请求尚未完成，移动距离 $d$ 会让它们的完成时间总和增加 $q\cdot d$。于是转移必须使用“移动前”的剩余请求数：扩展左端或右端时，分别从当前两个端点计算距离。起点本身若有请求，应先以时间 0 完成，不能继续计入乘数。
+
+这种 $O(m^2)$ 区间 DP 依赖两个性质：沿线移动会顺便覆盖中间请求，且目标是完成时间之和。若目标改成最后完成时刻，只需覆盖最左、最右请求；若不同请求有正权重，乘数改成剩余权重和；若移动费用与方向有关，则用有向距离替换绝对值。
+
+--8<-- "includes/problems/lc-4023.md"
+
 ## 数值、方案与计数需要不同状态
 
 - 只求最优值：可滚动压缩；
@@ -114,4 +124,5 @@ $$
 - [LeetCode 312：戳气球](../problems/index.md#problem-lc-312)
 - [LeetCode 877：石子游戏](../problems/index.md#problem-lc-877)
 - [LeetCode 1563：石子游戏 V](../problems/index.md#problem-lc-1563)
+- [LeetCode 4023：电梯请求 II](../problems/index.md#problem-lc-4023)
 - [Bellman, Dynamic Programming — Princeton University Press](https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming)

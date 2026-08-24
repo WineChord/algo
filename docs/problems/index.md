@@ -20,6 +20,8 @@
 
 --8<-- "includes/problems/atcoder-abc472-b.md"
 
+--8<-- "includes/problems/atcoder-abc472-c.md"
+
 --8<-- "includes/problems/lc-189.md"
 
 --8<-- "includes/problems/lc-122.md"
@@ -304,6 +306,8 @@
 
 --8<-- "includes/problems/lc-1386.md"
 
+--8<-- "includes/problems/lc-3718.md"
+
 ## 动态规划
 
 --8<-- "includes/problems/lc-4009.md"
@@ -383,6 +387,8 @@
 --8<-- "includes/problems/lc-62.md"
 
 --8<-- "includes/problems/lc-4027.md"
+
+--8<-- "includes/problems/lc-4023.md"
 
 --8<-- "includes/problems/lc-1927.md"
 
@@ -523,6 +529,8 @@
 --8<-- "includes/problems/lc-3622.md"
 
 --8<-- "includes/problems/lc-4022.md"
+
+--8<-- "includes/problems/codeforces-2253-a.md"
 
 ## 字符串
 

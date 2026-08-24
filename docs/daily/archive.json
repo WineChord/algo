@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-25",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc472-c",
+          "title": "[atcoder] ABC472 C On a Diet",
+          "kind": "AtCoder",
+          "page": "atcoder-abc472-c.md",
+          "official": "https://atcoder.jp/contests/abc472/tasks/abc472_c?lang=en",
+          "topic": "../../basics/prefix-sums-and-difference.md",
+          "source_sha256": "289a1ead760a3a069260fa56e228bbe3ec1d3ea141e4d36f337bf94c66c051b0"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-biweekly-189-q4-lc4023",
+          "title": "[力扣竞赛] 第 189 场双周赛 Q4 LC 4023 电梯请求 II 困难",
+          "kind": "力扣竞赛",
+          "page": "leetcode-biweekly-189-q4-lc4023.md",
+          "official": "https://leetcode.cn/problems/elevator-requests-ii/",
+          "topic": "../../dp/interval-dp.md",
+          "source_sha256": "bf6d31dbf64daf20e9e861156d09a25aa2e3d221cb16a9588cd4c0af93ed2a25"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2253-a",
+          "title": "[codeforces] CF Educational Round 193 Div.2 A The Best Card",
+          "kind": "Codeforces",
+          "page": "codeforces-2253-a.md",
+          "official": "https://codeforces.com/contest/2253/problem/A",
+          "topic": "../../math/index.md",
+          "source_sha256": "48303beec8286a92d876773b92324039620a59da4956d7b68d8d6502455b617d"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-25-lc3718",
+          "title": "[力扣每日一题] 2026-08-25｜LC 3718 缺失的最小倍数",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-25-lc3718.md",
+          "official": "https://leetcode.cn/problems/smallest-missing-multiple-of-k/",
+          "topic": "../../data-structures/hash-and-cache.md",
+          "source_sha256": "6f93f98ab27d7ef98466831613b5d7bb1b1f78a62190456042f863308ba8050c"
+        }
+      ]
+    },
+    {
       "date": "2026-08-24",
       "expected_count": 5,
       "top_count": 1,

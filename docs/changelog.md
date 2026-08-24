@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-25
+
+### 每日训练档案
+
+- 新增 [2026-08-25 每日 5 题](daily/2026-08-25/index.md)：[AtCoder ABC472 C](problems/index.md#problem-atcoder-abc472-c)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 189 场双周赛 Q4](problems/index.md#problem-lc-4023)、[Codeforces Educational Round 193 Div.2 A](problems/index.md#problem-codeforces-2253-a) 与 [LC 3718](problems/index.md#problem-lc-3718)。
+
+### 滚动贡献、线性访问、商值归一化与唯一候选
+
+- 扩充[前缀状态与差分](basics/prefix-sums-and-difference.md)，加入固定长度窗口只维护真实贡献的线性扫描。
+- 扩充[区间动态规划](dp/interval-dp.md)，加入一维访问的连续覆盖不变量与“剩余请求数乘移动距离”的完成时间交换。
+- 扩充[哈希与有限值域](data-structures/hash-and-cache.md)，加入倍数除以步长后的商值归一化与最小缺失正整数上界。
+- 扩充[数学知识地图](math/index.md)，先用相邻牌排除非最大候选，再把全胜条件化为素数判定。
+
+### 权威题目条目
+
+- 新增 [ABC472 C](problems/index.md#problem-atcoder-abc472-c)、[LC 4023](problems/index.md#problem-lc-4023)、[CF 2253A](problems/index.md#problem-codeforces-2253-a) 与 [LC 3718](problems/index.md#problem-lc-3718) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-24
 
 ### 每日训练档案

@@ -76,6 +76,14 @@ UTF-8 文本不能把一个字节当作一个字符。若题意按 Unicode 码�
 
 --8<-- "includes/problems/lc-349.md"
 
+### 按步长归一化：倍数集合变成商下标
+
+若只关心正倍数 $k,2k,3k,\ldots$ 是否出现，可以把每个能被 $k$ 整除的值除以 $k$，问题便变成查找最小缺失正整数。长度为 $n$ 的数组最多覆盖 $n$ 个不同正商，因此答案的商一定落在 $1\ldots n+1$；只需大小 $n+2$ 的布尔存在表，无须存下更大的值。
+
+这个鸽巢上界同时给出时间和空间边界。重复值只会重复标记，不影响答案；若允许在线删除，则布尔值不足以判断某个商是否仍存在，需要改存频次，并额外维护当前最小缺失商。
+
+--8<-- "includes/problems/lc-3718.md"
+
 ### 窗口覆盖次数：先算位置对应的起点区间
 
 当题目问一个值出现于多少个定长窗口时，同一窗口内重复出现仍只能计一次。位置 $i$ 对
@@ -159,4 +167,5 @@ LC 4007 中，固定栅栏高度 $H$ 后，长度 $x$ 只能与 $H-x$ 配对；�
 - [LeetCode 4007：栅栏的最宽宽度](../problems/index.md#problem-lc-4007)
 - [LeetCode 2958：最多 K 个重复元素的最长子数组](../problems/index.md#problem-lc-2958)
 - [LeetCode 3090：每个字符最多出现两次的最长子字符串](../problems/index.md#problem-lc-3090)
+- [LeetCode 3718：缺失的最小倍数](../problems/index.md#problem-lc-3718)
 - [std::list::splice — cppreference](https://en.cppreference.com/w/cpp/container/list/splice)

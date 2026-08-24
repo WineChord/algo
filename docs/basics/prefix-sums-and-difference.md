@@ -64,6 +64,20 @@ $P$ 不再单调，但线性枚举全部切口仍然正确；只有进一步要�
 
 --8<-- "includes/problems/atcoder-abc472-b.md"
 
+### 固定长度窗口：只维护真实贡献
+
+有些顺序决策只依赖最近 $M$ 个位置，但被拒绝的元素并不会进入后续约束。此时应先定义真实贡献
+
+$$
+b_i=\begin{cases}A_i,&\text{第 }i\text{ 天接受},\\0,&\text{第 }i\text{ 天拒绝},\end{cases}
+$$
+
+再维护当前决定前的窗口和 $\sum_{j=\max(1,i-M+1)}^{i-1}b_j$。处理第 $i$ 天前，先减去刚离开窗口的 $b_{i-M}$；随后只需判断新元素与窗口和是否超过上限。每个贡献最多加入、删除一次，朴素的 $O(NM)$ 重算便降为 $O(N)$。
+
+这里的关键是保存“实际发生的贡献”，而不是原输入。若规则改成从所有天中自由选择，顺序模拟不再等价于最优选择；若窗口长度在线变化，可以改用接受贡献前缀和或带日期的队列。
+
+--8<-- "includes/problems/atcoder-abc472-c.md"
+
 ## 前后缀分解：删除当前位置的贡献
 
 若目标是“聚合除当前位置外的全部元素”，可以把答案拆成左侧前缀与右侧后缀两部分。乘积没有逆元、输入含零或题目禁止除法时，这种分解比“总乘积再除自身”更稳健。
@@ -152,4 +166,5 @@ $$
 - [LeetCode 4011：按奇偶比统计子数组 I](../problems/index.md#problem-lc-4011)
 - [LeetCode 4013：按奇偶比统计子数组 II](../problems/index.md#problem-lc-4013)
 - [LeetCode 4008：击败所有怪物的最小初始强度](../problems/index.md#problem-lc-4008)
+- [AtCoder ABC472 C：On a Diet](../problems/index.md#problem-atcoder-abc472-c)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)

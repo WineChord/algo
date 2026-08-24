@@ -41,6 +41,14 @@ $$
 | 同时求最小质因子 | 线性筛 | $O(n)$ |
 | 64 位整数判素 | Miller–Rabin 固定底数 | $O(k\log^3 n)$ 量级 |
 
+#### 唯一候选先于判素
+
+判断是否存在一个能击败全集的元素时，不应先枚举所有候选并套判定模板。若集合恰为连续整数 $2,3,\ldots,n+1$，任意非最大值 $x$ 都会被相邻的 $x+1$ 击败：两者互不整除，所以按规则较大者胜。唯一候选因此是 $n+1$。
+
+最大值要击败所有更小牌，当且仅当它没有 $2\ldots n$ 中的真因子，也就是 $n+1$ 为素数。先证明候选唯一，再做 $O(\sqrt n)$ 试除，既缩小了搜索空间，也解释了为什么“判素”恰好是最终条件。若牌值集合不连续，相邻反证失效，必须重新检查每个候选的因子与倍数关系。
+
+--8<-- "includes/problems/codeforces-2253-a.md"
+
 ### 平方和分类
 
 拉格朗日四平方定理保证每个正整数都能写成至多四个整数平方之和。勒让德三平方定理进一步指出：把 $n$ 中所有因子 $4$ 除掉后，若余数模 $8$ 等于 $7$，它不能由三个平方表示，因此最少需要四项。
@@ -284,4 +292,5 @@ $$
 - [LeetCode 7：整数反转](../problems/index.md#problem-lc-7)
 - [AtCoder ARC227 D：Median of Binary Strings](../problems/index.md#problem-atcoder-arc227-d)
 - [AtCoder ARC227 E：Shift and XOR Switches](../problems/index.md#problem-atcoder-arc227-e)
+- [Codeforces 2253A：The Best Card](../problems/index.md#problem-codeforces-2253-a)
 - [Introduction to Algorithms, Fourth Edition — MIT Press](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/)
