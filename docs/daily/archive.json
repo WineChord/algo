@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-26",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc472-d",
+          "title": "[atcoder] ABC472 D Bomber Mad",
+          "kind": "AtCoder",
+          "page": "atcoder-abc472-d.md",
+          "official": "https://atcoder.jp/contests/abc472/tasks/abc472_d?lang=en",
+          "topic": "../../graph/index.md",
+          "source_sha256": "173f2a9a29e8b41a2911c951869fcc8d51dc323f211b35bf0b38babf8e33c8b8"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-516-q1-lc4030",
+          "title": "[力扣竞赛] 第 516 场周赛 Q1 LC 4030 判断 ASCII 值回文 简单",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-516-q1-lc4030.md",
+          "official": "https://leetcode.cn/problems/check-ascii-palindromic/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "d9d18020838529933625e132b55443653be75d2eae95aec169dd62b8d596e487"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2253-b",
+          "title": "[codeforces] CF Educational Round 193 Div.2 B Hypercarp and the Control Panel",
+          "kind": "Codeforces",
+          "page": "codeforces-2253-b.md",
+          "official": "https://codeforces.com/contest/2253/problem/B",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "559d7afb3f849a726c732a2ddfe6304e03f814df82510fd1d065a162daa8c972"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-26-lc2904",
+          "title": "[力扣每日一题] 2026-08-26｜LC 2904 最短且字典序最小的美丽子字符串",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-26-lc2904.md",
+          "official": "https://leetcode.cn/problems/shortest-and-lexicographically-smallest-beautiful-string/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "90bc6ac06c7d762137b0bc1e225ba24f8612e1bd4a09e55db7ff77fc832f057a"
+        }
+      ]
+    },
+    {
       "date": "2026-08-25",
       "expected_count": 5,
       "top_count": 1,

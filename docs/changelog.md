@@ -1,5 +1,21 @@
 # 更新日志
 
+## 2026-08-26
+
+### 每日训练档案
+
+- 新增 [2026-08-26 每日 5 题](daily/2026-08-26/index.md)：[AtCoder ABC472 D](problems/index.md#problem-atcoder-abc472-d)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 516 场周赛 Q1](problems/index.md#problem-lc-4030)、[Codeforces Educational Round 193 Div.2 B](problems/index.md#problem-codeforces-2253-b) 与 [LC 2904](problems/index.md#problem-lc-2904)。
+
+### 多源最短路、固定块反转、游程局部修复与稀疏位置窗口
+
+- 扩充[图论知识地图](graph/index.md)，加入目标集合的多源 BFS、截断距离与障碍最短路边界。
+- 扩充[字符串知识地图](strings/index.md)，加入固定宽度分块的块序／位序双反转，以及只枚举目标字符紧致窗口的稀疏位置模型。
+- 扩充[序列扫描](basics/sequence-invariants.md)，加入游程压缩后按相邻和距离为 2 的局部见证判断一次交换增量。
+
+### 权威题目条目
+
+- 新增 [ABC472 D](problems/index.md#problem-atcoder-abc472-d)、[LC 4030](problems/index.md#problem-lc-4030)、[CF 2253B](problems/index.md#problem-codeforces-2253-b) 与 [LC 2904](problems/index.md#problem-lc-2904) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-25
 
 ### 每日训练档案
