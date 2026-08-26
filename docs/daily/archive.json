@@ -2,6 +2,63 @@
   "version": 1,
   "dates": [
     {
+      "date": "2026-08-27",
+      "expected_count": 5,
+      "top_count": 1,
+      "items": [
+        {
+          "position": 1,
+          "key": "atcoder-abc472-e",
+          "title": "[atcoder] ABC472 E Odd Cycle",
+          "kind": "AtCoder",
+          "page": "atcoder-abc472-e.md",
+          "official": "https://atcoder.jp/contests/abc472/tasks/abc472_e?lang=en",
+          "topic": "../../graph/index.md",
+          "source_sha256": "5c8dd9f66c0f833a69d04843eb5e2e692cccdefc73f59f662fdce526528b6584"
+        },
+        {
+          "position": 2,
+          "key": "leetcode-top-141-lc62",
+          "title": "[力扣 Top 141] LC 62 不同路径 中等",
+          "kind": "力扣 Top",
+          "page": "leetcode-top-141-lc62.md",
+          "official": "https://leetcode.cn/problems/unique-paths/",
+          "topic": "../../dp/grid-dp.md",
+          "source_sha256": "6a32abc07943cb4127e453cc756c25a92e3e6309a14fd01dd10ab03497dc66f4"
+        },
+        {
+          "position": 3,
+          "key": "leetcode-weekly-516-q2-lc4031",
+          "title": "[力扣竞赛] 第 516 场周赛 Q2 LC 4031 找到所有数组中消失的数字 II 中等",
+          "kind": "力扣竞赛",
+          "page": "leetcode-weekly-516-q2-lc4031.md",
+          "official": "https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array-ii/",
+          "topic": "../../basics/sequence-invariants.md",
+          "source_sha256": "1c9e12e245b23827c029fb1bf861050a7f51bb299e67052006918e6f744fbb9f"
+        },
+        {
+          "position": 4,
+          "key": "codeforces-2253-c",
+          "title": "[codeforces] CF Educational Round 193 Div.2 C Sum of Distinct Values in a Matrix",
+          "kind": "Codeforces",
+          "page": "codeforces-2253-c.md",
+          "official": "https://codeforces.com/contest/2253/problem/C",
+          "topic": "../../basics/greedy-exchange.md",
+          "source_sha256": "043102da72da9d3e2bde56a9addf3fb1f4e222637d93adc3e2c56ea2887affc0"
+        },
+        {
+          "position": 5,
+          "key": "leetcode-daily-2026-08-27-lc3720",
+          "title": "[力扣每日一题] 2026-08-27｜LC 3720 大于目标字符串的最小字典序排列",
+          "kind": "力扣每日一题",
+          "page": "leetcode-daily-2026-08-27-lc3720.md",
+          "official": "https://leetcode.cn/problems/lexicographically-smallest-permutation-greater-than-target/",
+          "topic": "../../strings/index.md",
+          "source_sha256": "efc6dc693b485395985df4f7671c4ddc819e167bb9c7dbeee250572000bfd902"
+        }
+      ]
+    },
+    {
       "date": "2026-08-26",
       "expected_count": 5,
       "top_count": 1,

@@ -106,6 +106,13 @@ nav:
   # DAILY_ARCHIVE_NAV_START
   - 每日题目:
       - 总览: daily/index.md
+      - "2026-08-27":
+          - 当日总览: daily/2026-08-27/index.md
+          - "[atcoder] ABC472 E Odd Cycle": daily/2026-08-27/atcoder-abc472-e.md
+          - "[力扣 Top 141] LC 62 不同路径 中等": daily/2026-08-27/leetcode-top-141-lc62.md
+          - "[力扣竞赛] 第 516 场周赛 Q2 LC 4031 找到所有数组中消失的数字 II 中等": daily/2026-08-27/leetcode-weekly-516-q2-lc4031.md
+          - "[codeforces] CF Educational Round 193 Div.2 C Sum of Distinct Values in a Matrix": daily/2026-08-27/codeforces-2253-c.md
+          - "[力扣每日一题] 2026-08-27｜LC 3720 大于目标字符串的最小字典序排列": daily/2026-08-27/leetcode-daily-2026-08-27-lc3720.md
       - "2026-08-26":
           - 当日总览: daily/2026-08-26/index.md
           - "[atcoder] ABC472 D Bomber Mad": daily/2026-08-26/atcoder-abc472-d.md

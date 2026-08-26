@@ -22,6 +22,10 @@
 
 --8<-- "includes/problems/atcoder-abc472-c.md"
 
+--8<-- "includes/problems/lc-4031.md"
+
+--8<-- "includes/problems/codeforces-2253-c.md"
+
 --8<-- "includes/problems/lc-189.md"
 
 --8<-- "includes/problems/lc-122.md"
@@ -400,6 +404,8 @@
 
 --8<-- "includes/problems/atcoder-abc472-d.md"
 
+--8<-- "includes/problems/atcoder-abc472-e.md"
+
 --8<-- "includes/problems/lc-142.md"
 
 --8<-- "includes/problems/lc-3286.md"
@@ -541,6 +547,8 @@
 --8<-- "includes/problems/lc-4030.md"
 
 --8<-- "includes/problems/lc-2904.md"
+
+--8<-- "includes/problems/lc-3720.md"
 
 --8<-- "includes/problems/atcoder-abc468-d.md"
 

@@ -1,5 +1,22 @@
 # 更新日志
 
+## 2026-08-27
+
+### 每日训练档案
+
+- 新增 2026-08-27 每日 5 题：[AtCoder ABC472 E](problems/index.md#problem-atcoder-abc472-e)、[力扣 Top 141](problems/index.md#problem-lc-62)、[力扣第 516 场周赛 Q2](problems/index.md#problem-lc-4031)、[Codeforces Educational Round 193 Div.2 C](problems/index.md#problem-codeforces-2253-c) 与 [LC 3720](problems/index.md#problem-lc-3720)。
+
+### 奇环恢复、缺失零段、层次配额与字典序后继
+
+- 扩充[图论知识地图](graph/index.md)，加入二染色冲突边的奇环存在性证明，以及基于深度与父指针的 LCA 路径恢复。
+- 扩充[序列扫描](basics/sequence-invariants.md)，把有限值域存在表推进到极大缺失零段的游程编码，并说明大值域与在线更新边界。
+- 扩充[贪心交换](basics/greedy-exchange.md)，加入带两个分支配额与一个全局配额的层次可行集合、降序选择与交换证明。
+- 扩充[字符串知识地图](strings/index.md)，加入多重集合严格字典序后继的最靠右枢轴、最小增大字符与升序后缀。
+
+### 权威题目条目
+
+- 新增 [ABC472 E](problems/index.md#problem-atcoder-abc472-e)、[LC 4031](problems/index.md#problem-lc-4031)、[CF 2253C](problems/index.md#problem-codeforces-2253-c) 与 [LC 3720](problems/index.md#problem-lc-3720) 的唯一折叠条目；复用 [LC 62](problems/index.md#problem-lc-62) 的既有权威条目。
+
 ## 2026-08-26
 
 ### 每日训练档案
